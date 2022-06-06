@@ -8,9 +8,7 @@ const Layout = ({ location, title, children }) => {
 
   if (isRootPath) {
     header = (
-      <h1 className="main-heading">
-        <Link to="/">{title}</Link>
-      </h1>
+      <Link className="header-link-home" to="/">{title}</Link>
     )
   } else {
     header = (
@@ -25,9 +23,7 @@ const Layout = ({ location, title, children }) => {
       <header className="global-header">{header}</header>
       <main>{children}</main>
       <footer>
-        © {new Date().getFullYear()}, Built with
-        {` `}
-        <a href="https://www.gatsbyjs.com">Gatsby</a>
+        <a href="https://github.com/seungyoubkim" target={"_blank"}>Github</a>
       </footer>
     </div>
   )
