@@ -1,12 +1,9 @@
 {
-  "name": "gatsby-starter-blog",
+  "name": "seungyoubkim.github.io",
   "private": true,
-  "description": "A starter for a blog powered by Gatsby and Markdown",
-  "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
-  },
+  "description": "Seungyoub Kim",
+  "version": "1.0.0",
+  "author": "Seungyoub Kim <shas15@kakao.com>",
   "dependencies": {
     "gatsby": "^4.15.2",
     "gatsby-plugin-feed": "^4.15.1",
@@ -36,14 +33,14 @@
   "devDependencies": {
     "prettier": "^2.6.2"
   },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
+  "homepage": "https://seungyoubkim.github.io/",
   "keywords": [
     "gatsby"
   ],
   "license": "0BSD",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
+    "url": "git+https://github.com/seungyoubkim/seungyoubkim.github.io"
   },
   "scripts": {
     "build": "gatsby build",
@@ -53,6 +50,6 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
-    "deploy": "gatsby build && gh-pages -d public -b deploy"
+    "deploy": "gatsby build && gh-pages -d public -b gh-pages"
   }
 }
