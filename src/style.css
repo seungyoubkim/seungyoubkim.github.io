@@ -317,8 +317,6 @@ a:focus {
 
 .blog-post img {
   padding-bottom: var(--spacing-2);
-  max-height: calc(50vh - 4rem);
-  object-fit: contain;
 }
 
 /* Media queries */
