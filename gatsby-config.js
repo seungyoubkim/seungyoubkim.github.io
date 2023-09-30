@@ -132,6 +132,12 @@ module.exports = {
         sitemap: 'https://seungyoubkim.github.io/sitemap.xml',
         policy: [{userAgent: '*', allow: '/'}]
       }
-    }
+    },
+    {
+      resolve: "gatsby-plugin-google-gtag",
+      options: {
+        trackingIds: ["G-TVYZ629KX1"],
+      },
+    },
   ],
 }
