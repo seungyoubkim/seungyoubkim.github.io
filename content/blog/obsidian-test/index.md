@@ -4,4 +4,6 @@ date: 2023-09-25
 ---
 Hello Obsidian
 
-![IMG_2165.jpg](IMG_2165.jpg)
+![](IMG_2165.jpg)
+
+![](i015431920545.gif)
