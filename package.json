@@ -6,6 +6,7 @@
   "author": "Seungyoub Kim <shas15@kakao.com>",
   "dependencies": {
     "gatsby": "^4.15.2",
+    "gatsby-plugin-advanced-sitemap": "^2.1.0",
     "gatsby-plugin-feed": "^4.15.1",
     "gatsby-plugin-gatsby-cloud": "^4.15.0",
     "gatsby-plugin-google-analytics": "^4.15.0",

@@ -4,8 +4,8 @@ module.exports = {
     author: {
       name: `Seungyoub Kim`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
+    description: `Blog by Seungyoub Kim`,
+    siteUrl: `https://seungyoubkim.github.io/`,
   },
   plugins: [
     `gatsby-plugin-image`,
@@ -124,7 +124,7 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
-    'gatsby-plugin-sitemap',
+    'gatsby-plugin-advanced-sitemap',
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
