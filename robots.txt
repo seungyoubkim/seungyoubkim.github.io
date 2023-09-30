@@ -1,2 +1,4 @@
 User-agent: *
-Disallow:
+Allow: /
+Sitemap: https://seungyoubkim.github.io/sitemap.xml
+Host: https://seungyoubkim.github.io
