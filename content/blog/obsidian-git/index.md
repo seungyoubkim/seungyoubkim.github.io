@@ -17,7 +17,7 @@ Obsidian 을 열고 `Create new vault`에서 `Create` 버튼을 클릭해줍니�
 생성된 볼트에 새 노트를 하나 작성해줍니다.
 
 ![](58.png)
-이후 `Preference` > `Community plugins`로 이동하여 `Turn on community plugins` 버튼을 클릭해줍니다.
+이후 `Preference > Community plugins`로 이동하여 `Turn on community plugins` 버튼을 클릭해줍니다.
 
 ![](59.png)
 `Community plugins`의 `Browse` 버튼을 클릭해줍니다.
@@ -109,10 +109,10 @@ Github 우측 상단의 프로필을 클릭하고 `Settings` 를 클릭해주세
 좌측 하단의 `Developer settings` 클릭해주세요.
 
 ![](16.png)
-`Personal access tokens` > `Tokens (classic)` 을 클릭해주세요.
+`Personal access tokens > Tokens (classic)` 을 클릭해주세요.
 
 ![](17.png)
-우측 상단의 `Generate new token` > `Generate new token (classic)` 를 클릭해주세요.
+우측 상단의 `Generate new token > Generate new token (classic)` 를 클릭해주세요.
 
 ![](18.png)
 Github 계정 비밀번호를 입력해줍니다.
