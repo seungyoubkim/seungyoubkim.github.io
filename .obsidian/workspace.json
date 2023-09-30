@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "8ed76f2b6d13966a",
+        "id": "9260461a02c87417",
         "type": "tabs",
         "children": [
           {
-            "id": "55c0bf9502d0a52c",
+            "id": "945e1c8d1a0c018e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/blog/obsidian-test/index.md",
+                "file": "content/blog/obsidian-git/index.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/blog/obsidian-test/index.md",
+                "file": "content/blog/obsidian-git/index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/blog/obsidian-test/index.md",
+                "file": "content/blog/obsidian-git/index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/blog/obsidian-test/index.md"
+                "file": "content/blog/obsidian-git/index.md"
               }
             }
           },
@@ -154,13 +154,27 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "55c0bf9502d0a52c",
+  "active": "945e1c8d1a0c018e",
   "lastOpenFiles": [
-    "content/blog/obsidian-test/i015431920545.gif",
-    "content/blog/hello-world/index.md",
-    "content/blog/hello-world/salty_egg.jpg",
+    "content/blog/obsidian-git/IMG_3310.png",
+    "content/blog/obsidian-git/IMG_3307.png",
+    "content/blog/obsidian-git/IMG_3306.png",
+    "content/blog/obsidian-git/IMG_3303.png",
+    "content/blog/obsidian-git/IMG_3300.png",
+    "content/blog/obsidian-git/IMG_3297.png",
+    "content/blog/obsidian-git/IMG_3296.png",
+    "content/blog/obsidian-git/IMG_3294.png",
+    "content/blog/obsidian-git/IMG_3291.png",
+    "content/blog/obsidian-git/IMG_3289.png",
+    "content/blog/obsidian-git/IMG_3287.png",
+    "스크린샷 2023-09-18 오후 7.50.45.png.md",
+    "content/blog/obsidian-git/index.md",
+    "스크린샷 2023-09-18 오후 7.43.22.png.md",
     "content/blog/obsidian-test/index.md",
     "content/blog/my-second-post/index.md",
+    "content/blog/obsidian-git",
+    "src/components/Utterances.js",
+    "content/blog/hello-world/index.md",
     "content/blog/new-beginnings/index.md",
     "yarn-error.log",
     "node_modules/sharp/build/Release/sharp-darwin-arm64v8.node",
@@ -170,18 +184,7 @@
     "node_modules/@parcel/cache/node_modules/lmdb/build/Release/obj.target/lmdb/dependencies/lmdb/libraries/liblmdb/mdb.o",
     "node_modules/@parcel/cache/node_modules/lmdb/build/Release/obj.target/lmdb/dependencies/lmdb/libraries/liblmdb/chacha8.o",
     "node_modules/@parcel/cache/node_modules/lmdb/build/Release/obj.target/lmdb/dependencies/lmdb/libraries/liblmdb",
-    "node_modules/@parcel/cache/node_modules/lmdb/build/Release/obj.target/lmdb/dependencies/lz4/lib/lz4.o",
-    "node_modules/@parcel/cache/node_modules/lmdb/build/Release/obj.target/lmdb/dependencies/lz4/lib",
     "node_modules/sharp/vendor/8.12.2/darwin-arm64v8/THIRD-PARTY-NOTICES.md",
-    "node_modules/pretendard/examples/flutter_pretendard/android/app/src/main/res/mipmap-mdpi/ic_launcher.png",
-    "node_modules/pretendard/examples/flutter_pretendard/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png",
-    "node_modules/pretendard/examples/flutter_pretendard/android/app/src/main/res/mipmap-hdpi/ic_launcher.png",
-    "node_modules/pretendard/examples/flutter_pretendard/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png",
-    "node_modules/pretendard/examples/flutter_pretendard/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png",
-    "node_modules/pretendard/examples/react_native_pretendard/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png",
-    "node_modules/pretendard/examples/react_native_pretendard/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png",
-    "node_modules/pretendard/examples/react_native_pretendard/android/app/src/main/res/mipmap-mdpi/ic_launcher_round.png",
-    "node_modules/pretendard/examples/react_native_pretendard/android/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png",
     "node_modules/pretendard/examples/flutter_pretendard/ios/Runner/Assets.xcassets/LaunchImage.imageset/README.md",
     "node_modules/lmdb/dependencies/lz4/lib/dll/example/README.md",
     "node_modules/@parcel/cache/node_modules/lmdb/dependencies/lz4/lib/dll/example/README.md",
@@ -198,9 +201,6 @@
     "node_modules/ext/docs/math/floor-10.md",
     "node_modules/ext/docs/math/round-10.md",
     "node_modules/ext/docs/string_/includes.md",
-    "node_modules/ext/docs/object/clear.md",
-    "node_modules/ext/docs/object/entries.md",
-    "node_modules/ext/docs/promise/limit.md",
-    "node_modules/ext/docs/function/identity.md"
+    "node_modules/ext/docs/object/clear.md"
   ]
 }
