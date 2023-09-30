@@ -35,7 +35,6 @@ const BlogPostTemplate = ({ data, location }) => {
           <Bio />
         </footer>
       </article>
-      <Utterances />
       <nav className="blog-post-nav">
         <ul
           style={{
@@ -62,6 +61,7 @@ const BlogPostTemplate = ({ data, location }) => {
           </li>
         </ul>
       </nav>
+      <Utterances />
     </Layout>
   )
 }
