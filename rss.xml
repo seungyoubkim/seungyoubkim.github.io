@@ -1,10 +1,70 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[Blog by Seungyoub Kim]]></description><link>https://seungyoubkim.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 30 Sep 2023 13:08:39 GMT</lastBuildDate><item><title><![CDATA[Obsidian Git 을 이용하여 무료로 맥북과 아이폰간의 데이터 동기화하기]]></title><description><![CDATA[맥북과 아이폰간의 데이터를 동기화하는 방법을 소개하려고 합니다. 이 과정에서는 Obsidian Git 플러그인과 GitHub 레포지토리를 활용해 데이터를 안전하게 백업하고 동기화할 것입니다.
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[Blog by Seungyoub Kim]]></description><link>https://seungyoubkim.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 30 Sep 2023 13:22:41 GMT</lastBuildDate><item><title><![CDATA[Obsidian Git 을 이용하여 무료로 맥북과 아이폰간의 데이터 동기화하기]]></title><description><![CDATA[맥북과 아이폰간의 데이터를 동기화하는 방법을 소개하려고 합니다. 이 과정에서는 Obsidian Git 플러그인과 GitHub 레포지토리를 활용해 데이터를 안전하게 백업하고 동기화할 것입니다.
 (Working Copy…]]></description><link>https://seungyoubkim.github.io/obsidian-git/</link><guid isPermaLink="false">https://seungyoubkim.github.io/obsidian-git/</guid><pubDate>Sat, 30 Sep 2023 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;맥북과 아이폰간의 데이터를 동기화하는 방법을 소개하려고 합니다. 이 과정에서는 Obsidian Git 플러그인과 GitHub 레포지토리를 활용해 데이터를 안전하게 백업하고 동기화할 것입니다.
 (Working Copy 를 이용하지 않습니다!)&lt;/p&gt;
 &lt;p&gt;아래 내용을 따라오시기 위해 깃과 터미널 명령어에 대한 기초적인 지식이 있으시다면 더욱 수월하게 진행하실 수 있습니다. 하지만 걱정하지 마세요. 깃과 터미널 명령어에 대한 세부적인 설명은 생략하였으나, 이 글에서는 그런 기술적인 지식 없이도 충분히 따라올 수 있도록 상세하게 작성하였으니 천천히 따라오세요.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%202023-09-18%20%EC%98%A4%ED%9B%84%207.42.57.png&quot; alt=&quot;&quot;&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/4c293be9a891458369a8b02454a0f43e/c1c45/1.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 81.64556962025317%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAAAsTAAALEwEAmpwYAAACPUlEQVQ4y4WTy27TQBSGs40wiYBUxGN7xpcZJ3acq2NHSUybtgoSG6pKLLpBAjY8AQvES7DhSXgFFrzVj864U5xwyeLXGc/l87m23t2+xWo5Rr4skGUjDAYDxHGMOFYQQsDzPHBO4loedxH4Uu/TudmntcMYWjeXN9henKOqKiyXS8zncywWC6RJ2gDSIwGbPUc+rfDt009kcQnm9vW+ucNsG61Xyx2iWEJJCSkllFIPagIF99FnPWTBJb7c/sAiPUefnUE0geThPlvBlyEGOsxDNYGu6+ofVtUWu+olNustfN8/iEADrwdzBLHUwKZ3BkggekQ2CAJst1tcXe+w3qzvzx0wx64tAa/CcQ1UtVdNIHlAIhBZx6kfEZzWZMMgRjqcYqAy2ARc+0NEsULcABpLoDzPURSFttQBpDq/Pmx2hn31Hp8/fseHN18hHI4Wc9jDpWNgGIaYzWa66rryaYooig4KJqXCfJYjSUbgjocWhXAKaFppOp1iPB7r+7+Bkb4zTIaQQp4GGu9Iq9UKZVkiSRJ9RnmkypdFiXSUQoro30BTFHpIOZxMJjrk0WikvcyyTK/NNwGVCP8ObLYNQQlE36bx5fEQSIVQRlA8OA2kPJkW+Z8c14Xy/EPgsQ5mmayRHsVaZu1xD8oVaNHfKcmmx5qiPqRZ5aKWdy+Hc9g0Ga4LRhFwD0xwSAK22210u110Op0/ZFkWHlkW3O4T9CwLqtuBfNxB1X+Ku2KD11mBfTjEC5uj6Nm4eObhFzLzypv95j9+AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;1&quot;
+        title=&quot;1&quot;
+        src=&quot;/static/4c293be9a891458369a8b02454a0f43e/f058b/1.png&quot;
+        srcset=&quot;/static/4c293be9a891458369a8b02454a0f43e/c26ae/1.png 158w,
+/static/4c293be9a891458369a8b02454a0f43e/6bdcf/1.png 315w,
+/static/4c293be9a891458369a8b02454a0f43e/f058b/1.png 630w,
+/static/4c293be9a891458369a8b02454a0f43e/c1c45/1.png 824w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
 Obsidian 을 열고 &lt;code class=&quot;language-text&quot;&gt;Create new vault&lt;/code&gt;에서 &lt;code class=&quot;language-text&quot;&gt;Create&lt;/code&gt; 버튼을 클릭해줍니다.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%202023-09-18%20%EC%98%A4%ED%9B%84%207.43.22.png&quot; alt=&quot;&quot;&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/0014a56b42dad520627eb4de12a387a1/f73a1/2.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 82.27848101265823%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAAAsTAAALEwEAmpwYAAACZUlEQVQ4y4WUTXLTQBCFvUxsU1RCILI0PTP6G/0mwlbiJIrj2EAByYIqYEGxgEOwo7gAd+AkXIMLParHluKQSli8mlJXz9c902/U+3T9EWfTCnV9hKIokCQJTGJgTAylJIgIUrLkWoQ4zCBIbMQklFIYjUboXc2vcLFYoGka1HWNyWRilaWZTVoBJZRUcEZP0dSv8ev7HxSmhiscSHmT4zgOesvxOSITIYpWiuO4022ghuPu4UC/xLfr3yjNFI77zBZqc0YMnOc1/ChEYviYN2qB7ZGEEDa2XC7wavkG8/kltNYdrAPOTIXARB2EtQlkECfzRt/3cXp6itnFOY6Pj7v4rQ5nYYHAxDDxTWebQB4Sr57nWTivJAiu63YgXlV7h7WfILwHyB2Nx2NUVWXFR2w7bq+hLUAM5ikLItvFJqhdgyCwR+Ppcw5/c5H2bjkvz3PEUYwgDKE8iR5XuQ/Im6vqEHmeWQdYjxqz6pQE0jRBWZa2kPY1jDb/AwY4mZ5j/PwIiUmQpikCPwYJH3FYQAhCGIZozhoUZQmjooeBWvPGAyRxhcAPIcjF5HCBr+9/Ik9reMJd5UQxtO8jkeHDwJVtXCsiiZG7j6po8PndD6Tm0AIlrYdDAgkFd4F3jE2yswY/M9dzsLs3sEVsfP3OhSQkpFdABvz77Fibxu0MTBJa+fbJWftwQSKwW1JPocdBHj1feJZlnewAeHpaQ60l1/L4zyIEXBLwJEEoCVcrGKHQ29rawnA4xGAwuKPt/jb6/W14jx7jSb8PMxwi6g+w2N/Bl5MZPpRTvPVTXDoSJ7sOXuwQ/gKcIcV6Drb35QAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;2&quot;
+        title=&quot;2&quot;
+        src=&quot;/static/0014a56b42dad520627eb4de12a387a1/f058b/2.png&quot;
+        srcset=&quot;/static/0014a56b42dad520627eb4de12a387a1/c26ae/2.png 158w,
+/static/0014a56b42dad520627eb4de12a387a1/6bdcf/2.png 315w,
+/static/0014a56b42dad520627eb4de12a387a1/f058b/2.png 630w,
+/static/0014a56b42dad520627eb4de12a387a1/f73a1/2.png 822w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
 &lt;code class=&quot;language-text&quot;&gt;Vault name&lt;/code&gt;과 &lt;code class=&quot;language-text&quot;&gt;Location&lt;/code&gt; 설정 후, &lt;code class=&quot;language-text&quot;&gt;Create&lt;/code&gt; 버튼을 클릭해줍니다.&lt;/p&gt;
 &lt;p&gt;![[스크린샷 2023-09-18 오후 7.43.40.png]]
 생성된 볼트에 새 노트를 하나 작성해줍니다.&lt;/p&gt;
@@ -21,11 +81,107 @@ Obsidian 을 열고 &lt;code class=&quot;language-text&quot;&gt;Create new vault
 &lt;p&gt;![[스크린샷 2023-09-18 오후 7.44.38.png]]
 그러면 우측 상단에 이런 메시지가 노출됩니다. 메시지는 Obsidian 볼트 디렉토리가 Git 레포지토리와 연동이 되어있지 않다는 내용입니다. 이제 Obsidian 볼트 디렉토리와 Git 레포지토리를 연동해주어야 합니다.&lt;/p&gt;
 &lt;p&gt;우선 Git 레포지토리를 생성부터 해주어야 하는데요. Git 저장소로는 &lt;code class=&quot;language-text&quot;&gt;Github&lt;/code&gt; 를 사용할 것이기 때문에 &lt;a href=&quot;https://github.com&quot;&gt;https://github.com&lt;/a&gt; 사이트로 접속하여 계정이 없다면 회원가입을 진행해줍니다.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%202023-09-18%20%EC%98%A4%ED%9B%84%207.45.41.png&quot; alt=&quot;&quot;&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/d591a1fa16f279a53f3e4461059f52b9/81471/3.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 58.22784810126582%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAABYlAAAWJQFJUiTwAAAB+0lEQVQoz21STY/TMBDN7nZb8mE7dmzHcdKkofvBIjggIRVVcAOVXwBopZU4cFl+Akeu/OiHZtKWXeDwZI898zx+b5Kuv4C2EfMnEiezHLOFwCJVOJ1lSE4XODlLH+Gc7rMSZ+c559A6mxeYpwraOCRCWeTSQeoaN8+u0HY9MuXhmwGqapAKg1RUyPZIiykm5NJC6Pp4vsg1EjrIS4932w2+fdnh+90O6/WIQgeUNnIBgfbSULFGoSyK0nGsfQdpAudQnCxyg+ubF/j18wea2uPj+y12H94ilZYTitJzMq2lCUyWCYNcVow/9xOSTDrUcYXb2894/fIKX+8+YbPdQrslmuUarhkgdOAupGmOEPyDFsYveS/K6ScJsZJWVd0jtCuUVeCXfDvCNgPDhB5VM3AOgc606+DaFezTFecfpEmoZe1aXD5/xXBx5JgKqtDD1EsoF6FshKr2q40oqwjd9lBdf+zuSEgOE0lVL1l8QhwuYEPPGhXKHQsYpJfQMOMb1Jt7CDeiKCfHE6H9VFQ65GoC6dUOl6xf3Y68HsRnN0OEahoo10F5mgh6hO49koftHl4nkYmITKGxII2LfQGPSBUgbYCgKVB2T1YfOvwfYc16kZvTOHgIE5nM+AhJru+dL/6q/4eQCCiRTJnQovQrqOYawjSPvv6wgQPhb84DK5zBU512AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;3&quot;
+        title=&quot;3&quot;
+        src=&quot;/static/d591a1fa16f279a53f3e4461059f52b9/f058b/3.png&quot;
+        srcset=&quot;/static/d591a1fa16f279a53f3e4461059f52b9/c26ae/3.png 158w,
+/static/d591a1fa16f279a53f3e4461059f52b9/6bdcf/3.png 315w,
+/static/d591a1fa16f279a53f3e4461059f52b9/f058b/3.png 630w,
+/static/d591a1fa16f279a53f3e4461059f52b9/40601/3.png 945w,
+/static/d591a1fa16f279a53f3e4461059f52b9/78612/3.png 1260w,
+/static/d591a1fa16f279a53f3e4461059f52b9/81471/3.png 3306w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
 프로필에서 좌측 상단의 &lt;code class=&quot;language-text&quot;&gt;Repositories&lt;/code&gt; 탭을 클릭해줍니다.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%202023-09-18%20%EC%98%A4%ED%9B%84%207.45.58.png&quot; alt=&quot;&quot;&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/543335e8b875da1ece60de7ebc4c39ca/de755/4.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 58.22784810126582%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAABYlAAAWJQFJUiTwAAAB2ElEQVQoz2VSyW7UQBT0ZBbv7r3b28QzIQmMiFCkSARpJG4h4gNQcgFx4MQncOPMRxfq55nYzhye3Eu5ul7VC9rzSxi3RhgzzBYZlmGBKGGYr1IEZxFm83hS81WGZVT0+7MYsyDGYplhFTMIaRBkhYKQDkKV2L27RrvuEOUaXNdImUGSKySF7itXELqGqTqYsoMsW7j7N0i1QZRKhKlAkAuHlFl83n/Cr6cv+P39ERcXG7pkqgRTFTymkCV9/UPSthCmga7O0d68BTMVcu4xDkGYSuzef8C/v39QWYuvD3s8PuyxiBip4bpBxi2R+fLrjFlSn8sSXNaHc0ekQVIYuGaL5+dvuLu5xs8fT7j7eE9eeTu8MgKLafkzr9bUG+RiwAR+wVQNXXaomg24JxAlClmBq5rAfZ2SEsY0/X4gtOTH1e4Wl7tbmHoLriqEUYa0UEhziSQTQ9t8aH1Q6F7uibAQjkiVWxPIq2RegbBEzrxXuj4Ec/TT0v4YWk6E1qdse6O5IaOzg9n0Izf0UO+jHZENCnXdjRTafmxOitu+XaYHBSehHAir7nXLYyI3GgFDpKT4ePYqZf+YdOtpKOQLnwKF9gmX5J0wLaRd0zxS2uNQTAPTbCdj8x9HySkM3pJxsQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;4&quot;
+        title=&quot;4&quot;
+        src=&quot;/static/543335e8b875da1ece60de7ebc4c39ca/f058b/4.png&quot;
+        srcset=&quot;/static/543335e8b875da1ece60de7ebc4c39ca/c26ae/4.png 158w,
+/static/543335e8b875da1ece60de7ebc4c39ca/6bdcf/4.png 315w,
+/static/543335e8b875da1ece60de7ebc4c39ca/f058b/4.png 630w,
+/static/543335e8b875da1ece60de7ebc4c39ca/40601/4.png 945w,
+/static/543335e8b875da1ece60de7ebc4c39ca/78612/4.png 1260w,
+/static/543335e8b875da1ece60de7ebc4c39ca/de755/4.png 3302w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
 우측 상단 &lt;code class=&quot;language-text&quot;&gt;New&lt;/code&gt; 버튼을 클릭하여 새 레포지토리 생성 페이지로 이동해줍니다.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%202023-09-18%20%EC%98%A4%ED%9B%84%207.46.27.png&quot; alt=&quot;&quot;&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/a8bd344aef124f1bec053db89cf190aa/81471/5.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 57.59493670886076%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAABYlAAAWJQFJUiTwAAABXElEQVQoz42S6W6DMBCEkZqGhmIOYwwOhwklRAk07Tu07/9KU3k5cjRN82PEar18O2aw0mwDFkgsbBcLmw1auifZp/pp6cJ2AjhMYLny8fziwV751Fu5EYRUsBxP4NWPwcKEwOapmwOqbY96d0SsNAKxRhhns85nWSipdgNJHGtoDgfuOFQ1BxTNEUXdgW4QJvB4OmsG0vy5EljnBwbo8QR12yGvWuh2j7rr4Qs1whIwLmdXt2Sdb5gc6rc9Mr2FUCXEuoRcV5CqAlc5fDXAf7sbZF03DNQAi81uXnChILn4dg8Bld4RMEpLEk8KBObaE2gO5T/gOFS372gPn2PCilJmUQ5P5Cd34QPA6YrN/gPVtgOXOcEMyBMlGFd/OrsLNP9fpluq/UiBceMwAzNhUNLJY8Bpu0g1hNIQaUmKUg0/LgnsOIJ0/c5d4HWy3hiCG0rorx7Vd0/1rZR/ACFHJkQ4XbNnAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;5&quot;
+        title=&quot;5&quot;
+        src=&quot;/static/a8bd344aef124f1bec053db89cf190aa/f058b/5.png&quot;
+        srcset=&quot;/static/a8bd344aef124f1bec053db89cf190aa/c26ae/5.png 158w,
+/static/a8bd344aef124f1bec053db89cf190aa/6bdcf/5.png 315w,
+/static/a8bd344aef124f1bec053db89cf190aa/f058b/5.png 630w,
+/static/a8bd344aef124f1bec053db89cf190aa/40601/5.png 945w,
+/static/a8bd344aef124f1bec053db89cf190aa/78612/5.png 1260w,
+/static/a8bd344aef124f1bec053db89cf190aa/81471/5.png 3306w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
 아래 3가지 정보를 입력해주세요.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;Repository name&lt;/code&gt;: 가능하다면 Obsidian 볼트의 이름과 동일하게 설정해주세요.&lt;/li&gt;
@@ -33,85 +189,915 @@ Obsidian 을 열고 &lt;code class=&quot;language-text&quot;&gt;Create new vault
 &lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;Public/Private&lt;/code&gt;: 백업한 Obsidian 데이터를 외부에 공개할지에 대한 여부입니다. 공개하기 싫으시다면 &lt;code class=&quot;language-text&quot;&gt;Private&lt;/code&gt; 으로 체크해주세요.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;모두 입력한 뒤 하단의 &lt;code class=&quot;language-text&quot;&gt;Create repository&lt;/code&gt; 버튼을 클릭해주세요.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%202023-09-18%20%EC%98%A4%ED%9B%84%207.48.45.png&quot; alt=&quot;&quot;&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/6834e9752ef79e8b5821d5d53fa79fd5/1ead5/8.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 58.22784810126582%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAABYlAAAWJQFJUiTwAAAB80lEQVQoz3WS2XbTMBCGCyWQxYlsWZZt2fIar6ndBEIKFy1c8f5v9HM0znYO5eI7I2mkX7M9yCABFwobx8dyzTH7ssbn+YaYzc/rBcPHT0t8eFwQ5o7BrM3542xF+6Xl4IHZEsu1C+4pBHEB7kVY2xJrR56tTyw3AnOLwxYKrq/hiAiOF0EECZgbYmFx4sFctmwJLiNIldGDi8g95vwiZkTMmglFouzuDQmumEeCze6Aqn+GK2MwN4DthmQtJhBEOfrxCJ03ULqEIybfiglYtkfZmMCuEdqehq8bBEkDGVcQYQlPbeGGBdauhi1TiGhLdiMS2DIjmGf28bVM5wgFpO4wvvxBObyiHN9Q73+j3v9Cs3+Dro9Q5QGuHs48gUc9HNVBJANE3MNi3i1lE7Ljpyi6I9L2O7LuhLg+ImmO0NsRYdoRXDVwVEOWyRzMy2D7BUVqnRt4raEp9vjtJ7rhK8p2QJRWCHUJL8yo8NzXdMcNJkxj3CChRhr/P4IiSLE/vWJ3+IGsHhAmFaKsmchb+HEJGRXvYl8FqYZTd8wsqbRCUrTIqh3SbX9FhCn530dhw4N7wVvKT4cX7PYnlO0zkrJHXg8omhEqrSkDN0jJXphSzsFlPI3OrSmSBjUpOmTbHnHeQBct1cl8ZiL4f4Qh+S9j8xfyCjMNTm6otQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;8&quot;
+        title=&quot;8&quot;
+        src=&quot;/static/6834e9752ef79e8b5821d5d53fa79fd5/f058b/8.png&quot;
+        srcset=&quot;/static/6834e9752ef79e8b5821d5d53fa79fd5/c26ae/8.png 158w,
+/static/6834e9752ef79e8b5821d5d53fa79fd5/6bdcf/8.png 315w,
+/static/6834e9752ef79e8b5821d5d53fa79fd5/f058b/8.png 630w,
+/static/6834e9752ef79e8b5821d5d53fa79fd5/40601/8.png 945w,
+/static/6834e9752ef79e8b5821d5d53fa79fd5/78612/8.png 1260w,
+/static/6834e9752ef79e8b5821d5d53fa79fd5/1ead5/8.png 3304w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
 그럼 이렇게 새로운 레포지토리가 생성되었습니다.&lt;/p&gt;
 &lt;p&gt;이제 생성된 레포지토리를 Obsidian 볼트 디렉토리와 연동해주어야 합니다.&lt;/p&gt;
 &lt;p&gt;만일 PC 에 Git 설치가 되어있지 않다면 먼저 Git 설치를 진행해주셔야 합니다.&lt;/p&gt;
 &lt;p&gt;Git 설치 방법은 구글에 검색해 보시거나 아래 글등을 참고하여 따로 설치를 진행해주세요.
 &lt;a href=&quot;https://www.lainyzine.com/ko/article/how-to-install-latest-version-of-git-on-macos/&quot;&gt;https://www.lainyzine.com/ko/article/how-to-install-latest-version-of-git-on-macos/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Git 설치를 진행하신 후 터미널을 열어주세요.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%202023-09-18%20%EC%98%A4%ED%9B%84%207.47.49.png&quot; alt=&quot;&quot;&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 604px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/57ef4e751c6813a249fce2e8dfba299f/87254/6.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 63.92405063291139%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsTAAALEwEAmpwYAAABc0lEQVQ4y62S227aQBBA/QlI8S34io25+BaDjLvYkACpQZVoRNSHPOX/P+NEXqFKoYkSJX04mtkdzdkd7Sp14LPdTRnOJozCMdFozHgYkS9blu2JtVghqoaqFFQLQS0a8qwgnqYkcSrjdBqTxAlhMEQpqyU/7zfUq4bN3Yb9fs9ut+O+bbndbqmqhdwTQpBlGTdFQZIkBEFAEIRnAsIwJE1TlD9Pzzw8/OZ4PPL4eJLNbdtyOBxYr1aUZUnTNNyu1xRFwWQyIYoibNvGOSNz12EwGKAcf52oflTUdS2ZzWaS+XxOluXyVh15nuP7Pv1+Xwpc1/2L4zh4nivryqIQ6IaGbdlYliWL73EpucylcJktuLb6eJ73quE9LsX/CEU8x+yEn5B9dIgUDlz/zVO/LNQNQ477HekroWmauP9deN78Dt0bdJMq3b/qzN3iq/jdhL7HKAxRer0emqahquqH6JqBoZsy6pqOJtG4UlUcw8TXTV4AwwpuSNPRE40AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;6&quot;
+        title=&quot;6&quot;
+        src=&quot;/static/57ef4e751c6813a249fce2e8dfba299f/87254/6.png&quot;
+        srcset=&quot;/static/57ef4e751c6813a249fce2e8dfba299f/c26ae/6.png 158w,
+/static/57ef4e751c6813a249fce2e8dfba299f/6bdcf/6.png 315w,
+/static/57ef4e751c6813a249fce2e8dfba299f/87254/6.png 604w&quot;
+        sizes=&quot;(max-width: 604px) 100vw, 604px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
 터미널을 열고, &lt;code class=&quot;language-text&quot;&gt;cd&lt;/code&gt; 명령어로 Obsidian 볼트 디렉토리로 이동해줍니다.&lt;/p&gt;
 &lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;ls&lt;/code&gt; 명령어를 이용하면 위에서 작성한 노트의 md 파일을 확인하실 수 있습니다.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%202023-09-18%20%EC%98%A4%ED%9B%84%207.48.06.png&quot; alt=&quot;&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;git init&lt;/code&gt; 명령어로 Git 저장소 초기화를 해줍니다.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%202023-09-18%20%EC%98%A4%ED%9B%84%207.52.05.png&quot; alt=&quot;&quot;&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 604px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/5f01159450c8b2e0c08e0d8eb475ef6d/87254/7.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 64.55696202531645%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsTAAALEwEAmpwYAAACZ0lEQVQ4y4WSW2/iSBCF+Qd5GGDYYLvb+NbdvmJsBzIGQoYNzEqTy0iR9nH//5/4Vm1v8jTSPhyd09VVR1WlmtTC5XGvCaqYOIgIw4g4CKi2Z7anZw67A9v2nqbuaDcdd+2WPC3QymCUGVglGqMNwpNMmnrDX9cH+tOeh+MDT09P/Hk+8/1y5fFyoe+/cf1xZbfbUddrNpsNWZYRBAFhGI4IAuI4HuKTt7//4fnnC68vb7y+vnG9/uByuXD+fqb/1tN2HX2/5+5uS11vSBJFEIQsl84nbpcOruvh+ysm77/e2e1qjsctfX/H/X1N06zpuoquK1ivM+p1xroyNE1OWSp83yUMBUkiiCJBHHsoJQkCn8nTwxHpz1HKxRiHJHFJU3d4q8Qly1y0tvDIc4809cgyQZEL8lyQGms8GkopmTyfenTqoJUkzyVpKilLSZ5JjBGDzlI5mFidpgKlxMC2wyQWCOEipWXJ5OWwRRmHKLStj8kWQ3Ii0Epg9Biz/9bAcbwBQnh4ntUunifGDptqRVm6lKXHphYDj2N5g64qjyy1WnzGq9LDaJeiGNdgVyKlO3Zod9M2GUWhaBpFWSas15rNRqO1QuuEJImI4whjNEolKBVTFBlaj++qyijLAmkNy7LkdHqk61oOhz37/Z7j8TDcnz2Vtu1o25a6rsnznNVqNZyNUnq4PXuHcZxgjBlHvr29JYqiz0P90Ba22Pf9/0yCoWC5XOI4zid/aNe1Iwsmi8ViEHa5FvbjQ/8ONvd38KQkCUImNzc3zGYzptPp/2I++8rX+WLg2Ww+1Fl8mU4Riz/wpnP+BcJnfp8f+ERUAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;7&quot;
+        title=&quot;7&quot;
+        src=&quot;/static/5f01159450c8b2e0c08e0d8eb475ef6d/87254/7.png&quot;
+        srcset=&quot;/static/5f01159450c8b2e0c08e0d8eb475ef6d/c26ae/7.png 158w,
+/static/5f01159450c8b2e0c08e0d8eb475ef6d/6bdcf/7.png 315w,
+/static/5f01159450c8b2e0c08e0d8eb475ef6d/87254/7.png 604w&quot;
+        sizes=&quot;(max-width: 604px) 100vw, 604px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;code class=&quot;language-text&quot;&gt;git init&lt;/code&gt; 명령어로 Git 저장소 초기화를 해줍니다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 601px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/ddadb236149c9c2ad5f864926b618938/d8f62/12.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 65.18987341772153%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsTAAALEwEAmpwYAAABZklEQVQ4y6WT7U6DMBSGuYT9GS0bUD42DToBN2gZMgmDjWmMifd/Ma9pFbKZfej88eT0tIenB2i12BqjED6sew8uc+G6HnzHRchr8PIdhViBJzmSR4FkzpEuBO6CGaaT229uMPGnKpqmBS2dL/D2UmNVlWiaDbZti3pdo6wbRZYJCCHAOUeWLbHMc6RpqnLOhRonSYI8zxFFMbT16weqqsKm2WC326FtW2zbLZp6jVXxhDiOEUURwjBEEARgzIbjOHBdVyHHEs/zVK6VRQ1KCWzbhmmasCyrjxLGmEKuH9ZYfY2ck2uyTit4CWNEweyvh2TBz7hPJ96n21h2qhXxEsbY6IWXOCY9ED4/cNDxCOwXsnOb9MKJ48M88SpXCYf6UCXWP6QHQkrpyW9zlZAQcvRv/pXueKkOpbk7R+ew2XdXzFYHvF+Tcw6DvHXaYDCA7FLX9YtQQkGJoSJREMVQ18GMEWaej0/eQmw4m0FsSgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;12&quot;
+        title=&quot;12&quot;
+        src=&quot;/static/ddadb236149c9c2ad5f864926b618938/d8f62/12.png&quot;
+        srcset=&quot;/static/ddadb236149c9c2ad5f864926b618938/c26ae/12.png 158w,
+/static/ddadb236149c9c2ad5f864926b618938/6bdcf/12.png 315w,
+/static/ddadb236149c9c2ad5f864926b618938/d8f62/12.png 601w&quot;
+        sizes=&quot;(max-width: 601px) 100vw, 601px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
 &lt;code class=&quot;language-text&quot;&gt;git remote add origin {git-url}&lt;/code&gt; 명령어로 현재 디렉토리와 Github 레포지토리를 연동해줍니다.&lt;/p&gt;
 &lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;{git-url}&lt;/code&gt; 부분은 레포지토리 주소를 넣어주세요.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;Pasted%20image%2020230928135025.png&quot; alt=&quot;&quot;&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/c808f3763e524a1385102513f5321517/74dae/55.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 13.29113924050633%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAADCAYAAACTWi8uAAAACXBIWXMAAAsTAAALEwEAmpwYAAAArUlEQVQI10WO3Y6CMBBGeQMt7E+hKMWFlhpXQ1vwwhCjV77/Cx0jmN2Lk2+SmS9zkrL1lI1nYyJbG6nsMKO7EfXTs5KGlbSspUUUHWnRzbnMjlT9IwpHEi4PrL/Tnq4chjvO3zCnieNwY99P1O71ILBperJyKWVqQeQWkbeI3LCWDVL/kigzklaRD+35rCNpFch0pGjCn6l2Z6pu5GveR753Yb4V5eFt6xZjtecJK1tU41MK6N0AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;55&quot;
+        title=&quot;55&quot;
+        src=&quot;/static/c808f3763e524a1385102513f5321517/f058b/55.png&quot;
+        srcset=&quot;/static/c808f3763e524a1385102513f5321517/c26ae/55.png 158w,
+/static/c808f3763e524a1385102513f5321517/6bdcf/55.png 315w,
+/static/c808f3763e524a1385102513f5321517/f058b/55.png 630w,
+/static/c808f3763e524a1385102513f5321517/40601/55.png 945w,
+/static/c808f3763e524a1385102513f5321517/78612/55.png 1260w,
+/static/c808f3763e524a1385102513f5321517/74dae/55.png 2494w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
 &lt;code class=&quot;language-text&quot;&gt;{git-url}&lt;/code&gt; 부분에 넣어야 하는 주소는 Github 레포지토리의 위 부분에 적혀있습니다.&lt;/p&gt;
 &lt;p&gt;우측의 복사 버튼을 누르면 복사해서 사용하실 수 있습니다.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%202023-09-18%20%EC%98%A4%ED%9B%84%207.50.45.png&quot; alt=&quot;&quot;&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 609px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/4765e10f0412fe412752a7db18451c86/d0d8c/11.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 64.55696202531645%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsTAAALEwEAmpwYAAABWElEQVQ4y62T2U7DMBBF8wcVamO7zeI1AaQWEpLG2RoKouKB//+ei2zRCngAqe3D0cjbsT0eBw/REs1WIb0XkKmAkBJGKhTtO7rpA309oC4sqmKLp6JGVdS4ze5gVIZM5x6jDXKTY34zR1A9lji8DWgGi6HrMQ4jhr5HOz3Djjt0rYW1Fk3ToGtbjOOIsix93Gw2yEyGPMuwXq8hpUJQ9a9Ik8TvorWGUgpKaxilIAWHlBJSSHAuIITwbRfd3DRNEccxoijyfYwxBPvdASFZnAa/kyTJKR753e/WuegOQilFMNkXsCUF59wPnsNRyChDMBU96IqBp5cLqRPuNxZ0tbye0HCF+CsXVxEuwtDnL7lA+iOH7mWuIXTlRAn9KTwXV0JaKaScI3DF6IrS7eTEf3E6FXdzj3D/MaQx2BUVgtlsBkIIwjD8F0qYT7y7GvEQj3sHHcVQbIVPYKZl63e/Km8AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;11&quot;
+        title=&quot;11&quot;
+        src=&quot;/static/4765e10f0412fe412752a7db18451c86/d0d8c/11.png&quot;
+        srcset=&quot;/static/4765e10f0412fe412752a7db18451c86/c26ae/11.png 158w,
+/static/4765e10f0412fe412752a7db18451c86/6bdcf/11.png 315w,
+/static/4765e10f0412fe412752a7db18451c86/d0d8c/11.png 609w&quot;
+        sizes=&quot;(max-width: 609px) 100vw, 609px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
 &lt;code class=&quot;language-text&quot;&gt;git branch -M main&lt;/code&gt; 명령어로 브랜치를 &lt;code class=&quot;language-text&quot;&gt;main&lt;/code&gt; 으로 변경해줍니다.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%202023-09-18%20%EC%98%A4%ED%9B%84%207.49.13.png&quot; alt=&quot;&quot;&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 613px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/fe106287bfca5ea205bd7b6ae1b57b31/5754a/9.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 65.18987341772153%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsTAAALEwEAmpwYAAABcklEQVQ4y6WSXUvDMBSGc7sr2yS6rkvTpB+pEzbdRtWmOlcRRRBEQfDG//8zXklZ61Dx8+LhJCF5cnJOiKIMZ2UOPdXQUkNpjVRpzMtLVOt72KXF8cJicVhieVRiOS8xMQcwWQGTGeSpQZZmMLkBowzkcHGCu5sVqguL1fkKTdPgvK5Rr9ewzSVqewprq5aqqtA0a0ynU+R5jqIoWpxsNpshTVOQ67tncMYQSwUpZU8cRYiEgHBxgxCij+PxuI2OMAyhlEIQjECe7l/AdylUrPqDPRt5N+/G2xd3a0mSIAgCkIerJ/Ahb4XvN37Ftthl2Qsf7S14sAcVx78SbiNEl6F78sk1+Oi/QvEmTIRCJCPISP5Z2NdwGIDs+F7boc+K/asM0wRhOAZh7svE8ccO/5BOaIzBfrEPQhn9l9Dh/qQTFpMJCOccWutW+ldkFCEtDOrZHGQwGMD3fXie9y2McnC210ZKGahP4Ts8H9lwBEE5XgFfK2VvFEudFQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;9&quot;
+        title=&quot;9&quot;
+        src=&quot;/static/fe106287bfca5ea205bd7b6ae1b57b31/5754a/9.png&quot;
+        srcset=&quot;/static/fe106287bfca5ea205bd7b6ae1b57b31/c26ae/9.png 158w,
+/static/fe106287bfca5ea205bd7b6ae1b57b31/6bdcf/9.png 315w,
+/static/fe106287bfca5ea205bd7b6ae1b57b31/5754a/9.png 613w&quot;
+        sizes=&quot;(max-width: 613px) 100vw, 613px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
 &lt;code class=&quot;language-text&quot;&gt;git add .&lt;/code&gt; 명령어로 변경사항을 추가해줍니다.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%202023-09-18%20%EC%98%A4%ED%9B%84%207.50.04.png&quot; alt=&quot;&quot;&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 601px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/7a4dfd1d2a95e0437431f74d4b896857/d8f62/10.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 65.18987341772153%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB8UlEQVQ4y5WS25KaUBBF+QMfogN44YBQOtydGoeUUUQu3lHUPCT//yM71T051tSYSioPu7qaA/us3bSiaxpsx4FhGOj3+xgMBqzAjfESTRF4MXw3hPvswx178J592EMHljmEZVoQhgnDEBDChK7pUKLXN5RFgfl8jrIskec5iqJAURZI0wWS5A1xHCGKQkxeJphOp/B8D0EYwHVdBhFCwLIs7pV98wOH/Q5lVeF2u+FwOOB4PKKua9THGuv1ml8kakogU5CRTCN70zShfG9+oqpKFHmB8/nMZlmWcSU1TcM9kRNdEAT8oTSUlSjZsNndkBcrZMsM+/0e2+0WaZpit9uxyWazYcrVaoXFYgHf9zEajR4o74aX/Ii8KpiC4pIRGZI5mVFPM53NZgjD8C7bttHr9R4JL+kWq7JAtlxyRDIiEklLl1A9nU58TmMhYorvOM59pnfD6eQV9enEFNfrFZfLBVVVsYE0IXqijuOYRYRylg+RR+Mx37hIU14bikmzo5mRkiRBFEXwPI/jdbtdjkr6/FNoFxVN0/jh5zWQayLXQe6bfPejpOFwOISiquofzf5XwhCYTCZQdF1ngnfkv8sQv6nEuz6eDYTAt+QrlFarhU6ng3a7/U9pqo6u1uOqPmlQn1SoHRVf2h3Yeg+eYeIX6NWJBXQQAg0AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;10&quot;
+        title=&quot;10&quot;
+        src=&quot;/static/7a4dfd1d2a95e0437431f74d4b896857/d8f62/10.png&quot;
+        srcset=&quot;/static/7a4dfd1d2a95e0437431f74d4b896857/c26ae/10.png 158w,
+/static/7a4dfd1d2a95e0437431f74d4b896857/6bdcf/10.png 315w,
+/static/7a4dfd1d2a95e0437431f74d4b896857/d8f62/10.png 601w&quot;
+        sizes=&quot;(max-width: 601px) 100vw, 601px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
 &lt;code class=&quot;language-text&quot;&gt;git commit -m &quot;init&quot;&lt;/code&gt; 명령어로 변경사항을 커밋해줍니다.&lt;/p&gt;
 &lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;init&lt;/code&gt; 부분은 커밋 메시지로 다른 메시지로 변경해도 무방합니다.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%202023-09-18%20%EC%98%A4%ED%9B%84%207.59.43.png&quot; alt=&quot;&quot;&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 604px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/08e6ce3c9da4cfd723acd65a33930f21/87254/13.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 64.55696202531645%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsTAAALEwEAmpwYAAABYUlEQVQ4y62S23KCMBCGeQQv1IRyCNBBRjsDKBEkVQ5C62Gmvez7v8nfSdQObdVObS++2eRn989uiBYaOpapC2s6xjjkiKMIYRghTwsUYg2RFci4QJrkyOY5ZjFHNl8gmXJEYQyezDEZP2DkB2C2A00KL/sWRbtG+7zFfrfHdrtD+9SiLEsURYGqrg6xqpCmKTjnEEIgzwXiOIbv+whGAaIwgrZ5fUPTNFiKR3CeqMLVaqU0aVjXNdq2VVqWZfA8D5ZlwXEchVwbhqGi67rQ1uUGhAyUYJrmB3Jv27aiq51D5jDG4DoutHLRgOpECScDydeCrt7ddzXVYTVbgt7pYDb7lniJS4ccRo5yUON3hlc79J17mGfGuNmwP+ir+7P+YPrJkBDyv4bD4fDbX70F6SHfpUYoUYvTW7qGzY5dMZl74vSNIfBH0Hq9HuTYstOfoISCUl1FoiDHWgKL6pi4Ht4BwIZtl/HKYooAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;13&quot;
+        title=&quot;13&quot;
+        src=&quot;/static/08e6ce3c9da4cfd723acd65a33930f21/87254/13.png&quot;
+        srcset=&quot;/static/08e6ce3c9da4cfd723acd65a33930f21/c26ae/13.png 158w,
+/static/08e6ce3c9da4cfd723acd65a33930f21/6bdcf/13.png 315w,
+/static/08e6ce3c9da4cfd723acd65a33930f21/87254/13.png 604w&quot;
+        sizes=&quot;(max-width: 604px) 100vw, 604px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
 &lt;code class=&quot;language-text&quot;&gt;git push -u origin main&lt;/code&gt; 명령어로 커밋 내역을 깃허브에 푸시해줍니다.&lt;/p&gt;
 &lt;p&gt;이후 계정정보를 입력하여 인증을 진행해야 합니다.&lt;/p&gt;
 &lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;Username&lt;/code&gt;은 깃허브 계정 아이디를 입력해주세요.&lt;/p&gt;
 &lt;p&gt;하지만 &lt;code class=&quot;language-text&quot;&gt;Password&lt;/code&gt;는 비밀번호가 아닌 &lt;code class=&quot;language-text&quot;&gt;토큰&lt;/code&gt;을 발급받아 입력하셔야 합니다.&lt;/p&gt;
 &lt;p&gt;2021년부터 깃허브가 비밀번호 인증을 제한하였기 때문입니다.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%202023-09-18%20%EC%98%A4%ED%9B%84%208.00.08.png&quot; alt=&quot;&quot;&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/3cf232b35eb60ca339a931af697bb9f0/351ee/14.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 57.59493670886076%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAABYlAAAWJQFJUiTwAAABuUlEQVQoz41TXXPaMBDkRyTNpKEzkEwgAQIxRrIlWZYtHH/U0PSp//+fbOfOdhIoD33YOY0sr3ZvTyOVlhAqx07l2IQGr7sEm13ClSEs1luNVaAYtKb99dbg+UVgvnjFbLnF9fcpvt3dYxRGDrs4g3YlYvvG6zDOuA6gM4FMeZ8ESL1HlBR82Xj6hLvJ/JOQlEnt4YoDkqyBsiWk2UMoD6E9V5PVsL5FWrXI//yCLVoYVyOQFo+LAMsgZjIiHZECslzUv+Grdz6o0wqKUTK0q5HkTUdatNCu4kuoNQ9PGyw2EjfjL4SkMvEHRmQrKNcgSmvIpIK0FVdhSsR5DVO03BqyTP2czl4weVzh+nbSW2aFHjo/QOdHGH/kKm1zAmFqmOaA9P3IiskFEZJCIry6nfQKVd/42HWIOuzOguEz0iEUDlHyhth2hLNliNkqxM34gcGhfPzUj0+HYS87+56xQpP9xDo0TDZfhR9pd5a175OlH/w/ELpLnddDNQXPLdn9cf/8xfJAyCMyqDsj1fsLl3gmpHSv+kC6wb7Qq/+B6F/WQNRhipFK9pA6P+nRaS8voHc1EA6vhAj/ApPCht2vqV5rAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;14&quot;
+        title=&quot;14&quot;
+        src=&quot;/static/3cf232b35eb60ca339a931af697bb9f0/f058b/14.png&quot;
+        srcset=&quot;/static/3cf232b35eb60ca339a931af697bb9f0/c26ae/14.png 158w,
+/static/3cf232b35eb60ca339a931af697bb9f0/6bdcf/14.png 315w,
+/static/3cf232b35eb60ca339a931af697bb9f0/f058b/14.png 630w,
+/static/3cf232b35eb60ca339a931af697bb9f0/40601/14.png 945w,
+/static/3cf232b35eb60ca339a931af697bb9f0/78612/14.png 1260w,
+/static/3cf232b35eb60ca339a931af697bb9f0/351ee/14.png 3350w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
 Github 우측 상단의 프로필을 클릭하고 &lt;code class=&quot;language-text&quot;&gt;Settings&lt;/code&gt; 를 클릭해주세요.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%202023-09-18%20%EC%98%A4%ED%9B%84%208.01.24.png&quot; alt=&quot;&quot;&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/d59ac45bea6d6369df37466007c03f73/92e5c/15.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 58.22784810126582%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAABYlAAAWJQFJUiTwAAABgklEQVQoz42TTU/CQBCGOQGln9tu96tfUArFxGA0hoM3E48ejP//v7xmBtuINeBhs8nu9JlndqazUGj4cQ5TtnB1hzizCBKFotnB1h2kaZDqCqkqEAiLqr3D58c73l5f8Hw6Ye4LRKlGKBSv2QDUxQZ1e0BuGw5IpEOSOd6DOIcXpBwXCI04M8iUQ5QaTj7AfgAlG3WHIwecgzT8SGIVZryWvsDST/ic7hk+wBL1l2GLcr0fs9ITpKrEKpJsSEkpjuLPawq7ACq3RrHejxdCOjYkMyp3GQg2ZdgvyBQYSbajprBRovgtc1MzbLFKuFzaKfYa9MLQVlsumc6oGZHQbDj3Iiy8GHMvvmk5Oz9yDmlq7nSmK77IVMlwMqKEvN+wmxhS2cMcprocGzRYj025BRzejKDh90hIVcHYDaSpxlH6lyF97IUZN6S/f4QuNzzQrt+hOT7A1D1MtYUpt9BlC5EXk2G+ALqqBS1qApWbSIswVrBPHdypRxBrLpn+nqH0a4ZfGXonalzhv0cAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;15&quot;
+        title=&quot;15&quot;
+        src=&quot;/static/d59ac45bea6d6369df37466007c03f73/f058b/15.png&quot;
+        srcset=&quot;/static/d59ac45bea6d6369df37466007c03f73/c26ae/15.png 158w,
+/static/d59ac45bea6d6369df37466007c03f73/6bdcf/15.png 315w,
+/static/d59ac45bea6d6369df37466007c03f73/f058b/15.png 630w,
+/static/d59ac45bea6d6369df37466007c03f73/40601/15.png 945w,
+/static/d59ac45bea6d6369df37466007c03f73/78612/15.png 1260w,
+/static/d59ac45bea6d6369df37466007c03f73/92e5c/15.png 3300w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
 좌측 하단의 &lt;code class=&quot;language-text&quot;&gt;Developer settings&lt;/code&gt; 클릭해주세요.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%202023-09-18%20%EC%98%A4%ED%9B%84%208.01.43.png&quot; alt=&quot;&quot;&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/10bb4f1f513f42a01f88474f1f3611a1/0244a/16.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 57.59493670886076%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAABYlAAAWJQFJUiTwAAABCUlEQVQoz9WSUW+DIBSFSbrQKiIoAirYVW0fXLL0Yf//t50Fiq3J9jZf9nByziWX714SSGM9pOqgjAfNBGhWgp5KHDOBAy1woOypN8riOeMKOVcxH3OBE5OxrpUFCUFqj+tyh3UXCNXCuhG35Y5umGNu/QTrJ9TtBGEusP6K8/wBoToU0oBXNjoTGiSESvdYPr/wPi+oO4/KOJj+gtaPD2CCGjdBdSOkHcHVkGAGfPXKPoAhhGmy6VFpF2sWJsapwW300LuKp3t8zUkkkNemAAwqVZBPciib4ZWVB6/7tNFPkW2x3WC7SSH1Jm+eKH8FWuyp/wSUOwHzUj8/5x5Q4s4zlB1e0D8CvwFzyyMjPiK02QAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;16&quot;
+        title=&quot;16&quot;
+        src=&quot;/static/10bb4f1f513f42a01f88474f1f3611a1/f058b/16.png&quot;
+        srcset=&quot;/static/10bb4f1f513f42a01f88474f1f3611a1/c26ae/16.png 158w,
+/static/10bb4f1f513f42a01f88474f1f3611a1/6bdcf/16.png 315w,
+/static/10bb4f1f513f42a01f88474f1f3611a1/f058b/16.png 630w,
+/static/10bb4f1f513f42a01f88474f1f3611a1/40601/16.png 945w,
+/static/10bb4f1f513f42a01f88474f1f3611a1/78612/16.png 1260w,
+/static/10bb4f1f513f42a01f88474f1f3611a1/0244a/16.png 3342w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
 &lt;code class=&quot;language-text&quot;&gt;Personal access tokens&lt;/code&gt; &gt; &lt;code class=&quot;language-text&quot;&gt;Tokens (classic)&lt;/code&gt; 을 클릭해주세요.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%202023-09-18%20%EC%98%A4%ED%9B%84%208.01.59.png&quot; alt=&quot;&quot;&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/3e12d309cb4a711fb222f6fa05db0e7b/fa3b0/17.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 57.59493670886076%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAABYlAAAWJQFJUiTwAAABLklEQVQoz9WPXW+CMBiFWaaiaL8LpQUBETPRzHjh3f7/7zpLiziSZcmy7WYXT96P9pycN9JmCyZzCG0xjwlmMcFiSREnHHHCAn73PF/jabZCQlT4n2wEFisWWCY87KUyiBKqQWWOqj1CZiXWLIXOK9T7I+quR3M4I7U1TLFD1fbozlfsXl5hbQ2uLDY8AxFZqF4b+YanJfrLDc3hBJE7CLNFXp9gyhZcWzCVo+nOuNze0PVXmLJDer9sNBwwgyEReUjpFx6uC2RFC+1aCNNAmDpUpiyEdhBpAZkW4e/D8F6jMW5Iql0QUWlBlQNVxYDegqoSRFoQ6UA+Jfsgmg7ezOMFg3js3WQeDMnXhuZx6piUfIeJbkr01cNP+QeGCU2xZtnfGRbVHsY1w4L/3vAdLNck1ddJmKoAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;17&quot;
+        title=&quot;17&quot;
+        src=&quot;/static/3e12d309cb4a711fb222f6fa05db0e7b/f058b/17.png&quot;
+        srcset=&quot;/static/3e12d309cb4a711fb222f6fa05db0e7b/c26ae/17.png 158w,
+/static/3e12d309cb4a711fb222f6fa05db0e7b/6bdcf/17.png 315w,
+/static/3e12d309cb4a711fb222f6fa05db0e7b/f058b/17.png 630w,
+/static/3e12d309cb4a711fb222f6fa05db0e7b/40601/17.png 945w,
+/static/3e12d309cb4a711fb222f6fa05db0e7b/78612/17.png 1260w,
+/static/3e12d309cb4a711fb222f6fa05db0e7b/fa3b0/17.png 3340w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
 우측 상단의 &lt;code class=&quot;language-text&quot;&gt;Generate new token&lt;/code&gt; &gt; &lt;code class=&quot;language-text&quot;&gt;Generate new token (classic)&lt;/code&gt; 를 클릭해주세요.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%202023-09-18%20%EC%98%A4%ED%9B%84%208.02.18.png&quot; alt=&quot;&quot;&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/1266bfc2688790045dfba0e0ee17ceec/fa3b0/18.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 57.59493670886076%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAABYlAAAWJQFJUiTwAAAAyUlEQVQoz62S0WrCMBSGvV+Tpkkbe9KtsUYUhcLYLraXmO//Nt+oMlCZvYhefBxI8n+HJGehqiW3FMaf6ovxaNuyPbxfrf/V/1jc2zjjaSSy3o3UEk8N5s/PCKew8x3hbSD0ibZboYynyBaWNXW3QTYfmLDD9SPGR4qyyRSqBpcGVj+fpOMX8fiN7SOFzhROD28aQVLidbtnOazRdv5D5oXVOagrobRCWQnKPCKcglZQrkO7gKkDyrZ5wst5uyV7Du+Fsq+cy9OFv/+BJJGSPLLTAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;18&quot;
+        title=&quot;18&quot;
+        src=&quot;/static/1266bfc2688790045dfba0e0ee17ceec/f058b/18.png&quot;
+        srcset=&quot;/static/1266bfc2688790045dfba0e0ee17ceec/c26ae/18.png 158w,
+/static/1266bfc2688790045dfba0e0ee17ceec/6bdcf/18.png 315w,
+/static/1266bfc2688790045dfba0e0ee17ceec/f058b/18.png 630w,
+/static/1266bfc2688790045dfba0e0ee17ceec/40601/18.png 945w,
+/static/1266bfc2688790045dfba0e0ee17ceec/78612/18.png 1260w,
+/static/1266bfc2688790045dfba0e0ee17ceec/fa3b0/18.png 3340w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
 Github 계정 비밀번호를 입력해줍니다.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%202023-09-18%20%EC%98%A4%ED%9B%84%208.02.44.png&quot; alt=&quot;&quot;&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/40623139e2f46316b3c40e884c363fe9/81471/19.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 58.22784810126582%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAABYlAAAWJQFJUiTwAAABfUlEQVQoz5WS626jMBCFkbZbmoBrDNjGgE0wSRqq9KLVat//zU410yQiaitlf4yGsYdP53gmqa3HKlO4SwV+p+KS05VEui5OWXL+dZ/hLs2xyks8ZIr77k99VEtlkGRSg8K0G/jxgMey4TrEA3bzG7aHV2znd8SnV+h2RNUMqGxA3QSUpkdeGAhlOWfSIKGCPhq/xfPbX7gwQRqHpo8ctt2gMAMe6wBlR5RugjIeSneQVXsBniMRhUGuLCs7B110w46BVK9EibWosBYlclkjl5pBS3XnSAgmFgefijX6zR62G1kJWSx0D1E6CNVcKVpCPxUqAtmrJgL6OCNMM7+V6Ubofo+620HqAPrnO+gJeA1bKjwc/3BzoTsM0wznpy9ubga2YeJJUzPZbvoJtoso6q+DuAlI7xefXiArxxDbR14tyst1uRlIU47740VhG3ZwfouWpu8nPjtvxE1AWhkCkrolkGyX1rPy/wI6H3F8/8f2ZN2iG/bQbrjc/2T5A5LcKOoySnF1AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;19&quot;
+        title=&quot;19&quot;
+        src=&quot;/static/40623139e2f46316b3c40e884c363fe9/f058b/19.png&quot;
+        srcset=&quot;/static/40623139e2f46316b3c40e884c363fe9/c26ae/19.png 158w,
+/static/40623139e2f46316b3c40e884c363fe9/6bdcf/19.png 315w,
+/static/40623139e2f46316b3c40e884c363fe9/f058b/19.png 630w,
+/static/40623139e2f46316b3c40e884c363fe9/40601/19.png 945w,
+/static/40623139e2f46316b3c40e884c363fe9/78612/19.png 1260w,
+/static/40623139e2f46316b3c40e884c363fe9/81471/19.png 3306w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
 다음 세 가지를 입력해줍니다.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;Note&lt;/code&gt;: 토큰의 이름을 지정합니다. 이름은 자유롭게 설정할 수 있습니다.&lt;/li&gt;
 &lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;Expiration&lt;/code&gt;: 토큰의 유효기간을 설정합니다. 보안상, 무기한으로 설정하는 것은 권장하지 않습니다.&lt;/li&gt;
 &lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;Select scopes&lt;/code&gt;: 권한 범위에서는 &lt;code class=&quot;language-text&quot;&gt;repo&lt;/code&gt;를 반드시 체크해야합니다. 그 외에는 자유롭게 체크해주세요.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&quot;%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%202023-09-18%20%EC%98%A4%ED%9B%84%208.03.06.png&quot; alt=&quot;&quot;&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/667f79a285228a25315b8be11de9388d/e7370/20.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 58.22784810126582%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAABYlAAAWJQFJUiTwAAABN0lEQVQoz52S226DMBBE89wYMGBs4xsECL3QKlGlSn3pP/T/f2YqL0kjmlYifVhpV1oOM+PdJLnEshS2WQVlW7h2pD6vLLTvIU1Lfdw571Lxy/ebv4C22WN4PIBxCS4MTBhQKk/zDFC3AY3vMR3eUPsehXQwzR7azX1a6CV0DbD2HcanI5TdEcS2IwH/bbl2HfzuHttMkOUIni1XS7urLYce3fgMoT24sDBhj9oPc4WBVH+rXAccSGFaKFIYX1noQH1W1rcrtM2Ah5dXmmNu8VGU6wjGuLwtw5iTlA3G8QgbBmSnszmrTNdmeP7zHRNoPiZMn++ofI8015RZLB7tLu5Q/g5kpyW6sWjTOeTBgRUxLw0Wiyvqk9POtbsfwAiLeWWlAeNRiUFaWiSlRSo8kvIyE5hfA78A5icpBhZaBlcAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;20&quot;
+        title=&quot;20&quot;
+        src=&quot;/static/667f79a285228a25315b8be11de9388d/f058b/20.png&quot;
+        srcset=&quot;/static/667f79a285228a25315b8be11de9388d/c26ae/20.png 158w,
+/static/667f79a285228a25315b8be11de9388d/6bdcf/20.png 315w,
+/static/667f79a285228a25315b8be11de9388d/f058b/20.png 630w,
+/static/667f79a285228a25315b8be11de9388d/40601/20.png 945w,
+/static/667f79a285228a25315b8be11de9388d/78612/20.png 1260w,
+/static/667f79a285228a25315b8be11de9388d/e7370/20.png 3310w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
 하단의 &lt;code class=&quot;language-text&quot;&gt;Generate token&lt;/code&gt;을 클릭하여 토큰을 생성합니다.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%202023-09-18%20%EC%98%A4%ED%9B%84%208.03.28.png&quot; alt=&quot;&quot;&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/7696df595434fb05c8b645adbd41f93d/8c565/21.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 57.59493670886076%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAABYlAAAWJQFJUiTwAAABaElEQVQoz82Qy27UQBBFvSIT/Gq73W+PX7FnMpkQROD/f+0gt2csQAKxYMHiqKqvVLdudWKPZ2o70riJx8JwyHXkIdMcsq0+ZIoP6UrDITekwu/6+n4sLGnlaWxPorsXTH/FjZ9itf1r7P30FglPn5HhTKEnhJ2R4ZmmvdCEZyp3ipqwC6WdKcxMkpYNZW1ZLm/YduRjKZGmZVyukWF+wYaRyvQU0qP9gG0ntDlS1oZMqJ1cKJJMaMomMCxXfD9TWU/tBtrlC+3pnePpK935G2FZeUf3rwh/pgoXChlY5/PK7CT5TSik3UShETrgT1f89ITpenQ3IMOR2nvUsYsM40ytAuluqCNJbISOm1bSUiFUwHULJkyIJmyogJCOSnkqFaJZUZlbQv2L4Y2itjfcZqA6Sj0g9BBrId1G7fZrfpz/KeHKulk0nrz25DJsdR3e+7vuuH9V/qeE97Pzv6HSv0to+Jf8/4bfATgzKbfd6dZhAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;21&quot;
+        title=&quot;21&quot;
+        src=&quot;/static/7696df595434fb05c8b645adbd41f93d/f058b/21.png&quot;
+        srcset=&quot;/static/7696df595434fb05c8b645adbd41f93d/c26ae/21.png 158w,
+/static/7696df595434fb05c8b645adbd41f93d/6bdcf/21.png 315w,
+/static/7696df595434fb05c8b645adbd41f93d/f058b/21.png 630w,
+/static/7696df595434fb05c8b645adbd41f93d/40601/21.png 945w,
+/static/7696df595434fb05c8b645adbd41f93d/78612/21.png 1260w,
+/static/7696df595434fb05c8b645adbd41f93d/8c565/21.png 3346w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
 그러면 이런식으로 토큰이 생성됩니다.&lt;/p&gt;
 &lt;p&gt;이 토큰은 생성될 때 &lt;strong&gt;딱 한번&lt;/strong&gt;만 확인하실 수 있으므로 반드시 복사하여 안전한 곳에 저장해두세요. (페이지를 이탈하면 재확인이 불가능합니다.)&lt;/p&gt;
 &lt;p&gt;이 토큰이 유출되는 것은 비밀번호가 유출되는 것과 동일합니다. &lt;strong&gt;반드시 안전한 곳에 저장하세요.&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%202023-09-18%20%EC%98%A4%ED%9B%84%208.04.06.png&quot; alt=&quot;&quot;&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 602px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/fdff6aeccd9bab00e393cfa8177c8320/32056/22.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 65.18987341772153%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB2klEQVQ4y6WSW4+aUBSF+QtjH+QiHASqRme4EwEFuQjGW2vnoc2kSf//v1jN3tNprKZtmj6s7HM28O21dpDmyhBpZEKbChgjA7puQOgGvLjFsjhjnZSI/RSBGyNwI0RBgtlkDst0YJk27LEDy3Jg2w4UWYUU+z72fYlss0JZlKiqGnVVIdvUyKoaqzzHuiiQr1YoigJpliEMI65pmuLx6QmTyQTz+Ryu60HaP7/g8vGCpm7Qti1OpxO6rsPz5YJt26Kua3Tbjp+5rgtd12GaJizLwng85rumaTAMg3vSy+dv6PstqqrCfr9HWZZYr9d8Xv1wFQQBVFWFoihcCUAiGIlgQggIYUL68ukr+l2PpmlwOByw2WxwPp/ZJQ05Ho/IsowjxXHMLmezGabTKUajEcMISkByLn1ojqiaip31fc8QqhSVBtCgPM/5TmcC2rbN8d7c/Qosemz7DrvdjvdElWISmAAUe7lcYrFY8EcU+TrqHTDxIoRRCN/3EUURkiThaCTq0f7CMITneRzzFnQHHLwb8IJp8q2u+3S+3tkb9A4oyzJfrl/4k25hd8DhcPiz+T9iU0L8u8PfSgi8tx1ID4MH/mEJ/DcpigpVef3BWfKrhrIMQ9PwaDn4DkWJgImbEtC1AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;22&quot;
+        title=&quot;22&quot;
+        src=&quot;/static/fdff6aeccd9bab00e393cfa8177c8320/32056/22.png&quot;
+        srcset=&quot;/static/fdff6aeccd9bab00e393cfa8177c8320/c26ae/22.png 158w,
+/static/fdff6aeccd9bab00e393cfa8177c8320/6bdcf/22.png 315w,
+/static/fdff6aeccd9bab00e393cfa8177c8320/32056/22.png 602w&quot;
+        sizes=&quot;(max-width: 602px) 100vw, 602px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
 이후 위 토큰을 터미널의 &lt;code class=&quot;language-text&quot;&gt;Password&lt;/code&gt; 입력란에 입력하면 Push 가 완료됩니다.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%202023-09-18%20%EC%98%A4%ED%9B%84%208.04.45.png&quot; alt=&quot;&quot;&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/fd8ea679ad4db8c7fd82b7c49bf6f0bf/2b2b8/23.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 57.59493670886076%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAABYlAAAWJQFJUiTwAAABh0lEQVQoz52Rx1LDMBRFDemxZEuyrRIXkWIIBIYla/7/oy6jJztj2gIWZ6RX5r6WaNshExo8rzBfMSzXGRZrjsUqEuzZIsXNbIOb2Zr+y02O28WWfLfzLeZLRr5cFEjSrAQXFWx9h9J2YKIieCgSkAbbrMBqK5DmFQrTIi8coXRDbLjChimsUomECU1Bf3yE604orYeoamTKkj+8tj2i8Q9oHs/w7y+oD/eonCcxOeSGwpkyUTCTBqfzC/b3F0oMXSgTq0tdk882B+x8j92hh2uPMPWBhELXXGqwYaIkjmVhuzNM9wChPQp3hDR75FWHvPL08qKFavbQ+/46Nq1GmmE1EeqQKwfTPcHePRPGXyBtDzEgXQ+hT7CvF9Rvz7BNXA0bdjyKkSB9hAbLS6QTxuNMSXmJNC2hjIfQ3e+CbHLRrwljwTHOpIZte+imB/sh93plUe4GMQserqZchOzdYEc/ky76poJiIhiuFQTj+SdiI0X9SfBaSEy7/zLyCP8L8jvJb4H/8gG6aCVl8+f/5QAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;23&quot;
+        title=&quot;23&quot;
+        src=&quot;/static/fd8ea679ad4db8c7fd82b7c49bf6f0bf/f058b/23.png&quot;
+        srcset=&quot;/static/fd8ea679ad4db8c7fd82b7c49bf6f0bf/c26ae/23.png 158w,
+/static/fd8ea679ad4db8c7fd82b7c49bf6f0bf/6bdcf/23.png 315w,
+/static/fd8ea679ad4db8c7fd82b7c49bf6f0bf/f058b/23.png 630w,
+/static/fd8ea679ad4db8c7fd82b7c49bf6f0bf/40601/23.png 945w,
+/static/fd8ea679ad4db8c7fd82b7c49bf6f0bf/78612/23.png 1260w,
+/static/fd8ea679ad4db8c7fd82b7c49bf6f0bf/2b2b8/23.png 3344w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
 Push 가 완료되면 Github 레포지토리에 작성한 Obsidian 파일들이 백업된 것을 확인하실 수 있습니다.&lt;/p&gt;
-&lt;p&gt;![[스크린샷 2023-09-18 오후 8.09.00.png]]
+&lt;p&gt;![[24.png]]
 이후 노트를 수정한 뒤&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%202023-09-18%20%EC%98%A4%ED%9B%84%208.09.05.png&quot; alt=&quot;&quot;&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/c1635d35cf0c8ec0cccbff2d1b7b0b46/00172/25.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 79.11392405063292%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAAAsTAAALEwEAmpwYAAABpklEQVQ4y62T226jMBRF/RMTggHbAZuLuRhSlFBFlSaK8jL9h/n/v9jVcaBDR4kqVXlYsjGcpW3sw/6+/caf93cMwx5936Oua/Sux3Q44fV4wn4Y0bsBTd2itjV0prFTOxhj0DaN/57WXdehrSxYX5YwVQ7XOXRdh6qqUJYltNEQQiCKIg/NlVLIssy/p7lU6jZKiTTLIBIB9lK1OE6vOJ/PaNvW45zzCQ6HI67XKy6Xi5eQOEkSxHHsxy8IgXC7BdtXDTKjobX2kjzPURSFT0LyaZp8ckr4CBIKKcHDkLZsoY3xCUhIYpKScF3gi5bie0IhbsI6NciLwqci0ZKShOstPZKt10MS2lTDzKKFtfD/orvM/1Dw6J8wn0WPhN8RxREKU4NVTxFKcB7CNSNYlqZfRD8WRiFaO4KlTxFSA4Soy+GJwpijMu3PhPfWYzqUzIItF/nRtfm8h99Ap5yrHMxa67ukmC83sXSNFNK3FJGsiAUhbs9KQiiFZCdhdgZsSUANv4Zzjl+bDXiwBQ8CiCCAmsmCDU5Ngzf3gkNpMZoSgykwphYffWbAHRjPyi4AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;25&quot;
+        title=&quot;25&quot;
+        src=&quot;/static/c1635d35cf0c8ec0cccbff2d1b7b0b46/f058b/25.png&quot;
+        srcset=&quot;/static/c1635d35cf0c8ec0cccbff2d1b7b0b46/c26ae/25.png 158w,
+/static/c1635d35cf0c8ec0cccbff2d1b7b0b46/6bdcf/25.png 315w,
+/static/c1635d35cf0c8ec0cccbff2d1b7b0b46/f058b/25.png 630w,
+/static/c1635d35cf0c8ec0cccbff2d1b7b0b46/40601/25.png 945w,
+/static/c1635d35cf0c8ec0cccbff2d1b7b0b46/00172/25.png 1044w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
 좌측의 &lt;code class=&quot;language-text&quot;&gt;Open command palette&lt;/code&gt; 버튼을 클릭합니다.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%202023-09-18%20%EC%98%A4%ED%9B%84%208.09.32.png&quot; alt=&quot;&quot;&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/2ff17b32da8f9a8b6cad5baad42c4286/00172/26.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 78.48101265822784%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAAAsTAAALEwEAmpwYAAABu0lEQVQ4y62TXW+bMBSG/QuW1mCwsQHzGQihI2mSrtqHtE7a1S63//9T3uk4gVpR101TLx5Z2IfnvDaYffvyiGF7h6apUVUViqJA320w9Ft06w3qqkFV0nwJm1torR3WWpRF4eoLW6BtWhgRg+ncoLAWdV07qEDrBEopKCXdmCSJg0R5niPLsmWeRimlW+OrG7CqaTBNE9q2xW63w36/xzAM6Pse63W3NPEpy9JBOyJpHEVOevtuBZZZu2yBxCQ9Ho84HA44nU7umRqM4+igRj4kjEioFG5XKzCTpUiNgTFmiR/HMYQQrthc1mZobYZq53oab0ioUxKmL75I0msojY8v94QGKY0ec9p/gqRSwvDoWeinm4VzZ3+bL0E1QoS4f/8ZzHgJ/0d4TqkQhBzfv/4Cm0WvCf+OQhhyPH38+YZCEeDT4cdbCc9n+DA+PQtf+yg+f2oiohD33SMY3ctrIbG8PB/+NZff5QwJBaZqD0Z3kxKR2IduyZKA0lKDC4KgH19KREoiThSEijHmA9h5/8J1WG5EJMCDAAHniIMQEefQPIAJAmjO0SUSD5stprLBmFlsUovWZPiQDfgNuA+olwGiC98AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;26&quot;
+        title=&quot;26&quot;
+        src=&quot;/static/2ff17b32da8f9a8b6cad5baad42c4286/f058b/26.png&quot;
+        srcset=&quot;/static/2ff17b32da8f9a8b6cad5baad42c4286/c26ae/26.png 158w,
+/static/2ff17b32da8f9a8b6cad5baad42c4286/6bdcf/26.png 315w,
+/static/2ff17b32da8f9a8b6cad5baad42c4286/f058b/26.png 630w,
+/static/2ff17b32da8f9a8b6cad5baad42c4286/40601/26.png 945w,
+/static/2ff17b32da8f9a8b6cad5baad42c4286/00172/26.png 1044w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
 검색창에 &lt;code class=&quot;language-text&quot;&gt;Obsidian Git: Open source control view&lt;/code&gt; 를 입력하고 실행합니다.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%202023-09-18%20%EC%98%A4%ED%9B%84%208.09.50.png&quot; alt=&quot;&quot;&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/55a746519d1adaa076448d9bc327bec9/620ae/27.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 78.48101265822784%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAAAsTAAALEwEAmpwYAAABs0lEQVQ4y62T3W7bIBiGfRGLyeK/GGMg9R+O7TpLukqLIvdgU6We7XS7/3t4p4/GKYu2alN78ArwBw8PAntPXx/waX+H1hg0TYOyLDH0I3a3e9wOI5raoCpraKWRphx13aCua7SmtfP7vkffdXacrgJ4ciNRFoUtFkUBrTWUkliv1wjDAEGwQpZlEEIgiiOkaYo8z2GMwbbrbEsSpm2xYkt4TdvieDzanajggqdpwul0wm63QxiGiOPYtpzzZ+B2i6qq7Ga09iNj8PTNxu4opbyExpRhGOxGBIiiyAKpJUuCzObzOv/DAp5U6gJwkyTJb5Br4LWAUgr+YgEvp49XhpQZOIPmuEBX4I9A9+iu4Qx6DSiVRLYM/x34miH1hchwGKf3AipwnuLp2094LuhNwCzF4/QDnjrf8luPnIkUD/ff3xPI8WV8fDmyW/wf4Dxf5BnuzOnF8G8P+/IWz6E+nx82Ac+hW94XB3j031KRwG7IwloliU00J46RcA5BhiSjFaTWEFpiVD08MgmCwP70bhhjYL6PgC0R+D7WjD3H91ElEe5Nh0NlMKgNenWDWkh8Thv8AlWOyYitDhTAAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;27&quot;
+        title=&quot;27&quot;
+        src=&quot;/static/55a746519d1adaa076448d9bc327bec9/f058b/27.png&quot;
+        srcset=&quot;/static/55a746519d1adaa076448d9bc327bec9/c26ae/27.png 158w,
+/static/55a746519d1adaa076448d9bc327bec9/6bdcf/27.png 315w,
+/static/55a746519d1adaa076448d9bc327bec9/f058b/27.png 630w,
+/static/55a746519d1adaa076448d9bc327bec9/40601/27.png 945w,
+/static/55a746519d1adaa076448d9bc327bec9/620ae/27.png 1043w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
 Git 뷰에서 상단의 우측에서 3번째 &lt;code class=&quot;language-text&quot;&gt;Pull&lt;/code&gt; 버튼을 클릭합니다.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%202023-09-18%20%EC%98%A4%ED%9B%84%208.10.10.png&quot; alt=&quot;&quot;&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/0a7ede6a5a4488ab0f2d0eeb3bd45afe/1ff84/28.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 79.11392405063292%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAAAsTAAALEwEAmpwYAAABxElEQVQ4y62TW3KjMBBFtQrjskHC6I0EEgbjPOxkPuM9zP63caekgcSp+cv44xS01H11peomv99+4eN2wzAMiDHCOYcYBjzNr3g6v+AYR7TWoW0dpJQw2qDrOoQQMqlmGieEPsBbC9IbA2VV3kyJ1loYoyEER81qUMpQ1zWUVGCUgVKa11NuHCLGcYRf/rVSIEPrEWLEfDpBCJFdSKkgJIcPDOHY4Pp+wsftBfOzhbYUUlE45zFNUxbUWsMYk2vJYB2EkjlQSn1+eXIoKA6SQSgO1UvwtgFrKGhN4b3H9XrNV063Oh6PsEaDeKkhlYKScnG3CHKOqqwyZVmi3JUo9xWq6i/J0eVywfl8Rtu22W3XShDL5afgN4dJsKrym92zrqXnuSfVMcZ+LrjmqbVWa4j68P+CX2/eIPYnEMPFAwQ1mqbGPF5AUuG90I8d8gPG+PxAQdFg6OZHCnIEN4I0TfMQwTRZnQ0g9xv/NHb11ch04ZvgHXlUtQdJXZ66Ps3jSopTs7LkirFMtZJcMgaeDtc6o1K+UfDagazXyOO1kOL9bofNZoN9scWuKECLAnVmC74t8Oo7vA0TztZhNi16rnASDn8Ap3zJo8oaMqYAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;28&quot;
+        title=&quot;28&quot;
+        src=&quot;/static/0a7ede6a5a4488ab0f2d0eeb3bd45afe/f058b/28.png&quot;
+        srcset=&quot;/static/0a7ede6a5a4488ab0f2d0eeb3bd45afe/c26ae/28.png 158w,
+/static/0a7ede6a5a4488ab0f2d0eeb3bd45afe/6bdcf/28.png 315w,
+/static/0a7ede6a5a4488ab0f2d0eeb3bd45afe/f058b/28.png 630w,
+/static/0a7ede6a5a4488ab0f2d0eeb3bd45afe/40601/28.png 945w,
+/static/0a7ede6a5a4488ab0f2d0eeb3bd45afe/1ff84/28.png 1040w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
 그러면 &lt;code class=&quot;language-text&quot;&gt;Changes&lt;/code&gt; 에 변경된 파일 내역이 노출됩니다.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%202023-09-18%20%EC%98%A4%ED%9B%84%208.10.23.png&quot; alt=&quot;&quot;&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/e7c46947ffc716f3d63f99db9d926281/620ae/29.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 78.48101265822784%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAAAsTAAALEwEAmpwYAAABwUlEQVQ4y62T3W6cMBCF/RIFNl5+DTYsy48xkLBKlWzSVaWmUqWol73q+7/DqcZaRySKokqbi6MBPP7mDPaw56fvWA630H2Pruuw3+8xmWss1wfM0w26pofuNep6jzRJ0batzTODQd91GM2IQWubk/EQTO4k6rq2SRTLsoRUEmmaYLvd4opfoSgKSCkRhiHSNEWe52iaBlpr9H1vTVDkwQas0xoPxyOmabIL5MCBT6eT1bIs4JwjiiJbJEkSa2CeZxupIO3lmw1YVe9eHDi5dyoyjiOEENYdAZ1LYwyGYTjnKnRti43vg8lS2Y9vFcfxK8j6mRxSy+SwqipIpTD0DXjwBaxQEvKNQ5IDOpCTc7juxEXP814Dnbs1cA16D2jzSUpCBPz/gR85JIk8w8PXX5cD3aFkWYrnn3/B6IcWFwMlhEjx4/EPmPosYJ7h2+3vzwXeTU9g64VLDiUvBA7dEYxG7KOL/XIXz1oDpbsyRWGBN7sFjGaQFqn1tWiTdRXHVuFZ2yhCIgRyJa2KUkGWJfJSYlYGjJzQ4NPQr+X7PnzPA/cDcM9D4vtIAh+x52GUOe7NhKVuMZc7GFmhEQXuhMY/rbLKrtaMZdoAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;29&quot;
+        title=&quot;29&quot;
+        src=&quot;/static/e7c46947ffc716f3d63f99db9d926281/f058b/29.png&quot;
+        srcset=&quot;/static/e7c46947ffc716f3d63f99db9d926281/c26ae/29.png 158w,
+/static/e7c46947ffc716f3d63f99db9d926281/6bdcf/29.png 315w,
+/static/e7c46947ffc716f3d63f99db9d926281/f058b/29.png 630w,
+/static/e7c46947ffc716f3d63f99db9d926281/40601/29.png 945w,
+/static/e7c46947ffc716f3d63f99db9d926281/620ae/29.png 1043w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
 이후, Git 뷰에서 상단의 좌측에서 첫번째 백업 버튼을 눌러 변경사항을 저장합니다.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;Pasted%20image%2020230928150808.png&quot; alt=&quot;&quot;&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 193px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/2bf0e46d8cfc7912fd315c34715725c9/6d2d1/56.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 55.69620253164557%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAABpUlEQVQoz41SyYoCQQwt9w1RpBUVN7RbbXDFDVEERXFBUbQPntSD//8Lb3gZqkeGOczhUUkqlbyXihqPxxiNRliv1wL6x+MRr9cLz+cTs9lMYsRkMhHoN8PhEMvlEo7jYLvdYjAYQPV6PcTjcXi9Xng8Hiil4PP5XJ8nfYJ3RCgUQiQSQTgcFgQCAWQyGWmiSqWSJNm2DdM0YVoWyuUyut2uoF6vw7IswWKxQLPZlIK6uEYwGESj0fgpyMeHwwG73Q7z+Ryr1Qqn00mktNttVKtV8S+XCwzDkDdagS7I5oqJpM2A7ub3+135BO8/2VA+ZcZiMblj0UQi8c2QVQkyZIB2v98XVpTZ6XTAOdOm3Far5Y6BNmMcFWNSkE4ymZSuHDTnw+5kTJ82GX9+AsE85hDRaFQ+hcVVrVYTGZRO2vl8HrlcThIIxvVdOp2WM5VKIZvNil8oFNymwvB6vUpHfsj5fJYdfDwe7k5yz+73O/b7vfzydDrFZrPBzXEk9n6/RT5JSUEuLjvoYf9eh/+Cst0Zcu+KxaLQ56nx6Wv7rxyiUqlIwS9dYiZZR3xzkwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;56&quot;
+        title=&quot;56&quot;
+        src=&quot;/static/2bf0e46d8cfc7912fd315c34715725c9/6d2d1/56.png&quot;
+        srcset=&quot;/static/2bf0e46d8cfc7912fd315c34715725c9/c26ae/56.png 158w,
+/static/2bf0e46d8cfc7912fd315c34715725c9/6d2d1/56.png 193w&quot;
+        sizes=&quot;(max-width: 193px) 100vw, 193px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
 백업 진행 시, 우측 상단에 이러한 메시지가 노출되며 Commit/Push가 자동으로 진행됩니다.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%202023-09-18%20%EC%98%A4%ED%9B%84%208.12.23.png&quot; alt=&quot;&quot;&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/0f0ad006dc3c2f9adcf69426afa3c0cb/55395/30.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 58.22784810126582%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAABYlAAAWJQFJUiTwAAABCElEQVQoz+2P227CMBBE3RICATu+xHFs5wpEalH///umyhoEgvah7WsfjsYza429zLoOpm4hdQMuLbJ8jyznyDYc641Avi2RFyVesx1eVgVpXkjKl/NqvccqT3d3XIP5OEJolzAeujkgDjOs7yFUyrlyKITBlmsU3NwQSXeiSlpasP74Dhcn2DAS7fSGaf6Aaw8p8wN03aJqekK7jvwVdZkt98MwL4Vn+pGsApSNqMMI350wHM+wfoRxPeo4IfQnhH6mB9RdIZXaiKY9EkxWkYLSBJTGg8tlzQbGdcmrtPJe1sTVP3Kds1vYUJHQnpQrd/H3uX/InufsaaC+8D+AfVv0S/4L/174CRgyIqOCnjvsAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;30&quot;
+        title=&quot;30&quot;
+        src=&quot;/static/0f0ad006dc3c2f9adcf69426afa3c0cb/f058b/30.png&quot;
+        srcset=&quot;/static/0f0ad006dc3c2f9adcf69426afa3c0cb/c26ae/30.png 158w,
+/static/0f0ad006dc3c2f9adcf69426afa3c0cb/6bdcf/30.png 315w,
+/static/0f0ad006dc3c2f9adcf69426afa3c0cb/f058b/30.png 630w,
+/static/0f0ad006dc3c2f9adcf69426afa3c0cb/40601/30.png 945w,
+/static/0f0ad006dc3c2f9adcf69426afa3c0cb/78612/30.png 1260w,
+/static/0f0ad006dc3c2f9adcf69426afa3c0cb/55395/30.png 3312w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
 이후 깃허브 레포지토리에서 수정한 노트의 md 파일을 확인해보면 노트가 잘 백업된 것을 확인할 수 있습니다.&lt;/p&gt;
 &lt;p&gt;이제까지 설명한 과정을 따르면 PC 의 Obsidian 볼트와 GitHub 레포지토리의 연동이 완료된 상태입니다.&lt;/p&gt;
 &lt;p&gt;다음 단계로, 해당 GitHub 레포지토리를 아이폰의 Obsidian 볼트와 연동해보겠습니다.&lt;/p&gt;
 &lt;p&gt;연동 방법의 이론적인 배경을 간단히 설명하자면, Git 과 연동된 디렉토리에는 보통 &lt;code class=&quot;language-text&quot;&gt;.git&lt;/code&gt; 이라는 숨겨진 폴더가 생성됩니다. 이 디렉토리에는 연동된 Git 레포지토리에 대한 정보가 저장되어 있습니다.&lt;/p&gt;
 &lt;p&gt;아이폰의 Obsidian 볼트와 레포지토리를 연동하기 위해서는 이 &lt;code class=&quot;language-text&quot;&gt;.git&lt;/code&gt; 폴더를 아이폰의 Obsidian 볼트가 위치한 디렉토리로 복사해주어야 합니다. 이 과정은 PC 에서 이미 설정한 Obsidian 볼트 디렉토리를 아이폰으로 그대로 옮기는 것에 해당됩니다.&lt;/p&gt;
 &lt;p&gt;아래에서 이 방법을 상세히 설명하니, 계속 따라오시면 됩니다.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;IMG_3267%201.png&quot; alt=&quot;&quot;&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/7d417fea6090b8948778cb16b20c29d2/60b3a/34.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 217.08860759493672%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAArCAIAAAD3xz8iAAAACXBIWXMAAAsTAAALEwEAmpwYAAABdElEQVRIx+2VyW7CMBCGHW/xYEUgC2JHAZNAUqDcUIryKiA4ceDI+98qkpZFYW2L1EO+m5d/xuP5ZSNUIKWcTCae56HrcM4BgHPu+z6ldD+llDLGjMfj+XzOGLsocxwHITSbzUajURiGy+VSKbVfwBgDgBACY4xuUoa4z2Hfo4K/gXMehiGlFGMspRRCPHSEckev19tut6vVarFYbDab3W63Xq9brdZDIQghzWZTa93pdNrtttZaKfVE8WULAIBSyjknhLzmhpwf8bwBqhhjtNaDwSBNU2vt2zf9fj9JkqrhXdf98vZhAACe5wkhAKDRaJQdllJWbwtj/MRJbxXMGKOUOo5DCMEnXAt/Nq+1DoLAWjudTq21w+Gw2+0mSRLH8UWxEOJYc5mHEFL6mRQwxn7rjftNllICAGPs1JKu694w71EfFMRx/F7g+36aplEUXROf9bmmpqbmf3HnuXxVToRQFEV5nmdZ9lGQZVme58aY6k/8CTMaIfdJF7RnAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;34&quot;
+        title=&quot;34&quot;
+        src=&quot;/static/7d417fea6090b8948778cb16b20c29d2/f058b/34.png&quot;
+        srcset=&quot;/static/7d417fea6090b8948778cb16b20c29d2/c26ae/34.png 158w,
+/static/7d417fea6090b8948778cb16b20c29d2/6bdcf/34.png 315w,
+/static/7d417fea6090b8948778cb16b20c29d2/f058b/34.png 630w,
+/static/7d417fea6090b8948778cb16b20c29d2/40601/34.png 945w,
+/static/7d417fea6090b8948778cb16b20c29d2/60b3a/34.png 1179w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
 아이폰에 Obsidian 앱을 설치 후, &lt;code class=&quot;language-text&quot;&gt;Create New Vault&lt;/code&gt; 를 통해 새 볼트를 생성합니다.&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
@@ -119,7 +1105,7 @@ Git 뷰에서 상단의 우측에서 3번째 &lt;code class=&quot;language-text&
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/80cabeea745cfa236f09698e85015211/60b3a/IMG_3269.png&quot;
+    href=&quot;/static/80cabeea745cfa236f09698e85015211/60b3a/35.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -130,14 +1116,14 @@ Git 뷰에서 상단의 우측에서 3번째 &lt;code class=&quot;language-text&
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;IMG 3269&quot;
-        title=&quot;IMG 3269&quot;
-        src=&quot;/static/80cabeea745cfa236f09698e85015211/f058b/IMG_3269.png&quot;
-        srcset=&quot;/static/80cabeea745cfa236f09698e85015211/c26ae/IMG_3269.png 158w,
-/static/80cabeea745cfa236f09698e85015211/6bdcf/IMG_3269.png 315w,
-/static/80cabeea745cfa236f09698e85015211/f058b/IMG_3269.png 630w,
-/static/80cabeea745cfa236f09698e85015211/40601/IMG_3269.png 945w,
-/static/80cabeea745cfa236f09698e85015211/60b3a/IMG_3269.png 1179w&quot;
+        alt=&quot;35&quot;
+        title=&quot;35&quot;
+        src=&quot;/static/80cabeea745cfa236f09698e85015211/f058b/35.png&quot;
+        srcset=&quot;/static/80cabeea745cfa236f09698e85015211/c26ae/35.png 158w,
+/static/80cabeea745cfa236f09698e85015211/6bdcf/35.png 315w,
+/static/80cabeea745cfa236f09698e85015211/f058b/35.png 630w,
+/static/80cabeea745cfa236f09698e85015211/40601/35.png 945w,
+/static/80cabeea745cfa236f09698e85015211/60b3a/35.png 1179w&quot;
         sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
@@ -156,7 +1142,7 @@ Git 뷰에서 상단의 우측에서 3번째 &lt;code class=&quot;language-text&
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/7e8939aff16893d51787e170386a4b3a/60b3a/IMG_3270.png&quot;
+    href=&quot;/static/7e8939aff16893d51787e170386a4b3a/60b3a/36.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -167,14 +1153,14 @@ Git 뷰에서 상단의 우측에서 3번째 &lt;code class=&quot;language-text&
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;IMG 3270&quot;
-        title=&quot;IMG 3270&quot;
-        src=&quot;/static/7e8939aff16893d51787e170386a4b3a/f058b/IMG_3270.png&quot;
-        srcset=&quot;/static/7e8939aff16893d51787e170386a4b3a/c26ae/IMG_3270.png 158w,
-/static/7e8939aff16893d51787e170386a4b3a/6bdcf/IMG_3270.png 315w,
-/static/7e8939aff16893d51787e170386a4b3a/f058b/IMG_3270.png 630w,
-/static/7e8939aff16893d51787e170386a4b3a/40601/IMG_3270.png 945w,
-/static/7e8939aff16893d51787e170386a4b3a/60b3a/IMG_3270.png 1179w&quot;
+        alt=&quot;36&quot;
+        title=&quot;36&quot;
+        src=&quot;/static/7e8939aff16893d51787e170386a4b3a/f058b/36.png&quot;
+        srcset=&quot;/static/7e8939aff16893d51787e170386a4b3a/c26ae/36.png 158w,
+/static/7e8939aff16893d51787e170386a4b3a/6bdcf/36.png 315w,
+/static/7e8939aff16893d51787e170386a4b3a/f058b/36.png 630w,
+/static/7e8939aff16893d51787e170386a4b3a/40601/36.png 945w,
+/static/7e8939aff16893d51787e170386a4b3a/60b3a/36.png 1179w&quot;
         sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
@@ -189,7 +1175,7 @@ Git 뷰에서 상단의 우측에서 3번째 &lt;code class=&quot;language-text&
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/a1539a3d4681740d36c65f35b4ac0151/60b3a/IMG_3277.png&quot;
+    href=&quot;/static/a1539a3d4681740d36c65f35b4ac0151/60b3a/37.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -200,14 +1186,14 @@ Git 뷰에서 상단의 우측에서 3번째 &lt;code class=&quot;language-text&
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;IMG 3277&quot;
-        title=&quot;IMG 3277&quot;
-        src=&quot;/static/a1539a3d4681740d36c65f35b4ac0151/f058b/IMG_3277.png&quot;
-        srcset=&quot;/static/a1539a3d4681740d36c65f35b4ac0151/c26ae/IMG_3277.png 158w,
-/static/a1539a3d4681740d36c65f35b4ac0151/6bdcf/IMG_3277.png 315w,
-/static/a1539a3d4681740d36c65f35b4ac0151/f058b/IMG_3277.png 630w,
-/static/a1539a3d4681740d36c65f35b4ac0151/40601/IMG_3277.png 945w,
-/static/a1539a3d4681740d36c65f35b4ac0151/60b3a/IMG_3277.png 1179w&quot;
+        alt=&quot;37&quot;
+        title=&quot;37&quot;
+        src=&quot;/static/a1539a3d4681740d36c65f35b4ac0151/f058b/37.png&quot;
+        srcset=&quot;/static/a1539a3d4681740d36c65f35b4ac0151/c26ae/37.png 158w,
+/static/a1539a3d4681740d36c65f35b4ac0151/6bdcf/37.png 315w,
+/static/a1539a3d4681740d36c65f35b4ac0151/f058b/37.png 630w,
+/static/a1539a3d4681740d36c65f35b4ac0151/40601/37.png 945w,
+/static/a1539a3d4681740d36c65f35b4ac0151/60b3a/37.png 1179w&quot;
         sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
@@ -222,7 +1208,7 @@ Git 뷰에서 상단의 우측에서 3번째 &lt;code class=&quot;language-text&
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/61bd3afba56520bfa9da402f97781656/60b3a/IMG_3279.png&quot;
+    href=&quot;/static/61bd3afba56520bfa9da402f97781656/60b3a/38.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -233,14 +1219,14 @@ Git 뷰에서 상단의 우측에서 3번째 &lt;code class=&quot;language-text&
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;IMG 3279&quot;
-        title=&quot;IMG 3279&quot;
-        src=&quot;/static/61bd3afba56520bfa9da402f97781656/f058b/IMG_3279.png&quot;
-        srcset=&quot;/static/61bd3afba56520bfa9da402f97781656/c26ae/IMG_3279.png 158w,
-/static/61bd3afba56520bfa9da402f97781656/6bdcf/IMG_3279.png 315w,
-/static/61bd3afba56520bfa9da402f97781656/f058b/IMG_3279.png 630w,
-/static/61bd3afba56520bfa9da402f97781656/40601/IMG_3279.png 945w,
-/static/61bd3afba56520bfa9da402f97781656/60b3a/IMG_3279.png 1179w&quot;
+        alt=&quot;38&quot;
+        title=&quot;38&quot;
+        src=&quot;/static/61bd3afba56520bfa9da402f97781656/f058b/38.png&quot;
+        srcset=&quot;/static/61bd3afba56520bfa9da402f97781656/c26ae/38.png 158w,
+/static/61bd3afba56520bfa9da402f97781656/6bdcf/38.png 315w,
+/static/61bd3afba56520bfa9da402f97781656/f058b/38.png 630w,
+/static/61bd3afba56520bfa9da402f97781656/40601/38.png 945w,
+/static/61bd3afba56520bfa9da402f97781656/60b3a/38.png 1179w&quot;
         sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
@@ -255,7 +1241,7 @@ Git 뷰에서 상단의 우측에서 3번째 &lt;code class=&quot;language-text&
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/aff77be4debf608dfb74acd940434f28/60b3a/IMG_3280.png&quot;
+    href=&quot;/static/aff77be4debf608dfb74acd940434f28/60b3a/39.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -266,14 +1252,14 @@ Git 뷰에서 상단의 우측에서 3번째 &lt;code class=&quot;language-text&
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;IMG 3280&quot;
-        title=&quot;IMG 3280&quot;
-        src=&quot;/static/aff77be4debf608dfb74acd940434f28/f058b/IMG_3280.png&quot;
-        srcset=&quot;/static/aff77be4debf608dfb74acd940434f28/c26ae/IMG_3280.png 158w,
-/static/aff77be4debf608dfb74acd940434f28/6bdcf/IMG_3280.png 315w,
-/static/aff77be4debf608dfb74acd940434f28/f058b/IMG_3280.png 630w,
-/static/aff77be4debf608dfb74acd940434f28/40601/IMG_3280.png 945w,
-/static/aff77be4debf608dfb74acd940434f28/60b3a/IMG_3280.png 1179w&quot;
+        alt=&quot;39&quot;
+        title=&quot;39&quot;
+        src=&quot;/static/aff77be4debf608dfb74acd940434f28/f058b/39.png&quot;
+        srcset=&quot;/static/aff77be4debf608dfb74acd940434f28/c26ae/39.png 158w,
+/static/aff77be4debf608dfb74acd940434f28/6bdcf/39.png 315w,
+/static/aff77be4debf608dfb74acd940434f28/f058b/39.png 630w,
+/static/aff77be4debf608dfb74acd940434f28/40601/39.png 945w,
+/static/aff77be4debf608dfb74acd940434f28/60b3a/39.png 1179w&quot;
         sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
@@ -288,7 +1274,7 @@ Git 뷰에서 상단의 우측에서 3번째 &lt;code class=&quot;language-text&
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/3339ee4e7d9f75c476ad473765fc4640/60b3a/IMG_3281.png&quot;
+    href=&quot;/static/3339ee4e7d9f75c476ad473765fc4640/60b3a/40.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -299,14 +1285,14 @@ Git 뷰에서 상단의 우측에서 3번째 &lt;code class=&quot;language-text&
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;IMG 3281&quot;
-        title=&quot;IMG 3281&quot;
-        src=&quot;/static/3339ee4e7d9f75c476ad473765fc4640/f058b/IMG_3281.png&quot;
-        srcset=&quot;/static/3339ee4e7d9f75c476ad473765fc4640/c26ae/IMG_3281.png 158w,
-/static/3339ee4e7d9f75c476ad473765fc4640/6bdcf/IMG_3281.png 315w,
-/static/3339ee4e7d9f75c476ad473765fc4640/f058b/IMG_3281.png 630w,
-/static/3339ee4e7d9f75c476ad473765fc4640/40601/IMG_3281.png 945w,
-/static/3339ee4e7d9f75c476ad473765fc4640/60b3a/IMG_3281.png 1179w&quot;
+        alt=&quot;40&quot;
+        title=&quot;40&quot;
+        src=&quot;/static/3339ee4e7d9f75c476ad473765fc4640/f058b/40.png&quot;
+        srcset=&quot;/static/3339ee4e7d9f75c476ad473765fc4640/c26ae/40.png 158w,
+/static/3339ee4e7d9f75c476ad473765fc4640/6bdcf/40.png 315w,
+/static/3339ee4e7d9f75c476ad473765fc4640/f058b/40.png 630w,
+/static/3339ee4e7d9f75c476ad473765fc4640/40601/40.png 945w,
+/static/3339ee4e7d9f75c476ad473765fc4640/60b3a/40.png 1179w&quot;
         sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
@@ -321,7 +1307,7 @@ Git 뷰에서 상단의 우측에서 3번째 &lt;code class=&quot;language-text&
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/bc552acf69682ec5c5d0bb1a03ed17e7/60b3a/IMG_3283.png&quot;
+    href=&quot;/static/bc552acf69682ec5c5d0bb1a03ed17e7/60b3a/41.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -332,14 +1318,14 @@ Git 뷰에서 상단의 우측에서 3번째 &lt;code class=&quot;language-text&
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;IMG 3283&quot;
-        title=&quot;IMG 3283&quot;
-        src=&quot;/static/bc552acf69682ec5c5d0bb1a03ed17e7/f058b/IMG_3283.png&quot;
-        srcset=&quot;/static/bc552acf69682ec5c5d0bb1a03ed17e7/c26ae/IMG_3283.png 158w,
-/static/bc552acf69682ec5c5d0bb1a03ed17e7/6bdcf/IMG_3283.png 315w,
-/static/bc552acf69682ec5c5d0bb1a03ed17e7/f058b/IMG_3283.png 630w,
-/static/bc552acf69682ec5c5d0bb1a03ed17e7/40601/IMG_3283.png 945w,
-/static/bc552acf69682ec5c5d0bb1a03ed17e7/60b3a/IMG_3283.png 1179w&quot;
+        alt=&quot;41&quot;
+        title=&quot;41&quot;
+        src=&quot;/static/bc552acf69682ec5c5d0bb1a03ed17e7/f058b/41.png&quot;
+        srcset=&quot;/static/bc552acf69682ec5c5d0bb1a03ed17e7/c26ae/41.png 158w,
+/static/bc552acf69682ec5c5d0bb1a03ed17e7/6bdcf/41.png 315w,
+/static/bc552acf69682ec5c5d0bb1a03ed17e7/f058b/41.png 630w,
+/static/bc552acf69682ec5c5d0bb1a03ed17e7/40601/41.png 945w,
+/static/bc552acf69682ec5c5d0bb1a03ed17e7/60b3a/41.png 1179w&quot;
         sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
@@ -354,7 +1340,7 @@ Git 뷰에서 상단의 우측에서 3번째 &lt;code class=&quot;language-text&
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/a9817f96d8119e680b8491b62af0fbf8/60b3a/IMG_3284.png&quot;
+    href=&quot;/static/a9817f96d8119e680b8491b62af0fbf8/60b3a/42.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -365,14 +1351,14 @@ Git 뷰에서 상단의 우측에서 3번째 &lt;code class=&quot;language-text&
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;IMG 3284&quot;
-        title=&quot;IMG 3284&quot;
-        src=&quot;/static/a9817f96d8119e680b8491b62af0fbf8/f058b/IMG_3284.png&quot;
-        srcset=&quot;/static/a9817f96d8119e680b8491b62af0fbf8/c26ae/IMG_3284.png 158w,
-/static/a9817f96d8119e680b8491b62af0fbf8/6bdcf/IMG_3284.png 315w,
-/static/a9817f96d8119e680b8491b62af0fbf8/f058b/IMG_3284.png 630w,
-/static/a9817f96d8119e680b8491b62af0fbf8/40601/IMG_3284.png 945w,
-/static/a9817f96d8119e680b8491b62af0fbf8/60b3a/IMG_3284.png 1179w&quot;
+        alt=&quot;42&quot;
+        title=&quot;42&quot;
+        src=&quot;/static/a9817f96d8119e680b8491b62af0fbf8/f058b/42.png&quot;
+        srcset=&quot;/static/a9817f96d8119e680b8491b62af0fbf8/c26ae/42.png 158w,
+/static/a9817f96d8119e680b8491b62af0fbf8/6bdcf/42.png 315w,
+/static/a9817f96d8119e680b8491b62af0fbf8/f058b/42.png 630w,
+/static/a9817f96d8119e680b8491b62af0fbf8/40601/42.png 945w,
+/static/a9817f96d8119e680b8491b62af0fbf8/60b3a/42.png 1179w&quot;
         sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
@@ -387,7 +1373,7 @@ Git 뷰에서 상단의 우측에서 3번째 &lt;code class=&quot;language-text&
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/2820dea00c606a8ff93c5cb41644fbb5/60b3a/IMG_3285.png&quot;
+    href=&quot;/static/2820dea00c606a8ff93c5cb41644fbb5/60b3a/43.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -398,14 +1384,14 @@ Git 뷰에서 상단의 우측에서 3번째 &lt;code class=&quot;language-text&
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;IMG 3285&quot;
-        title=&quot;IMG 3285&quot;
-        src=&quot;/static/2820dea00c606a8ff93c5cb41644fbb5/f058b/IMG_3285.png&quot;
-        srcset=&quot;/static/2820dea00c606a8ff93c5cb41644fbb5/c26ae/IMG_3285.png 158w,
-/static/2820dea00c606a8ff93c5cb41644fbb5/6bdcf/IMG_3285.png 315w,
-/static/2820dea00c606a8ff93c5cb41644fbb5/f058b/IMG_3285.png 630w,
-/static/2820dea00c606a8ff93c5cb41644fbb5/40601/IMG_3285.png 945w,
-/static/2820dea00c606a8ff93c5cb41644fbb5/60b3a/IMG_3285.png 1179w&quot;
+        alt=&quot;43&quot;
+        title=&quot;43&quot;
+        src=&quot;/static/2820dea00c606a8ff93c5cb41644fbb5/f058b/43.png&quot;
+        srcset=&quot;/static/2820dea00c606a8ff93c5cb41644fbb5/c26ae/43.png 158w,
+/static/2820dea00c606a8ff93c5cb41644fbb5/6bdcf/43.png 315w,
+/static/2820dea00c606a8ff93c5cb41644fbb5/f058b/43.png 630w,
+/static/2820dea00c606a8ff93c5cb41644fbb5/40601/43.png 945w,
+/static/2820dea00c606a8ff93c5cb41644fbb5/60b3a/43.png 1179w&quot;
         sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
@@ -420,7 +1406,7 @@ Git 뷰에서 상단의 우측에서 3번째 &lt;code class=&quot;language-text&
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/3403892e7bc12fdba83a8709757312df/60b3a/IMG_3287.png&quot;
+    href=&quot;/static/3403892e7bc12fdba83a8709757312df/60b3a/44.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -431,14 +1417,14 @@ Git 뷰에서 상단의 우측에서 3번째 &lt;code class=&quot;language-text&
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;IMG 3287&quot;
-        title=&quot;IMG 3287&quot;
-        src=&quot;/static/3403892e7bc12fdba83a8709757312df/f058b/IMG_3287.png&quot;
-        srcset=&quot;/static/3403892e7bc12fdba83a8709757312df/c26ae/IMG_3287.png 158w,
-/static/3403892e7bc12fdba83a8709757312df/6bdcf/IMG_3287.png 315w,
-/static/3403892e7bc12fdba83a8709757312df/f058b/IMG_3287.png 630w,
-/static/3403892e7bc12fdba83a8709757312df/40601/IMG_3287.png 945w,
-/static/3403892e7bc12fdba83a8709757312df/60b3a/IMG_3287.png 1179w&quot;
+        alt=&quot;44&quot;
+        title=&quot;44&quot;
+        src=&quot;/static/3403892e7bc12fdba83a8709757312df/f058b/44.png&quot;
+        srcset=&quot;/static/3403892e7bc12fdba83a8709757312df/c26ae/44.png 158w,
+/static/3403892e7bc12fdba83a8709757312df/6bdcf/44.png 315w,
+/static/3403892e7bc12fdba83a8709757312df/f058b/44.png 630w,
+/static/3403892e7bc12fdba83a8709757312df/40601/44.png 945w,
+/static/3403892e7bc12fdba83a8709757312df/60b3a/44.png 1179w&quot;
         sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
@@ -453,7 +1439,7 @@ Git 뷰에서 상단의 우측에서 3번째 &lt;code class=&quot;language-text&
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/a8f81434e0626559042a2c6c120718c2/60b3a/IMG_3289.png&quot;
+    href=&quot;/static/a8f81434e0626559042a2c6c120718c2/60b3a/45.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -464,14 +1450,14 @@ Git 뷰에서 상단의 우측에서 3번째 &lt;code class=&quot;language-text&
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;IMG 3289&quot;
-        title=&quot;IMG 3289&quot;
-        src=&quot;/static/a8f81434e0626559042a2c6c120718c2/f058b/IMG_3289.png&quot;
-        srcset=&quot;/static/a8f81434e0626559042a2c6c120718c2/c26ae/IMG_3289.png 158w,
-/static/a8f81434e0626559042a2c6c120718c2/6bdcf/IMG_3289.png 315w,
-/static/a8f81434e0626559042a2c6c120718c2/f058b/IMG_3289.png 630w,
-/static/a8f81434e0626559042a2c6c120718c2/40601/IMG_3289.png 945w,
-/static/a8f81434e0626559042a2c6c120718c2/60b3a/IMG_3289.png 1179w&quot;
+        alt=&quot;45&quot;
+        title=&quot;45&quot;
+        src=&quot;/static/a8f81434e0626559042a2c6c120718c2/f058b/45.png&quot;
+        srcset=&quot;/static/a8f81434e0626559042a2c6c120718c2/c26ae/45.png 158w,
+/static/a8f81434e0626559042a2c6c120718c2/6bdcf/45.png 315w,
+/static/a8f81434e0626559042a2c6c120718c2/f058b/45.png 630w,
+/static/a8f81434e0626559042a2c6c120718c2/40601/45.png 945w,
+/static/a8f81434e0626559042a2c6c120718c2/60b3a/45.png 1179w&quot;
         sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
@@ -486,7 +1472,7 @@ Git 뷰에서 상단의 우측에서 3번째 &lt;code class=&quot;language-text&
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/ca5868f63394180d241675b06979d1c5/60b3a/IMG_3306.png&quot;
+    href=&quot;/static/ca5868f63394180d241675b06979d1c5/60b3a/52.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -497,14 +1483,14 @@ Git 뷰에서 상단의 우측에서 3번째 &lt;code class=&quot;language-text&
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;IMG 3306&quot;
-        title=&quot;IMG 3306&quot;
-        src=&quot;/static/ca5868f63394180d241675b06979d1c5/f058b/IMG_3306.png&quot;
-        srcset=&quot;/static/ca5868f63394180d241675b06979d1c5/c26ae/IMG_3306.png 158w,
-/static/ca5868f63394180d241675b06979d1c5/6bdcf/IMG_3306.png 315w,
-/static/ca5868f63394180d241675b06979d1c5/f058b/IMG_3306.png 630w,
-/static/ca5868f63394180d241675b06979d1c5/40601/IMG_3306.png 945w,
-/static/ca5868f63394180d241675b06979d1c5/60b3a/IMG_3306.png 1179w&quot;
+        alt=&quot;52&quot;
+        title=&quot;52&quot;
+        src=&quot;/static/ca5868f63394180d241675b06979d1c5/f058b/52.png&quot;
+        srcset=&quot;/static/ca5868f63394180d241675b06979d1c5/c26ae/52.png 158w,
+/static/ca5868f63394180d241675b06979d1c5/6bdcf/52.png 315w,
+/static/ca5868f63394180d241675b06979d1c5/f058b/52.png 630w,
+/static/ca5868f63394180d241675b06979d1c5/40601/52.png 945w,
+/static/ca5868f63394180d241675b06979d1c5/60b3a/52.png 1179w&quot;
         sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
@@ -525,7 +1511,7 @@ Git 뷰에서 상단의 우측에서 3번째 &lt;code class=&quot;language-text&
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/cbfa12a412b4960c28b77c88a1e6e290/60b3a/IMG_3294.png&quot;
+    href=&quot;/static/cbfa12a412b4960c28b77c88a1e6e290/60b3a/47.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -536,14 +1522,14 @@ Git 뷰에서 상단의 우측에서 3번째 &lt;code class=&quot;language-text&
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;IMG 3294&quot;
-        title=&quot;IMG 3294&quot;
-        src=&quot;/static/cbfa12a412b4960c28b77c88a1e6e290/f058b/IMG_3294.png&quot;
-        srcset=&quot;/static/cbfa12a412b4960c28b77c88a1e6e290/c26ae/IMG_3294.png 158w,
-/static/cbfa12a412b4960c28b77c88a1e6e290/6bdcf/IMG_3294.png 315w,
-/static/cbfa12a412b4960c28b77c88a1e6e290/f058b/IMG_3294.png 630w,
-/static/cbfa12a412b4960c28b77c88a1e6e290/40601/IMG_3294.png 945w,
-/static/cbfa12a412b4960c28b77c88a1e6e290/60b3a/IMG_3294.png 1179w&quot;
+        alt=&quot;47&quot;
+        title=&quot;47&quot;
+        src=&quot;/static/cbfa12a412b4960c28b77c88a1e6e290/f058b/47.png&quot;
+        srcset=&quot;/static/cbfa12a412b4960c28b77c88a1e6e290/c26ae/47.png 158w,
+/static/cbfa12a412b4960c28b77c88a1e6e290/6bdcf/47.png 315w,
+/static/cbfa12a412b4960c28b77c88a1e6e290/f058b/47.png 630w,
+/static/cbfa12a412b4960c28b77c88a1e6e290/40601/47.png 945w,
+/static/cbfa12a412b4960c28b77c88a1e6e290/60b3a/47.png 1179w&quot;
         sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
@@ -558,7 +1544,7 @@ Git 뷰에서 상단의 우측에서 3번째 &lt;code class=&quot;language-text&
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/822a671980a70632238928b9f7593e8c/60b3a/IMG_3296.png&quot;
+    href=&quot;/static/822a671980a70632238928b9f7593e8c/60b3a/48.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -569,14 +1555,14 @@ Git 뷰에서 상단의 우측에서 3번째 &lt;code class=&quot;language-text&
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;IMG 3296&quot;
-        title=&quot;IMG 3296&quot;
-        src=&quot;/static/822a671980a70632238928b9f7593e8c/f058b/IMG_3296.png&quot;
-        srcset=&quot;/static/822a671980a70632238928b9f7593e8c/c26ae/IMG_3296.png 158w,
-/static/822a671980a70632238928b9f7593e8c/6bdcf/IMG_3296.png 315w,
-/static/822a671980a70632238928b9f7593e8c/f058b/IMG_3296.png 630w,
-/static/822a671980a70632238928b9f7593e8c/40601/IMG_3296.png 945w,
-/static/822a671980a70632238928b9f7593e8c/60b3a/IMG_3296.png 1179w&quot;
+        alt=&quot;48&quot;
+        title=&quot;48&quot;
+        src=&quot;/static/822a671980a70632238928b9f7593e8c/f058b/48.png&quot;
+        srcset=&quot;/static/822a671980a70632238928b9f7593e8c/c26ae/48.png 158w,
+/static/822a671980a70632238928b9f7593e8c/6bdcf/48.png 315w,
+/static/822a671980a70632238928b9f7593e8c/f058b/48.png 630w,
+/static/822a671980a70632238928b9f7593e8c/40601/48.png 945w,
+/static/822a671980a70632238928b9f7593e8c/60b3a/48.png 1179w&quot;
         sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
@@ -591,7 +1577,7 @@ Git 뷰에서 상단의 우측에서 3번째 &lt;code class=&quot;language-text&
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/1f4b4dfd29d283a218efc615b49566c3/60b3a/IMG_3297.png&quot;
+    href=&quot;/static/1f4b4dfd29d283a218efc615b49566c3/60b3a/49.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -602,14 +1588,14 @@ Git 뷰에서 상단의 우측에서 3번째 &lt;code class=&quot;language-text&
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;IMG 3297&quot;
-        title=&quot;IMG 3297&quot;
-        src=&quot;/static/1f4b4dfd29d283a218efc615b49566c3/f058b/IMG_3297.png&quot;
-        srcset=&quot;/static/1f4b4dfd29d283a218efc615b49566c3/c26ae/IMG_3297.png 158w,
-/static/1f4b4dfd29d283a218efc615b49566c3/6bdcf/IMG_3297.png 315w,
-/static/1f4b4dfd29d283a218efc615b49566c3/f058b/IMG_3297.png 630w,
-/static/1f4b4dfd29d283a218efc615b49566c3/40601/IMG_3297.png 945w,
-/static/1f4b4dfd29d283a218efc615b49566c3/60b3a/IMG_3297.png 1179w&quot;
+        alt=&quot;49&quot;
+        title=&quot;49&quot;
+        src=&quot;/static/1f4b4dfd29d283a218efc615b49566c3/f058b/49.png&quot;
+        srcset=&quot;/static/1f4b4dfd29d283a218efc615b49566c3/c26ae/49.png 158w,
+/static/1f4b4dfd29d283a218efc615b49566c3/6bdcf/49.png 315w,
+/static/1f4b4dfd29d283a218efc615b49566c3/f058b/49.png 630w,
+/static/1f4b4dfd29d283a218efc615b49566c3/40601/49.png 945w,
+/static/1f4b4dfd29d283a218efc615b49566c3/60b3a/49.png 1179w&quot;
         sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
@@ -624,7 +1610,7 @@ Git 뷰에서 상단의 우측에서 3번째 &lt;code class=&quot;language-text&
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/d43ac531d6178c95c7bc46f75ae333f6/60b3a/IMG_3300.png&quot;
+    href=&quot;/static/d43ac531d6178c95c7bc46f75ae333f6/60b3a/50.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -635,14 +1621,14 @@ Git 뷰에서 상단의 우측에서 3번째 &lt;code class=&quot;language-text&
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;IMG 3300&quot;
-        title=&quot;IMG 3300&quot;
-        src=&quot;/static/d43ac531d6178c95c7bc46f75ae333f6/f058b/IMG_3300.png&quot;
-        srcset=&quot;/static/d43ac531d6178c95c7bc46f75ae333f6/c26ae/IMG_3300.png 158w,
-/static/d43ac531d6178c95c7bc46f75ae333f6/6bdcf/IMG_3300.png 315w,
-/static/d43ac531d6178c95c7bc46f75ae333f6/f058b/IMG_3300.png 630w,
-/static/d43ac531d6178c95c7bc46f75ae333f6/40601/IMG_3300.png 945w,
-/static/d43ac531d6178c95c7bc46f75ae333f6/60b3a/IMG_3300.png 1179w&quot;
+        alt=&quot;50&quot;
+        title=&quot;50&quot;
+        src=&quot;/static/d43ac531d6178c95c7bc46f75ae333f6/f058b/50.png&quot;
+        srcset=&quot;/static/d43ac531d6178c95c7bc46f75ae333f6/c26ae/50.png 158w,
+/static/d43ac531d6178c95c7bc46f75ae333f6/6bdcf/50.png 315w,
+/static/d43ac531d6178c95c7bc46f75ae333f6/f058b/50.png 630w,
+/static/d43ac531d6178c95c7bc46f75ae333f6/40601/50.png 945w,
+/static/d43ac531d6178c95c7bc46f75ae333f6/60b3a/50.png 1179w&quot;
         sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
@@ -657,7 +1643,7 @@ Git 뷰에서 상단의 우측에서 3번째 &lt;code class=&quot;language-text&
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/59c0cb4e6d9d3425b3cd2238dc4c71d4/60b3a/IMG_3303.png&quot;
+    href=&quot;/static/59c0cb4e6d9d3425b3cd2238dc4c71d4/60b3a/51.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -668,14 +1654,14 @@ Git 뷰에서 상단의 우측에서 3번째 &lt;code class=&quot;language-text&
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;IMG 3303&quot;
-        title=&quot;IMG 3303&quot;
-        src=&quot;/static/59c0cb4e6d9d3425b3cd2238dc4c71d4/f058b/IMG_3303.png&quot;
-        srcset=&quot;/static/59c0cb4e6d9d3425b3cd2238dc4c71d4/c26ae/IMG_3303.png 158w,
-/static/59c0cb4e6d9d3425b3cd2238dc4c71d4/6bdcf/IMG_3303.png 315w,
-/static/59c0cb4e6d9d3425b3cd2238dc4c71d4/f058b/IMG_3303.png 630w,
-/static/59c0cb4e6d9d3425b3cd2238dc4c71d4/40601/IMG_3303.png 945w,
-/static/59c0cb4e6d9d3425b3cd2238dc4c71d4/60b3a/IMG_3303.png 1179w&quot;
+        alt=&quot;51&quot;
+        title=&quot;51&quot;
+        src=&quot;/static/59c0cb4e6d9d3425b3cd2238dc4c71d4/f058b/51.png&quot;
+        srcset=&quot;/static/59c0cb4e6d9d3425b3cd2238dc4c71d4/c26ae/51.png 158w,
+/static/59c0cb4e6d9d3425b3cd2238dc4c71d4/6bdcf/51.png 315w,
+/static/59c0cb4e6d9d3425b3cd2238dc4c71d4/f058b/51.png 630w,
+/static/59c0cb4e6d9d3425b3cd2238dc4c71d4/40601/51.png 945w,
+/static/59c0cb4e6d9d3425b3cd2238dc4c71d4/60b3a/51.png 1179w&quot;
         sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
@@ -690,7 +1676,7 @@ Git 뷰에서 상단의 우측에서 3번째 &lt;code class=&quot;language-text&
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/3b7f52acbc45424a0b345fa8a86a6894/60b3a/IMG_3307.png&quot;
+    href=&quot;/static/3b7f52acbc45424a0b345fa8a86a6894/60b3a/53.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -701,14 +1687,14 @@ Git 뷰에서 상단의 우측에서 3번째 &lt;code class=&quot;language-text&
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;IMG 3307&quot;
-        title=&quot;IMG 3307&quot;
-        src=&quot;/static/3b7f52acbc45424a0b345fa8a86a6894/f058b/IMG_3307.png&quot;
-        srcset=&quot;/static/3b7f52acbc45424a0b345fa8a86a6894/c26ae/IMG_3307.png 158w,
-/static/3b7f52acbc45424a0b345fa8a86a6894/6bdcf/IMG_3307.png 315w,
-/static/3b7f52acbc45424a0b345fa8a86a6894/f058b/IMG_3307.png 630w,
-/static/3b7f52acbc45424a0b345fa8a86a6894/40601/IMG_3307.png 945w,
-/static/3b7f52acbc45424a0b345fa8a86a6894/60b3a/IMG_3307.png 1179w&quot;
+        alt=&quot;53&quot;
+        title=&quot;53&quot;
+        src=&quot;/static/3b7f52acbc45424a0b345fa8a86a6894/f058b/53.png&quot;
+        srcset=&quot;/static/3b7f52acbc45424a0b345fa8a86a6894/c26ae/53.png 158w,
+/static/3b7f52acbc45424a0b345fa8a86a6894/6bdcf/53.png 315w,
+/static/3b7f52acbc45424a0b345fa8a86a6894/f058b/53.png 630w,
+/static/3b7f52acbc45424a0b345fa8a86a6894/40601/53.png 945w,
+/static/3b7f52acbc45424a0b345fa8a86a6894/60b3a/53.png 1179w&quot;
         sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
@@ -723,7 +1709,7 @@ Git 뷰에서 상단의 우측에서 3번째 &lt;code class=&quot;language-text&
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/a72c0a220b9b3333a8b82b9bbe36f9b8/60b3a/IMG_3310.png&quot;
+    href=&quot;/static/a72c0a220b9b3333a8b82b9bbe36f9b8/60b3a/54.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -734,14 +1720,14 @@ Git 뷰에서 상단의 우측에서 3번째 &lt;code class=&quot;language-text&
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;IMG 3310&quot;
-        title=&quot;IMG 3310&quot;
-        src=&quot;/static/a72c0a220b9b3333a8b82b9bbe36f9b8/f058b/IMG_3310.png&quot;
-        srcset=&quot;/static/a72c0a220b9b3333a8b82b9bbe36f9b8/c26ae/IMG_3310.png 158w,
-/static/a72c0a220b9b3333a8b82b9bbe36f9b8/6bdcf/IMG_3310.png 315w,
-/static/a72c0a220b9b3333a8b82b9bbe36f9b8/f058b/IMG_3310.png 630w,
-/static/a72c0a220b9b3333a8b82b9bbe36f9b8/40601/IMG_3310.png 945w,
-/static/a72c0a220b9b3333a8b82b9bbe36f9b8/60b3a/IMG_3310.png 1179w&quot;
+        alt=&quot;54&quot;
+        title=&quot;54&quot;
+        src=&quot;/static/a72c0a220b9b3333a8b82b9bbe36f9b8/f058b/54.png&quot;
+        srcset=&quot;/static/a72c0a220b9b3333a8b82b9bbe36f9b8/c26ae/54.png 158w,
+/static/a72c0a220b9b3333a8b82b9bbe36f9b8/6bdcf/54.png 315w,
+/static/a72c0a220b9b3333a8b82b9bbe36f9b8/f058b/54.png 630w,
+/static/a72c0a220b9b3333a8b82b9bbe36f9b8/40601/54.png 945w,
+/static/a72c0a220b9b3333a8b82b9bbe36f9b8/60b3a/54.png 1179w&quot;
         sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
@@ -750,9 +1736,71 @@ Git 뷰에서 상단의 우측에서 3번째 &lt;code class=&quot;language-text&
   &lt;/a&gt;
     &lt;/span&gt;
 그러면 이런 식으로 토스트 메시지가 노출되며 Push 가 정상적으로 동작함을 확인할 수 있습니다.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%202023-09-18%20%EC%98%A4%ED%9B%84%208.25.40.png&quot; alt=&quot;&quot;&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/a829d7f5e4b634a064ec5c26ff206d8a/620ae/31.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 79.11392405063292%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAAAsTAAALEwEAmpwYAAABtklEQVQ4y62UW27bMBBFuQszsV6U+JJISrIedmLnx84Omj10/zu4wRBloRQ1iiL+GIwg3jlzRXHIfl7e8fHjA6Ef4L2HtQbB93hd3/B6esM0Lgiuh+s8qlJAKw3nPPwm5sMBwXl02oBNxkK2CuMwYhxHdF2Htm2htUIlKmR5hqIoYIxBVVUQQkAphRACpmnCPM8YD4f43FoLtlqP9XTC9XpF3/dROAxDLFrmBbfbLa5Za7Hf75HnBbIsg3MOx+MR67pCax3XjdZgi3XQ1kQH22iaJjY4n8+xQVmWyPM8uqVMX0EwytS87VooKcEGaSC1ji9TUEcCUnECbGGUky7VkAlRVWBeSEijoTeCBEygBPkbMNWkPf4n8E/QPYeatul/gPccpixlgz7MYJ2QUN8GGtSNwDpfwGohol31TYdNU2MaXsDooJpHAGWNMRwfB4x76CYwGq+HAJVEaAcwKtR3DvaXc/grfgOljD8y6pWKQG88GI0OzSFBtqNHwi/OtlGWaAhGOmOgrYWyGt44MBJv5zQFXQC73Q7P/Al7zlFwjpJzVPwJNed48QGXccbaOiy2Q5Aai3L4BL7fyUiOgKUxAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;31&quot;
+        title=&quot;31&quot;
+        src=&quot;/static/a829d7f5e4b634a064ec5c26ff206d8a/f058b/31.png&quot;
+        srcset=&quot;/static/a829d7f5e4b634a064ec5c26ff206d8a/c26ae/31.png 158w,
+/static/a829d7f5e4b634a064ec5c26ff206d8a/6bdcf/31.png 315w,
+/static/a829d7f5e4b634a064ec5c26ff206d8a/f058b/31.png 630w,
+/static/a829d7f5e4b634a064ec5c26ff206d8a/40601/31.png 945w,
+/static/a829d7f5e4b634a064ec5c26ff206d8a/620ae/31.png 1043w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
 이제 다시 PC 의 Git 뷰에서 &lt;code class=&quot;language-text&quot;&gt;Pull&lt;/code&gt; 버튼을 눌러주면&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%202023-09-18%20%EC%98%A4%ED%9B%84%208.25.45.png&quot; alt=&quot;&quot;&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/3f1b6cb845ee37b6f07be1d2afb55d03/620ae/32.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 79.11392405063292%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB0ElEQVQ4y62U626cMBCF/RTZSFwMxhcMxrCUq7qJku3+T9+h7/8MpxpviMgqkaKmP44G2cM3Z4wH9ufhF15efsO3LZqmgbUlfNNinU5Y5xP6bkDjWtSVQ8ZzGG3gnAu5FEtj4OoaWkqoXIAdyxLKanRth7ZtUVVVgCqtkGUccRwhTVMYY8AzjjzPIaVE4z26YwdrLZRSKGSBNEnBfliHaV7w/PQcqpIITEnjOOJyueB8PgdgFEVIkgRxHMPVDtM0YRiGsEdGtFJgva2hSxMWSVrrEIuigPcey7KgrmtwzoNTEkFpbZ7n0DYVJ6f0DvPKQGodFjcRlDb3ANL2TLEsS6zrGgpS4WBCCLBaSCijg139Ct6AG2iD7IGURy63MyRgnuWvQP058Ba0B77rihzyDKz6IvAjh5S3qZACnR/B7DeB12ggRIZlfASjg9yD/hlY5Bj7E5gQIhzo94DUco6+Xf8nUKBzIxiN0leAH33lfb5UBXx1BKO51J9c7Hf38OZOvn1liuoKbEwDRjNIt34bvU1U6K1VniIJkV+VZSiUgtTqOhSUbzSccWC347WJfgR3hwOi+/ug5HAHzTmcUvCFwEPX4WfbY64dhrJCZyxm3eAv5vDJyPE+2AsAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;32&quot;
+        title=&quot;32&quot;
+        src=&quot;/static/3f1b6cb845ee37b6f07be1d2afb55d03/f058b/32.png&quot;
+        srcset=&quot;/static/3f1b6cb845ee37b6f07be1d2afb55d03/c26ae/32.png 158w,
+/static/3f1b6cb845ee37b6f07be1d2afb55d03/6bdcf/32.png 315w,
+/static/3f1b6cb845ee37b6f07be1d2afb55d03/f058b/32.png 630w,
+/static/3f1b6cb845ee37b6f07be1d2afb55d03/40601/32.png 945w,
+/static/3f1b6cb845ee37b6f07be1d2afb55d03/620ae/32.png 1043w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
 이로써 아이폰에서의 수정과 백업을 PC 에서도 손쉽게 확인할 수 있습니다. 반대로 PC 에서의 변경사항 역시 아이폰에서 Pull 을 받아 확인이 가능합니다.&lt;/p&gt;
 &lt;p&gt;이렇게 GitHub 레포지토리를 활용해 맥과 아이폰 간의 데이터 동기화를 성공적으로 완료했습니다.
 이 방법은 윈도우와 안드로이드에서도 마찬가지로 적용 가능하며, 기기의 수에 상관없이 무료로 이용할 수 있습니다.&lt;/p&gt;
