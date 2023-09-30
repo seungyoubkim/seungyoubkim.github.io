@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[Blog by Seungyoub Kim]]></description><link>https://seungyoubkim.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 30 Sep 2023 13:22:41 GMT</lastBuildDate><item><title><![CDATA[Obsidian Git 을 이용하여 무료로 맥북과 아이폰간의 데이터 동기화하기]]></title><description><![CDATA[맥북과 아이폰간의 데이터를 동기화하는 방법을 소개하려고 합니다. 이 과정에서는 Obsidian Git 플러그인과 GitHub 레포지토리를 활용해 데이터를 안전하게 백업하고 동기화할 것입니다.
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[Blog by Seungyoub Kim]]></description><link>https://seungyoubkim.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 30 Sep 2023 13:36:37 GMT</lastBuildDate><item><title><![CDATA[Obsidian Git 을 이용하여 무료로 맥북과 아이폰간의 데이터 동기화하기]]></title><description><![CDATA[맥북과 아이폰간의 데이터를 동기화하는 방법을 소개하려고 합니다. 이 과정에서는 Obsidian Git 플러그인과 GitHub 레포지토리를 활용해 데이터를 안전하게 백업하고 동기화할 것입니다.
 (Working Copy…]]></description><link>https://seungyoubkim.github.io/obsidian-git/</link><guid isPermaLink="false">https://seungyoubkim.github.io/obsidian-git/</guid><pubDate>Sat, 30 Sep 2023 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;맥북과 아이폰간의 데이터를 동기화하는 방법을 소개하려고 합니다. 이 과정에서는 Obsidian Git 플러그인과 GitHub 레포지토리를 활용해 데이터를 안전하게 백업하고 동기화할 것입니다.
 (Working Copy 를 이용하지 않습니다!)&lt;/p&gt;
 &lt;p&gt;아래 내용을 따라오시기 위해 깃과 터미널 명령어에 대한 기초적인 지식이 있으시다면 더욱 수월하게 진행하실 수 있습니다. 하지만 걱정하지 마세요. 깃과 터미널 명령어에 대한 세부적인 설명은 생략하였으나, 이 글에서는 그런 기술적인 지식 없이도 충분히 따라올 수 있도록 상세하게 작성하였으니 천천히 따라오세요.&lt;/p&gt;
@@ -66,19 +66,203 @@ Obsidian 을 열고 &lt;code class=&quot;language-text&quot;&gt;Create new vault
   &lt;/a&gt;
     &lt;/span&gt;
 &lt;code class=&quot;language-text&quot;&gt;Vault name&lt;/code&gt;과 &lt;code class=&quot;language-text&quot;&gt;Location&lt;/code&gt; 설정 후, &lt;code class=&quot;language-text&quot;&gt;Create&lt;/code&gt; 버튼을 클릭해줍니다.&lt;/p&gt;
-&lt;p&gt;![[스크린샷 2023-09-18 오후 7.43.40.png]]
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/3ce34fbfb831e7748fdff6da523c461f/4ef40/57.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 78.48101265822784%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAAAsTAAALEwEAmpwYAAABz0lEQVQ4y62UT2/TQBDFfaa0AarY6Xp3bcf7L3bsgmmdWFVIpEpUQkgcAIHEsSoHjnwGvvdDs9SpW1pRiRyeRt6d/c0b7Y6DH5+/4s3mHM5aOOegtcZps0R3ukL7usNx9QpVWcPZGbQyEFxACglrDKyxPjptUJdzsIPnCFSpURQzNE2Duq5RFAVmhUOuckgpwAWHlBJZliHL0m3R6XSKPM8xzXMfrXM4PBghmNfHWK/XWCwWKMsSVVX5SNVXq5Xf67oOcRxDCAHO+TYORWujJ3sIZvMSzjpf2V63bYzxLpbLJdq29d90gJzeJ9pLkgSjvacINLWglAcMlaapTyKRu/7gENLHHrhPQGUNjDbeRe+MIiX0rdyFPeTw2Q1Q/wUkh4+BeZFLurgX0cNAqvhP0C2XHIU52RUwAWMTfHx/hYBuVv8nkHInRyG+f/u1GyA5PGIRvrz7uTsgiyf4sLm8AfagxwDvW2ec4aL9hIAmQ9152LeA1w9XDiXF9rn8kUTMGc7rtwhodglATntREfoZ+ENJ4iUGioUEo0Jp4pVkKXgqsbFnCLxdxvx4DRVFEcbjMeIoAg9DpGGILIqQhSEqEeOsrL1OlEGTG7xUFhdqgd9Uo8FIG97d1QAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;57&quot;
+        title=&quot;57&quot;
+        src=&quot;/static/3ce34fbfb831e7748fdff6da523c461f/f058b/57.png&quot;
+        srcset=&quot;/static/3ce34fbfb831e7748fdff6da523c461f/c26ae/57.png 158w,
+/static/3ce34fbfb831e7748fdff6da523c461f/6bdcf/57.png 315w,
+/static/3ce34fbfb831e7748fdff6da523c461f/f058b/57.png 630w,
+/static/3ce34fbfb831e7748fdff6da523c461f/40601/57.png 945w,
+/static/3ce34fbfb831e7748fdff6da523c461f/4ef40/57.png 1057w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
 생성된 볼트에 새 노트를 하나 작성해줍니다.&lt;/p&gt;
-&lt;p&gt;![[스크린샷 2023-09-18 오후 7.43.57.png]]
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/4ba00849a726469320b2c85c2beb914f/620ae/58.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 79.11392405063292%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAAAsTAAALEwEAmpwYAAACuElEQVQ4y3WUS3PbNhSF+Qti2bIkAiDx4lOURFXW25Idt4oWdpKV22TaVevpdLrOwn//ZO51oDiLLM6AJMgP5+IeMPpjucbN7S3yPEeWZTDWIM8KjJspxk2LsqhRZCWc8zDaQkmFOBZIkgTeOThrWZn3yIxFVFkDk1mURYGyLFEUBbx3SBIFRVISSikGkNI0hTHmdM9KUzjvEccxotpmmC+XaNuWYQS11mI8HmO9XmO5XGKxWGAymWA0GqFpGhbdk+g9+o4W6l1eIiq1xWZ7jdubt6iqGlVZw1rHL+92O2y3WwYTjD4OC2ut2SmJrk/ATGm0sxHqoYe2Ai5TsM7Ae4/ZbIarqyuGkfOqqk4K20NAgqVavwCtELg//IPPH59x3D3h19W/qIoprDUMJFfUrNC0cB1E7tihTnFJQCcl9qtHvP/tPxz3f+Nu9cRAYzWWyxWXTk5euwtyzp2A1BjR6yNyIsFsMcG4LZHqAVwmueTQGALWdc1bkGU5jwSi+dBlAkopkPsakZUK88UCm/UW7WSKsqw5c7RH1AwSdXk6nWLSTrgpdU17WGFYNyzvM8RigKb+BZGUkqOx3+/ZCYHIATWCQPP5nOfXq2vWZrPDZr1DWeZITQxjJVQyQCz6qIoWkRCCo3E8Hk+ZorJCORRuPhV2iMw1LG9rbOYPeHfzFw43f+Lu+pHfyV3zHXg4HNhhAFIUwoaHnL08S6FUjLvtJ/z+8IzH+y/4cPgfaarhTflS8nA4ZBjFIJQcAN+lv+lloVj00Bt00BucYxB3IZWAS3NEZJUgr4P72qH5iSz/FByscTzS2XfKIaKJEIWgcPjpp0AVSCUhlIKQkhVLhX4cYyBixN/maDTKIOr3+5zwbrf7gy4uLvDm7Azdzjm6nQ4GZ2cQnQ4rOe+gUQoj7TDWFpVIUMgEU13gKwWXygbbKm58AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;58&quot;
+        title=&quot;58&quot;
+        src=&quot;/static/4ba00849a726469320b2c85c2beb914f/f058b/58.png&quot;
+        srcset=&quot;/static/4ba00849a726469320b2c85c2beb914f/c26ae/58.png 158w,
+/static/4ba00849a726469320b2c85c2beb914f/6bdcf/58.png 315w,
+/static/4ba00849a726469320b2c85c2beb914f/f058b/58.png 630w,
+/static/4ba00849a726469320b2c85c2beb914f/40601/58.png 945w,
+/static/4ba00849a726469320b2c85c2beb914f/620ae/58.png 1043w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
 이후 &lt;code class=&quot;language-text&quot;&gt;Preference&lt;/code&gt; &gt; &lt;code class=&quot;language-text&quot;&gt;Community plugins&lt;/code&gt;로 이동하여 &lt;code class=&quot;language-text&quot;&gt;Turn on community plugins&lt;/code&gt; 버튼을 클릭해줍니다.&lt;/p&gt;
-&lt;p&gt;![[스크린샷 2023-09-18 오후 7.44.04.png]]
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/8c89e9d84224842f27f1985d44faaad4/8f0f9/59.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 78.48101265822784%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAAAsTAAALEwEAmpwYAAACX0lEQVQ4y52U224TMRCG9wmaqEmT9WF93kOyySZtkqZJigotkRBSL0BC4ooKVPEKvAJv/SNPulVVEIJefBrLa/+e+T3e5OPyHLtXlwghR/Aexhga16MpxlWNPBQIPoe1DlobCCHAUoZMZnDWwRoDow28c/DaICmNgfYGeZ4jL3KK1loS9t5Daw0pBaSURJZl0EZTpLHWtN46h3SYIqm0w2K1QtM0JFYUBS2YTqZYr9c0H0JAWZb0LaKUIrF4QJ4XmM9Pae6k30dSKIPNboerq9coywplUZHgeDzGYrEgqqr6DeccGB9it7rF108/YUxAv99D4oXCdF6jrCyUYbBewBhFGZ2dnT1ujofErGImbYYRoy20csiyhwwNY3h3/Q2fb39gf3mP6/V3lGGGcT3CxcUFlsslZRtLjcLR1zZGn5XKUNdjOqQfBS0X2J1/wPs393i7+4Kr1R3K0MAHh7quMRqNaHP0MRJ9jrH1OgrNZ3NkSoGdDJFYJnG6ajCdlcj0ENZzWKvJ8NgikfYCntOWzXlcx2F0QGK4wGK5wmazRdPMUBQllfTUr7/Rtg5jKaqiQcI5J5+22y1dQOvV/wgqpcF4iipvkDDGyPz9fo/JZEIevUSQ8xS5qw+Cm80GNzc3lOHLBBW4YPCmOpQcbzKKPb291vB/4SDI4VRAIjP5+ORiM0f+lKF+jtYHHsZCClhhkcTmbF9Cy+GHcGibWEGEPSHlHCdpigFLkQoOJgRFIw2SwWBAHX58fPxIr9ejeNQ5Qq/bRa/TxbDTAet2iazbwURKTLVDowwqJlFwibnK8QvEvsBqICoxFgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;59&quot;
+        title=&quot;59&quot;
+        src=&quot;/static/8c89e9d84224842f27f1985d44faaad4/f058b/59.png&quot;
+        srcset=&quot;/static/8c89e9d84224842f27f1985d44faaad4/c26ae/59.png 158w,
+/static/8c89e9d84224842f27f1985d44faaad4/6bdcf/59.png 315w,
+/static/8c89e9d84224842f27f1985d44faaad4/f058b/59.png 630w,
+/static/8c89e9d84224842f27f1985d44faaad4/40601/59.png 945w,
+/static/8c89e9d84224842f27f1985d44faaad4/8f0f9/59.png 1045w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
 &lt;code class=&quot;language-text&quot;&gt;Community plugins&lt;/code&gt;의 &lt;code class=&quot;language-text&quot;&gt;Browse&lt;/code&gt; 버튼을 클릭해줍니다.&lt;/p&gt;
-&lt;p&gt;![[스크린샷 2023-09-18 오후 7.44.15.png]]
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/415bbaaf5eb7eb15a51f33a13d90e5c1/e996b/60.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 78.48101265822784%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAAAsTAAALEwEAmpwYAAADBElEQVQ4y1WTW5OjNhSE+QfjzTrGXMRdgLgIjAGPPWOPa2beUkltnvP/f8eXkjy7qTx0AZLo06dPy/mnP/H5+U5eSNIkIYoisjSjVZq27pFFRZYWpElGJGJ8L8DduQS+T5IkxHFMEsX23zxJcHoRk9U50+HAMAwopajrmqoqqevKomkb8iInyzKLoige7/l/a2VZ4vs+jhYZ+jDxdrtzPl/sxrquTNORqqpomgalWqQs7Z6BlNLi5/dPuLsdThcmdEPL/bqidfermvmhripU03A8dBzG1iqTRWG7MIXMObsmpX1awmovGKeOH39cmQ49SZIhhLDQw8C8rDyvHdNQst97hKFgmiaWZSWOE4IgtDBeuq6LU7kBUtVoPdK2HY2SliwMQ5Z55P52QTUdsqzou5YsS9F64HkdOc0tVVmgakmSpF+E+5C0yCmltJ7VlbTVhIh4OU+8v50swTiOzMcDVVVQVTVtUzH0CmWG1tRkWY5nCEs3oG4bO1mjzMQmsfGJOU49yzJbX4MgwPdDW8ikwRTxg9BaYNaiSJDGBU5hCBvFcTraSRp1fiDswUFrTutsi5kipTS5ixjHgePxYFUWeWxFhGGALBSOCanWmvv9zu125eP9zo8/PyiKjLZt7aDMRNu24XrWyCKzhXWvmKeOy0lb/wxhntU4xkgTA5O7j/vK+9vC7XW1gTae9n1PmqZftyKxz3ForAhZPjoy+0Z5lpQPQqvkOHNaBpo6R0QPD4dBc319tsTmFhgfjV9m+g9vc1zX+4pZSBrlOLvdjq7reH05c3058f42M02jPTyOmsvlmdPpxLIsaN0TikcOb9czr5eV2+vRhtoQJiLF8bw9da1Y15nz82LJGqWsL/frzN9/fdoraRQZItOeuUFt0zD0DdOoyLPcthyHMY6Raw6ZqT4i8IiOzWL0BSHwfB/ftBxFBELg+j6u57H3A0Iz5ThCBAJn+/sW0/Z2u/0fvn//ztPTE79tNmw3G9zNBu/bN7zNhmCzQQU+XZTSxwm1HyL9kF4U/AuCY86GOvH7tAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;60&quot;
+        title=&quot;60&quot;
+        src=&quot;/static/415bbaaf5eb7eb15a51f33a13d90e5c1/f058b/60.png&quot;
+        srcset=&quot;/static/415bbaaf5eb7eb15a51f33a13d90e5c1/c26ae/60.png 158w,
+/static/415bbaaf5eb7eb15a51f33a13d90e5c1/6bdcf/60.png 315w,
+/static/415bbaaf5eb7eb15a51f33a13d90e5c1/f058b/60.png 630w,
+/static/415bbaaf5eb7eb15a51f33a13d90e5c1/40601/60.png 945w,
+/static/415bbaaf5eb7eb15a51f33a13d90e5c1/e996b/60.png 1050w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
 검색창에 &lt;code class=&quot;language-text&quot;&gt;Obsidian Git&lt;/code&gt; 입력 후 선택해줍니다.&lt;/p&gt;
-&lt;p&gt;![[스크린샷 2023-09-18 오후 7.44.23.png]]
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/d7380aaf075930be8466faf8f4375f09/b6529/61.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 78.48101265822784%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAAAsTAAALEwEAmpwYAAADJklEQVQ4y2WUO4/kRBSF/QeaXnq6tx922S6/7fZj1na3+zEz2/NmACFYxGtXIkCz0oqAmIQAgpVI+Q2b85fIEAkBkH+oal4rCK7KVbLPPeeeUzZeVB3nZ6d4foiUEtu28aRPnlXkWUkcpgR+hHQ9HNthNjMZjyeYpol0XVzH0eVJie+4GLlwkZFHVVbk84I0zUiS9B7ctEz9sSUshC30meM4en27pCeZTiYYhfCYVznrzYq6KZGeRdNWZFmGEIIoinSpBmr/XyBV6jwIAqbTKUZm2ay7cz6+fM7x+nO66hnb9hlpMsfzPA4PD+m6jjiOsSzrHuCu1F6dJ0mCsCwMORrw7RdvePPTn/z86nd+/Povvv/yN5bNDscVNM1CM3xg9LZccd9ANR+PxxjusM/1J7/yy3fw+uXfvP7mH354/geLeofn22y2SzbLC1bNBXFQEsiCyC9wbPeeoVrVSDRgMJ7QtR/ywfErPn3vms+urtk8+Yqq3CeJCq5OX1DXLW27YD6fE0UxQti39SBdAZrjiQI0ycqYuq0oCpcsnTE1h8RJSBLWXB6+JI4SkiTWRinQ/0tXzqu4RRj+xCTLcz56/5jNekVZ1jo+aiZSOjypcxaLlqqqdHyUk5YwEcLUZjw4L0jjEkNlJ04Srs7XdMtaS1ImKED1fHZ6zsnJCdvtVjNUbod+ji8zojDC9/0bUEcQhwWGGmRZFDTtEtuRzGYzXNfVL6psrVYd3apjvV5zcHCga7vese6OyPP8Ji7C1oChn90ClgVPjzYcH7V6VneAYRCx3ezolgc6i21b0zQNbduwXC6o61ozvpthIOMbwP0yY9Hus2gKgsDXchWgdH3KfEFZtMRRpmUq2Wma3sflbo7aFCfAUEMuioJsPse0BELdSym13DAMuLg85/T0hKdHO453Z9oc1UzdZ/WzcG5ddl0HT3gYCl3RVvNQ7O46qw9Ud8VGNVPGpVmK63lYts14OuXxdMJkpmJmMhMWjuVgjEYjhqMhg8GAvb09hsOhrr3BgH6/z6PeO7zb6zHs9Xjc6zHp97Ee9clMk9zxKBxJMhOEM4vSDvgXCbna/OqOY/IAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;61&quot;
+        title=&quot;61&quot;
+        src=&quot;/static/d7380aaf075930be8466faf8f4375f09/f058b/61.png&quot;
+        srcset=&quot;/static/d7380aaf075930be8466faf8f4375f09/c26ae/61.png 158w,
+/static/d7380aaf075930be8466faf8f4375f09/6bdcf/61.png 315w,
+/static/d7380aaf075930be8466faf8f4375f09/f058b/61.png 630w,
+/static/d7380aaf075930be8466faf8f4375f09/40601/61.png 945w,
+/static/d7380aaf075930be8466faf8f4375f09/b6529/61.png 1049w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
 &lt;code class=&quot;language-text&quot;&gt;Install&lt;/code&gt; 버튼 클릭하여 플러그인을 설치해줍니다.&lt;/p&gt;
-&lt;p&gt;![[스크린샷 2023-09-18 오후 7.44.32.png]]
+&lt;p&gt;![[62.png]]
 설치 완료 후 &lt;code class=&quot;language-text&quot;&gt;Enable&lt;/code&gt; 클릭하여 플러그인을 활성화해줍니다.&lt;/p&gt;
-&lt;p&gt;![[스크린샷 2023-09-18 오후 7.44.38.png]]
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 339px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/42f85f171d740e81b7ae5a16fe91093a/16caa/63.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 31.645569620253163%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAYAAADDl76dAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA/0lEQVQY031RuY6EMBSLkHbEiGOGHYb7Hgk6xCLEUXA0FPz/B3nlSFBssYWVl8TP9kuE67qwbRuO40jkeY4oihAEwYUwDOH7vgTvzn0cx3LP9adt4dtvCM/zoKrqRUqSBK/XCzRiTdCQjTSzLEtyWZNHsc/nA/V+x7f5gCjLEpqmoW1bVFWFruvQNA36vseyLJimCcMw4DgOrOuKuq4xjiP2fZe8NE2lOEM9NB2CbrquY55n2UDhbdskmcmIc1TWTMipzqcSQkh83W54GgYEIzPh2cQRsyyDaZoX+T8oiiLBkaUgI1OUjvyUc+VnUJx3f8FzmvOJiqKQqRnoaZj4BT6RnRNbbBRuAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;63&quot;
+        title=&quot;63&quot;
+        src=&quot;/static/42f85f171d740e81b7ae5a16fe91093a/16caa/63.png&quot;
+        srcset=&quot;/static/42f85f171d740e81b7ae5a16fe91093a/c26ae/63.png 158w,
+/static/42f85f171d740e81b7ae5a16fe91093a/6bdcf/63.png 315w,
+/static/42f85f171d740e81b7ae5a16fe91093a/16caa/63.png 339w&quot;
+        sizes=&quot;(max-width: 339px) 100vw, 339px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
 그러면 우측 상단에 이런 메시지가 노출됩니다. 메시지는 Obsidian 볼트 디렉토리가 Git 레포지토리와 연동이 되어있지 않다는 내용입니다. 이제 Obsidian 볼트 디렉토리와 Git 레포지토리를 연동해주어야 합니다.&lt;/p&gt;
 &lt;p&gt;우선 Git 레포지토리를 생성부터 해주어야 하는데요. Git 저장소로는 &lt;code class=&quot;language-text&quot;&gt;Github&lt;/code&gt; 를 사용할 것이기 때문에 &lt;a href=&quot;https://github.com&quot;&gt;https://github.com&lt;/a&gt; 사이트로 접속하여 계정이 없다면 회원가입을 진행해줍니다.&lt;/p&gt;
 &lt;p&gt;&lt;span
@@ -735,26 +919,26 @@ Github 계정 비밀번호를 입력해줍니다.&lt;/p&gt;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/7696df595434fb05c8b645adbd41f93d/8c565/21.png&quot;
+    href=&quot;/static/74766e2b00253c82cebdf844973bc30a/8c565/21.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 57.59493670886076%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAABYlAAAWJQFJUiTwAAABaElEQVQoz82Qy27UQBBFvSIT/Gq73W+PX7FnMpkQROD/f+0gt2csQAKxYMHiqKqvVLdudWKPZ2o70riJx8JwyHXkIdMcsq0+ZIoP6UrDITekwu/6+n4sLGnlaWxPorsXTH/FjZ9itf1r7P30FglPn5HhTKEnhJ2R4ZmmvdCEZyp3ipqwC6WdKcxMkpYNZW1ZLm/YduRjKZGmZVyukWF+wYaRyvQU0qP9gG0ntDlS1oZMqJ1cKJJMaMomMCxXfD9TWU/tBtrlC+3pnePpK935G2FZeUf3rwh/pgoXChlY5/PK7CT5TSik3UShETrgT1f89ITpenQ3IMOR2nvUsYsM40ytAuluqCNJbISOm1bSUiFUwHULJkyIJmyogJCOSnkqFaJZUZlbQv2L4Y2itjfcZqA6Sj0g9BBrId1G7fZrfpz/KeHKulk0nrz25DJsdR3e+7vuuH9V/qeE97Pzv6HSv0to+Jf8/4bfATgzKbfd6dZhAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 57.59493670886076%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAABYlAAAWJQFJUiTwAAABY0lEQVQoz82QS0/rMBCFs4JC4ldsj19Jk7RJSy+93Af//7cdFKeNAAnEggWLTzNzpDlz7MK3R9R+gAk73HGHDaPMbUXYVEu9rSxuyhmDDXMoZVz1eb7jHqWKML5DQdtfcN0jwvA7V9+dcx93T5m0/wOdjuC0g/QjdHqAaU4w6QEqHLIm/QThR3A3oiiFgag9ptMTfDPgXmho12CYzpl+eoRvdlCuA9cRFPs8k2shaodK2hUmLYpKEoRJeTF2I5SPqEOPuP+bSeO/hekZafoP6s6Q8QiVTuA6Yd5nyq0U7CJw7RdREqRrQP0BygVwY8ENQYUEHRNsu830w4jaJpSrIWWK3EjKl2ZKYSFNQtwe4Ns9FLVQ1EDZBlIHKBuhbMpmXLlLQnpneIHX/kLIpsK2ENRBUJ/hOizUYX3N6/03CWfmy9JEsDqC6bTUeXntr3rA9avYZwmvz2ZfQdFHCR2+k59v+AIc3ylE5aYpdAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;21&quot;
         title=&quot;21&quot;
-        src=&quot;/static/7696df595434fb05c8b645adbd41f93d/f058b/21.png&quot;
-        srcset=&quot;/static/7696df595434fb05c8b645adbd41f93d/c26ae/21.png 158w,
-/static/7696df595434fb05c8b645adbd41f93d/6bdcf/21.png 315w,
-/static/7696df595434fb05c8b645adbd41f93d/f058b/21.png 630w,
-/static/7696df595434fb05c8b645adbd41f93d/40601/21.png 945w,
-/static/7696df595434fb05c8b645adbd41f93d/78612/21.png 1260w,
-/static/7696df595434fb05c8b645adbd41f93d/8c565/21.png 3346w&quot;
+        src=&quot;/static/74766e2b00253c82cebdf844973bc30a/f058b/21.png&quot;
+        srcset=&quot;/static/74766e2b00253c82cebdf844973bc30a/c26ae/21.png 158w,
+/static/74766e2b00253c82cebdf844973bc30a/6bdcf/21.png 315w,
+/static/74766e2b00253c82cebdf844973bc30a/f058b/21.png 630w,
+/static/74766e2b00253c82cebdf844973bc30a/40601/21.png 945w,
+/static/74766e2b00253c82cebdf844973bc30a/78612/21.png 1260w,
+/static/74766e2b00253c82cebdf844973bc30a/8c565/21.png 3346w&quot;
         sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
@@ -1472,25 +1656,25 @@ Git 뷰에서 상단의 우측에서 3번째 &lt;code class=&quot;language-text&
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/ca5868f63394180d241675b06979d1c5/60b3a/52.png&quot;
+    href=&quot;/static/56d2773c369c3b77e08357a110867c78/60b3a/52.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 217.08860759493672%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAArCAIAAAD3xz8iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEFklEQVRIx52W2XKqQBCGgQF12BRlDSDI6oILiIlJyhutGOMSs1mpvP+LnJIxMcZ4knO+C4rqYWa6e7r/AcMyKIriOC6Xy2GnyeVyEMJcLifLMkmSWxOO4xiGKYoyHA41TUPf4UdgGJYkSRiGuq6/vb2Vy2Xsn0BLHAAhLBQKX4ylUqmWoShKrVaDEH4eBQDsLDRNQwhxHCfeQZNd1/U8T9d127ZpmsYwDI3iOA4AQJb/Afm/febz+Var1el0ms1mFEVhGHa73Xq93ul02u12EATNjDAMkUUUxX38AIAwDFutVhRF6LtOp9PKcF0XWVzXdRwnypBl+fvk/d7t3WSCIHRdVzJkWRYEQVEUURQlSapWq4ZhKIqiqmqlUrEsK5/PHyxDkmSv10uSJE3TbrfbaDQuLi7SNI2iSBRFWZaLxWKpVKpUKqqqUhR1MJkgCJZlGYbhOI6m6UKhACHkeZ5hmJ8DAAC02+3BYJBmDIfDJEkajQbK3DHtdrvb7fq+v60IkiSvrq6m0+lsNru5ubm9vR2NRkmS9Pv95ARpmjYaDVROJ/P5GQAA+QkAwM5tQRC4DEmSPt5ZlkWR8zxfLBa/34eiKN/33YwwDNG77/uO4/i+b1mW53lRFDEMAwDI5XIH5YHjuG3bsizzGZVKRRRFnudZli2VSh9GZJckaefwx1EJgvB3DfnbUaGij+M4TdN+vx/Hcb/f72XEGSjDcRwjS5qmrutu/SdJcjKZPDw83N3drdfr1Wo1m80Wi8VqtVosFsvlcj6fr9frx8fH+Xy+Wq3u7++Xy+VgMNgF/6VF9nX/LgDH7CInCILneY7jIIQsy3IcxzAMhBAdGAAA/459YziOU6vVZFm2LKtarSqKomma4zjVanUnsacgCEKSpI+WVDNkWZYyNE07O0LXdUmStvtTFDWdTl9eXjabzfPz8+vr63w+v76+HmVcf8doNIrjeFtzOI4LglB5R/gF5XKZ5/lv0nuQjx+hKKperwdBoOu653lhGNq2bRhGEAS2bX+VjuPuQz2Ezol9B1U1e4Kd6FMUNR6PHzM2m83T0xMqr/F4fHl5+UPCAACWZfmHeJ5n23b1BJZlaZr2/9L9g6b/yC7mXq8XRVEQBL7vt1otlmV/e6EAAJDQNpvNer0eRRG6e4/3+bcSONUL+1VIktR13TAM7R1VVY0MVVU1TUNDgiDYtn1wvyK3a7Wa53lIKD3Pc10XnZNpmkhMbdu2LCsMQ8MwDv5BSJJEPawoimmaqCVRJ2qapuu6KIrIKEmSYRimaXIct5/80aiGYViWdXZ2hjxHFvRbomeYpqlp2r7gSZK0M1DdOI5jmia6llGHIqlAL+Vy+UBbCIJAgl4sFiGENE33er3FYjGZTPoZSZKcn58rinJ8+H8AQn657AYIvBUAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 217.08860759493672%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAArCAYAAAB4pah1AAAACXBIWXMAAAsTAAALEwEAmpwYAAADl0lEQVRIx7WXV1NiQRCFMYERMWAWJJgQs5aW4UXLEsviQUtL//8f6a2v14NzLxdkd9mHw8yd0NPhdM+QSqVSBkZGRmxqaspbjXXD8PCwjY6O+vp8Pu/fPjcwMOCdxcVFu7y8tKWlpchG5rUm7J+cnNjW1patrq7a5+enzczMaE/K+grUzmQyiZPT09NWKpUcCwsLtrGxYWNjY23rhoaGvsfp6GNwcNBNopXAcrlslUrFTUPg+Ph4a63W0QYH9dnkdDpte3t7tr+/b7Vazer1um1vb9vh4aHt7OzYwcGBzxEA5gHzGp+bm4sKRF0WIBTs7u76Jh0AMDvsA9ZyOJSJafnvZopKLR6urKx4FOEibS6X83Z+ft5RKBRsbW3N5wFmFovFZHbA8KOjIzs+PrazszP3DWZfXFz4N6YhANOy2awfxjeCW9kRAg0nJydtYmLCW2gBN6EBqZjEu66AlAQAbcDp6amnIBoTZQKB1klgH4ARm5ubv32J2ldXV/bw8GCNRsPbx8dHu729daHkbByMh0AJ3PQVnN4iGEYSq+JQ1rjJOBp/4UOcr2+Ab9USFNIxQpOkKFerVc9XAMnxB31aCgPz0IQWMhM4NKIWJghP+WI0Q0O0mZ2ddSj6aEUfUPcA89CnTSADmKhKrYrTK+TDCG2U7GSHtIJ/8FH1EjDGnDgbas1eDwwC7+/v7eXlxVOQTfhIG8PNOkQHAKoVgnDVV+Z824/ZMoFJoD4bAWviiNAGP4ginIh2oTbSsCtV4qmne4NIU1nW19fdJ8vLy177GOs5lzmZEhWWL65S9ZnjIIR3Ar5vFVp8QP6+vb3Z+/u7vb6+2sfHhz09Pdn19bXd3Nw46CeBOqC8dz+KhyIzEHkZ7wWsJQb/59aDEhBbzwrylT7pyDf5zH0cyYafghKyPqzegAoD4mvia1uVHQ3v7u48UwCBoX1+frZms+lzVHCc3wkErRUUflSaksAcvOwGeBq82voclJ4v8D+JMvcylZjoYiZ3Mc7+Kw3xod4ztFydCKQwdLqkftC+j+8amUxyQ2IipYSnz5jeNPqmJd0ge9tTLixf3HKEnxY/UrZEGYTqZmQMkF2Mtz2YEIgglS8EoEWStpQyzVGuEMh6MiUiUDVNpnOABLGJPi3zmMoauYM1kf82+JBFQIzHXBazCc3xFSUKrbACH6Itpa6taBAlJlhAEdBTDm6Sz9yIPJB4ENGen5+70E6R/wUPpPy1b3J8RAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;52&quot;
         title=&quot;52&quot;
-        src=&quot;/static/ca5868f63394180d241675b06979d1c5/f058b/52.png&quot;
-        srcset=&quot;/static/ca5868f63394180d241675b06979d1c5/c26ae/52.png 158w,
-/static/ca5868f63394180d241675b06979d1c5/6bdcf/52.png 315w,
-/static/ca5868f63394180d241675b06979d1c5/f058b/52.png 630w,
-/static/ca5868f63394180d241675b06979d1c5/40601/52.png 945w,
-/static/ca5868f63394180d241675b06979d1c5/60b3a/52.png 1179w&quot;
+        src=&quot;/static/56d2773c369c3b77e08357a110867c78/f058b/52.png&quot;
+        srcset=&quot;/static/56d2773c369c3b77e08357a110867c78/c26ae/52.png 158w,
+/static/56d2773c369c3b77e08357a110867c78/6bdcf/52.png 315w,
+/static/56d2773c369c3b77e08357a110867c78/f058b/52.png 630w,
+/static/56d2773c369c3b77e08357a110867c78/40601/52.png 945w,
+/static/56d2773c369c3b77e08357a110867c78/60b3a/52.png 1179w&quot;
         sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
