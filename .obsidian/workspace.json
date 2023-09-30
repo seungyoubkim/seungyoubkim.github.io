@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "9260461a02c87417",
+        "id": "93dcca942d8c9469",
         "type": "tabs",
         "children": [
           {
-            "id": "945e1c8d1a0c018e",
+            "id": "ce391e34d882e6c0",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -154,20 +154,21 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "945e1c8d1a0c018e",
+  "active": "ce391e34d882e6c0",
   "lastOpenFiles": [
-    "content/blog/obsidian-git/55.png",
+    "content/blog/obsidian-git/62.png",
     "content/blog/obsidian-git/index.md",
-    "content/blog/obsidian-git/54.png",
-    "content/blog/obsidian-git/53.png",
-    "content/blog/obsidian-git/52.png",
-    "content/blog/obsidian-git/51.png",
-    "content/blog/obsidian-git/50.png",
-    "content/blog/obsidian-git/49.png",
-    "content/blog/obsidian-git/48.png",
-    "content/blog/obsidian-git/47.png",
-    "content/blog/obsidian-git/46.png",
-    "content/blog/obsidian-git/45.png",
+    "content/blog/obsidian-git/52.png.sb-49bf3cd1-gUrwLt",
+    "content/blog/obsidian-git/63.png",
+    "content/blog/obsidian-git/61.png",
+    "content/blog/obsidian-git/60.png",
+    "content/blog/obsidian-git/59.png",
+    "content/blog/obsidian-git/58.png",
+    "content/blog/obsidian-git/57.png",
+    "스크린샷 2023-09-18 오후 7.43.40.png.md",
+    "content/blog/obsidian-git/3.png",
+    "content/blog/obsidian-git/2.png",
+    "content/blog/obsidian-git/55.png",
     "스크린샷 2023-09-18 오후 7.50.45.png.md",
     "스크린샷 2023-09-18 오후 7.43.22.png.md",
     "content/blog/obsidian-test/index.md",
@@ -183,7 +184,6 @@
     "node_modules/@parcel/cache/node_modules/lmdb/build/Release/obj.target/lmdb/dependencies/lmdb/libraries/liblmdb/midl.o",
     "node_modules/@parcel/cache/node_modules/lmdb/build/Release/obj.target/lmdb/dependencies/lmdb/libraries/liblmdb/mdb.o",
     "node_modules/@parcel/cache/node_modules/lmdb/build/Release/obj.target/lmdb/dependencies/lmdb/libraries/liblmdb/chacha8.o",
-    "node_modules/@parcel/cache/node_modules/lmdb/build/Release/obj.target/lmdb/dependencies/lmdb/libraries/liblmdb",
     "node_modules/sharp/vendor/8.12.2/darwin-arm64v8/THIRD-PARTY-NOTICES.md",
     "node_modules/pretendard/examples/flutter_pretendard/ios/Runner/Assets.xcassets/LaunchImage.imageset/README.md",
     "node_modules/lmdb/dependencies/lz4/lib/dll/example/README.md",
@@ -200,7 +200,6 @@
     "node_modules/ext/docs/string/random.md",
     "node_modules/ext/docs/math/floor-10.md",
     "node_modules/ext/docs/math/round-10.md",
-    "node_modules/ext/docs/string_/includes.md",
-    "node_modules/ext/docs/object/clear.md"
+    "node_modules/ext/docs/string_/includes.md"
   ]
 }
