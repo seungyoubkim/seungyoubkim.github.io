@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[Blog by Seungyoub Kim]]></description><link>https://seungyoubkim.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 02 Oct 2023 05:56:38 GMT</lastBuildDate><item><title><![CDATA[Obsidian Git 을 이용하여 무료로 맥북과 아이폰간의 데이터 동기화하기]]></title><description><![CDATA[맥북과 아이폰간의 데이터를 동기화하는 방법을 소개하려고 합니다. 이 과정에서는 Obsidian Git 플러그인과 GitHub 레포지토리를 활용해 데이터를 안전하게 백업하고 동기화할 것입니다.
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[Blog by Seungyoub Kim]]></description><link>https://seungyoubkim.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 02 Oct 2023 06:44:54 GMT</lastBuildDate><item><title><![CDATA[Obsidian Git 을 이용하여 무료로 맥북과 아이폰간의 데이터 동기화하기]]></title><description><![CDATA[맥북과 아이폰간의 데이터를 동기화하는 방법을 소개하려고 합니다. 이 과정에서는 Obsidian Git 플러그인과 GitHub 레포지토리를 활용해 데이터를 안전하게 백업하고 동기화할 것입니다.
 (Working Copy…]]></description><link>https://seungyoubkim.github.io/obsidian-git/</link><guid isPermaLink="false">https://seungyoubkim.github.io/obsidian-git/</guid><pubDate>Sat, 30 Sep 2023 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;맥북과 아이폰간의 데이터를 동기화하는 방법을 소개하려고 합니다. 이 과정에서는 Obsidian Git 플러그인과 GitHub 레포지토리를 활용해 데이터를 안전하게 백업하고 동기화할 것입니다.
 (Working Copy 를 이용하지 않습니다!)&lt;/p&gt;
 &lt;p&gt;아래 내용을 따라오시기 위해 깃과 터미널 명령어에 대한 기초적인 지식이 있으시다면 더욱 수월하게 진행하실 수 있습니다. 하지만 걱정하지 마세요. 깃과 터미널 명령어에 대한 세부적인 설명은 생략하였으나, 이 글에서는 그런 기술적인 지식 없이도 충분히 따라올 수 있도록 상세하게 작성하였으니 천천히 따라오세요.&lt;/p&gt;
@@ -2055,12 +2055,12 @@ Git 뷰에서 상단의 우측에서 3번째 &lt;code class=&quot;language-text&
 이는 깃의 기본 메커니즘에서 출발한 현상으로, 충돌을 피하기 위해서는 하나의 기기에서 수정을 마친 뒤 꼭 백업을 하고, 다른 기기에서 사용하기 전에는 꼭 Pull 명령을 한번 실행하고 나서 사용하는 것이 좋습니다.&lt;/p&gt;
 &lt;p&gt;필자는 수동으로 백업/Pull 을 하며 옵시디언을 이용하고 있습니다.&lt;/p&gt;
 &lt;p&gt;만약 충돌이나 기타 문제가 발생한다 해도, 지금까지 소개한 방법으로 Obsidian 볼트 디렉토리와 Git 설정을 초기화하면 마지막으로 백업한 데이터로 쉽게 복구할 수 있으니 크게 걱정하지는 않으셔도 됩니다.&lt;/p&gt;
-&lt;p&gt;이상으로 Obsidian Git 을 이용하여 맥북과 아이폰간의 데이터를 동기화하는 방법에 대한 설명을 마무리하겠습니다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[자바스크립트 콜 스택과 이벤트 루프]]></title><description><![CDATA[…]]></description><link>https://seungyoubkim.github.io/js-event-loop/</link><guid isPermaLink="false">https://seungyoubkim.github.io/js-event-loop/</guid><pubDate>Tue, 04 Aug 2020 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
-&lt;p&gt;⚠️ 해당 글의 내용과 예시 코드, 이미지는 모두 참고 자료에서 가져 와 정리 한 것입니다.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;자바스크립트&lt;/strong&gt;는 &lt;strong&gt;싱글 스레드 기반의 프로그래밍 언어&lt;/strong&gt;로 한번에 하나의 일만 처리 할 수 있습니다.&lt;/p&gt;
+&lt;p&gt;이상으로 Obsidian Git 을 이용하여 맥북과 아이폰간의 데이터를 동기화하는 방법에 대한 설명을 마무리하겠습니다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[자바스크립트 콜 스택과 이벤트 루프]]></title><description><![CDATA[…]]></description><link>https://seungyoubkim.github.io/js-event-loop/</link><guid isPermaLink="false">https://seungyoubkim.github.io/js-event-loop/</guid><pubDate>Tue, 04 Aug 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;strong&gt;자바스크립트&lt;/strong&gt;는 &lt;strong&gt;싱글 스레드 기반의 프로그래밍 언어&lt;/strong&gt;로 한번에 하나의 일만 처리 할 수 있습니다.&lt;/p&gt;
 &lt;p&gt;이것은 &lt;strong&gt;콜 스택&lt;/strong&gt;이 &lt;strong&gt;하나&lt;/strong&gt;라는 뜻인데요.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;콜 스택&lt;/strong&gt;이 무엇인지 알아보기 위해 &lt;strong&gt;자바스크립트 구조&lt;/strong&gt;에 대해 간단히 알아 볼 필요가 있습니다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;⚠️ 해당 글의 내용과 예시 코드, 이미지는 모두 참고 자료에서 가져 와 정리 한 것입니다.&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h1&gt;V8 엔진&lt;/h1&gt;
 &lt;hr&gt;
 &lt;p&gt;자바스크립트로 구현 된 코드는 보통 &lt;strong&gt;자바스크립트 엔진&lt;/strong&gt;을 이용해 실행하게 됩니다.&lt;/p&gt;
@@ -2149,8 +2149,8 @@ Git 뷰에서 상단의 우측에서 3번째 &lt;code class=&quot;language-text&
         decoding=&quot;async&quot;
       /&gt;
   &lt;/a&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;콜 스택의 각각의 요소는 &lt;strong&gt;스택 프레임&lt;/strong&gt; 이라고 부릅니다.&lt;/p&gt;
+    &lt;/span&gt;
+콜 스택의 각각의 요소는 &lt;strong&gt;스택 프레임&lt;/strong&gt; 이라고 부릅니다.&lt;/p&gt;
 &lt;p&gt;또한 프로그램에서 예외가 발생하였을 때 생성되는 &lt;strong&gt;스택 트레이스&lt;/strong&gt;는 기본적으로 예외가 발생하였을 때의 &lt;strong&gt;콜 스택의 상태&lt;/strong&gt;입니다.&lt;/p&gt;
 &lt;p&gt;아래 예시 코드를 살펴보겠습니다.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;jsx&quot;&gt;&lt;pre class=&quot;language-jsx&quot;&gt;&lt;code class=&quot;language-jsx&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;//foo.js&lt;/span&gt;
@@ -2197,8 +2197,68 @@ Git 뷰에서 상단의 우측에서 3번째 &lt;code class=&quot;language-text&
   &lt;/a&gt;
     &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;또한 코딩을 하다 종종 만나 볼 수 있는 &lt;strong&gt;Maximum call stack size exceeded&lt;/strong&gt; 에러 또한 아래 이미지와 같이 &lt;strong&gt;콜 스택&lt;/strong&gt;에 쌓인 &lt;strong&gt;스택 프레임&lt;/strong&gt;들이 제거되지 못하고 계속하여 쌓이기만 하여 &lt;strong&gt;콜 스택&lt;/strong&gt;의 &lt;strong&gt;최대 크기&lt;/strong&gt;에 도달 했을 때 브라우저가 던지는 &lt;strong&gt;에러&lt;/strong&gt;입니다.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;content/blog/js-event-loop/1.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;content/blog/js-event-loop/2.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/4df869c2f6ee2804931cc9f6244c2387/2bef9/1.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 75.31645569620254%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAAAsTAAALEwEAmpwYAAABg0lEQVQ4y5WUyQ6CQAyGff/XMMFEiBgFEk+8hhfc2Nxw3xVr/iYdBx0PNmmgM9OvG0ONfsjz+aw8Teu6ylpN39SdxH48HjSfz2k2m9H9fjcG0ddqv0CfWZRlWdm/3W602WxY9UCc4fV6pdPppEDn8/nLxhk9E9hxHNN4PKbL5fIGYgPlZFlGh8OBnfM8Z/t4PLKdpimvIYgAYVuWRfV6ncEKuN1uVXSkv1qtuG+Q9XrNNsqFwhaZTCbkui7Ztk2DweAN3O12qgf7/Z6d4AzBHoJI7xBcMtSBo9HIDMS7DgQAQDmsA5MkoW63S61W6xuIiQlguVyqsgArikJNGeUjOGwMo91uk+M4NBwOq0CJiqHACVNDX7GHhvd6PVZkpffQCERWgMhAptMpl9JsNimKIp5wo9HgiUppAkS5OFcBAhKGIXmeR/1+nxaLBWfT6XR4evh8giAg3/cZIiKZYw/lKyB6gvLQRzxhQ/HpYO1TReS8+FZuyj/yeT2Nd/kfNd1z/W/zApQJe6Ity+WuAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;1&quot;
+        title=&quot;1&quot;
+        src=&quot;/static/4df869c2f6ee2804931cc9f6244c2387/f058b/1.png&quot;
+        srcset=&quot;/static/4df869c2f6ee2804931cc9f6244c2387/c26ae/1.png 158w,
+/static/4df869c2f6ee2804931cc9f6244c2387/6bdcf/1.png 315w,
+/static/4df869c2f6ee2804931cc9f6244c2387/f058b/1.png 630w,
+/static/4df869c2f6ee2804931cc9f6244c2387/40601/1.png 945w,
+/static/4df869c2f6ee2804931cc9f6244c2387/2bef9/1.png 1024w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 386px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/88d01c97077754b5b0bd09b1a1847b42/7bc0b/2.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 5.69620253164557%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAABCAYAAADeko4lAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAQ0lEQVQI1yWLQQrAIBAD+/+nteBBEXVFP1GPoVOWPQQyQ3K998Mx4ysF5YzMUErIee+I+1rRGGhO1Ht03zq3Fp+1+AGHR0kVCE5ZqgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;2&quot;
+        title=&quot;2&quot;
+        src=&quot;/static/88d01c97077754b5b0bd09b1a1847b42/7bc0b/2.png&quot;
+        srcset=&quot;/static/88d01c97077754b5b0bd09b1a1847b42/c26ae/2.png 158w,
+/static/88d01c97077754b5b0bd09b1a1847b42/6bdcf/2.png 315w,
+/static/88d01c97077754b5b0bd09b1a1847b42/7bc0b/2.png 386w&quot;
+        sizes=&quot;(max-width: 386px) 100vw, 386px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
 &lt;h1&gt;싱글 스레드&lt;/h1&gt;
 &lt;hr&gt;
 &lt;p&gt;위에서 &lt;strong&gt;자바스크립트&lt;/strong&gt;는 &lt;strong&gt;싱글 스레드 기반의 프로그래밍 언어&lt;/strong&gt;이고 &lt;strong&gt;콜 스택이 하나&lt;/strong&gt;라고 이야기 했습니다.&lt;/p&gt;
@@ -2206,7 +2266,36 @@ Git 뷰에서 상단의 우측에서 3번째 &lt;code class=&quot;language-text&
 &lt;p&gt;브라우저가 응답 없음 상태로 &lt;strong&gt;멈추게 된다&lt;/strong&gt;는 뜻입니다.&lt;/p&gt;
 &lt;p&gt;이것을 &lt;strong&gt;블록킹 되었다&lt;/strong&gt;(blocked) 라고 합니다.&lt;/p&gt;
 &lt;p&gt;그렇게 콜 스택 내의 함수들이 많은 시간을 소요하여 브라우저가 &lt;strong&gt;일정 시간 이상 응답이 없을 경우&lt;/strong&gt; 대부분의 브라우저는 아래와 같은 에러를 일으키게 됩니다.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;content/blog/js-event-loop/10.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 462px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/996945bcf739336d24ee06838b5fc396/e389b/10.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 62.0253164556962%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAAsTAAALEwEAmpwYAAAB9ElEQVQoz4WRS0/bQBDH830LvfQjlPbcqkWquMMnyAWpEicuoa+DSdI48YsY8sDxe23v2v5V6xCRVkBH+mlnZmf+O6PtvTs1ODq95u2Zyfuza45ODXTuzZcRB59HvD4ecXg85vBY+9vzkTEHnwwOP37vePXhG737MCdKC4zRlCDKidOSTZzj+ks8f43rL3Dniy525gtublfbu/kKz1+xChLCpGATC25XEb2yKvn18wdXVwM8z6UQOW1bM/ccZuYE25pgWRNsx8LUsTNlZk1xnRmmOcb3fWRVAQ25EPQqqQiCDcPhkMFgwHj8m7qucSyLyWSC49jYtoVlWTiOi2WbTG2zi++DgCiOEaJAKUWc5vSkqsmyjH6/z8nJCRcXF5RlSRiGRHHE3eKOuX/DZrMhTVOyLCXLU+I4QSpF0zRIKR8EMy2oukLTNDEMg8vLS4QQVFVFXStW90sWyzsqKdHWti1t27mdmN5Gn23bbAXLSnbJfdMv7gp3tmt+Dn3fCeqXlZTdRPuoh3X2G56i7mqafwSV+gs9oXwi/xJNXZPsVtYT7UT2/f+ha0VZUVSSoqoef3nuu0ztMdfDIev1uvuMWj2PnkjXlFIxczzOz7/i+UuSXNBL84Iky4jTlChJSLOcvCjIi/JFRFGSiYIwyQkT3S8IooQ/1oODP+pRW0MAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;10&quot;
+        title=&quot;10&quot;
+        src=&quot;/static/996945bcf739336d24ee06838b5fc396/e389b/10.png&quot;
+        srcset=&quot;/static/996945bcf739336d24ee06838b5fc396/c26ae/10.png 158w,
+/static/996945bcf739336d24ee06838b5fc396/6bdcf/10.png 315w,
+/static/996945bcf739336d24ee06838b5fc396/e389b/10.png 462w&quot;
+        sizes=&quot;(max-width: 462px) 100vw, 462px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;물론 에러가 발생하지 않는다고 하여도 &lt;strong&gt;장시간 동안 응답하지 않는 웹 서비스&lt;/strong&gt;가 사용자에게 좋은 사용자 경험을 준다고 이야기 할 수는 &lt;strong&gt;없겠습니다&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;그렇다면 위 싱글 스레드의 문제점을 해결하려면 어떻게 해야 할까요?&lt;/p&gt;
 &lt;h1&gt;비동기 처리&lt;/h1&gt;
@@ -2241,7 +2330,7 @@ jQuery&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cla
 &lt;p&gt;Ajax 함수는 요청에 &lt;strong&gt;응답이 오면&lt;/strong&gt; 두번째 인자로 넘겨진 &lt;strong&gt;콜백 함수&lt;/strong&gt;를 &lt;strong&gt;호출&lt;/strong&gt; 할 것입니다.&lt;/p&gt;
 &lt;p&gt;위 같은 방법을 &lt;strong&gt;콜백 함수를 이용한 비동기 처리&lt;/strong&gt; 이라고 합니다.&lt;/p&gt;
 &lt;p&gt;위처럼 비동기 적인 수행을 하는 방법을 &lt;strong&gt;비동기 처리&lt;/strong&gt; 이라고 합니다.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;비동기 처리&lt;/strong&gt; 대해서는 **&lt;a href=&quot;https://www.notion.so/1979e31eb7d24f979513a68aa6b44c25?pvs=21&quot;&gt;다음 글&lt;/a&gt;**에서 좀 더 자세히 알아보도록 하겠습니다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;비동기 처리&lt;/strong&gt; 대해서는 &lt;a href=&quot;https://www.notion.so/1979e31eb7d24f979513a68aa6b44c25?pvs=21&quot;&gt;다음 글&lt;/a&gt;에서 좀 더 자세히 알아보도록 하겠습니다.&lt;/p&gt;
 &lt;p&gt;다시 이어서 &lt;strong&gt;자바스크립트 구조&lt;/strong&gt;에 대해서 이야기를 해보도록 하겠습니다.&lt;/p&gt;
 &lt;h1&gt;호스팅 환경&lt;/h1&gt;
 &lt;hr&gt;
@@ -2261,7 +2350,37 @@ jQuery&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cla
 &lt;p&gt;위에서 이야기 하였듯이 &lt;strong&gt;자바스크립트 프로그램&lt;/strong&gt;은 &lt;strong&gt;자바스크립트 엔진&lt;/strong&gt; 만으로 동작하는 것이 &lt;strong&gt;아닙니다&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;많은 자바스크립트 개발자들이 사용하는 &lt;strong&gt;DOM&lt;/strong&gt;, &lt;strong&gt;AJAX&lt;/strong&gt;, &lt;strong&gt;setTimeout&lt;/strong&gt; 등의 함수들은 &lt;strong&gt;Web API&lt;/strong&gt; 라는 것인데 이 Web API 는 &lt;strong&gt;브라우저&lt;/strong&gt;에서 제공을 하고 있습니다.&lt;/p&gt;
 &lt;p&gt;아래 이미지와 같이 Web API 외에도 &lt;strong&gt;이벤트 루프&lt;/strong&gt;와 &lt;strong&gt;콜백 큐&lt;/strong&gt;도 브라우저에 구현이 되어 있습니다.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;content/blog/js-event-loop/11.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/7299ec41566ffd25e8fd9772f74c714d/5a190/11.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 75.31645569620254%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAAAsTAAALEwEAmpwYAAACoklEQVQ4y5VT2W7TQBT1T/BlvPABIJB46UMFYhNiUYWERHniGSREAQnoB6TN4iRO7CS1idzGJErbNK6yekkcO4s9B90JcdqqL4x0NTP3js49Z+aMgP8YjLFL69WW5ihiPCfM53PYtn0hHFi2w+eLeTq3BloBh2AR5aO4kVAsFpHJZHBwcIBSqYRSSYGqKiiXFb6nPNUVRVlChCHBwnEZ6k0HWrWN49MROr0IEz+CQAdns9la1/gLzn7fx9z+GaeoXi6XL8l/+8HBrXt93H0wxJ3NAW7e7iKVD5aAjuPEd9KqbmD7+Q3UlCf/JEZccqVSgeuOoOuHODfPsLM7xcazAR5vWXj6xsLmiyFK2hSCLMuYTCZx56mTgN16j6mbWZMejzlDakjrKJzj8w8PD19bePnOxqttG4+2LJQJkDqb7TZOjpuo1+sYWmMO4gch3zebTQwGA36XF0cyF+DjtzG+7nrY+eXh0/cxGifzpeRUKoWcJEOraChIeYxGDgoFibOiSCaTICU0oii6ZJ+rQxDFDFKZLFouUJmpkLQs2i0Tuq7Hh7LZLNLpdAxI2sOIYbFgWITrIC8KWVFEjrqbJiZGBapxiPO2yZmR1OFwiP39fUagSxsu6bFraHJjE2BeyiNwfSAIcXh0BNM0uQe73S56vR4BkhfZykJhGMbr6XTKY+lPQEhnRMjFHIoa4M+BP4aOk9NTznA0GvFXJYZ7e3twXZd1Oh22WCw4IVKwahoEwfqn5HI56PoRjJrBgahjoVAA1WRZZolEgtErE1i1WmVkM8MwyAWsVquh0WhA0zT0+30IJI0k0aXTnM/nuUUkSeI5URQZMVRVlfxKrDhDy7LofjlLWhNL3/chUJGked6EG5wk0s+h2fM8HlRf0JNeeYPrbPMXzHJMZpK4HrUAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;11&quot;
+        title=&quot;11&quot;
+        src=&quot;/static/7299ec41566ffd25e8fd9772f74c714d/f058b/11.png&quot;
+        srcset=&quot;/static/7299ec41566ffd25e8fd9772f74c714d/c26ae/11.png 158w,
+/static/7299ec41566ffd25e8fd9772f74c714d/6bdcf/11.png 315w,
+/static/7299ec41566ffd25e8fd9772f74c714d/f058b/11.png 630w,
+/static/7299ec41566ffd25e8fd9772f74c714d/5a190/11.png 800w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;콜백 큐&lt;/strong&gt;란 비동기 적으로 실행 된 함수의 &lt;strong&gt;콜백 함수&lt;/strong&gt;가 &lt;strong&gt;저장되는 곳&lt;/strong&gt;입니다.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;이벤트 루프&lt;/strong&gt;란 &lt;strong&gt;콜백 큐&lt;/strong&gt;와 &lt;strong&gt;콜 스택&lt;/strong&gt;을 &lt;strong&gt;감시&lt;/strong&gt;하여 &lt;strong&gt;콜 스택이 비어있는 경우 콜백 큐의 첫번째 요소를 콜 스택에 삽입&lt;/strong&gt;하여 해당 함수가 자바스크립트 엔진에서 실행 될 수 있도록 합니다.&lt;/p&gt;
 &lt;p&gt;콜백 큐와 콜 스택의 이름이 비슷하다고 헷갈리시면 안됩니다.&lt;/p&gt;
