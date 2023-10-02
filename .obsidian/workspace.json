@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/blog/js-event-loop/index.md",
+                "file": "content/blog/obsidian-git/index.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/blog/js-event-loop/index.md",
+                "file": "content/blog/obsidian-git/index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/blog/js-event-loop/index.md",
+                "file": "content/blog/obsidian-git/index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/blog/js-event-loop/index.md"
+                "file": "content/blog/obsidian-git/index.md"
               }
             }
           },
@@ -156,9 +156,9 @@
   },
   "active": "752bc8c0a53e035f",
   "lastOpenFiles": [
+    "content/blog/js-event-loop/index.md",
     "content/blog/js-async/index.md",
     "js-async.md",
-    "content/blog/js-event-loop/index.md",
     "content/blog/js-async/13.png",
     "content/blog/js-async/12.png",
     "content/blog/javascript-event-loop/index.md",
