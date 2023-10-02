@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[Blog by Seungyoub Kim]]></description><link>https://seungyoubkim.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 02 Oct 2023 07:01:20 GMT</lastBuildDate><item><title><![CDATA[Obsidian Git 을 이용하여 무료로 맥북과 아이폰간의 데이터 동기화하기]]></title><description><![CDATA[맥북과 아이폰간의 데이터를 동기화하는 방법을 소개하려고 합니다. 이 과정에서는 Obsidian Git 플러그인과 GitHub 레포지토리를 활용해 데이터를 안전하게 백업하고 동기화할 것입니다.
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[Blog by Seungyoub Kim]]></description><link>https://seungyoubkim.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 02 Oct 2023 07:16:29 GMT</lastBuildDate><item><title><![CDATA[Obsidian Git 을 이용하여 무료로 맥북과 아이폰간의 데이터 동기화하기]]></title><description><![CDATA[맥북과 아이폰간의 데이터를 동기화하는 방법을 소개하려고 합니다. 이 과정에서는 Obsidian Git 플러그인과 GitHub 레포지토리를 활용해 데이터를 안전하게 백업하고 동기화할 것입니다.
 (Working Copy…]]></description><link>https://seungyoubkim.github.io/obsidian-git/</link><guid isPermaLink="false">https://seungyoubkim.github.io/obsidian-git/</guid><pubDate>Sat, 30 Sep 2023 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;맥북과 아이폰간의 데이터를 동기화하는 방법을 소개하려고 합니다. 이 과정에서는 Obsidian Git 플러그인과 GitHub 레포지토리를 활용해 데이터를 안전하게 백업하고 동기화할 것입니다.
 (Working Copy 를 이용하지 않습니다!)&lt;/p&gt;
 &lt;p&gt;아래 내용을 따라오시기 위해 깃과 터미널 명령어에 대한 기초적인 지식이 있으시다면 더욱 수월하게 진행하실 수 있습니다. 하지만 걱정하지 마세요. 깃과 터미널 명령어에 대한 세부적인 설명은 생략하였으나, 이 글에서는 그런 기술적인 지식 없이도 충분히 따라올 수 있도록 상세하게 작성하였으니 천천히 따라오세요.&lt;/p&gt;
@@ -2056,6 +2056,424 @@ Git 뷰에서 상단의 우측에서 3번째 &lt;code class=&quot;language-text&
 &lt;p&gt;필자는 수동으로 백업/Pull 을 하며 옵시디언을 이용하고 있습니다.&lt;/p&gt;
 &lt;p&gt;만약 충돌이나 기타 문제가 발생한다 해도, 지금까지 소개한 방법으로 Obsidian 볼트 디렉토리와 Git 설정을 초기화하면 마지막으로 백업한 데이터로 쉽게 복구할 수 있으니 크게 걱정하지는 않으셔도 됩니다.&lt;/p&gt;
 &lt;p&gt;이상으로 Obsidian Git 을 이용하여 맥북과 아이폰간의 데이터를 동기화하는 방법에 대한 설명을 마무리하겠습니다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[자바스크립트 콜 스택과 이벤트 루프]]></title><description><![CDATA[…]]></description><link>https://seungyoubkim.github.io/js-event-loop/</link><guid isPermaLink="false">https://seungyoubkim.github.io/js-event-loop/</guid><pubDate>Tue, 04 Aug 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;자바스크립트는 싱글 스레드 기반의 프로그래밍 언어로 한번에 하나의 일만 처리 할 수 있습니다.&lt;/p&gt;
+&lt;p&gt;이것은 &lt;strong&gt;콜 스택&lt;/strong&gt;이 &lt;strong&gt;하나&lt;/strong&gt;라는 뜻인데요.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;콜 스택&lt;/strong&gt;이 무엇인지 알아보기 위해 &lt;strong&gt;자바스크립트 구조&lt;/strong&gt;에 대해 간단히 알아 볼 필요가 있습니다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;⚠️ 해당 글의 내용과 예시 코드, 이미지는 모두 참고 자료에서 가져 와 정리 한 것입니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1&gt;V8 엔진&lt;/h1&gt;
+&lt;hr&gt;
+&lt;p&gt;자바스크립트로 구현 된 코드는 보통 &lt;strong&gt;자바스크립트 엔진&lt;/strong&gt;을 이용해 실행하게 됩니다.&lt;/p&gt;
+&lt;p&gt;자바스크립트 엔진은 여러가지가 있지만 그중 가장 유명한 것은 &lt;strong&gt;V8 엔진&lt;/strong&gt; 이라고 할 수 있습니다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;V8 엔진&lt;/strong&gt;은 구글에서 개발한 오픈 소스 프로젝트로 크롬, Node.js 등에서 사용됩니다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;V8 엔진&lt;/strong&gt;은 간단히 표시하여 아래와 같은 모습으로 볼 수 있습니다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/4064394f9b7f1fafb49a8ace19f23c42/5a190/1_X21ybPxqBtfRV5v9rD9J1A.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 75.31645569620254%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAIAAABr+ngCAAAACXBIWXMAAAsTAAALEwEAmpwYAAABfUlEQVQoz6XR3U7CMBgGYG6Im9CLI/HYE+9AT4yJZICyzWWRzZLgftiASMpQExlsbQdmrPtpDWA4MBmQ+KZHb/ukX9oKLw/brgOplChepPOcmjy3WRbuyxMwyzd4eTtQz5/vz9JI2JfHMdueS9H1zVX1slaNw7tNWWQnjl1wzukSIK8WfVzQVW9XMsaO4DRNk4RSStPs96qiKJIkWa/XRzBjTNM67QdBakutZvN7tVrHsSzLrVZLEARN0/I8L8URwW1J6U/TGfH7Q2s4GEIITdOM45hSKkkSQqgUE4JVTZ8vuRJIj2+NyWgCJxBCuNvVdR1jXIoxQsAw+ec717UZIW6/73meYRi+7wdBIIpiFEXlGGPQ7e7ebeb7ruN6nmea5mKxQAiJokgIKcUI4dceaCj8K+AYzZ0ttm07DENCiCzLhzAhRFGeZv4qDMloNHRddzqdqqo6Ho8hhPV6/dDYnHPHcQDQAHgBACRJkmUZAEDX9U6nY1nWn6+u8H/kB/6TUHO5WhYqAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;1 X21ybPxqBtfRV5v9rD9J1A&quot;
+        title=&quot;1 X21ybPxqBtfRV5v9rD9J1A&quot;
+        src=&quot;/static/4064394f9b7f1fafb49a8ace19f23c42/f058b/1_X21ybPxqBtfRV5v9rD9J1A.png&quot;
+        srcset=&quot;/static/4064394f9b7f1fafb49a8ace19f23c42/c26ae/1_X21ybPxqBtfRV5v9rD9J1A.png 158w,
+/static/4064394f9b7f1fafb49a8ace19f23c42/6bdcf/1_X21ybPxqBtfRV5v9rD9J1A.png 315w,
+/static/4064394f9b7f1fafb49a8ace19f23c42/f058b/1_X21ybPxqBtfRV5v9rD9J1A.png 630w,
+/static/4064394f9b7f1fafb49a8ace19f23c42/5a190/1_X21ybPxqBtfRV5v9rD9J1A.png 800w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;V8 엔진&lt;/strong&gt;은 크게 &lt;strong&gt;메모리 힙&lt;/strong&gt;, &lt;strong&gt;콜 스택&lt;/strong&gt; 두 부분으로 나눌 수 있습니다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;메모리 힙&lt;/strong&gt;은 프로그램에서 선언 한 변수, 함수 등의 메모리 할당이 이루어지는 곳입니다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;콜 스택&lt;/strong&gt;은 코드가 실행 되면서 &lt;strong&gt;스택 프레임&lt;/strong&gt;이 쌓이는 곳입니다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;메모리 힙&lt;/strong&gt;은 대충 이해가 가지만 &lt;strong&gt;콜 스택&lt;/strong&gt;은 쉽게 이해가 가지 않습니다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;콜 스택&lt;/strong&gt;에 대해 좀 더 자세히 알아보도록 하겠습니다.&lt;/p&gt;
+&lt;h1&gt;콜 스택&lt;/h1&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;콜 스택&lt;/strong&gt;은 기본적으로 엔진이 현재 프로그램의 어디에 있는지를 기록하는 자료구조입니다.&lt;/p&gt;
+&lt;p&gt;엔진이 어떠한 함수를 실행하는 순간 &lt;strong&gt;해당 함수&lt;/strong&gt;를 &lt;strong&gt;콜 스택&lt;/strong&gt;에 &lt;strong&gt;push&lt;/strong&gt; 를 하게 됩니다.&lt;/p&gt;
+&lt;p&gt;그리고 어떠한 함수가 종료되는 순간 &lt;strong&gt;콜 스택&lt;/strong&gt;에서 &lt;strong&gt;pop&lt;/strong&gt; 을 하게 됩니다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;콜 스택&lt;/strong&gt;이 할 수 있는 일은 오로지 이것 뿐입니다.&lt;/p&gt;
+&lt;p&gt;아래 예시 코드를 통해 더 자세히 알아보도록 하겠습니다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;jsx&quot;&gt;&lt;pre class=&quot;language-jsx&quot;&gt;&lt;code class=&quot;language-jsx&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;multiply&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;x&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; y&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; x &lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt; y&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;printSquare&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; s &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;multiply&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; x&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;s&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;printSquare&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;엔진이 위 코드를 실행하기 전에는 &lt;strong&gt;콜 스택&lt;/strong&gt;이 비어있는 상태입니다. 이후의 단계는 아래 이미지와 같습니다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/add7f4161b8bfa2326ff8860df3aeabe/5a190/1_1FL2WcODqRrK40rrzA5QQA.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 75.31645569620254%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAIAAABr+ngCAAAACXBIWXMAAAsTAAALEwEAmpwYAAABSUlEQVQoz6WT3YrCMBBG+/5vIuIPqxf6GiL2ThCljdAmmUxinLROFjrg9sJdWfyuThoO8yUlRf4gxW8bzNw0jVKq7/t/yznnvu+7rmPmv+SUEhHJeszdEGEiGrPUKbquu16vl8vldrullJRS5/NZuK5r+R5jrKqqruvbkNPppJQiogIA7vd7ztk5p7WWscIpJWa21mqt+yHGGGstMxMRABSIKH1CCMYY6TNmRBQh5wwAzjm5DkR8LzvnnrK1FgBeyN77pmlEGDMAtG0rVyW1X8tyZmZGROHH42GtNca8ru2GxBhlwmazmc1mh8NBa71arebzeVmWiOi9DyForRHxRzbGbLfbxWKx3+8BYL1eTyaT3W7Xtu1yuZxOp2VZVlX1NeR4PCJiSkmGFSklP0T+rXCMkYjGHELw3hNRjPHJxacPg4c838NbfsrfXZhfJsQtrXoAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;1 1FL2WcODqRrK40rrzA5QQA&quot;
+        title=&quot;1 1FL2WcODqRrK40rrzA5QQA&quot;
+        src=&quot;/static/add7f4161b8bfa2326ff8860df3aeabe/f058b/1_1FL2WcODqRrK40rrzA5QQA.png&quot;
+        srcset=&quot;/static/add7f4161b8bfa2326ff8860df3aeabe/c26ae/1_1FL2WcODqRrK40rrzA5QQA.png 158w,
+/static/add7f4161b8bfa2326ff8860df3aeabe/6bdcf/1_1FL2WcODqRrK40rrzA5QQA.png 315w,
+/static/add7f4161b8bfa2326ff8860df3aeabe/f058b/1_1FL2WcODqRrK40rrzA5QQA.png 630w,
+/static/add7f4161b8bfa2326ff8860df3aeabe/5a190/1_1FL2WcODqRrK40rrzA5QQA.png 800w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+콜 스택의 각각의 요소는 &lt;strong&gt;스택 프레임&lt;/strong&gt; 이라고 부릅니다.&lt;/p&gt;
+&lt;p&gt;또한 프로그램에서 예외가 발생하였을 때 생성되는 &lt;strong&gt;스택 트레이스&lt;/strong&gt;는 기본적으로 예외가 발생하였을 때의 &lt;strong&gt;콜 스택의 상태&lt;/strong&gt;입니다.&lt;/p&gt;
+&lt;p&gt;아래 예시 코드를 살펴보겠습니다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;jsx&quot;&gt;&lt;pre class=&quot;language-jsx&quot;&gt;&lt;code class=&quot;language-jsx&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;//foo.js&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;foo&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Error&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;SessionStack will help you resolve crashes :)&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;bar&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token function&quot;&gt;foo&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;start&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token function&quot;&gt;bar&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;start&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;만일 위 코드를 크롬에서 실행 시킨다면 아래와 같은 &lt;strong&gt;스택 트레이스&lt;/strong&gt;를 볼 수 있을 것입니다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 507px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/e7a68aaf1421826ee126d530fc49956c/3ebb1/Untitled3.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 14.556962025316455%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAADCAYAAACTWi8uAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAhElEQVQI143JywqEIACF4d7/2SKIhMq0pCBCUFsNE6X/UMPcdrP44FyyQ0piXXO0LZvWbH3P3jQkrYknY4jD8MzTRFTqsynFviy4YcAbw91aMrwnSQlVRahrZFEwlyXJWs7vzbnf/tpC4HDukkIgY11JXYfLc6wQGCHw48htnrm+P/DlAVVu4bcfKfMxAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Untitled3&quot;
+        title=&quot;Untitled3&quot;
+        src=&quot;/static/e7a68aaf1421826ee126d530fc49956c/3ebb1/Untitled3.png&quot;
+        srcset=&quot;/static/e7a68aaf1421826ee126d530fc49956c/c26ae/Untitled3.png 158w,
+/static/e7a68aaf1421826ee126d530fc49956c/6bdcf/Untitled3.png 315w,
+/static/e7a68aaf1421826ee126d530fc49956c/3ebb1/Untitled3.png 507w&quot;
+        sizes=&quot;(max-width: 507px) 100vw, 507px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;또한 코딩을 하다 종종 만나 볼 수 있는 &lt;strong&gt;Maximum call stack size exceeded&lt;/strong&gt; 에러 또한 아래 이미지와 같이 &lt;strong&gt;콜 스택&lt;/strong&gt;에 쌓인 &lt;strong&gt;스택 프레임&lt;/strong&gt;들이 제거되지 못하고 계속하여 쌓이기만 하여 &lt;strong&gt;콜 스택&lt;/strong&gt;의 &lt;strong&gt;최대 크기&lt;/strong&gt;에 도달 했을 때 브라우저가 던지는 &lt;strong&gt;에러&lt;/strong&gt;입니다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/4df869c2f6ee2804931cc9f6244c2387/2bef9/1.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 75.31645569620254%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAAAsTAAALEwEAmpwYAAABg0lEQVQ4y5WUyQ6CQAyGff/XMMFEiBgFEk+8hhfc2Nxw3xVr/iYdBx0PNmmgM9OvG0ONfsjz+aw8Teu6ylpN39SdxH48HjSfz2k2m9H9fjcG0ddqv0CfWZRlWdm/3W602WxY9UCc4fV6pdPppEDn8/nLxhk9E9hxHNN4PKbL5fIGYgPlZFlGh8OBnfM8Z/t4PLKdpimvIYgAYVuWRfV6ncEKuN1uVXSkv1qtuG+Q9XrNNsqFwhaZTCbkui7Ztk2DweAN3O12qgf7/Z6d4AzBHoJI7xBcMtSBo9HIDMS7DgQAQDmsA5MkoW63S61W6xuIiQlguVyqsgArikJNGeUjOGwMo91uk+M4NBwOq0CJiqHACVNDX7GHhvd6PVZkpffQCERWgMhAptMpl9JsNimKIp5wo9HgiUppAkS5OFcBAhKGIXmeR/1+nxaLBWfT6XR4evh8giAg3/cZIiKZYw/lKyB6gvLQRzxhQ/HpYO1TReS8+FZuyj/yeT2Nd/kfNd1z/W/zApQJe6Ity+WuAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;1&quot;
+        title=&quot;1&quot;
+        src=&quot;/static/4df869c2f6ee2804931cc9f6244c2387/f058b/1.png&quot;
+        srcset=&quot;/static/4df869c2f6ee2804931cc9f6244c2387/c26ae/1.png 158w,
+/static/4df869c2f6ee2804931cc9f6244c2387/6bdcf/1.png 315w,
+/static/4df869c2f6ee2804931cc9f6244c2387/f058b/1.png 630w,
+/static/4df869c2f6ee2804931cc9f6244c2387/40601/1.png 945w,
+/static/4df869c2f6ee2804931cc9f6244c2387/2bef9/1.png 1024w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 386px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/88d01c97077754b5b0bd09b1a1847b42/7bc0b/2.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 5.69620253164557%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAABCAYAAADeko4lAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAQ0lEQVQI1yWLQQrAIBAD+/+nteBBEXVFP1GPoVOWPQQyQ3K998Mx4ysF5YzMUErIee+I+1rRGGhO1Ht03zq3Fp+1+AGHR0kVCE5ZqgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;2&quot;
+        title=&quot;2&quot;
+        src=&quot;/static/88d01c97077754b5b0bd09b1a1847b42/7bc0b/2.png&quot;
+        srcset=&quot;/static/88d01c97077754b5b0bd09b1a1847b42/c26ae/2.png 158w,
+/static/88d01c97077754b5b0bd09b1a1847b42/6bdcf/2.png 315w,
+/static/88d01c97077754b5b0bd09b1a1847b42/7bc0b/2.png 386w&quot;
+        sizes=&quot;(max-width: 386px) 100vw, 386px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h1&gt;싱글 스레드&lt;/h1&gt;
+&lt;hr&gt;
+&lt;p&gt;위에서 &lt;strong&gt;자바스크립트&lt;/strong&gt;는 &lt;strong&gt;싱글 스레드 기반의 프로그래밍 언어&lt;/strong&gt;이고 &lt;strong&gt;콜 스택이 하나&lt;/strong&gt;라고 이야기 했습니다.&lt;/p&gt;
+&lt;p&gt;이 말은 &lt;strong&gt;콜 스택&lt;/strong&gt;에 &lt;strong&gt;수행 할 함수가 존재&lt;/strong&gt;한다면 브라우저는 &lt;strong&gt;콜 스택이 비워 질 때까지 다른 일을 할 수 없음&lt;/strong&gt; 을 의미합니다.&lt;/p&gt;
+&lt;p&gt;브라우저가 응답 없음 상태로 &lt;strong&gt;멈추게 된다&lt;/strong&gt;는 뜻입니다.&lt;/p&gt;
+&lt;p&gt;이것을 &lt;strong&gt;블록킹 되었다&lt;/strong&gt;(blocked) 라고 합니다.&lt;/p&gt;
+&lt;p&gt;그렇게 콜 스택 내의 함수들이 많은 시간을 소요하여 브라우저가 &lt;strong&gt;일정 시간 이상 응답이 없을 경우&lt;/strong&gt; 대부분의 브라우저는 아래와 같은 에러를 일으키게 됩니다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 462px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/996945bcf739336d24ee06838b5fc396/e389b/10.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 62.0253164556962%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAAsTAAALEwEAmpwYAAAB9ElEQVQoz4WRS0/bQBDH830LvfQjlPbcqkWquMMnyAWpEicuoa+DSdI48YsY8sDxe23v2v5V6xCRVkBH+mlnZmf+O6PtvTs1ODq95u2Zyfuza45ODXTuzZcRB59HvD4ecXg85vBY+9vzkTEHnwwOP37vePXhG737MCdKC4zRlCDKidOSTZzj+ks8f43rL3Dniy525gtublfbu/kKz1+xChLCpGATC25XEb2yKvn18wdXVwM8z6UQOW1bM/ccZuYE25pgWRNsx8LUsTNlZk1xnRmmOcb3fWRVAQ25EPQqqQiCDcPhkMFgwHj8m7qucSyLyWSC49jYtoVlWTiOi2WbTG2zi++DgCiOEaJAKUWc5vSkqsmyjH6/z8nJCRcXF5RlSRiGRHHE3eKOuX/DZrMhTVOyLCXLU+I4QSpF0zRIKR8EMy2oukLTNDEMg8vLS4QQVFVFXStW90sWyzsqKdHWti1t27mdmN5Gn23bbAXLSnbJfdMv7gp3tmt+Dn3fCeqXlZTdRPuoh3X2G56i7mqafwSV+gs9oXwi/xJNXZPsVtYT7UT2/f+ha0VZUVSSoqoef3nuu0ztMdfDIev1uvuMWj2PnkjXlFIxczzOz7/i+UuSXNBL84Iky4jTlChJSLOcvCjIi/JFRFGSiYIwyQkT3S8IooQ/1oODP+pRW0MAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;10&quot;
+        title=&quot;10&quot;
+        src=&quot;/static/996945bcf739336d24ee06838b5fc396/e389b/10.png&quot;
+        srcset=&quot;/static/996945bcf739336d24ee06838b5fc396/c26ae/10.png 158w,
+/static/996945bcf739336d24ee06838b5fc396/6bdcf/10.png 315w,
+/static/996945bcf739336d24ee06838b5fc396/e389b/10.png 462w&quot;
+        sizes=&quot;(max-width: 462px) 100vw, 462px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;물론 에러가 발생하지 않는다고 하여도 &lt;strong&gt;장시간 동안 응답하지 않는 웹 서비스&lt;/strong&gt;가 사용자에게 좋은 사용자 경험을 준다고 이야기 할 수는 &lt;strong&gt;없겠습니다&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;그렇다면 위 싱글 스레드의 문제점을 해결하려면 어떻게 해야 할까요?&lt;/p&gt;
+&lt;h1&gt;비동기 처리&lt;/h1&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;지금&lt;/strong&gt; 실행 할 수 없는 작업은 &lt;strong&gt;나중에&lt;/strong&gt; 실행하면 됩니다.&lt;/p&gt;
+&lt;p&gt;이 말은 &lt;strong&gt;지금 완료 할 수 없는 작업&lt;/strong&gt;을 &lt;strong&gt;비동기 적&lt;/strong&gt;으로 수행한다는 이야기입니다.&lt;/p&gt;
+&lt;p&gt;아래 예시 코드를 보도록 하겠습니다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;jsx&quot;&gt;&lt;pre class=&quot;language-jsx&quot;&gt;&lt;code class=&quot;language-jsx&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// ajax(..) is some arbitrary Ajax function given by a library&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; response &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;ajax&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;&amp;lt;https://example.com/api&gt;&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;response&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;// `response` won&apos;t have the response&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;우리는 response 변수의 출력을 원하는 시점에 원하는 값이 아직 할당 되지 않았음을 알고 있습니다.&lt;/p&gt;
+&lt;p&gt;이 말은 &lt;strong&gt;Ajax 함수가 실행된 시점&lt;/strong&gt;에는 아직 response 에 할당 할 &lt;strong&gt;반환 값이 없다&lt;/strong&gt;는 이야기입니다.&lt;/p&gt;
+&lt;p&gt;이 말은 Ajax 함수가 &lt;strong&gt;비동기 적&lt;/strong&gt;으로 수행된다는 이야기 입니다.&lt;/p&gt;
+&lt;p&gt;아래 코드와 같이 Ajax 함수를 &lt;strong&gt;동기 적&lt;/strong&gt;으로 수행 할 수 있는 방법도 있습니다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;jsx&quot;&gt;&lt;pre class=&quot;language-jsx&quot;&gt;&lt;code class=&quot;language-jsx&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// This is assuming that you&apos;re using jQuery&lt;/span&gt;
+jQuery&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;ajax&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token literal-property property&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;&amp;lt;https://api.example.com/endpoint&gt;&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token function-variable function&quot;&gt;success&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token comment&quot;&gt;// This is your callback.&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token literal-property property&quot;&gt;async&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;false&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// And this is a terrible idea&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;하지만 이 방법을 사용 할 시 Ajax 요청에 응답이 올 때 까지 브라우저는 &lt;strong&gt;동작을 멈춰 버릴 것&lt;/strong&gt;입니다.&lt;/p&gt;
+&lt;p&gt;이는 사용자 경험을 최악으로 떨어뜨리는 &lt;strong&gt;매우 안좋은 방법&lt;/strong&gt;입니다.&lt;/p&gt;
+&lt;p&gt;그렇다면 비동기 함수가 결과를 반환 하기를 &lt;strong&gt;기다릴 수 있는 방법&lt;/strong&gt;은 무엇이 있을까요?&lt;/p&gt;
+&lt;p&gt;우선 가장 간단한 방법은 아래 코드와 같이 &lt;strong&gt;콜백 함수&lt;/strong&gt;를 이용하는 것입니다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;jsx&quot;&gt;&lt;pre class=&quot;language-jsx&quot;&gt;&lt;code class=&quot;language-jsx&quot;&gt;&lt;span class=&quot;token function&quot;&gt;ajax&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;&amp;lt;https://example.com/api&gt;&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;response&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// `response` is now available&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Ajax 함수는 요청에 &lt;strong&gt;응답이 오면&lt;/strong&gt; 두번째 인자로 넘겨진 &lt;strong&gt;콜백 함수&lt;/strong&gt;를 &lt;strong&gt;호출&lt;/strong&gt; 할 것입니다.&lt;/p&gt;
+&lt;p&gt;위 같은 방법을 &lt;strong&gt;콜백 함수를 이용한 비동기 처리&lt;/strong&gt; 이라고 합니다.&lt;/p&gt;
+&lt;p&gt;위처럼 비동기 적인 수행을 하는 방법을 &lt;strong&gt;비동기 처리&lt;/strong&gt; 이라고 합니다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;비동기 처리&lt;/strong&gt; 대해서는 &lt;a href=&quot;https://www.notion.so/1979e31eb7d24f979513a68aa6b44c25?pvs=21&quot;&gt;다음 글&lt;/a&gt;에서 좀 더 자세히 알아보도록 하겠습니다.&lt;/p&gt;
+&lt;p&gt;다시 이어서 &lt;strong&gt;자바스크립트 구조&lt;/strong&gt;에 대해서 이야기를 해보도록 하겠습니다.&lt;/p&gt;
+&lt;h1&gt;호스팅 환경&lt;/h1&gt;
+&lt;hr&gt;
+&lt;p&gt;위에서 살펴 보았듯이 &lt;strong&gt;자바스크립트 엔진&lt;/strong&gt;은 &lt;strong&gt;콜 스택에 쌓인 함수를 실행하는 것&lt;/strong&gt; 외에는 특별한 일을 하는 것은 &lt;strong&gt;없습니다&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;그렇다면 &lt;strong&gt;비동기 콜백 함수&lt;/strong&gt;는 어떻게 동작하는 것 일까요?&lt;/p&gt;
+&lt;p&gt;자바스크립트 엔진에게 어떠한 프로그램의 코드를 실행 하라고 &lt;strong&gt;명령&lt;/strong&gt;하는 것은 &lt;strong&gt;무엇&lt;/strong&gt; 일까요?&lt;/p&gt;
+&lt;p&gt;사실 자바스크립트 엔진은 &lt;strong&gt;혼자서 동작하는 것이 아니라&lt;/strong&gt; 자바스크립트 엔진이 수행 될 &lt;strong&gt;호스팅 환경&lt;/strong&gt; 내에서 수행됩니다.&lt;/p&gt;
+&lt;p&gt;아마 대부분의 경우에 이것은 &lt;strong&gt;브라우저&lt;/strong&gt; 혹은 &lt;strong&gt;Node.js&lt;/strong&gt; 일 것입니다.&lt;/p&gt;
+&lt;p&gt;(요즘에는 자바스크립트가 로봇에서 부터 스마트 전구까지 각종 장치에도 내장되고 있습니다.)&lt;/p&gt;
+&lt;p&gt;이러한 대부분의 호스팅 환경에 적용되어 있는 메커니즘이 바로 &lt;strong&gt;이벤트 루프&lt;/strong&gt; 라는 것입니다.&lt;/p&gt;
+&lt;p&gt;이것은 시간의 흐름에 따라 코드의 수행을 처리하며 그 때마다 자바스크립트 엔진을 작동 시킵니다.&lt;/p&gt;
+&lt;p&gt;사실 &lt;strong&gt;자바스크립트&lt;/strong&gt;가 &lt;strong&gt;싱글 스레드 기반의 프로그래밍 언어&lt;/strong&gt;라는 말은 &lt;strong&gt;자바스크립트 엔진&lt;/strong&gt;이 &lt;strong&gt;하나의 콜 스택 만을 사용한다&lt;/strong&gt;는 이야기 이지 자바스크립트 엔진이 수행되는 &lt;strong&gt;호스팅 환경&lt;/strong&gt;에선 주로 &lt;strong&gt;여러 개의 스레드&lt;/strong&gt;가 사용됩니다.&lt;/p&gt;
+&lt;p&gt;이러한 구동 환경을 &lt;strong&gt;단일 콜 스택&lt;/strong&gt; 만을 사용하는 &lt;strong&gt;자바스크립트 엔진&lt;/strong&gt;과 &lt;strong&gt;상호 연동&lt;/strong&gt; 하기 위해 사용하는 장치가 바로 &lt;strong&gt;이벤트 루프&lt;/strong&gt; 라고 할 수 있습니다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;이벤트 루프&lt;/strong&gt;에 대해 좀 더 자세히 알아보도록 하겠습니다.&lt;/p&gt;
+&lt;h1&gt;이벤트 루프&lt;/h1&gt;
+&lt;hr&gt;
+&lt;p&gt;위에서 이야기 하였듯이 &lt;strong&gt;자바스크립트 프로그램&lt;/strong&gt;은 &lt;strong&gt;자바스크립트 엔진&lt;/strong&gt; 만으로 동작하는 것이 &lt;strong&gt;아닙니다&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;많은 자바스크립트 개발자들이 사용하는 &lt;strong&gt;DOM&lt;/strong&gt;, &lt;strong&gt;AJAX&lt;/strong&gt;, &lt;strong&gt;setTimeout&lt;/strong&gt; 등의 함수들은 &lt;strong&gt;Web API&lt;/strong&gt; 라는 것인데 이 Web API 는 &lt;strong&gt;브라우저&lt;/strong&gt;에서 제공을 하고 있습니다.&lt;/p&gt;
+&lt;p&gt;아래 이미지와 같이 Web API 외에도 &lt;strong&gt;이벤트 루프&lt;/strong&gt;와 &lt;strong&gt;콜백 큐&lt;/strong&gt;도 브라우저에 구현이 되어 있습니다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/7299ec41566ffd25e8fd9772f74c714d/5a190/11.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 75.31645569620254%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAAAsTAAALEwEAmpwYAAACoklEQVQ4y5VT2W7TQBT1T/BlvPABIJB46UMFYhNiUYWERHniGSREAQnoB6TN4iRO7CS1idzGJErbNK6yekkcO4s9B90JcdqqL4x0NTP3js49Z+aMgP8YjLFL69WW5ihiPCfM53PYtn0hHFi2w+eLeTq3BloBh2AR5aO4kVAsFpHJZHBwcIBSqYRSSYGqKiiXFb6nPNUVRVlChCHBwnEZ6k0HWrWN49MROr0IEz+CQAdns9la1/gLzn7fx9z+GaeoXi6XL8l/+8HBrXt93H0wxJ3NAW7e7iKVD5aAjuPEd9KqbmD7+Q3UlCf/JEZccqVSgeuOoOuHODfPsLM7xcazAR5vWXj6xsLmiyFK2hSCLMuYTCZx56mTgN16j6mbWZMejzlDakjrKJzj8w8PD19bePnOxqttG4+2LJQJkDqb7TZOjpuo1+sYWmMO4gch3zebTQwGA36XF0cyF+DjtzG+7nrY+eXh0/cxGifzpeRUKoWcJEOraChIeYxGDgoFibOiSCaTICU0oii6ZJ+rQxDFDFKZLFouUJmpkLQs2i0Tuq7Hh7LZLNLpdAxI2sOIYbFgWITrIC8KWVFEjrqbJiZGBapxiPO2yZmR1OFwiP39fUagSxsu6bFraHJjE2BeyiNwfSAIcXh0BNM0uQe73S56vR4BkhfZykJhGMbr6XTKY+lPQEhnRMjFHIoa4M+BP4aOk9NTznA0GvFXJYZ7e3twXZd1Oh22WCw4IVKwahoEwfqn5HI56PoRjJrBgahjoVAA1WRZZolEgtErE1i1WmVkM8MwyAWsVquh0WhA0zT0+30IJI0k0aXTnM/nuUUkSeI5URQZMVRVlfxKrDhDy7LofjlLWhNL3/chUJGked6EG5wk0s+h2fM8HlRf0JNeeYPrbPMXzHJMZpK4HrUAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;11&quot;
+        title=&quot;11&quot;
+        src=&quot;/static/7299ec41566ffd25e8fd9772f74c714d/f058b/11.png&quot;
+        srcset=&quot;/static/7299ec41566ffd25e8fd9772f74c714d/c26ae/11.png 158w,
+/static/7299ec41566ffd25e8fd9772f74c714d/6bdcf/11.png 315w,
+/static/7299ec41566ffd25e8fd9772f74c714d/f058b/11.png 630w,
+/static/7299ec41566ffd25e8fd9772f74c714d/5a190/11.png 800w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;콜백 큐&lt;/strong&gt;란 비동기 적으로 실행 된 함수의 &lt;strong&gt;콜백 함수&lt;/strong&gt;가 &lt;strong&gt;저장되는 곳&lt;/strong&gt;입니다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;이벤트 루프&lt;/strong&gt;란 &lt;strong&gt;콜백 큐&lt;/strong&gt;와 &lt;strong&gt;콜 스택&lt;/strong&gt;을 &lt;strong&gt;감시&lt;/strong&gt;하여 &lt;strong&gt;콜 스택이 비어있는 경우 콜백 큐의 첫번째 요소를 콜 스택에 삽입&lt;/strong&gt;하여 해당 함수가 자바스크립트 엔진에서 실행 될 수 있도록 합니다.&lt;/p&gt;
+&lt;p&gt;콜백 큐와 콜 스택의 이름이 비슷하다고 헷갈리시면 안됩니다.&lt;/p&gt;
+&lt;p&gt;콜백 큐는 &lt;strong&gt;브라우저&lt;/strong&gt;에 존재하고 콜 스택은 &lt;strong&gt;자바스크립트 엔진&lt;/strong&gt;에 존재하는 것입니다.&lt;/p&gt;
+&lt;p&gt;예를 들어 보겠습니다.&lt;/p&gt;
+&lt;p&gt;만약 서버에서 데이터를 가져오기 위해 &lt;strong&gt;Ajax 요청&lt;/strong&gt;을 하는 자바스크립트 프로그램이 있다고 생각 해보겠습니다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;자바스크립트 엔진&lt;/strong&gt;은 &lt;strong&gt;Web API&lt;/strong&gt; 를 이용해 Ajax 요청을 하는 함수에서 &lt;strong&gt;호스팅 환경&lt;/strong&gt;(브라우저)에게 아래와 같이 이야기를 할 것입니다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;🗣 “나는 이제 &lt;strong&gt;이 함수&lt;/strong&gt;를 &lt;strong&gt;종료&lt;/strong&gt;시킬 거야. 하지만 너는 &lt;strong&gt;네트워크 요청에 응답이 오면&lt;/strong&gt; 해당 응답을 이용해서 이 &lt;strong&gt;콜백 함수&lt;/strong&gt;를 &lt;strong&gt;호출&lt;/strong&gt;해줘.”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;그러면 &lt;strong&gt;브라우저&lt;/strong&gt;는 &lt;strong&gt;네트워크 응답&lt;/strong&gt;에 &lt;strong&gt;대기&lt;/strong&gt;하고 있다가 &lt;strong&gt;응답이 오면&lt;/strong&gt; 해당 응답과 함께 아까 받은 &lt;strong&gt;콜백 함수&lt;/strong&gt;를 &lt;strong&gt;콜백 큐&lt;/strong&gt;에 &lt;strong&gt;삽입&lt;/strong&gt; 할 것입니다.&lt;/p&gt;
+&lt;p&gt;그러면 &lt;strong&gt;이벤트 루프&lt;/strong&gt;는 &lt;strong&gt;콜 스택&lt;/strong&gt;을 &lt;strong&gt;감시&lt;/strong&gt;하다가 &lt;strong&gt;콜 스택이 비었을 때&lt;/strong&gt; &lt;strong&gt;콜백 큐&lt;/strong&gt;에서 &lt;strong&gt;해당 함수&lt;/strong&gt;를 &lt;strong&gt;콜 스택&lt;/strong&gt;으로 넘겨 자바스크립트 엔진이 해당 함수를 실행 시킬 수 있도록 할 것입니다.&lt;/p&gt;
+&lt;p&gt;아래 예시 코드를 통해 다시 한번 어떤 일이 벌어지는지 보도록 하겠습니다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;jsx&quot;&gt;&lt;pre class=&quot;language-jsx&quot;&gt;&lt;code class=&quot;language-jsx&quot;&gt;console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;Hi&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;setTimeout&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;cb1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; 
+    console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;cb1&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;5000&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;Bye&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;해당 코드는 아래 이미지와 같은 과정을 거치게 됩니다.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/fffc0f806068767722e4d59c69afc0ab/12.gif&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;각 과정에 대한 자세한 설명은 &lt;a href=&quot;https://engineering.huiseoul.com/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%EB%8A%94-%EC%96%B4%EB%96%BB%EA%B2%8C-%EC%9E%91%EB%8F%99%ED%95%98%EB%8A%94%EA%B0%80-%EC%9D%B4%EB%B2%A4%ED%8A%B8-%EB%A3%A8%ED%94%84%EC%99%80-%EB%B9%84%EB%8F%99%EA%B8%B0-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EC%9D%98-%EB%B6%80%EC%83%81-async-await%EC%9D%84-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EC%BD%94%EB%94%A9-%ED%8C%81-%EB%8B%A4%EC%84%AF-%EA%B0%80%EC%A7%80-df65ffb4e7e&quot;&gt;참고 링크&lt;/a&gt;에서 확인 바랍니다.&lt;/p&gt;
+&lt;p&gt;이렇게 &lt;strong&gt;이벤트 루프&lt;/strong&gt;의 동작 과정에 대해 간단 하게는 이해를 하셨을 거라 생각합니다.&lt;/p&gt;
+&lt;h1&gt;setTimeout&lt;/h1&gt;
+&lt;hr&gt;
+&lt;p&gt;위 예시 코드에 나온 &lt;strong&gt;setTimeout&lt;/strong&gt; 함수에 대해 조금 더 이야기를 해보도록 하겠습니다.&lt;/p&gt;
+&lt;p&gt;우리는 &lt;strong&gt;setTimeout&lt;/strong&gt; 함수가 &lt;strong&gt;일정 시간이 지난 후 콜백 함수를 실행&lt;/strong&gt; 할 수 있도록 하는 함수라는 것을 모두 알고 있습니다.&lt;/p&gt;
+&lt;p&gt;아래 예시 코드를 보도록 하겠습니다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;jsx&quot;&gt;&lt;pre class=&quot;language-jsx&quot;&gt;&lt;code class=&quot;language-jsx&quot;&gt;&lt;span class=&quot;token function&quot;&gt;setTimeout&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;myCallback&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;우리는 이 코드가 &lt;strong&gt;1000ms 이후 myCallback 함수를 실행&lt;/strong&gt;시켜 준다는 것을 알고 있습니다.&lt;/p&gt;
+&lt;p&gt;하지만 위에서 배운 &lt;strong&gt;이벤트 루프&lt;/strong&gt; 내용을 통해 myCallback 함수가 &lt;strong&gt;정확히 1000ms 이후&lt;/strong&gt; 실행되는 것이 &lt;strong&gt;아니라&lt;/strong&gt; &lt;strong&gt;1000ms 이후 콜백 큐에 myCallback 함수가 삽입되는 것&lt;/strong&gt;이라는 것을 알게 되었습니다.&lt;/p&gt;
+&lt;p&gt;이것이 setTimeout 함수가 콜백 함수의 &lt;strong&gt;정확한 실행 시간을 보장 할 수 없다&lt;/strong&gt;고 이야기 하는 &lt;strong&gt;이유&lt;/strong&gt;입니다.&lt;/p&gt;
+&lt;p&gt;우리는 myCallback 함수가 setTimeout 함수가 실행 된지 &lt;strong&gt;1000ms 이후에 콜백 큐에 삽입&lt;/strong&gt; 될 것이고 그 이후 &lt;strong&gt;콜 스택이 비워 지면&lt;/strong&gt; myCallback 함수가 &lt;strong&gt;콜백 큐의 첫번째 요소 일 경우&lt;/strong&gt; 콜 스택으로 옮겨져 실행 될 것이라는 것을 알 수 있습니다.&lt;/p&gt;
+&lt;p&gt;또한 이제 아래 예시 코드의 실행 결과에 대해서도 이해를 할 수 있게 되었습니다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;jsx&quot;&gt;&lt;pre class=&quot;language-jsx&quot;&gt;&lt;code class=&quot;language-jsx&quot;&gt;console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;Hi&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;setTimeout&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;callback&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;Bye&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;비록 setTimeout 의 &lt;strong&gt;대기 시간&lt;/strong&gt;을 &lt;strong&gt;0&lt;/strong&gt;으로 설정 하였지만 브라우저 콘솔의 &lt;strong&gt;출력 결과&lt;/strong&gt;는 아래와 같음 을 알 수 있습니다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;jsx&quot;&gt;&lt;pre class=&quot;language-jsx&quot;&gt;&lt;code class=&quot;language-jsx&quot;&gt;Hi
+Bye
+callback&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;사실 브라우저들은 &lt;strong&gt;이벤트 루프가 동작하는 최소 시간 단위&lt;/strong&gt;인 &lt;strong&gt;틱&lt;/strong&gt;(tick)을 정해놓고 관리하기 때문에 setTimeout 의 대기 시간을 &lt;strong&gt;0&lt;/strong&gt;으로 설정한다고 하여도 &lt;strong&gt;즉시 실행&lt;/strong&gt;된다고 볼 수는 &lt;strong&gt;없습니다&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;(&lt;strong&gt;크롬&lt;/strong&gt;의 경우 틱 기준이 &lt;strong&gt;4ms&lt;/strong&gt; 이기 때문에 &lt;code class=&quot;language-text&quot;&gt;setTimeout(fn, 0)&lt;/code&gt; 이나 &lt;code class=&quot;language-text&quot;&gt;setTimeout(fn, 4)&lt;/code&gt; 이나 동일하게 작동 할 것입니다.)&lt;/p&gt;
+&lt;h1&gt;마이크로 태스크 큐&lt;/h1&gt;
+&lt;hr&gt;
+&lt;p&gt;아래 예시 코드를 보도록 하겠습니다.&lt;/p&gt;
+&lt;p&gt;(&lt;strong&gt;Promise&lt;/strong&gt; 코드에 대한 자세한 설명은 &lt;strong&gt;다음 글&lt;/strong&gt;에서 좀 더 자세히 알아보도록 하겠습니다.)&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;jsx&quot;&gt;&lt;pre class=&quot;language-jsx&quot;&gt;&lt;code class=&quot;language-jsx&quot;&gt;&lt;span class=&quot;token function&quot;&gt;setTimeout&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// (A)&lt;/span&gt;
+    console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;A&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+Promise&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;resolve&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;then&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// (B)&lt;/span&gt;
+    console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;B&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;then&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// (C)&lt;/span&gt;
+    console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;C&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;위 예시 코드의 출력 결과는 어떻게 될까요?&lt;/p&gt;
+&lt;p&gt;위에서 배운 대로 생각해 본다면 &lt;strong&gt;setTimeout&lt;/strong&gt; 과 &lt;strong&gt;Promise&lt;/strong&gt; 모두 &lt;strong&gt;비동기 함수&lt;/strong&gt; 이므로 &lt;strong&gt;A → B → C&lt;/strong&gt; 순서대로 출력 될 것이라 예상 할 수 있습니다.&lt;/p&gt;
+&lt;p&gt;하지만 출력 결과는 아래와 같습니다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;jsx&quot;&gt;&lt;pre class=&quot;language-jsx&quot;&gt;&lt;code class=&quot;language-jsx&quot;&gt;&lt;span class=&quot;token constant&quot;&gt;B&lt;/span&gt;
+&lt;span class=&quot;token constant&quot;&gt;C&lt;/span&gt;
+&lt;span class=&quot;token constant&quot;&gt;A&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;이 이유는 &lt;strong&gt;Promise&lt;/strong&gt; 는 &lt;strong&gt;마이크로 태스크 큐&lt;/strong&gt;를 사용하고 &lt;strong&gt;setTimeout&lt;/strong&gt; 은 &lt;strong&gt;일반 태스크 큐&lt;/strong&gt;를 사용하기 때문입니다.&lt;/p&gt;
+&lt;p&gt;갑자기 이게 무슨 말이냐 하면 사실 &lt;strong&gt;콜백 큐&lt;/strong&gt;는 &lt;strong&gt;하나의 큐&lt;/strong&gt;가 &lt;strong&gt;아니었던 것&lt;/strong&gt;입니다.&lt;/p&gt;
+&lt;p&gt;당황 스럽지만 쉽게 이해를 해보도록 하겠습니다.&lt;/p&gt;
+&lt;p&gt;사실 &lt;strong&gt;이벤트 루프&lt;/strong&gt;는 콜 스택이 비면 &lt;strong&gt;여러 개의 콜백 큐&lt;/strong&gt; 중 &lt;strong&gt;우선순위&lt;/strong&gt;를 매겨 순서대로 확인하여 &lt;strong&gt;비어 있지 않는 큐&lt;/strong&gt;를 찾아 첫번째 요소를 콜 스택으로 옮기는 것이었습니다.&lt;/p&gt;
+&lt;p&gt;쉽게 말해 &lt;strong&gt;마이크로 태스크 큐&lt;/strong&gt;는 &lt;strong&gt;일반 태스크 큐&lt;/strong&gt;보다 &lt;strong&gt;우선순위가 높아&lt;/strong&gt; 마이크로 태스크 큐에 들어있는 요소부터 콜 스택으로 옮겨지는 것입니다.&lt;/p&gt;
+&lt;p&gt;(그 외에도 여러 콜백 큐들이 존재하지만 이번 글에선 생략합니다.)&lt;/p&gt;
+&lt;p&gt;위 코드에 대해서 좀 더 살펴보자면 아래와 같은 순서로 동작 할 것입니다.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;우선 &lt;strong&gt;setTimeout&lt;/strong&gt; 의 &lt;strong&gt;콜백 함수&lt;/strong&gt;(A 함수)가 바로 &lt;strong&gt;다음 tick&lt;/strong&gt; 에 &lt;strong&gt;일반 태스크 큐&lt;/strong&gt;로 옮겨 집니다.&lt;/li&gt;
+&lt;li&gt;그 다음 &lt;strong&gt;첫번째 Promise&lt;/strong&gt; 가 바로 &lt;strong&gt;resolve&lt;/strong&gt; 되었기 때문에 &lt;strong&gt;첫번째 then&lt;/strong&gt; 함수의 &lt;strong&gt;콜백 함수&lt;/strong&gt;(B 함수)가 &lt;strong&gt;마이크로 태스크 큐&lt;/strong&gt;로 옮겨 집니다.&lt;/li&gt;
+&lt;li&gt;그 다음 &lt;strong&gt;이벤트 루프&lt;/strong&gt;는 &lt;strong&gt;마이크로 태스크 큐&lt;/strong&gt;에서 &lt;strong&gt;B 함수&lt;/strong&gt;를 &lt;strong&gt;콜 스택&lt;/strong&gt;으로 옮깁니다.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;B 함수&lt;/strong&gt;가 실행되고 나면 &lt;strong&gt;두번째 then&lt;/strong&gt; 함수의 &lt;strong&gt;콜백 함수&lt;/strong&gt;(C 함수)가 &lt;strong&gt;마이크로 태스크 큐&lt;/strong&gt;로 옮겨집니다.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;이벤트 루프&lt;/strong&gt;는 이번에도 &lt;strong&gt;마이크로 태스크 큐&lt;/strong&gt;에서 &lt;strong&gt;C 함수&lt;/strong&gt;를 &lt;strong&gt;콜 스택&lt;/strong&gt;으로 옮깁니다.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;C 함수&lt;/strong&gt;가 실행되고 나면 &lt;strong&gt;이벤트 루프&lt;/strong&gt;가 &lt;strong&gt;마이크로 태스크 큐&lt;/strong&gt;를 확인하지만 &lt;strong&gt;비어 있기 때문&lt;/strong&gt;에 &lt;strong&gt;일반 태스크 큐&lt;/strong&gt;에서 &lt;strong&gt;A 함수&lt;/strong&gt;를 &lt;strong&gt;콜 스택&lt;/strong&gt;으로 옮깁니다.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;A 함수&lt;/strong&gt;가 실행됩니다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;위처럼 &lt;strong&gt;콜백 큐&lt;/strong&gt;는 하나의 큐가 아니라 &lt;strong&gt;여러 개의 큐&lt;/strong&gt;이고 &lt;strong&gt;이벤트 루프&lt;/strong&gt;는 여러 개의 큐중 &lt;strong&gt;우선순위&lt;/strong&gt;를 매겨 &lt;strong&gt;순서대로 큐를 확인&lt;/strong&gt;하여 &lt;strong&gt;요소가 있다면&lt;/strong&gt; 첫번째 요소를 &lt;strong&gt;콜 스택&lt;/strong&gt;으로 옮긴다는 것을 알 수 있습니다.&lt;/p&gt;
+&lt;h1&gt;잡 큐&lt;/h1&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;잡 큐&lt;/strong&gt;(Job Queue)는 &lt;strong&gt;ES6&lt;/strong&gt;에서 &lt;strong&gt;Promise&lt;/strong&gt;를 위해 새로 도입 된 개념이라고 합니다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;잡 큐&lt;/strong&gt;는 쉽게 말해 &lt;strong&gt;이벤트 루프&lt;/strong&gt;의 &lt;strong&gt;모든 틱의 끝에 부착 된 큐&lt;/strong&gt;로 &lt;strong&gt;이벤트 루프 내의 비동기 처리&lt;/strong&gt;에 사용된다고 합니다.&lt;/p&gt;
+&lt;p&gt;이는 &lt;strong&gt;나중에 실행 될 수 있는 또 다른 요소&lt;/strong&gt;를 추가 시킬 수 있으며 이것이 &lt;strong&gt;다른 어떤 요소보다도 우선적으로 실행&lt;/strong&gt; 될 것이라는 것을 알 수 있다고 합니다.&lt;/p&gt;
+&lt;p&gt;하지만 다른 내용들과 달리 무슨 말인지 쉽게 와닿지가 않습니다.&lt;/p&gt;
+&lt;p&gt;잡 큐에 대해서는 다음 기회에 좀 더 자세히 알아보도록 하겠습니다.&lt;/p&gt;
+&lt;h2&gt;참고 자료&lt;/h2&gt;
+&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://engineering.huiseoul.com/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%EB%8A%94-%EC%96%B4%EB%96%BB%EA%B2%8C-%EC%9E%91%EB%8F%99%ED%95%98%EB%8A%94%EA%B0%80-%EC%97%94%EC%A7%84-%EB%9F%B0%ED%83%80%EC%9E%84-%EC%BD%9C%EC%8A%A4%ED%83%9D-%EA%B0%9C%EA%B4%80-ea47917c8442&quot;&gt;자바스크립트는 어떻게 작동하는가: 엔진, 런타임, 콜스택 개관&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://engineering.huiseoul.com/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%EB%8A%94-%EC%96%B4%EB%96%BB%EA%B2%8C-%EC%9E%91%EB%8F%99%ED%95%98%EB%8A%94%EA%B0%80-%EC%9D%B4%EB%B2%A4%ED%8A%B8-%EB%A3%A8%ED%94%84%EC%99%80-%EB%B9%84%EB%8F%99%EA%B8%B0-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EC%9D%98-%EB%B6%80%EC%83%81-async-await%EC%9D%84-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EC%BD%94%EB%94%A9-%ED%8C%81-%EB%8B%A4%EC%84%AF-%EA%B0%80%EC%A7%80-df65ffb4e7e&quot;&gt;자바스크립트는 어떻게 작동하는가: 이벤트 루프와 비동기 프로그래밍의 부상, async/await을 이용한 코딩 팁 다섯 가지&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://meetup.toast.com/posts/89&quot;&gt;자바스크립트와 이벤트 루프&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[자바스크립트 콜 스택과 이벤트 루프]]></title><description><![CDATA[…]]></description><link>https://seungyoubkim.github.io/javascript-event-loop/</link><guid isPermaLink="false">https://seungyoubkim.github.io/javascript-event-loop/</guid><pubDate>Tue, 04 Aug 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;자바스크립트는 싱글 스레드 기반의 프로그래밍 언어로 한번에 하나의 일만 처리 할 수 있습니다.&lt;/p&gt;
 &lt;p&gt;이것은 &lt;strong&gt;콜 스택&lt;/strong&gt;이 &lt;strong&gt;하나&lt;/strong&gt;라는 뜻인데요.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;콜 스택&lt;/strong&gt;이 무엇인지 알아보기 위해 &lt;strong&gt;자바스크립트 구조&lt;/strong&gt;에 대해 간단히 알아 볼 필요가 있습니다.&lt;/p&gt;
 &lt;blockquote&gt;
