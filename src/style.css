@@ -317,6 +317,7 @@ a:focus {
 
 .blog-post img {
   padding-bottom: var(--spacing-2);
+  width: 100%;
 }
 
 /* Media queries */
