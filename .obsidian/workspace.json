@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/blog/react17/index.md",
+                "file": "content/blog/angular/index.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/blog/react17/index.md",
+                "file": "content/blog/angular/index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/blog/react17/index.md",
+                "file": "content/blog/angular/index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/blog/react17/index.md"
+                "file": "content/blog/angular/index.md"
               }
             }
           },
@@ -156,9 +156,11 @@
   },
   "active": "752bc8c0a53e035f",
   "lastOpenFiles": [
-    "content/blog/react17/32.png",
     "content/blog/nextjs/index.md",
+    "content/blog/angular/index.md",
     "content/blog/react17/index.md",
+    "content/blog/angular",
+    "content/blog/react17/32.png",
     "content/blog/react17",
     "content/blog/redux-saga/index.md",
     "content/blog/nextjs/31.png",
@@ -170,7 +172,6 @@
     "content/blog/nextjs/25.png",
     "content/blog/nextjs/24.png",
     "content/blog/nextjs/23.png",
-    "content/blog/nextjs/22.png",
     "content/blog/nextjs",
     "content/blog/webpack/index.md",
     "content/blog/react-hook/index.md",
@@ -190,7 +191,6 @@
     "content/blog/react-hook",
     "js-async.md",
     "content/blog/javascript-event-loop/index.md",
-    "content/blog/javascript-event-loop",
     "12.gif.md",
     "스크린샷 2023-09-18 오후 7.43.40.png.md",
     "스크린샷 2023-09-18 오후 7.50.45.png.md",
