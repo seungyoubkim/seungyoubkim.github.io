@@ -320,7 +320,7 @@ a:focus {
   width: 100%;
 }
 
-.blog-post .giscus {
+.comments-wrapper .giscus {
   padding-top: var(--spacing-6);
 }
 
