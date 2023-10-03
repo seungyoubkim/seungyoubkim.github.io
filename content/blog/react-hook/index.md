@@ -1,7 +1,7 @@
 ---
 title: React Hook
 description: React Hook 에 대해 알아봅니다.
-date:
+date: 2020-11-16
 ---
 > ⚠️ 해당 글의 내용과 예시 코드, 이미지는 모두 참고 자료에서 가져 와 정리 한 것입니다.
 
