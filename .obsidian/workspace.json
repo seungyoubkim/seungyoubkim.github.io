@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/blog/redux-saga/index.md",
+                "file": "content/blog/nextjs/index.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/blog/redux-saga/index.md",
+                "file": "content/blog/nextjs/index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/blog/redux-saga/index.md",
+                "file": "content/blog/nextjs/index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/blog/redux-saga/index.md"
+                "file": "content/blog/nextjs/index.md"
               }
             }
           },
@@ -156,8 +156,20 @@
   },
   "active": "752bc8c0a53e035f",
   "lastOpenFiles": [
-    "content/blog/webpack/index.md",
     "content/blog/redux-saga/index.md",
+    "content/blog/nextjs/index.md",
+    "content/blog/nextjs/31.png",
+    "content/blog/nextjs/30.png",
+    "content/blog/nextjs/29.png",
+    "content/blog/nextjs/28.png",
+    "content/blog/nextjs/27.png",
+    "content/blog/nextjs/26.png",
+    "content/blog/nextjs/25.png",
+    "content/blog/nextjs/24.png",
+    "content/blog/nextjs/23.png",
+    "content/blog/nextjs/22.png",
+    "content/blog/nextjs",
+    "content/blog/webpack/index.md",
     "content/blog/react-hook/index.md",
     "content/blog/js-iterator/index.md",
     "content/blog/redux-saga",
@@ -165,15 +177,8 @@
     "content/blog/parcel/index.md",
     "content/blog/js-iterator",
     "content/blog/typescript/index.md",
-    "content/blog/redux/redux5.png",
-    "content/blog/redux/redux4.png",
-    "content/blog/redux/redux3.png",
-    "content/blog/redux/redux2.png",
-    "content/blog/redux/redux1.png",
     "content/blog/redux",
     "content/blog/parcel",
-    "content/blog/typescript/15.png",
-    "content/blog/typescript/14.png",
     "content/blog/typescript",
     "content/blog/js-async/index.md",
     "content/blog/webpack",
@@ -181,14 +186,10 @@
     "content/blog/obsidian-git/index.md",
     "content/blog/react-hook",
     "js-async.md",
-    "content/blog/js-async/13.png",
-    "content/blog/js-async/12.png",
     "content/blog/javascript-event-loop/index.md",
-    "content/blog/javascript-event-loop/Untitled3.png",
     "content/blog/javascript-event-loop",
     "content/blog/js-async",
     "12.gif.md",
-    "content/blog/js-event-loop",
     "스크린샷 2023-09-18 오후 7.43.40.png.md",
     "스크린샷 2023-09-18 오후 7.50.45.png.md",
     "스크린샷 2023-09-18 오후 7.43.22.png.md",
@@ -199,8 +200,6 @@
     "node_modules/sharp/vendor/8.12.2/darwin-arm64v8/THIRD-PARTY-NOTICES.md",
     "node_modules/pretendard/examples/flutter_pretendard/ios/Runner/Assets.xcassets/LaunchImage.imageset/README.md",
     "node_modules/lmdb/dependencies/lz4/lib/dll/example/README.md",
-    "node_modules/@parcel/cache/node_modules/lmdb/dependencies/lz4/lib/dll/example/README.md",
-    "node_modules/lmdb/dependencies/lz4/lib/README.md",
-    "node_modules/@parcel/cache/node_modules/lmdb/dependencies/lz4/lib/README.md"
+    "node_modules/@parcel/cache/node_modules/lmdb/dependencies/lz4/lib/dll/example/README.md"
   ]
 }
