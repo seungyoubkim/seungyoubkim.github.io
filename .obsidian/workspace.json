@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/blog/angular/index.md",
+                "file": "content/blog/styled-components/index.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/blog/angular/index.md",
+                "file": "content/blog/styled-components/index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/blog/angular/index.md",
+                "file": "content/blog/styled-components/index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/blog/angular/index.md"
+                "file": "content/blog/styled-components/index.md"
               }
             }
           },
@@ -156,8 +156,11 @@
   },
   "active": "752bc8c0a53e035f",
   "lastOpenFiles": [
-    "content/blog/nextjs/index.md",
+    "content/blog/webpack/index.md",
+    "content/blog/styled-components/index.md",
     "content/blog/angular/index.md",
+    "content/blog/styled-components",
+    "content/blog/nextjs/index.md",
     "content/blog/react17/index.md",
     "content/blog/angular",
     "content/blog/react17/32.png",
@@ -173,7 +176,6 @@
     "content/blog/nextjs/24.png",
     "content/blog/nextjs/23.png",
     "content/blog/nextjs",
-    "content/blog/webpack/index.md",
     "content/blog/react-hook/index.md",
     "content/blog/js-iterator/index.md",
     "content/blog/redux-saga",
@@ -188,7 +190,6 @@
     "content/blog/webpack",
     "content/blog/js-event-loop/index.md",
     "content/blog/obsidian-git/index.md",
-    "content/blog/react-hook",
     "js-async.md",
     "content/blog/javascript-event-loop/index.md",
     "12.gif.md",
@@ -200,7 +201,6 @@
     "content/blog/hello-world/index.md",
     "content/blog/new-beginnings/index.md",
     "node_modules/sharp/vendor/8.12.2/darwin-arm64v8/THIRD-PARTY-NOTICES.md",
-    "node_modules/pretendard/examples/flutter_pretendard/ios/Runner/Assets.xcassets/LaunchImage.imageset/README.md",
-    "node_modules/lmdb/dependencies/lz4/lib/dll/example/README.md"
+    "node_modules/pretendard/examples/flutter_pretendard/ios/Runner/Assets.xcassets/LaunchImage.imageset/README.md"
   ]
 }
