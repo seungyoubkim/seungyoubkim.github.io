@@ -15,17 +15,17 @@ class Giscus extends React.Component {
     scriptEl.async = true
     scriptEl.crossOrigin = 'anonymous'
     scriptEl.src = 'https://giscus.app/client.js'
-    scriptEl.setAttribute('repo', 'seungyoubkim/seungyoubkim.github.io')
-    scriptEl.setAttribute('repo-id', 'R_kgDOHdL6mw')
-    scriptEl.setAttribute('category', 'Announcements')
-    scriptEl.setAttribute('category-id', 'DIC_kwDOHdL6m84CZ0Tt')
-    scriptEl.setAttribute('strict', '0')
-    scriptEl.setAttribute('mapping', 'pathname')
-    scriptEl.setAttribute('reactions-enabled', '1')
-    scriptEl.setAttribute('emit-metadata', '0')
-    scriptEl.setAttribute('input-position', 'bottom')
-    scriptEl.setAttribute('theme', 'preferred_color_scheme')
-    scriptEl.setAttribute('lang', 'ko')
+    scriptEl.setAttribute('data-repo', 'seungyoubkim/seungyoubkim.github.io')
+    scriptEl.setAttribute('data-repo-id', 'R_kgDOHdL6mw')
+    scriptEl.setAttribute('data-category', 'Announcements')
+    scriptEl.setAttribute('data-category-id', 'DIC_kwDOHdL6m84CZ0Tt')
+    scriptEl.setAttribute('data-strict', '0')
+    scriptEl.setAttribute('data-mapping', 'pathname')
+    scriptEl.setAttribute('data-reactions-enabled', '1')
+    scriptEl.setAttribute('data-emit-metadata', '0')
+    scriptEl.setAttribute('data-input-position', 'bottom')
+    scriptEl.setAttribute('data-theme', 'preferred_color_scheme')
+    scriptEl.setAttribute('data-lang', 'ko')
     this.commentsEl.current.appendChild(scriptEl)
   }
 
