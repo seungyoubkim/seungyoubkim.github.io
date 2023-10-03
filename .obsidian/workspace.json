@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/blog/nextjs/index.md",
+                "file": "content/blog/react17/index.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/blog/nextjs/index.md",
+                "file": "content/blog/react17/index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/blog/nextjs/index.md",
+                "file": "content/blog/react17/index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/blog/nextjs/index.md"
+                "file": "content/blog/react17/index.md"
               }
             }
           },
@@ -156,8 +156,11 @@
   },
   "active": "752bc8c0a53e035f",
   "lastOpenFiles": [
-    "content/blog/redux-saga/index.md",
+    "content/blog/react17/32.png",
     "content/blog/nextjs/index.md",
+    "content/blog/react17/index.md",
+    "content/blog/react17",
+    "content/blog/redux-saga/index.md",
     "content/blog/nextjs/31.png",
     "content/blog/nextjs/30.png",
     "content/blog/nextjs/29.png",
@@ -188,7 +191,6 @@
     "js-async.md",
     "content/blog/javascript-event-loop/index.md",
     "content/blog/javascript-event-loop",
-    "content/blog/js-async",
     "12.gif.md",
     "스크린샷 2023-09-18 오후 7.43.40.png.md",
     "스크린샷 2023-09-18 오후 7.50.45.png.md",
@@ -199,7 +201,6 @@
     "content/blog/new-beginnings/index.md",
     "node_modules/sharp/vendor/8.12.2/darwin-arm64v8/THIRD-PARTY-NOTICES.md",
     "node_modules/pretendard/examples/flutter_pretendard/ios/Runner/Assets.xcassets/LaunchImage.imageset/README.md",
-    "node_modules/lmdb/dependencies/lz4/lib/dll/example/README.md",
-    "node_modules/@parcel/cache/node_modules/lmdb/dependencies/lz4/lib/dll/example/README.md"
+    "node_modules/lmdb/dependencies/lz4/lib/dll/example/README.md"
   ]
 }
