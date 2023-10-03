@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/blog/typescript/index.md",
+                "file": "content/blog/parcel/index.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/blog/typescript/index.md",
+                "file": "content/blog/parcel/index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/blog/typescript/index.md",
+                "file": "content/blog/parcel/index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/blog/typescript/index.md"
+                "file": "content/blog/parcel/index.md"
               }
             }
           },
@@ -156,12 +156,14 @@
   },
   "active": "752bc8c0a53e035f",
   "lastOpenFiles": [
+    "content/blog/react-hook/index.md",
+    "content/blog/parcel/index.md",
+    "content/blog/typescript/index.md",
+    "content/blog/parcel",
     "content/blog/typescript/15.png",
     "content/blog/typescript/14.png",
     "content/blog/webpack/index.md",
-    "content/blog/typescript/index.md",
     "content/blog/typescript",
-    "content/blog/react-hook/index.md",
     "content/blog/js-async/index.md",
     "content/blog/webpack",
     "content/blog/js-event-loop/index.md",
@@ -177,7 +179,6 @@
     "content/blog/javascript-event-loop/1_1FL2WcODqRrK40rrzA5QQA.png",
     "content/blog/javascript-event-loop/12.gif",
     "content/blog/javascript-event-loop/11.png",
-    "content/blog/javascript-event-loop/10.png",
     "content/blog/javascript-event-loop",
     "content/blog/js-async",
     "12.gif.md",
@@ -192,7 +193,6 @@
     "src/components/Utterances.js",
     "content/blog/hello-world/index.md",
     "content/blog/new-beginnings/index.md",
-    "yarn-error.log",
     "node_modules/sharp/vendor/8.12.2/darwin-arm64v8/THIRD-PARTY-NOTICES.md",
     "node_modules/pretendard/examples/flutter_pretendard/ios/Runner/Assets.xcassets/LaunchImage.imageset/README.md",
     "node_modules/lmdb/dependencies/lz4/lib/dll/example/README.md",
