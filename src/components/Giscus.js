@@ -13,8 +13,8 @@ class Giscus extends React.Component {
     scriptEl.onload = () => this.setState({ status: 'success' })
     scriptEl.onerror = () => this.setState({ status: 'failed' })
     scriptEl.async = true
-    scriptEl.src = 'https://giscus.app/client.js'
     scriptEl.crossOrigin = 'anonymous'
+    scriptEl.src = 'https://giscus.app/client.js'
     scriptEl.setAttribute('repo', 'seungyoubkim/seungyoubkim.github.io')
     scriptEl.setAttribute('repo-id', 'R_kgDOHdL6mw')
     scriptEl.setAttribute('category', 'Announcements')
@@ -33,10 +33,10 @@ class Giscus extends React.Component {
     const { status } = this.state
 
     return (
-      <div className="giscus">
+      <div className="comments-wrapper">
         {status === 'failed' && <div>Error. Please try again.</div>}
         {status === 'pending' && <div>Loading script...</div>}
-        <div ref={this.commentsEl} />
+        <div ref={this.commentsEl} className="giscus" />
       </div>
     )
   }
