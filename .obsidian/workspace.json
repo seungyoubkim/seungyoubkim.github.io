@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/blog/redux/index.md",
+                "file": "content/blog/js-iterator/index.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/blog/redux/index.md",
+                "file": "content/blog/js-iterator/index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/blog/redux/index.md",
+                "file": "content/blog/js-iterator/index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/blog/redux/index.md"
+                "file": "content/blog/js-iterator/index.md"
               }
             }
           },
@@ -156,17 +156,19 @@
   },
   "active": "752bc8c0a53e035f",
   "lastOpenFiles": [
+    "content/blog/redux/index.md",
+    "content/blog/js-iterator/index.md",
+    "content/blog/react-hook/index.md",
+    "content/blog/parcel/index.md",
+    "content/blog/js-iterator",
     "content/blog/webpack/index.md",
     "content/blog/typescript/index.md",
-    "content/blog/redux/index.md",
     "content/blog/redux/redux5.png",
     "content/blog/redux/redux4.png",
     "content/blog/redux/redux3.png",
     "content/blog/redux/redux2.png",
     "content/blog/redux/redux1.png",
-    "content/blog/parcel/index.md",
     "content/blog/redux",
-    "content/blog/react-hook/index.md",
     "content/blog/parcel",
     "content/blog/typescript/15.png",
     "content/blog/typescript/14.png",
@@ -191,7 +193,6 @@
     "스크린샷 2023-09-18 오후 7.43.22.png.md",
     "content/blog/obsidian-test/index.md",
     "content/blog/my-second-post/index.md",
-    "content/blog/obsidian-git",
     "content/blog/hello-world/index.md",
     "content/blog/new-beginnings/index.md",
     "node_modules/sharp/vendor/8.12.2/darwin-arm64v8/THIRD-PARTY-NOTICES.md",

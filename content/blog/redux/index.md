@@ -714,7 +714,7 @@ export const getPosts = () => async dispatch => {
 
 ## 이후 작성 할 내용
 ---
-1. [redux-saga](https://www.notion.so/Redux-Saga-655cf00435f849448c81682e446f9aac?pvs=21)
+1. [redux-saga](/redux-saga)
 2. Recoil
 3. Mobx
 

@@ -429,7 +429,7 @@ function Todos() {
 
 ## 이후 작성 할 내용
 ---
-1. [Redux](https://www.notion.so/Redux-112e3e2a78fb472680e6cb1bf74ba604?pvs=21)
+1. [Redux](/redux)
 
 ## 추가로 읽어보면 좋을 아티클
 ---
