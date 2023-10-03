@@ -610,7 +610,7 @@ document.body.appendChild(button);
 
 ## 이후 작성 할 내용
 ---
-1. [Parcel](https://www.notion.so/Parcel-caf9ed93aa0340e3b85bca3fce23d9ad?pvs=21)
+1. [Parcel](/parcel)
 2. Webpack 5
 
 ## 참고 자료

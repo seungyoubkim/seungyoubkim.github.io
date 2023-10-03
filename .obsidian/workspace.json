@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/blog/parcel/index.md",
+                "file": "content/blog/redux/index.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/blog/parcel/index.md",
+                "file": "content/blog/redux/index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/blog/parcel/index.md",
+                "file": "content/blog/redux/index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/blog/parcel/index.md"
+                "file": "content/blog/redux/index.md"
               }
             }
           },
@@ -156,13 +156,20 @@
   },
   "active": "752bc8c0a53e035f",
   "lastOpenFiles": [
-    "content/blog/react-hook/index.md",
-    "content/blog/parcel/index.md",
+    "content/blog/webpack/index.md",
     "content/blog/typescript/index.md",
+    "content/blog/redux/index.md",
+    "content/blog/redux/redux5.png",
+    "content/blog/redux/redux4.png",
+    "content/blog/redux/redux3.png",
+    "content/blog/redux/redux2.png",
+    "content/blog/redux/redux1.png",
+    "content/blog/parcel/index.md",
+    "content/blog/redux",
+    "content/blog/react-hook/index.md",
     "content/blog/parcel",
     "content/blog/typescript/15.png",
     "content/blog/typescript/14.png",
-    "content/blog/webpack/index.md",
     "content/blog/typescript",
     "content/blog/js-async/index.md",
     "content/blog/webpack",
@@ -174,11 +181,6 @@
     "content/blog/js-async/12.png",
     "content/blog/javascript-event-loop/index.md",
     "content/blog/javascript-event-loop/Untitled3.png",
-    "content/blog/javascript-event-loop/2.png",
-    "content/blog/javascript-event-loop/1_X21ybPxqBtfRV5v9rD9J1A.png",
-    "content/blog/javascript-event-loop/1_1FL2WcODqRrK40rrzA5QQA.png",
-    "content/blog/javascript-event-loop/12.gif",
-    "content/blog/javascript-event-loop/11.png",
     "content/blog/javascript-event-loop",
     "content/blog/js-async",
     "12.gif.md",
@@ -190,7 +192,6 @@
     "content/blog/obsidian-test/index.md",
     "content/blog/my-second-post/index.md",
     "content/blog/obsidian-git",
-    "src/components/Utterances.js",
     "content/blog/hello-world/index.md",
     "content/blog/new-beginnings/index.md",
     "node_modules/sharp/vendor/8.12.2/darwin-arm64v8/THIRD-PARTY-NOTICES.md",
@@ -199,8 +200,6 @@
     "node_modules/@parcel/cache/node_modules/lmdb/dependencies/lz4/lib/dll/example/README.md",
     "node_modules/lmdb/dependencies/lz4/lib/README.md",
     "node_modules/@parcel/cache/node_modules/lmdb/dependencies/lz4/lib/README.md",
-    "node_modules/pretendard/examples/react_native_pretendard/README.md",
-    "node_modules/pretendard/examples/flutter_pretendard/README.md",
-    "node_modules/immutable/contrib/cursor/README.md"
+    "node_modules/pretendard/examples/react_native_pretendard/README.md"
   ]
 }
