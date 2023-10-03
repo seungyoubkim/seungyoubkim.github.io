@@ -320,6 +320,10 @@ a:focus {
   width: 100%;
 }
 
+.blog-post .giscus {
+  padding-top: var(--spacing-6);
+}
+
 /* Media queries */
 
 @media (max-width: 42rem) {
