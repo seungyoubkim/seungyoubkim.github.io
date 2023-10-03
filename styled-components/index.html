@@ -1,0 +1,445 @@
+<!DOCTYPE html><html lang="ko"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><meta data-react-helmet="true" name="google-site-verification" content="rHum0RrMkzzwsEtLrQWEl5OU7oLB6KqmyBA1hLFBYXI"/><meta data-react-helmet="true" name="twitter:description" content="CSS-in-JS 와 Styled Components 에 대해 알아봅니다."/><meta data-react-helmet="true" name="twitter:title" content="styled-components"/><meta data-react-helmet="true" name="twitter:creator" content=""/><meta data-react-helmet="true" name="twitter:card" content="summary"/><meta data-react-helmet="true" property="og:type" content="website"/><meta data-react-helmet="true" property="og:description" content="CSS-in-JS 와 Styled Components 에 대해 알아봅니다."/><meta data-react-helmet="true" property="og:title" content="styled-components"/><meta data-react-helmet="true" name="description" content="CSS-in-JS 와 Styled Components 에 대해 알아봅니다."/><meta name="generator" content="Gatsby 4.15.2"/><style data-href="/styles.8e95d4a61000500392d6.css" data-identity="gatsby-global-css">@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:100;src:local("Montserrat Thin "),local("Montserrat-Thin"),url(/static/montserrat-latin-100-8d7d79679b70dbe27172b6460e7a7910.woff2) format("woff2"),url(/static/montserrat-latin-100-ec38980a9e0119a379e2a9b3dbb1901a.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:100;src:local("Montserrat Thin italic"),local("Montserrat-Thinitalic"),url(/static/montserrat-latin-100italic-e279051046ba1286706adc886cf1c96b.woff2) format("woff2"),url(/static/montserrat-latin-100italic-3b325a3173c8207435cd1b76e19bf501.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:200;src:local("Montserrat Extra Light "),local("Montserrat-Extra Light"),url(/static/montserrat-latin-200-9d266fbbfa6cab7009bd56003b1eeb67.woff2) format("woff2"),url(/static/montserrat-latin-200-2d8ba08717110d27122e54c34b8a5798.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:200;src:local("Montserrat Extra Light italic"),local("Montserrat-Extra Lightitalic"),url(/static/montserrat-latin-200italic-6e5b3756583bb2263eb062eae992735e.woff2) format("woff2"),url(/static/montserrat-latin-200italic-a0d6f343e4b536c582926255367a57da.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:300;src:local("Montserrat Light "),local("Montserrat-Light"),url(/static/montserrat-latin-300-00b3e893aab5a8fd632d6342eb72551a.woff2) format("woff2"),url(/static/montserrat-latin-300-ea303695ceab35f17e7d062f30e0173b.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:300;src:local("Montserrat Light italic"),local("Montserrat-Lightitalic"),url(/static/montserrat-latin-300italic-56f34ea368f6aedf89583d444bbcb227.woff2) format("woff2"),url(/static/montserrat-latin-300italic-54b0bf2c8c4c12ffafd803be2466a790.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:400;src:local("Montserrat Regular "),local("Montserrat-Regular"),url(/static/montserrat-latin-400-b71748ae4f80ec8c014def4c5fa8688b.woff2) format("woff2"),url(/static/montserrat-latin-400-0659a9f4e90db5cf51b50d005bff1e41.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:400;src:local("Montserrat Regular italic"),local("Montserrat-Regularitalic"),url(/static/montserrat-latin-400italic-6eed6b4cbb809c6efc7aa7ddad6dbe3e.woff2) format("woff2"),url(/static/montserrat-latin-400italic-7583622cfde30ae49086d18447ab28e7.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:500;src:local("Montserrat Medium "),local("Montserrat-Medium"),url(/static/montserrat-latin-500-091b209546e16313fd4f4fc36090c757.woff2) format("woff2"),url(/static/montserrat-latin-500-edd311588712a96bbf435fad264fff62.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:500;src:local("Montserrat Medium italic"),local("Montserrat-Mediumitalic"),url(/static/montserrat-latin-500italic-c90ced68b46050061d1a41842d6dfb43.woff2) format("woff2"),url(/static/montserrat-latin-500italic-5146cbfe02b1deea5dffea27a5f2f998.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:600;src:local("Montserrat SemiBold "),local("Montserrat-SemiBold"),url(/static/montserrat-latin-600-0480d2f8a71f38db8633b84d8722e0c2.woff2) format("woff2"),url(/static/montserrat-latin-600-b77863a375260a05dd13f86a1cee598f.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:600;src:local("Montserrat SemiBold italic"),local("Montserrat-SemiBolditalic"),url(/static/montserrat-latin-600italic-cf46ffb11f3a60d7df0567f8851a1d00.woff2) format("woff2"),url(/static/montserrat-latin-600italic-c4fcfeeb057724724097167e57bd7801.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:700;src:local("Montserrat Bold "),local("Montserrat-Bold"),url(/static/montserrat-latin-700-7dbcc8a5ea2289d83f657c25b4be6193.woff2) format("woff2"),url(/static/montserrat-latin-700-99271a835e1cae8c76ef8bba99a8cc4e.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:700;src:local("Montserrat Bold italic"),local("Montserrat-Bolditalic"),url(/static/montserrat-latin-700italic-c41ad6bdb4bd504a843d546d0a47958d.woff2) format("woff2"),url(/static/montserrat-latin-700italic-6779372f04095051c62ed36bc1dcc142.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:800;src:local("Montserrat ExtraBold "),local("Montserrat-ExtraBold"),url(/static/montserrat-latin-800-db9a3e0ba7eaea32e5f55328ace6cf23.woff2) format("woff2"),url(/static/montserrat-latin-800-4e3c615967a2360f5db87d2f0fd2456f.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:800;src:local("Montserrat ExtraBold italic"),local("Montserrat-ExtraBolditalic"),url(/static/montserrat-latin-800italic-bf45bfa14805969eda318973947bc42b.woff2) format("woff2"),url(/static/montserrat-latin-800italic-fe82abb0bcede51bf724254878e0c374.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:900;src:local("Montserrat Black "),local("Montserrat-Black"),url(/static/montserrat-latin-900-e66c7edc609e24bacbb705175669d814.woff2) format("woff2"),url(/static/montserrat-latin-900-8211f418baeb8ec880b80ba3c682f957.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:900;src:local("Montserrat Black italic"),local("Montserrat-Blackitalic"),url(/static/montserrat-latin-900italic-4454c775e48152c1a72510ceed3603e2.woff2) format("woff2"),url(/static/montserrat-latin-900italic-efcaa0f6a82ee0640b83a0916e6e8d68.woff) format("woff")}@font-face{font-display:swap;font-family:Merriweather;font-style:normal;font-weight:300;src:local("Merriweather Light "),local("Merriweather-Light"),url(/static/merriweather-latin-300-fc117160c69a8ea0851b26dd14748ee4.woff2) format("woff2"),url(/static/merriweather-latin-300-58b18067ebbd21fda77b67e73c241d3b.woff) format("woff")}@font-face{font-display:swap;font-family:Merriweather;font-style:italic;font-weight:300;src:local("Merriweather Light italic"),local("Merriweather-Lightitalic"),url(/static/merriweather-latin-300italic-fe29961474f8dbf77c0aa7b9a629e4bc.woff2) format("woff2"),url(/static/merriweather-latin-300italic-23c3f1f88683618a4fb8d265d33d383a.woff) format("woff")}@font-face{font-display:swap;font-family:Merriweather;font-style:normal;font-weight:400;src:local("Merriweather Regular "),local("Merriweather-Regular"),url(/static/merriweather-latin-400-d9479e8023bef9cbd9bf8d6eabd6bf36.woff2) format("woff2"),url(/static/merriweather-latin-400-040426f99ff6e00b86506452e0d1f10b.woff) format("woff")}@font-face{font-display:swap;font-family:Merriweather;font-style:italic;font-weight:400;src:local("Merriweather Regular italic"),local("Merriweather-Regularitalic"),url(/static/merriweather-latin-400italic-2de7bfeaf08fb03d4315d49947f062f7.woff2) format("woff2"),url(/static/merriweather-latin-400italic-79db67aca65f5285964ab332bd65f451.woff) format("woff")}@font-face{font-display:swap;font-family:Merriweather;font-style:normal;font-weight:700;src:local("Merriweather Bold "),local("Merriweather-Bold"),url(/static/merriweather-latin-700-4b08e01d805fa35d7bf777f1b24314ae.woff2) format("woff2"),url(/static/merriweather-latin-700-22fb8afba4ab1f093b6ef9e28a9b6e92.woff) format("woff")}@font-face{font-display:swap;font-family:Merriweather;font-style:italic;font-weight:700;src:local("Merriweather Bold italic"),local("Merriweather-Bolditalic"),url(/static/merriweather-latin-700italic-cd92541b177652fffb6e3b952f1c33f1.woff2) format("woff2"),url(/static/merriweather-latin-700italic-f87f3d87cea0dd0979bfc8ac9ea90243.woff) format("woff")}@font-face{font-display:swap;font-family:Merriweather;font-style:normal;font-weight:900;src:local("Merriweather Black "),local("Merriweather-Black"),url(/static/merriweather-latin-900-f813fc6a4bee46eda5224ac7ebf1b7be.woff2) format("woff2"),url(/static/merriweather-latin-900-5d4e42cb44410674acd99153d57df032.woff) format("woff")}@font-face{font-display:swap;font-family:Merriweather;font-style:italic;font-weight:900;src:local("Merriweather Black italic"),local("Merriweather-Blackitalic"),url(/static/merriweather-latin-900italic-b7901d85486871c1779c0e93ddd85656.woff2) format("woff2"),url(/static/merriweather-latin-900italic-9647f9fdab98756989a8a5550eb205c3.woff) format("woff")}
+
+
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */html{-webkit-text-size-adjust:100%;line-height:1.15}body{margin:0}main{display:block}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;-webkit-text-decoration:underline dotted;text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details{display:block}summary{display:list-item}[hidden]{display:none}:root{--maxWidth-none:"none";--maxWidth-xs:20rem;--maxWidth-sm:24rem;--maxWidth-md:28rem;--maxWidth-lg:32rem;--maxWidth-xl:36rem;--maxWidth-2xl:42rem;--maxWidth-3xl:48rem;--maxWidth-4xl:56rem;--maxWidth-full:"100%";--maxWidth-wrapper:var(--maxWidth-2xl);--spacing-px:"1px";--spacing-0:0;--spacing-1:0.25rem;--spacing-2:0.5rem;--spacing-3:0.75rem;--spacing-4:1rem;--spacing-5:1.25rem;--spacing-6:1.5rem;--spacing-8:2rem;--spacing-10:2.5rem;--spacing-12:3rem;--spacing-16:4rem;--spacing-20:5rem;--spacing-24:6rem;--spacing-32:8rem;--fontFamily:Pretendard,-apple-system,BlinkMacSystemFont,system-ui,Roboto,"Helvetica Neue","Segoe UI","Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic","Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol",sans-serif;--font-body:var(--fontFamily);--font-heading:var(--fontFamily);--fontWeight-normal:400;--fontWeight-medium:500;--fontWeight-semibold:600;--fontWeight-bold:700;--fontWeight-extrabold:800;--fontWeight-black:900;--fontSize-root:16px;--lineHeight-none:1;--lineHeight-tight:1.1;--lineHeight-normal:1.5;--lineHeight-relaxed:1.625;--fontSize-0:0.833rem;--fontSize-1:1rem;--fontSize-2:1.2rem;--fontSize-3:1.44rem;--fontSize-4:1.728rem;--fontSize-5:2.074rem;--fontSize-6:2.488rem;--fontSize-7:2.986rem;--color-primary:#da1212;--color-text:#2e353f;--color-text-light:#4f5969;--color-heading:#1a202c;--color-heading-black:#000;--color-accent:#d1dce5}*,:after,:before{box-sizing:border-box}html{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-size:var(--fontSize-root);line-height:var(--lineHeight-normal)}body{color:var(--color-text);font-family:var(--font-body);font-size:var(--fontSize-1)}footer{padding:var(--spacing-6) var(--spacing-0)}hr{background:var(--color-accent);border:0;height:1px}h1,h2,h3,h4,h5,h6{font-family:var(--font-heading);letter-spacing:-.025em;line-height:var(--lineHeight-tight);margin-bottom:var(--spacing-6);margin-top:var(--spacing-12)}h2,h3,h4,h5,h6{color:var(--color-heading);font-weight:var(--fontWeight-bold)}h1{color:var(--color-heading-black);font-size:var(--fontSize-6);font-weight:var(--fontWeight-black)}h2{font-size:var(--fontSize-5)}h3{font-size:var(--fontSize-4)}h4{font-size:var(--fontSize-3)}h5{font-size:var(--fontSize-2)}h6{font-size:var(--fontSize-1)}h1>a,h2>a,h3>a,h4>a,h5>a,h6>a{color:inherit;text-decoration:none}p{--baseline-multiplier:0.179;--x-height-multiplier:0.35;line-height:var(--lineHeight-relaxed);margin:var(--spacing-0) var(--spacing-0) var(--spacing-8) var(--spacing-0)}ol,p,ul{padding:var(--spacing-0)}ol,ul{list-style-image:none;list-style-position:outside;margin-bottom:var(--spacing-8);margin-left:var(--spacing-0);margin-right:var(--spacing-0)}ol li,ul li{padding-left:var(--spacing-0)}li>p,ol li,ul li{margin-bottom:calc(var(--spacing-8)/2)}li :last-child{margin-bottom:var(--spacing-0)}li>ul{margin-left:var(--spacing-8);margin-top:calc(var(--spacing-8)/2)}blockquote{border-left:var(--spacing-1) solid var(--color-primary);color:var(--color-text-light);font-size:var(--fontSize-2);font-style:italic;margin-bottom:var(--spacing-8);margin-left:calc(var(--spacing-6)*-1);margin-right:var(--spacing-8);padding:var(--spacing-0) var(--spacing-0) var(--spacing-0) var(--spacing-6)}blockquote>:last-child{margin-bottom:var(--spacing-0)}blockquote>ol,blockquote>ul{list-style-position:inside}table{border-collapse:collapse;border-spacing:.25rem;margin-bottom:var(--spacing-8);width:100%}table thead tr th{border-bottom:1px solid var(--color-accent)}a{color:var(--color-primary)}a:focus,a:hover{text-decoration:none}.global-wrapper{margin:var(--spacing-0) auto;max-width:var(--maxWidth-wrapper);padding:var(--spacing-10) var(--spacing-5)}.global-wrapper[data-is-root-path=true] .bio{margin-bottom:var(--spacing-20)}.global-header{margin-bottom:var(--spacing-12)}.main-heading{font-size:var(--fontSize-7);margin:0}.post-list-item{margin-bottom:var(--spacing-8);margin-top:var(--spacing-8)}.post-list-item p{margin-bottom:var(--spacing-0)}.post-list-item h2{color:var(--color-heading);font-size:var(--fontSize-4);margin-bottom:var(--spacing-2);margin-top:var(--spacing-0)}.post-list-item header{margin-bottom:var(--spacing-4)}.header-link-home{font-family:var(--font-heading);font-size:var(--fontSize-2);font-weight:var(--fontWeight-bold);text-decoration:none}.bio{display:flex;margin-bottom:var(--spacing-16)}.bio p,.bio-avatar{margin-bottom:var(--spacing-0)}.bio-avatar{border-radius:100%;margin-right:var(--spacing-4);min-width:50px}.blog-post header h1{margin:var(--spacing-0) var(--spacing-0) var(--spacing-4) var(--spacing-0)}.blog-post header p{font-family:var(--font-heading);font-size:var(--fontSize-2)}.blog-post-nav ul{margin:var(--spacing-0)}.gatsby-highlight{margin-bottom:var(--spacing-8)}.blog-post img{padding-bottom:var(--spacing-2);width:100%}@media (max-width:42rem){blockquote{margin-left:var(--spacing-0);padding:var(--spacing-0) var(--spacing-0) var(--spacing-0) var(--spacing-4)}ol,ul{list-style-position:inside}}@font-face{font-display:swap;font-family:Pretendard;font-weight:900;src:local("Pretendard Black"),url(/static/Pretendard-Black-aaa76c4a6ca9efc94d1a3f892cb1196d.woff2) format("woff2"),url(/static/Pretendard-Black-78d9f24400b70da75d379317cca859c1.woff) format("woff")}@font-face{font-display:swap;font-family:Pretendard;font-weight:800;src:local("Pretendard ExtraBold"),url(/static/Pretendard-ExtraBold-36145a15bedb632d6795a369af714c5f.woff2) format("woff2"),url(/static/Pretendard-ExtraBold-a6f30dd6e4c3c93ea3cb57e7d769ce44.woff) format("woff")}@font-face{font-display:swap;font-family:Pretendard;font-weight:700;src:local("Pretendard Bold"),url(/static/Pretendard-Bold-6b164eb09ac66559881ebaff87a9f68f.woff2) format("woff2"),url(/static/Pretendard-Bold-d0f80e7ac3933bfbf45d05e2cc6fde07.woff) format("woff")}@font-face{font-display:swap;font-family:Pretendard;font-weight:600;src:local("Pretendard SemiBold"),url(/static/Pretendard-SemiBold-77dc78f65aa11d9abc377e54f2bc0281.woff2) format("woff2"),url(/static/Pretendard-SemiBold-3fb6e3741b5dffea918e9fd730156bbd.woff) format("woff")}@font-face{font-display:swap;font-family:Pretendard;font-weight:500;src:local("Pretendard Medium"),url(/static/Pretendard-Medium-59b075f096b9d3f4d25e99d69c3a70a5.woff2) format("woff2"),url(/static/Pretendard-Medium-a2ef0b28cc457c109381607c3290250a.woff) format("woff")}@font-face{font-display:swap;font-family:Pretendard;font-weight:400;src:local("Pretendard Regular"),url(/static/Pretendard-Regular-0c7ef87f67b575118ed954c29b2bcddb.woff2) format("woff2"),url(/static/Pretendard-Regular-371a053f6fa19004d5fa62feb5669588.woff) format("woff")}@font-face{font-display:swap;font-family:Pretendard;font-weight:300;src:local("Pretendard Light"),url(/static/Pretendard-Light-f63725c2aff140ea27065ea8675921d8.woff2) format("woff2"),url(/static/Pretendard-Light-e90933d161baef9945bf99fe091fef4a.woff) format("woff")}@font-face{font-display:swap;font-family:Pretendard;font-weight:200;src:local("Pretendard ExtraLight"),url(/static/Pretendard-ExtraLight-e2816fb65d32738bf7312f256c330f36.woff2) format("woff2"),url(/static/Pretendard-ExtraLight-c4a5b6406da33f9e87cd66ba6f4bc0ca.woff) format("woff")}@font-face{font-display:swap;font-family:Pretendard;font-weight:100;src:local("Pretendard Thin"),url(/static/Pretendard-Thin-04f04b1778555863e68f36b4aa45053d.woff2) format("woff2"),url(/static/Pretendard-Thin-36a510183103a448779984ef74cb1da9.woff) format("woff")}code[class*=language-],pre[class*=language-]{word-wrap:normal;background:none;color:#000;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none;line-height:1.5;-o-tab-size:4;tab-size:4;text-align:left;text-shadow:0 1px #fff;white-space:pre;word-break:normal;word-spacing:normal}code[class*=language-] ::selection,code[class*=language-]::selection,pre[class*=language-] ::selection,pre[class*=language-]::selection{background:#b3d4fc;text-shadow:none}@media print{code[class*=language-],pre[class*=language-]{text-shadow:none}}pre[class*=language-]{margin:.5em 0;overflow:auto;padding:1em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#f5f2f0}:not(pre)>code[class*=language-]{border-radius:.3em;padding:.1em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#708090}.token.punctuation{color:#999}.token.namespace{opacity:.7}.token.boolean,.token.constant,.token.deleted,.token.number,.token.property,.token.symbol,.token.tag{color:#905}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#690}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url{background:hsla(0,0%,100%,.5);color:#9a6e3a}.token.atrule,.token.attr-value,.token.keyword{color:#07a}.token.class-name,.token.function{color:#dd4a68}.token.important,.token.regex,.token.variable{color:#e90}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}</style><style>.gatsby-image-wrapper{position:relative;overflow:hidden}.gatsby-image-wrapper picture.object-fit-polyfill{position:static!important}.gatsby-image-wrapper img{bottom:0;height:100%;left:0;margin:0;max-width:none;padding:0;position:absolute;right:0;top:0;width:100%;object-fit:cover}.gatsby-image-wrapper [data-main-image]{opacity:0;transform:translateZ(0);transition:opacity .25s linear;will-change:opacity}.gatsby-image-wrapper-constrained{display:inline-block;vertical-align:top}</style><noscript><style>.gatsby-image-wrapper noscript [data-main-image]{opacity:1!important}.gatsby-image-wrapper [data-placeholder-image]{opacity:0!important}</style></noscript><script type="module">const e="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;e&&document.body.addEventListener("load",(function(e){const t=e.target;if(void 0===t.dataset.mainImage)return;if(void 0===t.dataset.gatsbyImageSsr)return;let a=null,n=t;for(;null===a&&n;)void 0!==n.parentNode.dataset.gatsbyImageWrapper&&(a=n.parentNode),n=n.parentNode;const o=a.querySelector("[data-placeholder-image]"),r=new Image;r.src=t.currentSrc,r.decode().catch((()=>{})).then((()=>{t.style.opacity=1,o&&(o.style.opacity=0,o.style.transition="opacity 500ms linear")}))}),!0);</script><link rel="alternate" type="application/rss+xml" title="Gatsby Starter Blog RSS Feed" href="/rss.xml"/><link rel="icon" href="/favicon-32x32.png?v=cadbbdce5d5e9ac27d4e53b2112adad3" type="image/png"/><link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=cadbbdce5d5e9ac27d4e53b2112adad3"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=cadbbdce5d5e9ac27d4e53b2112adad3"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=cadbbdce5d5e9ac27d4e53b2112adad3"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=cadbbdce5d5e9ac27d4e53b2112adad3"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=cadbbdce5d5e9ac27d4e53b2112adad3"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=cadbbdce5d5e9ac27d4e53b2112adad3"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=cadbbdce5d5e9ac27d4e53b2112adad3"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=cadbbdce5d5e9ac27d4e53b2112adad3"/><title data-react-helmet="true">styled-components | Seungyoub Kim Blog</title><link rel="sitemap" type="application/xml" href="/sitemap.xml"/><link rel="preconnect" href="https://www.googletagmanager.com"/><link rel="dns-prefetch" href="https://www.googletagmanager.com"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="global-wrapper" data-is-root-path="false"><header class="global-header"><a class="header-link-home" href="/">Seungyoub Kim Blog</a></header><main><article class="blog-post" itemscope="" itemType="http://schema.org/Article"><header><h1 itemProp="headline">styled-components</h1><p></p></header><section itemProp="articleBody"><blockquote>
+<p>⚠️ 해당 글의 내용과 예시 코드, 이미지는 모두 참고 자료에서 가져 와 정리 한 것입니다.</p>
+</blockquote>
+<p>오늘은 CSS-in-JS 도구 중 현재 가장 많은 인기를 누리고 있는 styled-components 에 대한 기본적인 내용들에 대해 알아보도록 하겠습니다.</p>
+<h1>CSS-in-JS</h1>
+<hr>
+<ul>
+<li>2014년 페이스북의 개발자인 Vjeux 는 CSS 에는 아래와 같은 문제점들이 있다고 발표하였습니다.
+<ul>
+<li><strong>Global namespace</strong>: 모든 스타일이 global에 선언되어 별도의 class 명명 규칙을 적용해야 하는 문제</li>
+<li><strong>Dependencies</strong>: css간의 의존관계를 관리하기 힘든 문제</li>
+<li><strong>Dead Code Elimination</strong>: 기능 추가, 변경, 삭제 과정에서 불필요한 CSS를 제거하기 어려운 문제</li>
+<li><strong>Minification</strong>: 클래스 이름의 최소화 문제</li>
+<li><strong>Sharing Constants</strong>: JS의 상태 값을 공유할 수 없는 문제</li>
+<li><strong>Non-deterministic Resolution</strong>: CSS 로드 순서에 따라 스타일 우선 순위가 달라지는 문제</li>
+<li><strong>Isolation</strong>: CSS와 JS가 분리된 탓에 상속에 따른 격리가 어려운 문제</li>
+</ul>
+</li>
+<li>그리고 페이스북에서는 위 문제를 해결하기 위해 컴포넌트 기반의 자바스크립트 인라인 스타일을 선택했다고 이야기 하였습니다.</li>
+<li>이렇게 자바스크립트 내부에 스타일을 삽입하는 방법론을 CSS-in-JS 라고 이야기합니다.</li>
+<li>발표에 관한 더 자세한 내용은 아래 링크를 참고해주세요.
+<ul>
+<li><a href="http://blog.vjeux.com/2014/javascript/react-css-in-js-nationjs.html">http://blog.vjeux.com/2014/javascript/react-css-in-js-nationjs.html</a></li>
+</ul>
+</li>
+<li>이 발표를 시작으로 CSS-in-JS 가 주목받기 시작하며 이후로 다양한 CSS-in-JS 도구들이 생겨나기 시작했습니다.</li>
+</ul>
+<h1>styled-components</h1>
+<hr>
+<ul>
+<li>styled-components 는 CSS-in-JS 도구중 현재 가장 인기있는 라이브러리입니다.
+<ul>
+<li>이에 대한 대안으로는 emotion, styled-jsx 등이 있습니다.</li>
+</ul>
+</li>
+<li>styled-components 는 ES6의 tagged template literals 문법을 통해 스타일을 작성하도록 합니다.
+<ul>
+<li>tagged template literals 에 대하여는 아래에서 설명합니다.</li>
+</ul>
+</li>
+<li>styled-components 의 공식 문서에서는 아래와 같은 이점을 제공한다고 이야기합니다.
+<ul>
+<li><strong>Automatic critical CSS</strong>: styled-components 는 페이지에 렌더링되는 컴포넌트를 추적하여 필요한 스타일만을 자동으로 삽입해줍니다. 이것은 code splitting 과 함께 최소한의 코드만을 로드한다는 것을 의미합니다.</li>
+<li><strong>No class name bugs</strong>: styled-components 는 스타일에 대한 고유한 클래스명을 생성하기 때문에 중복이나 맞춤법 오류등을 신경 쓸 필요가 없습니다.</li>
+<li><strong>Easier deletion of CSS</strong>: 일반 CSS 는 클래스 이름이 코드의 어딘가에서 사용되는지 알기가 어려울 수 있습니다. styled-components 는 모든 스타일이 컴포넌트에 연결되므로 사용되지 않는 컴포넌트가 삭제되면 해당 컴포넌트의 스타일도 함께 삭제됩니다.</li>
+<li><strong>Simple dynamic styling</strong>: 수십개의 클래스를 수동으로 관리할 필요가 없이 props 나 global theme 를 기반으로 컴포넌트의 스타일을 조정하는것이 간단하고 직관적입니다.</li>
+<li><strong>Painless maintenance</strong>: 컴포넌트에 영향을 미치는 스타일을 찾기 위해 여러 파일을 찾아다닐 필요가 없으므로 코드베이스가 아무리 커지더라도 유지관리 하기가 쉽습니다.</li>
+<li><strong>Automatic vendor prefixing</strong>: 현재 표준에 따라 CSS 를 작성하면 styled-components 가 알아서 나머지를 처리하도록 합니다.</li>
+</ul>
+</li>
+</ul>
+<h1>tagged template literals</h1>
+<hr>
+<ul>
+<li>styled-components 에서 사용한다는 tagged template literals 문법이란 ES6 의 템플릿 문자열(template literals)을 발전시킨 하나의 형태입니다.</li>
+<li>tagged template literals 를 사용하면 템플릿 문자열을 함수로 파싱을 할 수가 있습니다.</li>
+<li>태그 함수의 첫번째 인수는 문자열 값의 배열을 포함하며 나머지 인수는 표현식과 관련됩니다.</li>
+<li>tagged template literals 를 사용하는 예제 코드는 아래와 같습니다.</li>
+</ul>
+<div class="gatsby-highlight" data-language="tsx"><pre class="language-tsx"><code class="language-tsx"><span class="token keyword">var</span> person <span class="token operator">=</span> <span class="token string">'Mike'</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> age <span class="token operator">=</span> <span class="token number">28</span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">myTag</span><span class="token punctuation">(</span>strings<span class="token punctuation">,</span> personExp<span class="token punctuation">,</span> ageExp<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+  <span class="token keyword">var</span> str0 <span class="token operator">=</span> strings<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment">// "that "</span>
+  <span class="token keyword">var</span> str1 <span class="token operator">=</span> strings<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment">// " is a "</span>
+
+  <span class="token comment">// 사실 이 예제의 string에서 표현식이 두 개 삽입되었으므로</span>
+  <span class="token comment">// ${age} 뒤에는 ''인 string이 존재하여</span>
+  <span class="token comment">// 기술적으로 strings 배열의 크기는 3이 됩니다.</span>
+  <span class="token comment">// 하지만 빈 string이므로 무시하겠습니다.</span>
+  <span class="token comment">// var str2 = strings[2];</span>
+
+  <span class="token keyword">var</span> ageStr<span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>ageExp <span class="token operator">></span> <span class="token number">99</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    ageStr <span class="token operator">=</span> <span class="token string">'centenarian'</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    ageStr <span class="token operator">=</span> <span class="token string">'youngster'</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment">// 심지어 이 함수내에서도 template literal을 반환할 수 있습니다.</span>
+  <span class="token keyword">return</span> str0 <span class="token operator">+</span> personExp <span class="token operator">+</span> str1 <span class="token operator">+</span> ageStr<span class="token punctuation">;</span>
+
+<span class="token punctuation">}</span>
+
+<span class="token keyword">var</span> output <span class="token operator">=</span> myTag<span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">that </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span> person <span class="token interpolation-punctuation punctuation">}</span></span><span class="token string"> is a </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span> age <span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+
+<span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>output<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// that Mike is a youngster</span></code></pre></div>
+<ul>
+<li>또한 아래와 같이 나머지 인수를 rest 문법을 사용해 이용 할 수도, 파싱 함수 내에서 string 이 아닌 다른 값을 반환할 수도 있습니다.</li>
+</ul>
+<div class="gatsby-highlight" data-language="tsx"><pre class="language-tsx"><code class="language-tsx"><span class="token keyword">function</span> <span class="token function">template</span><span class="token punctuation">(</span>strings<span class="token punctuation">,</span> <span class="token operator">...</span>keys<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token operator">...</span>values<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> dict <span class="token operator">=</span> values<span class="token punctuation">[</span>values<span class="token punctuation">.</span>length <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">||</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token keyword">var</span> result <span class="token operator">=</span> <span class="token punctuation">[</span>strings<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    keys<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>key<span class="token punctuation">,</span> i<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">var</span> value <span class="token operator">=</span> Number<span class="token punctuation">.</span><span class="token function">isInteger</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span> <span class="token operator">?</span> values<span class="token punctuation">[</span>key<span class="token punctuation">]</span> <span class="token operator">:</span> dict<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">;</span>
+      result<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>value<span class="token punctuation">,</span> strings<span class="token punctuation">[</span>i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> result<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">var</span> t1Closure <span class="token operator">=</span> template<span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token number">0</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token number">1</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token number">0</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">!</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+<span class="token function">t1Closure</span><span class="token punctuation">(</span><span class="token string">'Y'</span><span class="token punctuation">,</span> <span class="token string">'A'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// "YAY!"</span>
+<span class="token keyword">var</span> t2Closure <span class="token operator">=</span> template<span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token number">0</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string"> </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token string">'foo'</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">!</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+<span class="token function">t2Closure</span><span class="token punctuation">(</span><span class="token string">'Hello'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>foo<span class="token operator">:</span> <span class="token string">'World'</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// "Hello World!"</span></code></pre></div>
+<h1>Installation</h1>
+<hr>
+<ul>
+<li>styled-components 를 사용하기에 앞서 아래 명령어를 통해 의존성 설치를 진행합니다.</li>
+</ul>
+<div class="gatsby-highlight" data-language="tsx"><pre class="language-tsx"><code class="language-tsx"># <span class="token keyword">with</span> npm
+npm i styled<span class="token operator">-</span>components
+
+# <span class="token keyword">with</span> yarn
+yarn add styled<span class="token operator">-</span>components</code></pre></div>
+<h1>Getting Started</h1>
+<hr>
+<ul>
+<li>아래와 같이 스타일을 적용 한 컴포넌트를 작성 할 수 있습니다.</li>
+</ul>
+<div class="gatsby-highlight" data-language="tsx"><pre class="language-tsx"><code class="language-tsx"><span class="token keyword">import</span> styled <span class="token keyword">from</span> <span class="token string">"styled-components"</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> Title <span class="token operator">=</span> styled<span class="token punctuation">.</span>h1<span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
+  font-size: 1.5em;
+  text-align: center;
+  color: palevioletred;
+</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> Wrapper <span class="token operator">=</span> styled<span class="token punctuation">.</span>section<span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
+  padding: 4em;
+  background: papayawhip;
+</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">App</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Wrapper</span></span><span class="token punctuation">></span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Title</span></span><span class="token punctuation">></span></span><span class="token plain-text">Hello World!</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">Title</span></span><span class="token punctuation">></span></span><span class="token plain-text">
+    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">Wrapper</span></span><span class="token punctuation">></span></span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> App<span class="token punctuation">;</span></code></pre></div>
+<ul>
+<li>위에서 이야기했다시피 styled-components 는 tagged template literals 를 이용해서 스타일을 정의합니다.</li>
+<li>styled.{tagName}<code class="language-text">{style}</code> 방식으로 원하는 태그에 스타일을 적용시킨 스타일 컴포넌트를 정의하고 사용 할 수 있습니다.</li>
+</ul>
+<h1>Adapting based on props</h1>
+<hr>
+<ul>
+<li>styled-components 의 강점중 하나는 스타일 컴포넌트에 props 를 사용 할 수 있다는 점입니다.</li>
+</ul>
+<div class="gatsby-highlight" data-language="tsx"><pre class="language-tsx"><code class="language-tsx"><span class="token keyword">const</span> Button <span class="token operator">=</span> styled<span class="token punctuation">.</span>button<span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
+  background: </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token punctuation">(</span>props<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">(</span>props<span class="token punctuation">.</span>primary <span class="token operator">?</span> <span class="token string">"palevioletred"</span> <span class="token operator">:</span> <span class="token string">"white"</span><span class="token punctuation">)</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">;
+  color: </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token punctuation">(</span>props<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">(</span>props<span class="token punctuation">.</span>primary <span class="token operator">?</span> <span class="token string">"white"</span> <span class="token operator">:</span> <span class="token string">"palevioletred"</span><span class="token punctuation">)</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">;
+  font-size: 1em;
+  margin: 1em;
+  padding: 0.25em 1em;
+  border: 2px solid palevioletred;
+  border-radius: 3px;
+</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">App</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Button</span></span><span class="token punctuation">></span></span><span class="token plain-text">Normal</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">Button</span></span><span class="token punctuation">></span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Button</span></span> <span class="token attr-name">primary</span><span class="token punctuation">></span></span><span class="token plain-text">Normal</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">Button</span></span><span class="token punctuation">></span></span><span class="token plain-text">
+    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div>
+<ul>
+<li>위처럼 스타일 컴포넌트의 props 로 전달 한 값을 이용해 스타일을 조정 할 수 있습니다.</li>
+</ul>
+<h1>Extending Styles</h1>
+<hr>
+<ul>
+<li>또한 다른 스타일 컴포넌트를 이어받아 확장하는 방법도 제공하고 있습니다.</li>
+</ul>
+<div class="gatsby-highlight" data-language="tsx"><pre class="language-tsx"><code class="language-tsx"><span class="token keyword">const</span> Button <span class="token operator">=</span> styled<span class="token punctuation">.</span>button<span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
+  background: white;
+  color: palevioletred;
+  font-size: 1em;
+  margin: 1em;
+  padding: 0.25em 1em;
+  border: 2px solid palevioletred;
+  border-radius: 3px;
+</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> TomatoButton <span class="token operator">=</span> <span class="token function">styled</span><span class="token punctuation">(</span>Button<span class="token punctuation">)</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
+  color: tomato;
+  border-color: tomato;
+</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">App</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Button</span></span><span class="token punctuation">></span></span><span class="token plain-text">Normal Button</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">Button</span></span><span class="token punctuation">></span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">TomatoButton</span></span><span class="token punctuation">></span></span><span class="token plain-text">Tomato Button</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">TomatoButton</span></span><span class="token punctuation">></span></span><span class="token plain-text">
+    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div>
+<ul>
+<li>이렇게 기존의 스타일 컴포넌트의 일부만 변경을 원하는 경우 기존의 스타일 컴포넌트를 확장하는 새로운 컴포넌트를 정의해 사용 할 수 있습니다.</li>
+<li>또 경우에 따라 스타일 컴포넌트가 렌더링하는 태그만을 변경하고 싶은 경우가 있을 수 있습니다.
+<ul>
+<li>예를 들어 a 태그와 button 태그가 함께 사용되지만 동일한 스타일을 유지해야 하는 경우가 있을 수 있습니다.</li>
+</ul>
+</li>
+<li>이런 경우 “as” 라는 prop 을 이용해 스타일 컴포넌트의 태그를 변경하여 렌더링 할 수 있습니다.</li>
+</ul>
+<div class="gatsby-highlight" data-language="tsx"><pre class="language-tsx"><code class="language-tsx"><span class="token keyword">const</span> Button <span class="token operator">=</span> styled<span class="token punctuation">.</span>button<span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
+  background: white;
+  color: palevioletred;
+  font-size: 1em;
+  margin: 1em;
+  padding: 0.25em 1em;
+  border: 2px solid palevioletred;
+  border-radius: 3px;
+</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">App</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Button</span></span><span class="token punctuation">></span></span><span class="token plain-text">Normal Button</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">Button</span></span><span class="token punctuation">></span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Button</span></span> <span class="token attr-name">as</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>a<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token plain-text">
+        Link with Button Styles
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">Button</span></span><span class="token punctuation">></span></span><span class="token plain-text">
+    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div>
+<h1>Styling any component</h1>
+<hr>
+<ul>
+<li>styled 함수는 스타일 컴포넌트 뿐만 아니라 일반적인 컴포넌트도 확장하여 스타일을 추가할 수 있습니다.</li>
+</ul>
+<div class="gatsby-highlight" data-language="tsx"><pre class="language-tsx"><code class="language-tsx"><span class="token keyword">const</span> <span class="token function-variable function">WrapperComponent</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">{</span> children <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">(</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span></span><span class="token punctuation">></span></span><span class="token plain-text">
+    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token punctuation">{</span>children<span class="token punctuation">}</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><span class="token plain-text">
+    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span><span class="token punctuation">></span></span><span class="token punctuation">{</span>children<span class="token punctuation">}</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span><span class="token plain-text">
+  </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span></span><span class="token punctuation">></span></span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> StyledWrapperComponent <span class="token operator">=</span> <span class="token function">styled</span><span class="token punctuation">(</span>WrapperComponent<span class="token punctuation">)</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
+  color: palevioletred;
+  font-weight: bold;
+</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">App</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">WrapperComponent</span></span><span class="token punctuation">></span></span><span class="token plain-text">Unstyled</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">WrapperComponent</span></span><span class="token punctuation">></span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">StyledWrapperComponent</span></span><span class="token punctuation">></span></span><span class="token plain-text">styled</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">StyledWrapperComponent</span></span><span class="token punctuation">></span></span><span class="token plain-text">
+    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div>
+<h1>Passed props</h1>
+<hr>
+<ul>
+<li>만일 스타일 컴포넌트의 대상이 단순 요소(예. styled.div)일 경우에는 스타일 컴포넌트는 알려져있는 모든 HTML DOM attribute 는 스타일 컴포넌트를 통과시켜 실제 태그에 전달합니다.</li>
+<li>만일 스타일 컴포넌트의 대상이 리액트 컴포넌트(예. styled(MyComponent))일 경우에는 모든 props 를 통과시켜 리액트 컴포넌트에 전달합니다.</li>
+</ul>
+<div class="gatsby-highlight" data-language="tsx"><pre class="language-tsx"><code class="language-tsx"><span class="token keyword">const</span> Input <span class="token operator">=</span> styled<span class="token punctuation">.</span>input<span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
+  padding: 0.5em;
+  margin: 0.5em;
+  color: </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token punctuation">(</span>props<span class="token punctuation">)</span> <span class="token operator">=></span> props<span class="token punctuation">.</span>inputColor <span class="token operator">||</span> <span class="token string">"palevioletred"</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">;
+  background: papayawhip;
+  border: none;
+  border-radius: 3px;
+</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">App</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> <span class="token punctuation">[</span>value<span class="token punctuation">,</span> setValue<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Input</span></span>
+        <span class="token attr-name">value</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>value<span class="token punctuation">}</span></span>
+        <span class="token attr-name">onChange</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span> <span class="token function">setValue</span><span class="token punctuation">(</span>e<span class="token punctuation">.</span>target<span class="token punctuation">.</span>value<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token punctuation">}</span><span class="token punctuation">}</span></span>
+        <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span>
+      <span class="token punctuation">/></span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Input</span></span>
+        <span class="token attr-name">value</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>value<span class="token punctuation">}</span></span>
+        <span class="token attr-name">onChange</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span> <span class="token function">setValue</span><span class="token punctuation">(</span>e<span class="token punctuation">.</span>target<span class="token punctuation">.</span>value<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token punctuation">}</span><span class="token punctuation">}</span></span>
+        <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span>
+        <span class="token attr-name">inputColor</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>rebeccapurple<span class="token punctuation">"</span></span>
+      <span class="token punctuation">/></span></span><span class="token plain-text">
+    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div>
+<h1>Define Styled Components outside of the render method</h1>
+<hr>
+<ul>
+<li>스타일 컴포넌트는 컴포넌트 객체 외부에 정의하는것이 중요합니다.</li>
+<li>스타일 컴포넌트를 컴포넌트 객체 내부에 정의 할 경우 리렌더링이 일어날 때 마다 스타일 컴포넌트를 재생성 하게 되고, 이는 캐싱이 중단되고 렌더링 속도가 크게 느려지므로 피해야 합니다.</li>
+</ul>
+<div class="gatsby-highlight" data-language="tsx"><pre class="language-tsx"><code class="language-tsx"><span class="token keyword">const</span> <span class="token function-variable function">Wrapper</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">{</span> message <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token comment">// WARNING: THIS IS VERY VERY BAD AND SLOW, DO NOT DO THIS!!!</span>
+  <span class="token keyword">const</span> StyledWrapper <span class="token operator">=</span> styled<span class="token punctuation">.</span>div<span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
+    /* ... */
+  </span><span class="token template-punctuation string">`</span></span>
+
+  <span class="token keyword">return</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">StyledWrapper</span></span><span class="token punctuation">></span></span><span class="token punctuation">{</span>message<span class="token punctuation">}</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">StyledWrapper</span></span><span class="token punctuation">></span></span>
+<span class="token punctuation">}</span></code></pre></div>
+<h1>Attaching additional props</h1>
+<hr>
+<ul>
+<li>불필요한 래퍼 방지를 위해 .attrs 생성자를 사용 할 수 있습니다.</li>
+<li>반환 값은 결과의 props 에도 병합됩니다.</li>
+</ul>
+<div class="gatsby-highlight" data-language="tsx"><pre class="language-tsx"><code class="language-tsx"><span class="token keyword">const</span> Input <span class="token operator">=</span> styled<span class="token punctuation">.</span>input<span class="token punctuation">.</span><span class="token function">attrs</span><span class="token punctuation">(</span><span class="token punctuation">(</span>props<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
+  type<span class="token operator">:</span> <span class="token string">"text"</span><span class="token punctuation">,</span>
+  size<span class="token operator">:</span> props<span class="token punctuation">.</span>size <span class="token operator">||</span> <span class="token string">"1em"</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
+  color: palevioletred;
+  font-size: 1em;
+  border: 2px solid palevioletred;
+  border-radius: 3px;
+  margin: </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token punctuation">(</span>props<span class="token punctuation">)</span> <span class="token operator">=></span> props<span class="token punctuation">.</span>size<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">;
+  padding: </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token punctuation">(</span>props<span class="token punctuation">)</span> <span class="token operator">=></span> props<span class="token punctuation">.</span>size<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">;
+</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">App</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Input</span></span> <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>A small text input<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span> <span class="token punctuation">/></span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Input</span></span> <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>A bigger text input<span class="token punctuation">"</span></span> <span class="token attr-name">size</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>2em<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span><span class="token plain-text">
+    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div>
+<ul>
+<li>attrs 또한 overriding 이 가능합니다.</li>
+</ul>
+<div class="gatsby-highlight" data-language="tsx"><pre class="language-tsx"><code class="language-tsx"><span class="token keyword">const</span> Input <span class="token operator">=</span> styled<span class="token punctuation">.</span>input<span class="token punctuation">.</span><span class="token function">attrs</span><span class="token punctuation">(</span><span class="token punctuation">(</span>props<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
+  type<span class="token operator">:</span> <span class="token string">"text"</span><span class="token punctuation">,</span>
+  size<span class="token operator">:</span> props<span class="token punctuation">.</span>size <span class="token operator">||</span> <span class="token string">"1em"</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
+  border: 2px solid palevioletred;
+  margin: </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token punctuation">(</span>props<span class="token punctuation">)</span> <span class="token operator">=></span> props<span class="token punctuation">.</span>size<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">;
+  padding: </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token punctuation">(</span>props<span class="token punctuation">)</span> <span class="token operator">=></span> props<span class="token punctuation">.</span>size<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">;
+</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> PasswordInput <span class="token operator">=</span> <span class="token function">styled</span><span class="token punctuation">(</span>Input<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">attrs</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  type<span class="token operator">:</span> <span class="token string">"password"</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
+  border: 2px solid aqua;
+</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">App</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Input</span></span> <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>A bigger text input<span class="token punctuation">"</span></span> <span class="token attr-name">size</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>2em<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span> <span class="token punctuation">/></span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">PasswordInput</span></span> <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>A bigger password input<span class="token punctuation">"</span></span> <span class="token attr-name">size</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>2em<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span><span class="token plain-text">
+    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div>
+<h1>Animations</h1>
+<hr>
+<ul>
+<li>@keyframe이 포함된 CSS 애니메이션은 단일 컴포넌트로 범위가 지정되지는 않지만 이름 충돌을 피하기 위해 전역으로 범위가 지정되는 것은 원하지 않습니다.</li>
+<li>때문에 애플리케이션 전체에서 사용 할 수 있는 고유한 인스턴스를 생성하는 keyframes helper 를 내보냅니다.</li>
+</ul>
+<div class="gatsby-highlight" data-language="tsx"><pre class="language-tsx"><code class="language-tsx"><span class="token keyword">import</span> styled<span class="token punctuation">,</span> <span class="token punctuation">{</span> keyframes <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"styled-components"</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> rotate <span class="token operator">=</span> keyframes<span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg)
+  }
+</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> Rotate <span class="token operator">=</span> styled<span class="token punctuation">.</span>div<span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
+  display: inline-block;
+  animation </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>rotate<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string"> 2s linear infinite;
+  padding: 2rem 1rem;
+  font-size: 1.2rem;
+</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">App</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Rotate</span></span><span class="token punctuation">></span></span><span class="token plain-text">&amp;lt; 💅🏾 &amp;gt;</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">Rotate</span></span><span class="token punctuation">></span></span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div>
+<ul>
+<li>Keyframes 는 lazily injected 가 되며, 이는 코드 분할이 가능해지기 때문에 공유 스타일을 사용할 경우 css helper 를 사용해야 합니다.</li>
+</ul>
+<div class="gatsby-highlight" data-language="tsx"><pre class="language-tsx"><code class="language-tsx"><span class="token keyword">import</span> styled<span class="token punctuation">,</span> <span class="token punctuation">{</span> keyframes<span class="token punctuation">,</span> css <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"styled-components"</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> rotate <span class="token operator">=</span> keyframes<span class="token template-string"><span class="token template-punctuation string">`</span><span class="token template-punctuation string">`</span></span>
+
+<span class="token comment">// ❌ This will throw an error!</span>
+<span class="token keyword">const</span> styles <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
+  animation: </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>rotate<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string"> 2s linear infinite;
+</span><span class="token template-punctuation string">`</span></span>
+
+<span class="token comment">// ✅ This will work as intended</span>
+<span class="token keyword">const</span> styles <span class="token operator">=</span> css<span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
+  animation: </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>rotate<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string"> 2s linear infinite;
+</span><span class="token template-punctuation string">`</span></span></code></pre></div>
+<h1>느낀점</h1>
+<hr>
+<ul>
+<li>저는 사실 컴포넌트 로직과 스타일을 하나의 파일에서 관리하는 것이 좋은 방법이라고 생각하지는 않습니다.</li>
+<li>컴포넌트 로직과 스타일은 관심사가 다르기 때문에 분리가 돼야한다고 생각합니다.
+<ul>
+<li>이는 개인적인 생각으로 관심사를 JS, CSS, HTML 로 분리하는것이 아니라 컴포넌트 단위로 분리해야 한다는 이야기가 틀린 이야기라고 생각하는 것은 아닙니다.</li>
+<li>하지만 컴포넌트 내에서도 로직과 스타일은 관심사가 다르다고 생각하여 분리하는게 더 좋은 방법이라고 생각합니다.</li>
+</ul>
+</li>
+<li>물론 props 등을 이용한 dynamic styling 이나 최소한의 스타일만을 로드하는 Automatic critical CSS 등은 CSS-in-JS 의 큰 장점인 것 같습니다.</li>
+<li>하지만 그 외에 CSS-in-JS 가 이점으로 내새우는 부분들, Vjeux 가 CSS 의 문제점이라고 이야기 한 부분들의 대부분은 CSS Modules 와 Sass 를 함께 이용하면 해결 할 수 있는 부분이라고 생각합니다.</li>
+<li>또한 성능면에서도 상태에 따라 JS 를 파싱해 새로운 CSS 코드를 생성해야 하는 CSS-in-JS 에 비해 전처리를 통해 생성한 CSS 파일만을 이용하는 CSS Modules + Sass 를 이용한 방식이 더 나은 퍼포먼스를 보여주는 것으로 알고 있습니다.</li>
+<li>그러니 CSS-in-JS 가 유행이라고 무조건 사용하는 것이 아닌 본인의 상황에서 더 좋은 방법을 생각해보고 필요한 기술을 적절히 사용해야 할 것 같습니다.</li>
+<li>개인적으로 styled-components 를 사용하면 JSX 템플릿 코드에 사용되는 스타일 컴포넌트와 일반 컴포넌트의 구분이 어려워서 코딩할 때 오히려 불편함이 생기지는 않을지 하는 생각이 들었습니다.</li>
+<li>이 부분은 제가 개인적인 프로젝트에서라도 실제로 조금 더 사용을 해보고 직접 느껴봐야 할 것 같습니다.</li>
+</ul>
+<h2>이후 작성 할 내용</h2>
+<hr>
+<ol>
+<li>motion</li>
+<li>Sass(Scss)</li>
+</ol>
+<h2>참고 자료</h2>
+<hr>
+<ul>
+<li><a href="https://styled-components.com/docs/basics">styled-components 공식 문서</a></li>
+<li><a href="https://medium.com/@okys2010/%EB%AA%A8%EB%8D%98-css-1-css-in-js-c1c53d9bbbc9">모던 CSS : 1. CSS-in-JS</a></li>
+<li><a href="https://blueshw.github.io/2020/09/14/why-css-in-css/">CSS-in-JS에서 CSS-in-CSS로 바꿔야 하는 이유</a></li>
+</ul></section><hr/><footer><div class="bio"><div data-gatsby-image-wrapper="" style="width:50px;height:50px" class="gatsby-image-wrapper bio-avatar"><div aria-hidden="true" data-placeholder-image="" style="opacity:1;transition:opacity 500ms linear;background-color:#080808;width:50px;height:50px;position:relative"></div><picture><source type="image/avif" data-srcset="/static/6011ca8e0c3bceb22459a3400711b66d/d4bf4/profile-pic.avif 50w,/static/6011ca8e0c3bceb22459a3400711b66d/ee81f/profile-pic.avif 100w" sizes="50px"/><source type="image/webp" data-srcset="/static/6011ca8e0c3bceb22459a3400711b66d/3faea/profile-pic.webp 50w,/static/6011ca8e0c3bceb22459a3400711b66d/6a679/profile-pic.webp 100w" sizes="50px"/><img data-gatsby-image-ssr="" layout="fixed" data-main-image="" style="opacity:0" sizes="50px" decoding="async" loading="lazy" data-src="/static/6011ca8e0c3bceb22459a3400711b66d/e5610/profile-pic.png" data-srcset="/static/6011ca8e0c3bceb22459a3400711b66d/e5610/profile-pic.png 50w,/static/6011ca8e0c3bceb22459a3400711b66d/e9b55/profile-pic.png 100w" alt="Profile picture"/></picture><noscript><picture><source type="image/avif" srcSet="/static/6011ca8e0c3bceb22459a3400711b66d/d4bf4/profile-pic.avif 50w,/static/6011ca8e0c3bceb22459a3400711b66d/ee81f/profile-pic.avif 100w" sizes="50px"/><source type="image/webp" srcSet="/static/6011ca8e0c3bceb22459a3400711b66d/3faea/profile-pic.webp 50w,/static/6011ca8e0c3bceb22459a3400711b66d/6a679/profile-pic.webp 100w" sizes="50px"/><img data-gatsby-image-ssr="" layout="fixed" data-main-image="" style="opacity:0" sizes="50px" decoding="async" loading="lazy" src="/static/6011ca8e0c3bceb22459a3400711b66d/e5610/profile-pic.png" srcSet="/static/6011ca8e0c3bceb22459a3400711b66d/e5610/profile-pic.png 50w,/static/6011ca8e0c3bceb22459a3400711b66d/e9b55/profile-pic.png 100w" alt="Profile picture"/></picture></noscript><script type="module">const t="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;if(t){const t=document.querySelectorAll("img[data-main-image]");for(let e of t){e.dataset.src&&(e.setAttribute("src",e.dataset.src),e.removeAttribute("data-src")),e.dataset.srcset&&(e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset"));const t=e.parentNode.querySelectorAll("source[data-srcset]");for(let e of t)e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset");e.complete&&(e.style.opacity=1,e.parentNode.parentNode.querySelector("[data-placeholder-image]").style.opacity=0)}}</script></div><p>Blog by <!-- --><strong>Seungyoub Kim</strong> <!-- --><br/>즐겁고 폼나게 일하는 개발자가 되고 싶습니다.<!-- --></p></div></footer></article><nav class="blog-post-nav"><ul style="display:flex;flex-wrap:wrap;justify-content:space-between;list-style:none;padding:0"><li><a rel="prev" href="/obsidian-git/">← <!-- -->Obsidian Git 을 이용하여 무료로 맥북과 아이폰간의 데이터 동기화하기<!-- --></a></li><li></li></ul></nav><div class="comments-wrapper"><div>Loading script...</div><div></div></div></main><footer><a href="https://github.com/seungyoubkim" target="_blank">Github</a></footer></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-TVYZ629KX1"></script><script>
+      
+      
+      if(true) {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-TVYZ629KX1', {"send_page_view":false});
+      }
+      </script><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/styled-components/";window.___webpackCompilationHash="aa9e879ada8149eb1fbe";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-f991a7778357fc7bc796.js"],"app":["/app-1144fa4fd8b53bd6f8d6.js"],"component---src-pages-404-js":["/component---src-pages-404-js-c9e19930794994a32d89.js"],"component---src-pages-index-js":["/component---src-pages-index-js-9eaef437c53c5b90528a.js"],"component---src-pages-using-typescript-tsx":["/component---src-pages-using-typescript-tsx-71e75b82cbf64a93d7d6.js"],"component---src-templates-blog-post-js":["/component---src-templates-blog-post-js-37ec0ba6297eb8d552d6.js"]};/*]]>*/</script><script src="/polyfill-f991a7778357fc7bc796.js" nomodule=""></script><script src="/app-1144fa4fd8b53bd6f8d6.js" async=""></script><script src="/framework-d02ab48d6921f56864a6.js" async=""></script><script src="/webpack-runtime-6dc06fccff6fbdcb5cee.js" async=""></script></body></html>

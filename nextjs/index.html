@@ -1,0 +1,1304 @@
+<!DOCTYPE html><html lang="ko"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><meta data-react-helmet="true" name="google-site-verification" content="rHum0RrMkzzwsEtLrQWEl5OU7oLB6KqmyBA1hLFBYXI"/><meta data-react-helmet="true" name="twitter:description" content="Next.js 에 대해 알아봅니다."/><meta data-react-helmet="true" name="twitter:title" content="Next.js"/><meta data-react-helmet="true" name="twitter:creator" content=""/><meta data-react-helmet="true" name="twitter:card" content="summary"/><meta data-react-helmet="true" property="og:type" content="website"/><meta data-react-helmet="true" property="og:description" content="Next.js 에 대해 알아봅니다."/><meta data-react-helmet="true" property="og:title" content="Next.js"/><meta data-react-helmet="true" name="description" content="Next.js 에 대해 알아봅니다."/><meta name="generator" content="Gatsby 4.15.2"/><style data-href="/styles.8e95d4a61000500392d6.css" data-identity="gatsby-global-css">@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:100;src:local("Montserrat Thin "),local("Montserrat-Thin"),url(/static/montserrat-latin-100-8d7d79679b70dbe27172b6460e7a7910.woff2) format("woff2"),url(/static/montserrat-latin-100-ec38980a9e0119a379e2a9b3dbb1901a.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:100;src:local("Montserrat Thin italic"),local("Montserrat-Thinitalic"),url(/static/montserrat-latin-100italic-e279051046ba1286706adc886cf1c96b.woff2) format("woff2"),url(/static/montserrat-latin-100italic-3b325a3173c8207435cd1b76e19bf501.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:200;src:local("Montserrat Extra Light "),local("Montserrat-Extra Light"),url(/static/montserrat-latin-200-9d266fbbfa6cab7009bd56003b1eeb67.woff2) format("woff2"),url(/static/montserrat-latin-200-2d8ba08717110d27122e54c34b8a5798.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:200;src:local("Montserrat Extra Light italic"),local("Montserrat-Extra Lightitalic"),url(/static/montserrat-latin-200italic-6e5b3756583bb2263eb062eae992735e.woff2) format("woff2"),url(/static/montserrat-latin-200italic-a0d6f343e4b536c582926255367a57da.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:300;src:local("Montserrat Light "),local("Montserrat-Light"),url(/static/montserrat-latin-300-00b3e893aab5a8fd632d6342eb72551a.woff2) format("woff2"),url(/static/montserrat-latin-300-ea303695ceab35f17e7d062f30e0173b.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:300;src:local("Montserrat Light italic"),local("Montserrat-Lightitalic"),url(/static/montserrat-latin-300italic-56f34ea368f6aedf89583d444bbcb227.woff2) format("woff2"),url(/static/montserrat-latin-300italic-54b0bf2c8c4c12ffafd803be2466a790.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:400;src:local("Montserrat Regular "),local("Montserrat-Regular"),url(/static/montserrat-latin-400-b71748ae4f80ec8c014def4c5fa8688b.woff2) format("woff2"),url(/static/montserrat-latin-400-0659a9f4e90db5cf51b50d005bff1e41.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:400;src:local("Montserrat Regular italic"),local("Montserrat-Regularitalic"),url(/static/montserrat-latin-400italic-6eed6b4cbb809c6efc7aa7ddad6dbe3e.woff2) format("woff2"),url(/static/montserrat-latin-400italic-7583622cfde30ae49086d18447ab28e7.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:500;src:local("Montserrat Medium "),local("Montserrat-Medium"),url(/static/montserrat-latin-500-091b209546e16313fd4f4fc36090c757.woff2) format("woff2"),url(/static/montserrat-latin-500-edd311588712a96bbf435fad264fff62.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:500;src:local("Montserrat Medium italic"),local("Montserrat-Mediumitalic"),url(/static/montserrat-latin-500italic-c90ced68b46050061d1a41842d6dfb43.woff2) format("woff2"),url(/static/montserrat-latin-500italic-5146cbfe02b1deea5dffea27a5f2f998.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:600;src:local("Montserrat SemiBold "),local("Montserrat-SemiBold"),url(/static/montserrat-latin-600-0480d2f8a71f38db8633b84d8722e0c2.woff2) format("woff2"),url(/static/montserrat-latin-600-b77863a375260a05dd13f86a1cee598f.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:600;src:local("Montserrat SemiBold italic"),local("Montserrat-SemiBolditalic"),url(/static/montserrat-latin-600italic-cf46ffb11f3a60d7df0567f8851a1d00.woff2) format("woff2"),url(/static/montserrat-latin-600italic-c4fcfeeb057724724097167e57bd7801.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:700;src:local("Montserrat Bold "),local("Montserrat-Bold"),url(/static/montserrat-latin-700-7dbcc8a5ea2289d83f657c25b4be6193.woff2) format("woff2"),url(/static/montserrat-latin-700-99271a835e1cae8c76ef8bba99a8cc4e.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:700;src:local("Montserrat Bold italic"),local("Montserrat-Bolditalic"),url(/static/montserrat-latin-700italic-c41ad6bdb4bd504a843d546d0a47958d.woff2) format("woff2"),url(/static/montserrat-latin-700italic-6779372f04095051c62ed36bc1dcc142.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:800;src:local("Montserrat ExtraBold "),local("Montserrat-ExtraBold"),url(/static/montserrat-latin-800-db9a3e0ba7eaea32e5f55328ace6cf23.woff2) format("woff2"),url(/static/montserrat-latin-800-4e3c615967a2360f5db87d2f0fd2456f.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:800;src:local("Montserrat ExtraBold italic"),local("Montserrat-ExtraBolditalic"),url(/static/montserrat-latin-800italic-bf45bfa14805969eda318973947bc42b.woff2) format("woff2"),url(/static/montserrat-latin-800italic-fe82abb0bcede51bf724254878e0c374.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:900;src:local("Montserrat Black "),local("Montserrat-Black"),url(/static/montserrat-latin-900-e66c7edc609e24bacbb705175669d814.woff2) format("woff2"),url(/static/montserrat-latin-900-8211f418baeb8ec880b80ba3c682f957.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:900;src:local("Montserrat Black italic"),local("Montserrat-Blackitalic"),url(/static/montserrat-latin-900italic-4454c775e48152c1a72510ceed3603e2.woff2) format("woff2"),url(/static/montserrat-latin-900italic-efcaa0f6a82ee0640b83a0916e6e8d68.woff) format("woff")}@font-face{font-display:swap;font-family:Merriweather;font-style:normal;font-weight:300;src:local("Merriweather Light "),local("Merriweather-Light"),url(/static/merriweather-latin-300-fc117160c69a8ea0851b26dd14748ee4.woff2) format("woff2"),url(/static/merriweather-latin-300-58b18067ebbd21fda77b67e73c241d3b.woff) format("woff")}@font-face{font-display:swap;font-family:Merriweather;font-style:italic;font-weight:300;src:local("Merriweather Light italic"),local("Merriweather-Lightitalic"),url(/static/merriweather-latin-300italic-fe29961474f8dbf77c0aa7b9a629e4bc.woff2) format("woff2"),url(/static/merriweather-latin-300italic-23c3f1f88683618a4fb8d265d33d383a.woff) format("woff")}@font-face{font-display:swap;font-family:Merriweather;font-style:normal;font-weight:400;src:local("Merriweather Regular "),local("Merriweather-Regular"),url(/static/merriweather-latin-400-d9479e8023bef9cbd9bf8d6eabd6bf36.woff2) format("woff2"),url(/static/merriweather-latin-400-040426f99ff6e00b86506452e0d1f10b.woff) format("woff")}@font-face{font-display:swap;font-family:Merriweather;font-style:italic;font-weight:400;src:local("Merriweather Regular italic"),local("Merriweather-Regularitalic"),url(/static/merriweather-latin-400italic-2de7bfeaf08fb03d4315d49947f062f7.woff2) format("woff2"),url(/static/merriweather-latin-400italic-79db67aca65f5285964ab332bd65f451.woff) format("woff")}@font-face{font-display:swap;font-family:Merriweather;font-style:normal;font-weight:700;src:local("Merriweather Bold "),local("Merriweather-Bold"),url(/static/merriweather-latin-700-4b08e01d805fa35d7bf777f1b24314ae.woff2) format("woff2"),url(/static/merriweather-latin-700-22fb8afba4ab1f093b6ef9e28a9b6e92.woff) format("woff")}@font-face{font-display:swap;font-family:Merriweather;font-style:italic;font-weight:700;src:local("Merriweather Bold italic"),local("Merriweather-Bolditalic"),url(/static/merriweather-latin-700italic-cd92541b177652fffb6e3b952f1c33f1.woff2) format("woff2"),url(/static/merriweather-latin-700italic-f87f3d87cea0dd0979bfc8ac9ea90243.woff) format("woff")}@font-face{font-display:swap;font-family:Merriweather;font-style:normal;font-weight:900;src:local("Merriweather Black "),local("Merriweather-Black"),url(/static/merriweather-latin-900-f813fc6a4bee46eda5224ac7ebf1b7be.woff2) format("woff2"),url(/static/merriweather-latin-900-5d4e42cb44410674acd99153d57df032.woff) format("woff")}@font-face{font-display:swap;font-family:Merriweather;font-style:italic;font-weight:900;src:local("Merriweather Black italic"),local("Merriweather-Blackitalic"),url(/static/merriweather-latin-900italic-b7901d85486871c1779c0e93ddd85656.woff2) format("woff2"),url(/static/merriweather-latin-900italic-9647f9fdab98756989a8a5550eb205c3.woff) format("woff")}
+
+
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */html{-webkit-text-size-adjust:100%;line-height:1.15}body{margin:0}main{display:block}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;-webkit-text-decoration:underline dotted;text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details{display:block}summary{display:list-item}[hidden]{display:none}:root{--maxWidth-none:"none";--maxWidth-xs:20rem;--maxWidth-sm:24rem;--maxWidth-md:28rem;--maxWidth-lg:32rem;--maxWidth-xl:36rem;--maxWidth-2xl:42rem;--maxWidth-3xl:48rem;--maxWidth-4xl:56rem;--maxWidth-full:"100%";--maxWidth-wrapper:var(--maxWidth-2xl);--spacing-px:"1px";--spacing-0:0;--spacing-1:0.25rem;--spacing-2:0.5rem;--spacing-3:0.75rem;--spacing-4:1rem;--spacing-5:1.25rem;--spacing-6:1.5rem;--spacing-8:2rem;--spacing-10:2.5rem;--spacing-12:3rem;--spacing-16:4rem;--spacing-20:5rem;--spacing-24:6rem;--spacing-32:8rem;--fontFamily:Pretendard,-apple-system,BlinkMacSystemFont,system-ui,Roboto,"Helvetica Neue","Segoe UI","Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic","Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol",sans-serif;--font-body:var(--fontFamily);--font-heading:var(--fontFamily);--fontWeight-normal:400;--fontWeight-medium:500;--fontWeight-semibold:600;--fontWeight-bold:700;--fontWeight-extrabold:800;--fontWeight-black:900;--fontSize-root:16px;--lineHeight-none:1;--lineHeight-tight:1.1;--lineHeight-normal:1.5;--lineHeight-relaxed:1.625;--fontSize-0:0.833rem;--fontSize-1:1rem;--fontSize-2:1.2rem;--fontSize-3:1.44rem;--fontSize-4:1.728rem;--fontSize-5:2.074rem;--fontSize-6:2.488rem;--fontSize-7:2.986rem;--color-primary:#da1212;--color-text:#2e353f;--color-text-light:#4f5969;--color-heading:#1a202c;--color-heading-black:#000;--color-accent:#d1dce5}*,:after,:before{box-sizing:border-box}html{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-size:var(--fontSize-root);line-height:var(--lineHeight-normal)}body{color:var(--color-text);font-family:var(--font-body);font-size:var(--fontSize-1)}footer{padding:var(--spacing-6) var(--spacing-0)}hr{background:var(--color-accent);border:0;height:1px}h1,h2,h3,h4,h5,h6{font-family:var(--font-heading);letter-spacing:-.025em;line-height:var(--lineHeight-tight);margin-bottom:var(--spacing-6);margin-top:var(--spacing-12)}h2,h3,h4,h5,h6{color:var(--color-heading);font-weight:var(--fontWeight-bold)}h1{color:var(--color-heading-black);font-size:var(--fontSize-6);font-weight:var(--fontWeight-black)}h2{font-size:var(--fontSize-5)}h3{font-size:var(--fontSize-4)}h4{font-size:var(--fontSize-3)}h5{font-size:var(--fontSize-2)}h6{font-size:var(--fontSize-1)}h1>a,h2>a,h3>a,h4>a,h5>a,h6>a{color:inherit;text-decoration:none}p{--baseline-multiplier:0.179;--x-height-multiplier:0.35;line-height:var(--lineHeight-relaxed);margin:var(--spacing-0) var(--spacing-0) var(--spacing-8) var(--spacing-0)}ol,p,ul{padding:var(--spacing-0)}ol,ul{list-style-image:none;list-style-position:outside;margin-bottom:var(--spacing-8);margin-left:var(--spacing-0);margin-right:var(--spacing-0)}ol li,ul li{padding-left:var(--spacing-0)}li>p,ol li,ul li{margin-bottom:calc(var(--spacing-8)/2)}li :last-child{margin-bottom:var(--spacing-0)}li>ul{margin-left:var(--spacing-8);margin-top:calc(var(--spacing-8)/2)}blockquote{border-left:var(--spacing-1) solid var(--color-primary);color:var(--color-text-light);font-size:var(--fontSize-2);font-style:italic;margin-bottom:var(--spacing-8);margin-left:calc(var(--spacing-6)*-1);margin-right:var(--spacing-8);padding:var(--spacing-0) var(--spacing-0) var(--spacing-0) var(--spacing-6)}blockquote>:last-child{margin-bottom:var(--spacing-0)}blockquote>ol,blockquote>ul{list-style-position:inside}table{border-collapse:collapse;border-spacing:.25rem;margin-bottom:var(--spacing-8);width:100%}table thead tr th{border-bottom:1px solid var(--color-accent)}a{color:var(--color-primary)}a:focus,a:hover{text-decoration:none}.global-wrapper{margin:var(--spacing-0) auto;max-width:var(--maxWidth-wrapper);padding:var(--spacing-10) var(--spacing-5)}.global-wrapper[data-is-root-path=true] .bio{margin-bottom:var(--spacing-20)}.global-header{margin-bottom:var(--spacing-12)}.main-heading{font-size:var(--fontSize-7);margin:0}.post-list-item{margin-bottom:var(--spacing-8);margin-top:var(--spacing-8)}.post-list-item p{margin-bottom:var(--spacing-0)}.post-list-item h2{color:var(--color-heading);font-size:var(--fontSize-4);margin-bottom:var(--spacing-2);margin-top:var(--spacing-0)}.post-list-item header{margin-bottom:var(--spacing-4)}.header-link-home{font-family:var(--font-heading);font-size:var(--fontSize-2);font-weight:var(--fontWeight-bold);text-decoration:none}.bio{display:flex;margin-bottom:var(--spacing-16)}.bio p,.bio-avatar{margin-bottom:var(--spacing-0)}.bio-avatar{border-radius:100%;margin-right:var(--spacing-4);min-width:50px}.blog-post header h1{margin:var(--spacing-0) var(--spacing-0) var(--spacing-4) var(--spacing-0)}.blog-post header p{font-family:var(--font-heading);font-size:var(--fontSize-2)}.blog-post-nav ul{margin:var(--spacing-0)}.gatsby-highlight{margin-bottom:var(--spacing-8)}.blog-post img{padding-bottom:var(--spacing-2);width:100%}@media (max-width:42rem){blockquote{margin-left:var(--spacing-0);padding:var(--spacing-0) var(--spacing-0) var(--spacing-0) var(--spacing-4)}ol,ul{list-style-position:inside}}@font-face{font-display:swap;font-family:Pretendard;font-weight:900;src:local("Pretendard Black"),url(/static/Pretendard-Black-aaa76c4a6ca9efc94d1a3f892cb1196d.woff2) format("woff2"),url(/static/Pretendard-Black-78d9f24400b70da75d379317cca859c1.woff) format("woff")}@font-face{font-display:swap;font-family:Pretendard;font-weight:800;src:local("Pretendard ExtraBold"),url(/static/Pretendard-ExtraBold-36145a15bedb632d6795a369af714c5f.woff2) format("woff2"),url(/static/Pretendard-ExtraBold-a6f30dd6e4c3c93ea3cb57e7d769ce44.woff) format("woff")}@font-face{font-display:swap;font-family:Pretendard;font-weight:700;src:local("Pretendard Bold"),url(/static/Pretendard-Bold-6b164eb09ac66559881ebaff87a9f68f.woff2) format("woff2"),url(/static/Pretendard-Bold-d0f80e7ac3933bfbf45d05e2cc6fde07.woff) format("woff")}@font-face{font-display:swap;font-family:Pretendard;font-weight:600;src:local("Pretendard SemiBold"),url(/static/Pretendard-SemiBold-77dc78f65aa11d9abc377e54f2bc0281.woff2) format("woff2"),url(/static/Pretendard-SemiBold-3fb6e3741b5dffea918e9fd730156bbd.woff) format("woff")}@font-face{font-display:swap;font-family:Pretendard;font-weight:500;src:local("Pretendard Medium"),url(/static/Pretendard-Medium-59b075f096b9d3f4d25e99d69c3a70a5.woff2) format("woff2"),url(/static/Pretendard-Medium-a2ef0b28cc457c109381607c3290250a.woff) format("woff")}@font-face{font-display:swap;font-family:Pretendard;font-weight:400;src:local("Pretendard Regular"),url(/static/Pretendard-Regular-0c7ef87f67b575118ed954c29b2bcddb.woff2) format("woff2"),url(/static/Pretendard-Regular-371a053f6fa19004d5fa62feb5669588.woff) format("woff")}@font-face{font-display:swap;font-family:Pretendard;font-weight:300;src:local("Pretendard Light"),url(/static/Pretendard-Light-f63725c2aff140ea27065ea8675921d8.woff2) format("woff2"),url(/static/Pretendard-Light-e90933d161baef9945bf99fe091fef4a.woff) format("woff")}@font-face{font-display:swap;font-family:Pretendard;font-weight:200;src:local("Pretendard ExtraLight"),url(/static/Pretendard-ExtraLight-e2816fb65d32738bf7312f256c330f36.woff2) format("woff2"),url(/static/Pretendard-ExtraLight-c4a5b6406da33f9e87cd66ba6f4bc0ca.woff) format("woff")}@font-face{font-display:swap;font-family:Pretendard;font-weight:100;src:local("Pretendard Thin"),url(/static/Pretendard-Thin-04f04b1778555863e68f36b4aa45053d.woff2) format("woff2"),url(/static/Pretendard-Thin-36a510183103a448779984ef74cb1da9.woff) format("woff")}code[class*=language-],pre[class*=language-]{word-wrap:normal;background:none;color:#000;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none;line-height:1.5;-o-tab-size:4;tab-size:4;text-align:left;text-shadow:0 1px #fff;white-space:pre;word-break:normal;word-spacing:normal}code[class*=language-] ::selection,code[class*=language-]::selection,pre[class*=language-] ::selection,pre[class*=language-]::selection{background:#b3d4fc;text-shadow:none}@media print{code[class*=language-],pre[class*=language-]{text-shadow:none}}pre[class*=language-]{margin:.5em 0;overflow:auto;padding:1em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#f5f2f0}:not(pre)>code[class*=language-]{border-radius:.3em;padding:.1em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#708090}.token.punctuation{color:#999}.token.namespace{opacity:.7}.token.boolean,.token.constant,.token.deleted,.token.number,.token.property,.token.symbol,.token.tag{color:#905}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#690}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url{background:hsla(0,0%,100%,.5);color:#9a6e3a}.token.atrule,.token.attr-value,.token.keyword{color:#07a}.token.class-name,.token.function{color:#dd4a68}.token.important,.token.regex,.token.variable{color:#e90}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}</style><style>.gatsby-image-wrapper{position:relative;overflow:hidden}.gatsby-image-wrapper picture.object-fit-polyfill{position:static!important}.gatsby-image-wrapper img{bottom:0;height:100%;left:0;margin:0;max-width:none;padding:0;position:absolute;right:0;top:0;width:100%;object-fit:cover}.gatsby-image-wrapper [data-main-image]{opacity:0;transform:translateZ(0);transition:opacity .25s linear;will-change:opacity}.gatsby-image-wrapper-constrained{display:inline-block;vertical-align:top}</style><noscript><style>.gatsby-image-wrapper noscript [data-main-image]{opacity:1!important}.gatsby-image-wrapper [data-placeholder-image]{opacity:0!important}</style></noscript><script type="module">const e="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;e&&document.body.addEventListener("load",(function(e){const t=e.target;if(void 0===t.dataset.mainImage)return;if(void 0===t.dataset.gatsbyImageSsr)return;let a=null,n=t;for(;null===a&&n;)void 0!==n.parentNode.dataset.gatsbyImageWrapper&&(a=n.parentNode),n=n.parentNode;const o=a.querySelector("[data-placeholder-image]"),r=new Image;r.src=t.currentSrc,r.decode().catch((()=>{})).then((()=>{t.style.opacity=1,o&&(o.style.opacity=0,o.style.transition="opacity 500ms linear")}))}),!0);</script><link rel="alternate" type="application/rss+xml" title="Gatsby Starter Blog RSS Feed" href="/rss.xml"/><link rel="icon" href="/favicon-32x32.png?v=cadbbdce5d5e9ac27d4e53b2112adad3" type="image/png"/><link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=cadbbdce5d5e9ac27d4e53b2112adad3"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=cadbbdce5d5e9ac27d4e53b2112adad3"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=cadbbdce5d5e9ac27d4e53b2112adad3"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=cadbbdce5d5e9ac27d4e53b2112adad3"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=cadbbdce5d5e9ac27d4e53b2112adad3"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=cadbbdce5d5e9ac27d4e53b2112adad3"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=cadbbdce5d5e9ac27d4e53b2112adad3"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=cadbbdce5d5e9ac27d4e53b2112adad3"/><title data-react-helmet="true">Next.js | Seungyoub Kim Blog</title><link rel="sitemap" type="application/xml" href="/sitemap.xml"/><link rel="preconnect" href="https://www.googletagmanager.com"/><link rel="dns-prefetch" href="https://www.googletagmanager.com"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="global-wrapper" data-is-root-path="false"><header class="global-header"><a class="header-link-home" href="/">Seungyoub Kim Blog</a></header><main><article class="blog-post" itemscope="" itemType="http://schema.org/Article"><header><h1 itemProp="headline">Next.js</h1><p>February 03, 2021</p></header><section itemProp="articleBody"><blockquote>
+<p>⚠️ 해당 글의 내용과 예시 코드, 이미지는 모두 참고 자료에서 가져 와 정리 한 것입니다.</p>
+</blockquote>
+<p>이번에는 리액트 프레임워크인 Next.js 에 대해 간단히 알아보도록 하겠습니다.</p>
+<h1>React 의 한계</h1>
+<hr>
+<ul>
+<li>리액트는 뷰 레이어만을 담당하는 라이브러리입니다.</li>
+<li>때문에 빠른 릴리즈가 가능하고 리액트 외에는 개발자가 원하는 만큼의 다른 라이브러리들을 조합하여 사용 할 수 있다는 장점이 있습니다.</li>
+<li>하지만 이는 뷰나 앵귤러 같은 다른 라이브러리들과 다르게 상태관리, 라우팅 등의 기능을 사용하기 위해서 별도로 배워야하는 기술이 늘어나고 개발자가 선택해야하는 선택지가 많아져 오히려 복잡해진다는 단점이 있기도 합니다.</li>
+<li>또한 요즘 프론트엔드 개발에선 번들러가 기본으로 사용됨은 물론 Lazy Loading, Code Splitting, HMR, SSR 등의 기능이 필요한 경우가 많은데 이를 개발자가 일일히 설정해주기는 매우 복잡하다고 할 수 있습니다.</li>
+<li>그렇기에 위같은 기능들을 기본적으로 제공해주어 개발자 경험을 높혀주는 리액트 프레임워크가 크게 떠오르게 되었습니다.</li>
+<li>리액트 프레임워크로는 대표적으로 Create React App, Next.js, Gatsby 등이 있습니다.</li>
+</ul>
+<h1>Next.js</h1>
+<hr>
+<ul>
+<li>Next.js 는 번들러 설정, 프로덕션 최적화, SEO 개선 등의 문제에 대해 개발자가 고민하지 않고 보다 쉽고 간단하게 프로젝트를 구성 할 수 있도록 도와주는 역할을 하는 리액트 프레임워크입니다.</li>
+<li>Next.js 는 개발자 경험을 높히기 위해 아래와 같은 기능들을 지원합니다.
+<ul>
+<li>An intuitive <a href="https://nextjs.org/docs/basic-features/pages">page-based</a> routing system (with support for <a href="https://nextjs.org/docs/routing/dynamic-routes">dynamic routes</a>)</li>
+<li><a href="https://nextjs.org/docs/basic-features/pages#pre-rendering">Pre-rendering</a>, both <a href="https://nextjs.org/docs/basic-features/pages#static-generation-recommended">static generation</a> (SSG) and <a href="https://nextjs.org/docs/basic-features/pages#server-side-rendering">server-side rendering</a> (SSR) are supported on a per-page basis</li>
+<li>Automatic code splitting for faster page loads</li>
+<li><a href="https://nextjs.org/docs/routing/introduction#linking-between-pages">Client-side routing</a> with optimized prefetching</li>
+<li><a href="https://nextjs.org/docs/basic-features/built-in-css-support">Built-in CSS</a> and <a href="https://nextjs.org/docs/basic-features/built-in-css-support#sass-support">Sass support</a>, and support for any <a href="https://nextjs.org/docs/basic-features/built-in-css-support#css-in-js">CSS-in-JS</a> library</li>
+<li>Development environment with <a href="https://nextjs.org/docs/basic-features/fast-refresh">Fast Refresh</a> support</li>
+<li><a href="https://nextjs.org/docs/api-routes/introduction">API routes</a> to build API endpoints with Serverless Functions</li>
+<li>Fully extendable</li>
+</ul>
+</li>
+</ul>
+<h1>Next.js Basic Tutorial</h1>
+<hr>
+<ul>
+<li><a href="https://nextjs.org/learn/basics/create-nextjs-app">Next.js 공식 페이지에서 제공하는 Basic Tutorial</a> 을 따라서 데모 블로그 프로젝트를 만들며 Next.js 의 기본적인 기능들을 살펴보도록 하겠습니다.</li>
+<li>우선 아래 명령어를 통해 create-next-app 을 이용해 기본 프로젝트를 세팅해주세요.</li>
+</ul>
+<div class="gatsby-highlight" data-language="jsx"><pre class="language-jsx"><code class="language-jsx">npx create<span class="token operator">-</span>next<span class="token operator">-</span>app nextjs<span class="token operator">-</span>blog <span class="token operator">--</span>use<span class="token operator">-</span>npm <span class="token operator">--</span>example <span class="token string">"&lt;https://github.com/vercel/next-learn-starter/tree/master/learn-starter>"</span></code></pre></div>
+<ul>
+<li>—use-npm 은 의존성 설치에 npm 을 사용하라는 속성이며(설정하지 않을 경우 yarn) —example 은 프로젝트의 템플릿을 지정 할 수 있는 속성입니다.</li>
+<li>그리고 생성 된 nextjs-blog 폴더에 들어가 아래 명령어를 입력하면 바로 Next.js 프로젝트가 구동됩니다.</li>
+</ul>
+<div class="gatsby-highlight" data-language="jsx"><pre class="language-jsx"><code class="language-jsx">npm run dev</code></pre></div>
+<ul>
+<li><code class="language-text">http://localhost:3000</code> 에 접속하면 구동 된 개발 서버로 프로젝트를 확인 할 수 있습니다.</li>
+</ul>
+<h1>Navigate</h1>
+<hr>
+<ul>
+<li>Next.js 에서는 별도 라이브러리 없이 매우 편리한 라우팅 기능을 지원합니다.</li>
+<li>디렉토리 최상단에 <code class="language-text">pages</code> 디렉토리를 만들고 그 안에 리액트 컴포넌트를 생성하기만 하면 됩니다.</li>
+<li><code class="language-text">pages/index.js</code> 로 추가 한 컴포넌트는 <code class="language-text">/</code> 주소로 접속했을 때 노출 할 페이지입니다.</li>
+<li><code class="language-text">pages/posts/first-post.js</code> 로 추가 한 컴포넌트는 <code class="language-text">/posts/first-post</code> 라는 주소로 접속했을 때 노출 할 페이지가 됩니다.</li>
+<li>그럼 프로젝트에서 pages 폴더 내에 posts 라는 폴더를 만들고 그 폴더 안에 <code class="language-text">first-post.js</code> 파일을 아래와 같이 생성해주세요.</li>
+</ul>
+<div class="gatsby-highlight" data-language="jsx"><pre class="language-jsx"><code class="language-jsx"><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token function">FirstPost</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">></span></span><span class="token plain-text">First Post</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span>
+<span class="token punctuation">}</span></code></pre></div>
+<ul>
+<li>그리고 이제 아까 구동시켜둔 개발서버에 <a href="http://localhost:3000/posts/first-post"><code class="language-text">http://localhost:3000/posts/first-post</code></a> 주소로 접속해보면 라우팅이 적용 된 모습을 확인 하실 수 있습니다.</li>
+<li>그리고 Next.js 에선 페이지 이동을 위해 a 태그 대신 Link 태그를 이용합니다. (next/link)</li>
+<li><code class="language-text">pages/index.js</code> 파일의 title 부분을 아래와 같이 변경해주세요.</li>
+</ul>
+<div class="gatsby-highlight" data-language="jsx"><pre class="language-jsx"><code class="language-jsx"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span> <span class="token attr-name">className</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>title<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token plain-text">
+  Learn </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>&lt;https://nextjs.org><span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token plain-text">Next.js!</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><span class="token plain-text">
+</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span>
+
+<span class="token comment">// 위 코드를 찾아 아래와 같이 변경</span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span> <span class="token attr-name">className</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>title<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token plain-text">
+  Read</span><span class="token punctuation">{</span><span class="token string">' '</span><span class="token punctuation">}</span><span class="token plain-text">
+  </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Link</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/posts/first-post<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token plain-text">
+    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span><span class="token punctuation">></span></span><span class="token plain-text">this page!</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><span class="token plain-text">
+  </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">Link</span></span><span class="token punctuation">></span></span><span class="token plain-text">
+</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span></code></pre></div>
+<ul>
+<li>그리고 <code class="language-text">pages/posts/first-post.js</code> 파일을 아래와 같이 변경해주세요.</li>
+</ul>
+<div class="gatsby-highlight" data-language="jsx"><pre class="language-jsx"><code class="language-jsx"><span class="token keyword">import</span> Link <span class="token keyword">from</span> <span class="token string">'next/link'</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token function">FirstPost</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span></span><span class="token punctuation">></span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">></span></span><span class="token plain-text">First Post</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">></span></span><span class="token plain-text">
+        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Link</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token plain-text">
+          </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span><span class="token punctuation">></span></span><span class="token plain-text">Back to home</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><span class="token plain-text">
+        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">Link</span></span><span class="token punctuation">></span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">></span></span><span class="token plain-text">
+    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span></span><span class="token punctuation">></span></span>
+  <span class="token punctuation">)</span>
+<span class="token punctuation">}</span></code></pre></div>
+<ul>
+<li>이렇게 하면 페이지 이동이 가능 한 링크가 추가 된 것을 확인 하실 수 있습니다.</li>
+<li>Link 태그는 Client-side navigation 을 사용하기에 자바스크립트를 이용해 페이지를 전환하여 브라우저에서 전체 페이지를 다시 로드하지 않습니다.</li>
+<li>또한 Next.js 는 code splitting 기능을 자동으로 수행하므로 각 페이지 별로 필요 한 항목만 로드를 하기 때문에 홈페이지가 렌더링 될 때 필요하지 않은 다른 페이지는 제공되지 않습니다.</li>
+<li>이는 페이지가 많아져도 빠른 속도로 로딩 됨을 의미합니다.</li>
+<li>또한 Next.js 는 프로덕션 빌드 상태에선 링크 구성요소가 뷰포트에 나타나면 링크 된 페이지의 코드를 자동으로 prefetch 하여 링크를 클릭 했을 때 해당 페이지가 빠르게 로드되어 페이지 전환이 바로 될 수 있도록 합니다.</li>
+<li>만일 링크 태그에 className 등의 추가 속성을 부여해야 한다면 Link 태그가 아닌 a 태그에 삽입 할 수 있도록 합니다.</li>
+</ul>
+<h1>Assets</h1>
+<hr>
+<ul>
+<li>Next.js 에선 이미지와 같은 정적 파일들을 최상위 <code class="language-text">public</code> 폴더에 넣어 손쉽게 서빙 할 수 있습니다.</li>
+<li>이는 <code class="language-text">robots.txt</code> 같은 파일을 서빙하는 방법으로도 사용 할 수 있습니다.</li>
+<li>우선 public 폴더 안에 images 폴더를 만들고 그 안에 자신의 프로필 이미지를 profile.jpg 라는 이름으로 넣어주세요. (혹은 <a href="https://github.com/vercel/next-learn-starter/blob/master/basics-final/public/images/profile.jpg">이 파일 사용</a>)</li>
+<li>Next.js 에서 이미지를 렌더링 할 때에는 Image 태그를 사용 할 수 있습니다. (next/image)</li>
+<li>Image 태그는 일반 img 태그를 사용할 때와 달리 아래와 같은 기능들이 지원됩니다.
+<ul>
+<li>화면 크기에 따른 반응형 사이즈의 이미지 지원</li>
+<li>이미지 파일 최적화</li>
+<li>뷰포트에 나타난 이미지만 로딩(lazy loading)</li>
+</ul>
+</li>
+<li>이미지 파일 최적화는 빌드시에 진행되는게 아니라 사용자 요청시에 진행됩니다. 때문에 이미지가 많아도 빌드 시간이 증가되지 않습니다.</li>
+<li>이미지 태그는 아래와 같이 사용 할 수 있습니다.</li>
+</ul>
+<div class="gatsby-highlight" data-language="jsx"><pre class="language-jsx"><code class="language-jsx"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Image</span></span>
+  <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/images/profile.jpg<span class="token punctuation">"</span></span>
+  <span class="token attr-name">height</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token number">144</span><span class="token punctuation">}</span></span>
+  <span class="token attr-name">width</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token number">144</span><span class="token punctuation">}</span></span>
+  <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Your Name<span class="token punctuation">"</span></span>
+<span class="token punctuation">/></span></span></code></pre></div>
+<ul>
+<li>height 와 width 를 원하는 사이즈로 작성해줘야 하며 가로 세로 비율은 원본 이미지와 동일해야합니다.</li>
+</ul>
+<h1>Metadata</h1>
+<hr>
+<ul>
+<li>Next.js 에서는 Head 태그를 이용해 페이지별로 메타데이터를 추가 할 수 있습니다. (next/head)</li>
+<li>아래는 <code class="language-text">pages/index.js</code> 파일에 추가 되어 있는 Head 태그입니다.</li>
+</ul>
+<div class="gatsby-highlight" data-language="jsx"><pre class="language-jsx"><code class="language-jsx"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Head</span></span><span class="token punctuation">></span></span><span class="token plain-text">
+  </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span><span class="token plain-text">Create Next App</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span><span class="token plain-text">
+  </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>icon<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/favicon.ico<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span><span class="token plain-text">
+</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">Head</span></span><span class="token punctuation">></span></span></code></pre></div>
+<h1>Styling</h1>
+<hr>
+<ul>
+<li>Next.js 에는 기본적으로 styled-jsx 라는 css-in-js 라이브러리가 내장되어 있습니다.</li>
+<li>styled-jsx 가 아닌 다른 라이브러리들도 사용이 가능하며 CSS Modules 와 Sass 도 기본적으로 지원합니다.</li>
+<li>이번 튜토리얼에선 CSS 를 사용하며 위에 배운 내용들을 가지고 Layout 컴포넌트를 만들어보도록 하겠습니다.</li>
+<li>우선 최상단에 components 라는 폴더를 만들고 그 안에 layout.js 라는 파일을 아래와 같이 추가해주세요.</li>
+</ul>
+<div class="gatsby-highlight" data-language="jsx"><pre class="language-jsx"><code class="language-jsx"><span class="token keyword">import</span> styles <span class="token keyword">from</span> <span class="token string">'./layout.module.css'</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token function">Layout</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> children <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">className</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>container<span class="token punctuation">}</span></span><span class="token punctuation">></span></span><span class="token punctuation">{</span>children<span class="token punctuation">}</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token punctuation">}</span></code></pre></div>
+<ul>
+<li>그리고 <code class="language-text">components/layout.module.css</code> 파일을 아래와 같이 추가해주세요.</li>
+</ul>
+<div class="gatsby-highlight" data-language="jsx"><pre class="language-jsx"><code class="language-jsx"><span class="token punctuation">.</span>container <span class="token punctuation">{</span>
+  max<span class="token operator">-</span>width<span class="token operator">:</span> 36rem<span class="token punctuation">;</span>
+  <span class="token literal-property property">padding</span><span class="token operator">:</span> <span class="token number">0</span> 1rem<span class="token punctuation">;</span>
+  <span class="token literal-property property">margin</span><span class="token operator">:</span> 3rem auto 6rem<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div>
+<ul>
+<li>그리고 <code class="language-text">pages/posts/first-post.js</code> 파일을 아래와 같이 수정해주세요.</li>
+</ul>
+<div class="gatsby-highlight" data-language="jsx"><pre class="language-jsx"><code class="language-jsx"><span class="token keyword">import</span> Head <span class="token keyword">from</span> <span class="token string">'next/head'</span>
+<span class="token keyword">import</span> Link <span class="token keyword">from</span> <span class="token string">'next/link'</span>
+<span class="token keyword">import</span> Layout <span class="token keyword">from</span> <span class="token string">'../../components/layout'</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token function">FirstPost</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Layout</span></span><span class="token punctuation">></span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Head</span></span><span class="token punctuation">></span></span><span class="token plain-text">
+        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span><span class="token plain-text">First Post</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">Head</span></span><span class="token punctuation">></span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">></span></span><span class="token plain-text">First Post</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">></span></span><span class="token plain-text">
+        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Link</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token plain-text">
+          </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span><span class="token punctuation">></span></span><span class="token plain-text">Back to home</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><span class="token plain-text">
+        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">Link</span></span><span class="token punctuation">></span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">></span></span><span class="token plain-text">
+    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">Layout</span></span><span class="token punctuation">></span></span>
+  <span class="token punctuation">)</span>
+<span class="token punctuation">}</span></code></pre></div>
+<ul>
+<li>이렇게 스타일을 적용 할 경우 CSS Module 이 자동으로 유니크한 클래스명을 생성해줘 클래스 충돌을 방지 할 수 있습니다.</li>
+<li>또한 Next.js 의 code splitting 기능은 css 모듈에서도 작동하여 각 페이지에서 최소한의 css 가 로드되도록 보장합니다.</li>
+<li>CSS Module 은 컴포넌트 레벨 스타일링에 유용하지만 전역 스타일링을 사용할 수도 있습니다.</li>
+<li>우선 <code class="language-text">pages/_app.js</code> 파일을 아래와 같이 추가해주세요.</li>
+</ul>
+<div class="gatsby-highlight" data-language="jsx"><pre class="language-jsx"><code class="language-jsx"><span class="token keyword">import</span> <span class="token string">'../styles/global.css'</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token function">App</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> Component<span class="token punctuation">,</span> pageProps <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Component</span></span> <span class="token spread"><span class="token punctuation">{</span><span class="token operator">...</span>pageProps<span class="token punctuation">}</span></span> <span class="token punctuation">/></span></span>
+<span class="token punctuation">}</span></code></pre></div>
+<ul>
+<li>App 컴포넌트는 다른 모든 페이지에서 공통적으로 사용되는 최상위 구성요소입니다.</li>
+<li>그리고 최상단에서 styles 폴더를 만들고 그 안에 global.css 를 아래와 같이 추가해주세요.</li>
+</ul>
+<div class="gatsby-highlight" data-language="jsx"><pre class="language-jsx"><code class="language-jsx">html<span class="token punctuation">,</span>
+body <span class="token punctuation">{</span>
+  <span class="token literal-property property">padding</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+  <span class="token literal-property property">margin</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+  font<span class="token operator">-</span>family<span class="token operator">:</span> <span class="token operator">-</span>apple<span class="token operator">-</span>system<span class="token punctuation">,</span> BlinkMacSystemFont<span class="token punctuation">,</span> Segoe <span class="token constant">UI</span><span class="token punctuation">,</span> Roboto<span class="token punctuation">,</span> Oxygen<span class="token punctuation">,</span> Ubuntu<span class="token punctuation">,</span>
+    Cantarell<span class="token punctuation">,</span> Fira Sans<span class="token punctuation">,</span> Droid Sans<span class="token punctuation">,</span> Helvetica Neue<span class="token punctuation">,</span> sans<span class="token operator">-</span>serif<span class="token punctuation">;</span>
+  line<span class="token operator">-</span>height<span class="token operator">:</span> <span class="token number">1.6</span><span class="token punctuation">;</span>
+  font<span class="token operator">-</span>size<span class="token operator">:</span> 18px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token operator">*</span> <span class="token punctuation">{</span>
+  box<span class="token operator">-</span>sizing<span class="token operator">:</span> border<span class="token operator">-</span>box<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+a <span class="token punctuation">{</span>
+  <span class="token literal-property property">color</span><span class="token operator">:</span> #0070f3<span class="token punctuation">;</span>
+  text<span class="token operator">-</span>decoration<span class="token operator">:</span> none<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token literal-property property">a</span><span class="token operator">:</span>hover <span class="token punctuation">{</span>
+  text<span class="token operator">-</span>decoration<span class="token operator">:</span> underline<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+img <span class="token punctuation">{</span>
+  max<span class="token operator">-</span>width<span class="token operator">:</span> <span class="token number">100</span><span class="token operator">%</span><span class="token punctuation">;</span>
+  <span class="token literal-property property">display</span><span class="token operator">:</span> block<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div>
+<ul>
+<li>_app.js 파일을 추가하면 개발서버를 재시작해야 하기에 개발서버를 재시작하면 전역 스타일이 적용 된 것을 확인 하실 수 있습니다.</li>
+<li>이후 작업으로 넘어가기 전에 위에서 배운 내용들을 가지고 코드와 스타일을 조금 수정해줍시다.</li>
+<li>Update <code class="language-text">components/layout.module.css</code></li>
+</ul>
+<div class="gatsby-highlight" data-language="jsx"><pre class="language-jsx"><code class="language-jsx"><span class="token punctuation">.</span>container <span class="token punctuation">{</span>
+  max<span class="token operator">-</span>width<span class="token operator">:</span> 36rem<span class="token punctuation">;</span>
+  <span class="token literal-property property">padding</span><span class="token operator">:</span> <span class="token number">0</span> 1rem<span class="token punctuation">;</span>
+  <span class="token literal-property property">margin</span><span class="token operator">:</span> 3rem auto 6rem<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token punctuation">.</span>header <span class="token punctuation">{</span>
+  <span class="token literal-property property">display</span><span class="token operator">:</span> flex<span class="token punctuation">;</span>
+  flex<span class="token operator">-</span>direction<span class="token operator">:</span> column<span class="token punctuation">;</span>
+  align<span class="token operator">-</span>items<span class="token operator">:</span> center<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token punctuation">.</span>backToHome <span class="token punctuation">{</span>
+  <span class="token literal-property property">margin</span><span class="token operator">:</span> 3rem <span class="token number">0</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div>
+<ul>
+<li>Create <code class="language-text">styles/utils.module.css</code></li>
+</ul>
+<div class="gatsby-highlight" data-language="jsx"><pre class="language-jsx"><code class="language-jsx"><span class="token punctuation">.</span>heading2Xl <span class="token punctuation">{</span>
+  font<span class="token operator">-</span>size<span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">.</span>5rem<span class="token punctuation">;</span>
+  line<span class="token operator">-</span>height<span class="token operator">:</span> <span class="token number">1.2</span><span class="token punctuation">;</span>
+  font<span class="token operator">-</span>weight<span class="token operator">:</span> <span class="token number">800</span><span class="token punctuation">;</span>
+  letter<span class="token operator">-</span>spacing<span class="token operator">:</span> <span class="token operator">-</span><span class="token number">0</span><span class="token punctuation">.</span>05rem<span class="token punctuation">;</span>
+  <span class="token literal-property property">margin</span><span class="token operator">:</span> 1rem <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token punctuation">.</span>headingXl <span class="token punctuation">{</span>
+  font<span class="token operator">-</span>size<span class="token operator">:</span> 2rem<span class="token punctuation">;</span>
+  line<span class="token operator">-</span>height<span class="token operator">:</span> <span class="token number">1.3</span><span class="token punctuation">;</span>
+  font<span class="token operator">-</span>weight<span class="token operator">:</span> <span class="token number">800</span><span class="token punctuation">;</span>
+  letter<span class="token operator">-</span>spacing<span class="token operator">:</span> <span class="token operator">-</span><span class="token number">0</span><span class="token punctuation">.</span>05rem<span class="token punctuation">;</span>
+  <span class="token literal-property property">margin</span><span class="token operator">:</span> 1rem <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token punctuation">.</span>headingLg <span class="token punctuation">{</span>
+  font<span class="token operator">-</span>size<span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">.</span>5rem<span class="token punctuation">;</span>
+  line<span class="token operator">-</span>height<span class="token operator">:</span> <span class="token number">1.4</span><span class="token punctuation">;</span>
+  <span class="token literal-property property">margin</span><span class="token operator">:</span> 1rem <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token punctuation">.</span>headingMd <span class="token punctuation">{</span>
+  font<span class="token operator">-</span>size<span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">.</span>2rem<span class="token punctuation">;</span>
+  line<span class="token operator">-</span>height<span class="token operator">:</span> <span class="token number">1.5</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token punctuation">.</span>borderCircle <span class="token punctuation">{</span>
+  border<span class="token operator">-</span>radius<span class="token operator">:</span> 9999px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token punctuation">.</span>colorInherit <span class="token punctuation">{</span>
+  <span class="token literal-property property">color</span><span class="token operator">:</span> inherit<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token punctuation">.</span>padding1px <span class="token punctuation">{</span>
+  padding<span class="token operator">-</span>top<span class="token operator">:</span> 1px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token punctuation">.</span>list <span class="token punctuation">{</span>
+  list<span class="token operator">-</span>style<span class="token operator">:</span> none<span class="token punctuation">;</span>
+  <span class="token literal-property property">padding</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+  <span class="token literal-property property">margin</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token punctuation">.</span>listItem <span class="token punctuation">{</span>
+  <span class="token literal-property property">margin</span><span class="token operator">:</span> <span class="token number">0</span> <span class="token number">0</span> <span class="token number">1</span><span class="token punctuation">.</span>25rem<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token punctuation">.</span>lightText <span class="token punctuation">{</span>
+  <span class="token literal-property property">color</span><span class="token operator">:</span> #<span class="token number">666</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div>
+<ul>
+<li>Update <code class="language-text">components/layout.js</code></li>
+</ul>
+<div class="gatsby-highlight" data-language="jsx"><pre class="language-jsx"><code class="language-jsx"><span class="token keyword">import</span> Head <span class="token keyword">from</span> <span class="token string">'next/head'</span>
+<span class="token keyword">import</span> Image <span class="token keyword">from</span> <span class="token string">'next/image'</span>
+<span class="token keyword">import</span> styles <span class="token keyword">from</span> <span class="token string">'./layout.module.css'</span>
+<span class="token keyword">import</span> utilStyles <span class="token keyword">from</span> <span class="token string">'../styles/utils.module.css'</span>
+<span class="token keyword">import</span> Link <span class="token keyword">from</span> <span class="token string">'next/link'</span>
+
+<span class="token keyword">const</span> name <span class="token operator">=</span> <span class="token string">'Your Name'</span>
+<span class="token keyword">export</span> <span class="token keyword">const</span> siteTitle <span class="token operator">=</span> <span class="token string">'Next.js Sample Website'</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token function">Layout</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> children<span class="token punctuation">,</span> home <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">className</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>container<span class="token punctuation">}</span></span><span class="token punctuation">></span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Head</span></span><span class="token punctuation">></span></span><span class="token plain-text">
+        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>icon<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/favicon.ico<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span><span class="token plain-text">
+        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span>
+          <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>description<span class="token punctuation">"</span></span>
+          <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Learn how to build a personal website using Next.js<span class="token punctuation">"</span></span>
+        <span class="token punctuation">/></span></span><span class="token plain-text">
+        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span>
+          <span class="token attr-name">property</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>og:image<span class="token punctuation">"</span></span>
+          <span class="token attr-name">content</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">https://og-image.vercel.app/</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token function">encodeURI</span><span class="token punctuation">(</span>
+            siteTitle
+          <span class="token punctuation">)</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">.png?theme=light&amp;md=0&amp;fontSize=75px&amp;images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">}</span></span>
+        <span class="token punctuation">/></span></span><span class="token plain-text">
+        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>og:title<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>siteTitle<span class="token punctuation">}</span></span> <span class="token punctuation">/></span></span><span class="token plain-text">
+        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>twitter:card<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>summary_large_image<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">Head</span></span><span class="token punctuation">></span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>header</span> <span class="token attr-name">className</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>header<span class="token punctuation">}</span></span><span class="token punctuation">></span></span><span class="token plain-text">
+        </span><span class="token punctuation">{</span>home <span class="token operator">?</span> <span class="token punctuation">(</span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span></span><span class="token punctuation">></span></span><span class="token plain-text">
+            </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Image</span></span>
+              <span class="token attr-name">priority</span>
+              <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/images/profile.jpg<span class="token punctuation">"</span></span>
+              <span class="token attr-name">className</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>utilStyles<span class="token punctuation">.</span>borderCircle<span class="token punctuation">}</span></span>
+              <span class="token attr-name">height</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token number">144</span><span class="token punctuation">}</span></span>
+              <span class="token attr-name">width</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token number">144</span><span class="token punctuation">}</span></span>
+              <span class="token attr-name">alt</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>name<span class="token punctuation">}</span></span>
+            <span class="token punctuation">/></span></span><span class="token plain-text">
+            </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span> <span class="token attr-name">className</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>utilStyles<span class="token punctuation">.</span>heading2Xl<span class="token punctuation">}</span></span><span class="token punctuation">></span></span><span class="token punctuation">{</span>name<span class="token punctuation">}</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span><span class="token plain-text">
+          </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span></span><span class="token punctuation">></span></span>
+        <span class="token punctuation">)</span> <span class="token operator">:</span> <span class="token punctuation">(</span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span></span><span class="token punctuation">></span></span><span class="token plain-text">
+            </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Link</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token plain-text">
+              </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span><span class="token punctuation">></span></span><span class="token plain-text">
+                </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Image</span></span>
+                  <span class="token attr-name">priority</span>
+                  <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/images/profile.jpg<span class="token punctuation">"</span></span>
+                  <span class="token attr-name">className</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>utilStyles<span class="token punctuation">.</span>borderCircle<span class="token punctuation">}</span></span>
+                  <span class="token attr-name">height</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token number">108</span><span class="token punctuation">}</span></span>
+                  <span class="token attr-name">width</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token number">108</span><span class="token punctuation">}</span></span>
+                  <span class="token attr-name">alt</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>name<span class="token punctuation">}</span></span>
+                <span class="token punctuation">/></span></span><span class="token plain-text">
+              </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><span class="token plain-text">
+            </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">Link</span></span><span class="token punctuation">></span></span><span class="token plain-text">
+            </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span> <span class="token attr-name">className</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>utilStyles<span class="token punctuation">.</span>headingLg<span class="token punctuation">}</span></span><span class="token punctuation">></span></span><span class="token plain-text">
+              </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Link</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token plain-text">
+                </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">className</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>utilStyles<span class="token punctuation">.</span>colorInherit<span class="token punctuation">}</span></span><span class="token punctuation">></span></span><span class="token punctuation">{</span>name<span class="token punctuation">}</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><span class="token plain-text">
+              </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">Link</span></span><span class="token punctuation">></span></span><span class="token plain-text">
+            </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">></span></span><span class="token plain-text">
+          </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span></span><span class="token punctuation">></span></span>
+        <span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>header</span><span class="token punctuation">></span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>main</span><span class="token punctuation">></span></span><span class="token punctuation">{</span>children<span class="token punctuation">}</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>main</span><span class="token punctuation">></span></span><span class="token plain-text">
+      </span><span class="token punctuation">{</span><span class="token operator">!</span>home <span class="token operator">&amp;&amp;</span> <span class="token punctuation">(</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">className</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>backToHome<span class="token punctuation">}</span></span><span class="token punctuation">></span></span><span class="token plain-text">
+          </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Link</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token plain-text">
+            </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span><span class="token punctuation">></span></span><span class="token plain-text">← Back to home</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><span class="token plain-text">
+          </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">Link</span></span><span class="token punctuation">></span></span><span class="token plain-text">
+        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+      <span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token plain-text">
+    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token punctuation">)</span>
+<span class="token punctuation">}</span></code></pre></div>
+<ul>
+<li>Update <code class="language-text">pages/index.js</code></li>
+</ul>
+<div class="gatsby-highlight" data-language="jsx"><pre class="language-jsx"><code class="language-jsx"><span class="token keyword">import</span> Head <span class="token keyword">from</span> <span class="token string">'next/head'</span>
+<span class="token keyword">import</span> Layout<span class="token punctuation">,</span> <span class="token punctuation">{</span> siteTitle <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'../components/layout'</span>
+<span class="token keyword">import</span> utilStyles <span class="token keyword">from</span> <span class="token string">'../styles/utils.module.css'</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token function">Home</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Layout</span></span> <span class="token attr-name">home</span><span class="token punctuation">></span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Head</span></span><span class="token punctuation">></span></span><span class="token plain-text">
+        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span><span class="token punctuation">{</span>siteTitle<span class="token punctuation">}</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">Head</span></span><span class="token punctuation">></span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>section</span> <span class="token attr-name">className</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>utilStyles<span class="token punctuation">.</span>headingMd<span class="token punctuation">}</span></span><span class="token punctuation">></span></span><span class="token plain-text">
+        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span><span class="token plain-text">[Your Self Introduction]</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span><span class="token plain-text">
+        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span><span class="token plain-text">
+          (This is a sample website - you’ll be building a site like this on</span><span class="token punctuation">{</span><span class="token string">' '</span><span class="token punctuation">}</span><span class="token plain-text">
+          </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>&lt;https://nextjs.org/learn><span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token plain-text">our Next.js tutorial</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><span class="token plain-text">.)
+        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>section</span><span class="token punctuation">></span></span><span class="token plain-text">
+    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">Layout</span></span><span class="token punctuation">></span></span>
+  <span class="token punctuation">)</span>
+<span class="token punctuation">}</span></code></pre></div>
+<h1>Pre-rendering</h1>
+<hr>
+<ul>
+<li>Next.js 의 가장 중요한 개념중 한가지인 pre-rendering 입니다.</li>
+<li>기본적으로 Next.js 는 모든 페이지를 pre-rendering 하기 때문에 자바스크립트에서 모든 작업을 수행하는 대신에 각 페이지에 대한 HTML 을 미리 생성하여 성능과 SEO 를 개선합니다.</li>
+<li>생성된 각각의 HTML 은 해당 페이지에 필요한 최소의 자바스크립트 코드와 연결됩니다.</li>
+<li>페이지가 브라우저에 의해 로드되고 나면, 자바스크립트 코드가 실행되어 페이지가 완전히 상호작용 하게 됩니다. (이 과정을 hydration 이라고 합니다.)</li>
+<li>pre-rendering 이 잘 되는지 확인해보기 위해 브라우저에서 Disable Javascript 기능을 활성화하고 페이지가 로드되는지 확인 해볼 수 있습니다. (localhost 에서는 Disable Javascript 를 활성화 할 시 css 가 로드되지 않습니다.)</li>
+<li>pre-rendering 과 no pre-rendering 을 그림으로 살펴보면 아래와 같습니다.</li>
+</ul>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/58414d0513e74b459f5242ded0808a5e/062c8/21.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 59.49367088607595%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAAsTAAALEwEAmpwYAAABuUlEQVQoz41T267aQAzM/39RH/petVIBAaXAIUmBkJAm3MLuJuTiqcYhR6c3tZZGrK3BM/ZuvNPpBCJNUyRJguPx+Nv5druB0XWdQkR+BYMU8bIsw263w2q1wnw+x2QywXK5xGg00pzY7/f4R/TdRMTL8xxBECCKIlX/W1RVhfV6rcLk0j0RxzEhxpjeIUd6eVmrKzpNkliJ2+0Wl8sFT2XUda0cggZ8f4MwCJQXhqHwv8YY8R6PB5xzcM7C2BLG1bjf7yiKggS0bfu6P/LKsuy5roGxTmvWWrHWkiMeC23b9EuoMiD7+NyKgGIclU35y1zkuZbsA1BfwaxrW6GQjszDQIq+rfD183uU1UNzNjqfz5jNZjgcDq87ttbhy6d3OEZhr9110vcR8ajcNA1OeY5DnGAXJfiepjou670r4Viacx26432COE5UsG4aIU8dcmQunERrjWLY3TDm4JY81ti8LB2ctYOg8C0XRdFfCkkk8/wWHINj0hmFr9erXhbFCQo/L0/YI89z8fAfwSfB5+L7PjabDabTKRaLhWI8HrMuXIM6/MNn9BMYg2OOTbd0PoDOnHNCp7yUH1xXmN6wyeRCAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="21"
+        title="21"
+        src="/static/58414d0513e74b459f5242ded0808a5e/f058b/21.png"
+        srcset="/static/58414d0513e74b459f5242ded0808a5e/c26ae/21.png 158w,
+/static/58414d0513e74b459f5242ded0808a5e/6bdcf/21.png 315w,
+/static/58414d0513e74b459f5242ded0808a5e/f058b/21.png 630w,
+/static/58414d0513e74b459f5242ded0808a5e/40601/21.png 945w,
+/static/58414d0513e74b459f5242ded0808a5e/78612/21.png 1260w,
+/static/58414d0513e74b459f5242ded0808a5e/062c8/21.png 1386w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/06273f9454d09d1f6ee47557b6500e3d/062c8/22.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 49.36708860759494%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsTAAALEwEAmpwYAAABWElEQVQoz4VS7W6CQBDk/V+nL9E0xo8fNZqAqA3CRaJynnwIt9PMArUhaXrJZLljd2529gJrLYwxuN/vuN1uuF6viizLkOc5LpeLnhdFoedt20JEpuACAAlOpxPW6zX2+z3m8zlms5liuVxisVhoXK1WP/GP1bOJSEAFx+MRSZLgv8WcMAyRpinO57OC3RljpKqqXiFb2263qpBg0nCbwnuvsa5r7WSz2SCOY+yiEPFuh8PhwL1QlHNOAjLTv8fjoV7RUxYT/Nd1nV7AyDznnEbrGhR2+LZWWNd1XU84qhjBYp6RtGka/WZ8Pp+U3veffwBtoeZ574W52jIJZUyaLBJzulEU6dRHtWVZ4fP9DSaJe3u8f3lI5r8I+UTKslQbSExCtsxBfCUGaWbGp/RSyAIWMvk3xpa1zYGce3pNctd7h6FeGJWQ3oxDmGI6FO55wRR1XQt5SPgNKssCZrfqd2YAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="22"
+        title="22"
+        src="/static/06273f9454d09d1f6ee47557b6500e3d/f058b/22.png"
+        srcset="/static/06273f9454d09d1f6ee47557b6500e3d/c26ae/22.png 158w,
+/static/06273f9454d09d1f6ee47557b6500e3d/6bdcf/22.png 315w,
+/static/06273f9454d09d1f6ee47557b6500e3d/f058b/22.png 630w,
+/static/06273f9454d09d1f6ee47557b6500e3d/40601/22.png 945w,
+/static/06273f9454d09d1f6ee47557b6500e3d/78612/22.png 1260w,
+/static/06273f9454d09d1f6ee47557b6500e3d/062c8/22.png 1386w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<ul>
+<li>Next.js 의 pre-rendering 방식에는 Static Generation(SSG)과 Server-side Rendering(SSR) 두가지가 있습니다.</li>
+<li>SSG 는 빌드시에 HTML 을 생성하는 pre-rendering 방식입니다. 그 이후 각 요청에는 사전 렌더링된 HTML 을 재사용합니다.</li>
+<li>SSR 은 매 요청에 대해 HTML 을 생성하는 방법입니다.</li>
+</ul>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/575b2ac21ea1c7aeaf5d66acac3598c7/062c8/23.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 53.79746835443038%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAABeElEQVQoz41T7Y6CMBDk/V/pft8rSEhEQZSicnwZCrR05zJVOM3FxE02bZfu7MxuCfI8RxzHSNMUWZZhv9+DMRH5yGlyN78GRVEgDEMkSYIoitb9p/YAlQU4uN1uuF6vKMsSdV3jcrl43263HpyMlcpRKIXT6QSlFEjicDigaZqV4QronAPdWothGDBNk3etNfq+h9Y99Gigh3uMd+jGmFXyM2ZQVZXvGVk9G5OtNbCzwA0/cGMDYx2sMRjH0RdlQebN8/zHkLQpg3Ipf2HLpMXK6AvV7ns9kx0L8v4/QLLjdOnsWdd1aNvWMyA4Jce7FEmaeanzPK+AvHs+n18BORCCsRKbzcs0AhKA8aauwdZwcIwv/aZk5rxMWSklYRhKlmWitZbF+r6XcRx9jD4Mg0zTJNZav++6ToqikKqqpK5rMcaIH8q7t0VpZET2x+PRPxm+Typa+sx2bTYb/21RFsgbIy57Q0asTlZ0nh8SxTknbdv6dflhfgGWM1FYHKgjQAAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="23"
+        title="23"
+        src="/static/575b2ac21ea1c7aeaf5d66acac3598c7/f058b/23.png"
+        srcset="/static/575b2ac21ea1c7aeaf5d66acac3598c7/c26ae/23.png 158w,
+/static/575b2ac21ea1c7aeaf5d66acac3598c7/6bdcf/23.png 315w,
+/static/575b2ac21ea1c7aeaf5d66acac3598c7/f058b/23.png 630w,
+/static/575b2ac21ea1c7aeaf5d66acac3598c7/40601/23.png 945w,
+/static/575b2ac21ea1c7aeaf5d66acac3598c7/78612/23.png 1260w,
+/static/575b2ac21ea1c7aeaf5d66acac3598c7/062c8/23.png 1386w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/760878daa0a31e4ff441fb1837fdb43f/062c8/24.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 57.59493670886076%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAAsTAAALEwEAmpwYAAABlElEQVQoz3WS2XKEIBBF/f9vm6XmcR50Fo0adxF34aYuI8ZMkq5CQLpPX5p2yrJE27ao6xpJkqCqKvAfZ6UUtNZm0Oz8h+n1XDun0wnX6xWXywVcn89nHA4HHI/HH4A9dD8saN1rh0qKothUUl3TNIjjGL7v436/Y1mWfxVa0AZksBDCQPM8R5ZlBsw94dxbII1l4N6WY39lzk4QBOaQ9Xs8HmYwwTAMBtr3vfFkMiaSUsJ1XXiehyiKzHme55q+SqkXkMGEUBEPGMhBdQTQWII0TTGO4/popZl5TiBLtyyLdhj4Xh+7ZjDV0xg4TdOv+q1+ep7n15VJpmPXj5BFgLZO0fUD6MBkVE+jGibo+h6drCDSG4ZhMlcWQuiu615ABglRY14UkuiJIvsEE9sS2AehwrIsMI4TGlEh9F0sSoEgXnlTyC8VtlJCNBJNI40q/ntvaMIJMJ3RSLNey/Ld2FzwIZ7PJz4+AoRhCO92M6+6b2QaAezNwPcRR5HpCMbp1WEDUi4zUZkd9gH2QCqk37vvHvgFlkCg533i0ugAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="24"
+        title="24"
+        src="/static/760878daa0a31e4ff441fb1837fdb43f/f058b/24.png"
+        srcset="/static/760878daa0a31e4ff441fb1837fdb43f/c26ae/24.png 158w,
+/static/760878daa0a31e4ff441fb1837fdb43f/6bdcf/24.png 315w,
+/static/760878daa0a31e4ff441fb1837fdb43f/f058b/24.png 630w,
+/static/760878daa0a31e4ff441fb1837fdb43f/40601/24.png 945w,
+/static/760878daa0a31e4ff441fb1837fdb43f/78612/24.png 1260w,
+/static/760878daa0a31e4ff441fb1837fdb43f/062c8/24.png 1386w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<ul>
+<li>중요한것은 Next.js 에서는 각 페이지에서 사용 할 pre-rendering 방식을 선택 할 수 있다는 것입니다.</li>
+</ul>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/e64e36ad6122abbd4fd28cf8614787fe/9937c/25.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 77.84810126582278%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAAAsTAAALEwEAmpwYAAACmElEQVQ4y22Ty27TQBSG86KseAZYsKCvwR4hVZVAYs26q9I0paGoSZwmzT2+zdjjGc/NPzpj7LQVIx0f2fP53M/A+wbaAYbEmF601kGapgEd4pxp4GzzX47EOYdBWXtcRgaTg8bt7S/c3NxgPB5jNBrh+voaUspgsBYWi2GB7aTAeHyH+/v7wA2Hw8CRzOdzDJSSKEUFLiSqqkJZlhBCvBA6FAFjHKJouef33X/eewy8kZjFHm++aCRMIE1ixEmC4/EYUpJSAQ3gYbGbFfj6YYE8LpAQFyeI4zg4U0oFxwNTS+wLh0+XBkLWEKKNkDxaa/uUrTfIdgJXFzGkUH10r7mB1xWi2OPtuUbKBLI0QZpmSJIkREjpNL6Bh8E+4vh+tkSeFEizFGmaBo4i7A3KWkE6DWk0rD11jYyRZ9KhKdqgrDRUbcN3rU+dpndyHAxCGjS/D3DLDI+Pj1gsF0FPJhNMp9Mg+/0R8Aou/QPHF5jNpojm89DV2WwWGAqirWFVQz3sUXGBp6cnbDaboBeLRfhhHkU4HI5wtoY4PkAKFu7IaceR0W4aBpWpYbMK/vwOulIoaGzKsh8DSi2kbDwkP8JE36CVQElNecadaug0miUD3v+AYiVYwcE5B2PsVJum3aY6i2B/nkGWORgvwDkLXDterw2+I4MCOWfgjCHP82fj0Bmcw159bA0yHrjOYD+HlVawew73eQTBCqR5hixrhaC2Ng2UthDZCnp6gbLIkWV5z5HTvoZGG9RWgyplnYN3PtSEhCKkhe+ONg6WOEuce8F14zWgh5ISm6c1drsd1us1VqtV0NTx7XaL5XIZurperbBZr8Ja0h1xpOmujzCs1b/iU+jd4ndp0Hu3/EVRhO8d17FUx24O/wJWKMIEqmI13gAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="25"
+        title="25"
+        src="/static/e64e36ad6122abbd4fd28cf8614787fe/f058b/25.png"
+        srcset="/static/e64e36ad6122abbd4fd28cf8614787fe/c26ae/25.png 158w,
+/static/e64e36ad6122abbd4fd28cf8614787fe/6bdcf/25.png 315w,
+/static/e64e36ad6122abbd4fd28cf8614787fe/f058b/25.png 630w,
+/static/e64e36ad6122abbd4fd28cf8614787fe/40601/25.png 945w,
+/static/e64e36ad6122abbd4fd28cf8614787fe/9937c/25.png 1156w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<ul>
+<li>CDN 을 이용해 페이지를 한번만 빌드 한 후 계속하여 서빙 할 수 있어 매 요청시마다 서버가 페이지를 렌더링 하는 것 보다 훨씬 빠르기 때문에 가능하다면 언제든 SSG 방식을 사용하는것이 좋습니다.</li>
+<li>하지만 페이지에 자주 업데이트 되는 데이터가 표시되고 모든 요청에 따라 페이지 내용이 변경 될 수 있는 경우에는 SSR 방식을 사용해야 합니다.</li>
+<li>혹은 pre-rendering 을 사용하지 않고 client-side Javascript 를 이용해 페이지를 렌더링 할 수도 있습니다.</li>
+</ul>
+<h1>Data Fetching</h1>
+<hr>
+<ul>
+<li>일부 페이지의 경우 먼저 외부 데이터를 가져오지 않으면 HTML 을 렌더링 할 수 없는 경우가 있을 수 있습니다.</li>
+<li>Next.js 에서는 페이지 컴포넌트를 내보낼 때 비동기 함수인 <code class="language-text">getStaticProps</code> 를 이용하여 외부 데이터를 가져와 페이지의 props 로 전달 할 수 있습니다.</li>
+<li>기본적으로 <code class="language-text">getStaticProps</code> 를 사용하면 “이 페이지에는 몇가지 데이터 종속성이 있으니 빌드 시 이 페이지를 pre-render 할 때 먼저 해결하세요!” 라고 이야기 하는 것 과 같습니다.</li>
+<li>자 그럼 블로그 게시물을 markdown 파일로 추가 한 후 파일 시스템을 이용해 애플리케이션에 블로그 데이터를 추가해보도록 하겠습니다.</li>
+<li>우선 최상단에 posts 폴더를 생성해주세요.</li>
+<li>그리고 <code class="language-text">posts/pre-rendering.md</code> 파일을 아래와 같이 추가해주세요.</li>
+</ul>
+<div class="gatsby-highlight" data-language="jsx"><pre class="language-jsx"><code class="language-jsx"><span class="token operator">--</span><span class="token operator">-</span>
+<span class="token literal-property property">title</span><span class="token operator">:</span> <span class="token string">'Two Forms of Pre-rendering'</span>
+<span class="token literal-property property">date</span><span class="token operator">:</span> <span class="token string">'2020-01-01'</span>
+<span class="token operator">--</span><span class="token operator">-</span>
+
+Next<span class="token punctuation">.</span>js has two forms <span class="token keyword">of</span> pre<span class="token operator">-</span>rendering<span class="token operator">:</span> <span class="token operator">**</span>Static Generation<span class="token operator">**</span> and <span class="token operator">**</span>Server<span class="token operator">-</span>side Rendering<span class="token operator">**</span><span class="token punctuation">.</span> The difference is <span class="token keyword">in</span> <span class="token operator">**</span>when<span class="token operator">**</span> it generates the <span class="token constant">HTML</span> <span class="token keyword">for</span> a page<span class="token punctuation">.</span>
+
+<span class="token operator">-</span> <span class="token operator">**</span>Static Generation<span class="token operator">**</span> is the pre<span class="token operator">-</span>rendering method that generates the <span class="token constant">HTML</span> at <span class="token operator">**</span>build time<span class="token operator">**</span><span class="token punctuation">.</span> The pre<span class="token operator">-</span>rendered <span class="token constant">HTML</span> is then _reused_ on each request<span class="token punctuation">.</span>
+<span class="token operator">-</span> <span class="token operator">**</span>Server<span class="token operator">-</span>side Rendering<span class="token operator">**</span> is the pre<span class="token operator">-</span>rendering method that generates the <span class="token constant">HTML</span> on <span class="token operator">**</span>each request<span class="token operator">**</span><span class="token punctuation">.</span>
+
+Importantly<span class="token punctuation">,</span> Next<span class="token punctuation">.</span>js lets you <span class="token operator">**</span>choose<span class="token operator">**</span> which pre<span class="token operator">-</span>rendering form to use <span class="token keyword">for</span> each page<span class="token punctuation">.</span> You can create a <span class="token string">"hybrid"</span> Next<span class="token punctuation">.</span>js app by using Static Generation <span class="token keyword">for</span> most pages and using Server<span class="token operator">-</span>side Rendering <span class="token keyword">for</span> others<span class="token punctuation">.</span></code></pre></div>
+<ul>
+<li><code class="language-text">posts/ssg-ssr.md</code> 파일도 아래와 같이 추가해주세요.</li>
+</ul>
+<div class="gatsby-highlight" data-language="jsx"><pre class="language-jsx"><code class="language-jsx"><span class="token operator">--</span><span class="token operator">-</span>
+<span class="token literal-property property">title</span><span class="token operator">:</span> <span class="token string">'When to Use Static Generation v.s. Server-side Rendering'</span>
+<span class="token literal-property property">date</span><span class="token operator">:</span> <span class="token string">'2020-01-02'</span>
+<span class="token operator">--</span><span class="token operator">-</span>
+
+We recommend using <span class="token operator">**</span>Static Generation<span class="token operator">**</span> <span class="token punctuation">(</span><span class="token keyword">with</span> and without data<span class="token punctuation">)</span> whenever possible because your page can be built once and served by <span class="token constant">CDN</span><span class="token punctuation">,</span> which makes it much faster than having a server render the page on every request<span class="token punctuation">.</span>
+
+You can use Static Generation <span class="token keyword">for</span> many types <span class="token keyword">of</span> pages<span class="token punctuation">,</span> <span class="token literal-property property">including</span><span class="token operator">:</span>
+
+<span class="token operator">-</span> Marketing pages
+<span class="token operator">-</span> Blog posts
+<span class="token operator">-</span> <span class="token constant">E</span><span class="token operator">-</span>commerce product listings
+<span class="token operator">-</span> Help and documentation
+
+You should ask yourself<span class="token operator">:</span> <span class="token string">"Can I pre-render this page **ahead** of a user's request?"</span> If the answer is yes<span class="token punctuation">,</span> then you should choose Static Generation<span class="token punctuation">.</span>
+
+On the other hand<span class="token punctuation">,</span> Static Generation is <span class="token operator">**</span>not<span class="token operator">**</span> a good idea <span class="token keyword">if</span> you cannot pre<span class="token operator">-</span>render a page ahead <span class="token keyword">of</span> a user's request<span class="token punctuation">.</span> Maybe your page shows frequently updated data<span class="token punctuation">,</span> and the page content changes on every request<span class="token punctuation">.</span>
+
+In that <span class="token keyword">case</span><span class="token punctuation">,</span> you can use <span class="token operator">**</span>Server<span class="token operator">-</span>Side Rendering<span class="token operator">**</span><span class="token punctuation">.</span> It will be slower<span class="token punctuation">,</span> but the pre<span class="token operator">-</span>rendered page will always be up<span class="token operator">-</span>to<span class="token operator">-</span>date<span class="token punctuation">.</span> Or you can skip pre<span class="token operator">-</span>rendering and use client<span class="token operator">-</span>side JavaScript to populate data<span class="token punctuation">.</span></code></pre></div>
+<ul>
+<li>markdown 파일을 자바스크립트 내에서 해석하기 위해 gray-matter 라는 의존성을 설치해주세요.</li>
+</ul>
+<div class="gatsby-highlight" data-language="jsx"><pre class="language-jsx"><code class="language-jsx">npm install gray<span class="token operator">-</span>matter</code></pre></div>
+<ul>
+<li>그리고 최상단에 lib 라는 폴더를 만들고 그 안에 <code class="language-text">posts.js</code> 라는 파일을 아래와 같이 추가해주세요.</li>
+</ul>
+<div class="gatsby-highlight" data-language="jsx"><pre class="language-jsx"><code class="language-jsx"><span class="token keyword">import</span> fs <span class="token keyword">from</span> <span class="token string">'fs'</span>
+<span class="token keyword">import</span> path <span class="token keyword">from</span> <span class="token string">'path'</span>
+<span class="token keyword">import</span> matter <span class="token keyword">from</span> <span class="token string">'gray-matter'</span>
+
+<span class="token keyword">const</span> postsDirectory <span class="token operator">=</span> path<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>process<span class="token punctuation">.</span><span class="token function">cwd</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">'posts'</span><span class="token punctuation">)</span>
+
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">getSortedPostsData</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// Get file names under /posts</span>
+  <span class="token keyword">const</span> fileNames <span class="token operator">=</span> fs<span class="token punctuation">.</span><span class="token function">readdirSync</span><span class="token punctuation">(</span>postsDirectory<span class="token punctuation">)</span>
+  <span class="token keyword">const</span> allPostsData <span class="token operator">=</span> fileNames<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token parameter">fileName</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token comment">// Remove ".md" from file name to get id</span>
+    <span class="token keyword">const</span> id <span class="token operator">=</span> fileName<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">\\.md$</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">,</span> <span class="token string">''</span><span class="token punctuation">)</span>
+
+    <span class="token comment">// Read markdown file as string</span>
+    <span class="token keyword">const</span> fullPath <span class="token operator">=</span> path<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>postsDirectory<span class="token punctuation">,</span> fileName<span class="token punctuation">)</span>
+    <span class="token keyword">const</span> fileContents <span class="token operator">=</span> fs<span class="token punctuation">.</span><span class="token function">readFileSync</span><span class="token punctuation">(</span>fullPath<span class="token punctuation">,</span> <span class="token string">'utf8'</span><span class="token punctuation">)</span>
+
+    <span class="token comment">// Use gray-matter to parse the post metadata section</span>
+    <span class="token keyword">const</span> matterResult <span class="token operator">=</span> <span class="token function">matter</span><span class="token punctuation">(</span>fileContents<span class="token punctuation">)</span>
+
+    <span class="token comment">// Combine the data with the id</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      id<span class="token punctuation">,</span>
+      <span class="token operator">...</span>matterResult<span class="token punctuation">.</span>data
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token comment">// Sort posts by date</span>
+  <span class="token keyword">return</span> allPostsData<span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">a<span class="token punctuation">,</span> b</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>a<span class="token punctuation">.</span>date <span class="token operator">&lt;</span> b<span class="token punctuation">.</span>date<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token number">1</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token operator">-</span><span class="token number">1</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span></code></pre></div>
+<ul>
+<li>이제 pre-render 에서 <code class="language-text">getSortedPostsData</code> 를 사용하기 위해 <code class="language-text">getStaticProps</code> 를 사용해야 합니다.</li>
+<li><code class="language-text">pages/index.js</code> 파일에 아래와 같이 <code class="language-text">getStaticProps</code> 함수를 추가해주세요.</li>
+</ul>
+<div class="gatsby-highlight" data-language="jsx"><pre class="language-jsx"><code class="language-jsx"><span class="token keyword">import</span> <span class="token punctuation">{</span> getSortedPostsData <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'../lib/posts'</span>
+
+<span class="token keyword">export</span> <span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">getStaticProps</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> allPostsData <span class="token operator">=</span> <span class="token function">getSortedPostsData</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">props</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      allPostsData
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre></div>
+<ul>
+<li>그리고 <code class="language-text">Home</code> 컴포넌트를 아래와 같이 수정해주세요.</li>
+</ul>
+<div class="gatsby-highlight" data-language="jsx"><pre class="language-jsx"><code class="language-jsx"><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token function">Home</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> allPostsData <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Layout</span></span> <span class="token attr-name">home</span><span class="token punctuation">></span></span><span class="token plain-text">
+      </span><span class="token punctuation">{</span><span class="token comment">/* Keep the existing code here */</span><span class="token punctuation">}</span><span class="token plain-text">
+
+      </span><span class="token punctuation">{</span><span class="token comment">/* Add this &lt;section> tag below the existing &lt;section> tag */</span><span class="token punctuation">}</span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>section</span> <span class="token attr-name">className</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>utilStyles<span class="token punctuation">.</span>headingMd<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string"> </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>utilStyles<span class="token punctuation">.</span>padding1px<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">}</span></span><span class="token punctuation">></span></span><span class="token plain-text">
+        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span> <span class="token attr-name">className</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>utilStyles<span class="token punctuation">.</span>headingLg<span class="token punctuation">}</span></span><span class="token punctuation">></span></span><span class="token plain-text">Blog</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">></span></span><span class="token plain-text">
+        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span> <span class="token attr-name">className</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>utilStyles<span class="token punctuation">.</span>list<span class="token punctuation">}</span></span><span class="token punctuation">></span></span><span class="token plain-text">
+          </span><span class="token punctuation">{</span>allPostsData<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> id<span class="token punctuation">,</span> date<span class="token punctuation">,</span> title <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">(</span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">className</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>utilStyles<span class="token punctuation">.</span>listItem<span class="token punctuation">}</span></span> <span class="token attr-name">key</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>id<span class="token punctuation">}</span></span><span class="token punctuation">></span></span><span class="token plain-text">
+              </span><span class="token punctuation">{</span>title<span class="token punctuation">}</span><span class="token plain-text">
+              </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span> <span class="token punctuation">/></span></span><span class="token plain-text">
+              </span><span class="token punctuation">{</span>id<span class="token punctuation">}</span><span class="token plain-text">
+              </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span> <span class="token punctuation">/></span></span><span class="token plain-text">
+              </span><span class="token punctuation">{</span>date<span class="token punctuation">}</span><span class="token plain-text">
+            </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+          <span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token plain-text">
+        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">></span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>section</span><span class="token punctuation">></span></span><span class="token plain-text">
+    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">Layout</span></span><span class="token punctuation">></span></span>
+  <span class="token punctuation">)</span>
+<span class="token punctuation">}</span></code></pre></div>
+<ul>
+<li>이제 첫 화면에서 블로그 데이터를 불러온 모습을 확인 하실 수 있습니다.</li>
+</ul>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/8dcc09bef6fbba803341a4ba7bd6cb32/9239a/26.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 75.9493670886076%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAAAsTAAALEwEAmpwYAAABzklEQVQ4y5VT2Y6jMBDk/z9ptV8QaRXlYRRFuY+FYQIBkgC+cK2qR000x2qzllpuY7tcVd0kt9sN8/kc6/Va5vP5DI5hGBBjlFznZ0bStq0A7fd7zGYz5Hn+4cD/gAng/X7H8XjEdrtFmqbYbDbyAL91XTeC/itGwKqqsFqtcDqdBOx6vaIsS5HunHuamQInlDiZTLBYLDCdTmWTvnLTGIPL5YIQgrAtigK0yHsvj5IM877vR9CEjJbLJQ6HgzDlJR5W4N1uJ8C8TFvInOAsIn0nWF3XD0C+wA9N0wibsizQ1DWstcJMQ5kx56yha/UxYXs8ImBgy0TAGjOCkimtISMWTmeqou8EHBmSPsNaA+cjQrNDuGeSO2dFEoOXCEAL1CKVrd9ZxIT+kB1HAJDPf6LYTsbqcY9nnu5Dvk5ZdIAS07zE61shjGkLZShLMmF7sUdVOtf6oEhWwKa+4C37DdPdxD8WgU3P6mZZNlacMtkNbH4WkSRU4TugMdKRL/sq/vh1jLNDF43zsaqq2LZt7Ps+Gp4BPkR8L+uXtRSFLNPaY5F7LHOLrrdSEO+DMPjuF/zbOgkhRGttHLyLCDbG4KJzj+AezygLZfI5V6Z/AIKph961nsERAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="26"
+        title="26"
+        src="/static/8dcc09bef6fbba803341a4ba7bd6cb32/f058b/26.png"
+        srcset="/static/8dcc09bef6fbba803341a4ba7bd6cb32/c26ae/26.png 158w,
+/static/8dcc09bef6fbba803341a4ba7bd6cb32/6bdcf/26.png 315w,
+/static/8dcc09bef6fbba803341a4ba7bd6cb32/f058b/26.png 630w,
+/static/8dcc09bef6fbba803341a4ba7bd6cb32/40601/26.png 945w,
+/static/8dcc09bef6fbba803341a4ba7bd6cb32/9239a/26.png 1246w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<ul>
+<li>getStaticProps 에서는 파일 시스템을 이용한 데이터 뿐만 아니라 외부 API 를 이용한 데이터도 가져 올 수 있고 데이터베이스에 직접 쿼리를 날릴 수도 있습니다.</li>
+<li>이것이 가능한 이유는 getStaticProps 가 server-side 에서만 실행되기 때문입니다. 클라이언트 측에서는 실행 할 수 없으며 JS 번들에 포함되지도 않습니다.</li>
+<li>때문에 쿼리 매게 변수나 HTTP 헤더 같은 요청시에 가져올 수 있는 데이터는 사용 할 수 없습니다.</li>
+<li>만일 빌드시간이 아니라 요청마다 데이터를 가져와야 하는 경우에는 SSR 을 사용 할 수 있습니다.</li>
+</ul>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/6a67e1b89195407add1429d472659226/9239a/27.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 84.17721518987341%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAARCAYAAADdRIy+AAAACXBIWXMAAAsTAAALEwEAmpwYAAACEUlEQVQ4y4VU267aMBDMt/c7+t6qX9CnloeqFMRFSH1AiOsRkHBNyIXEie2pZsEUOBywtFrbiSczs+t4aZpis9kgiiLsdjusVitst1us12tZc59z7h8OB1hr3wXAJHPrzedzNJtN9Pt99Ho9NBoNdDod1Ot1tFotdLtdtNtt2R8MBng07BWqV1UVlFISeZ7DrcuyRFEUOB6PMudelmXCOI5jYcustRYgh+lRchAEInuxWMD3fclkzjkz1wxasN/vRT6f0QpH8sKQDMIwlCD4szGdTuU9nmHwfTKOosgaY04M+cJoNJIvUwYlUB4PMJ+lyLxWq2E4HApDqloul8I0CIL/gHw4m83gmCZJIua/vb2JRPrIg+4jHwzrskdGRHdBRiyO2+fa5SIvsIlDbNsj4MtfRHkCf+mzkJYFEw/xYlz1Go55Dn85w6/WBF9/Zoj2K4zHExKwtExrbb27Bn3UtDLImMxhLZQ2SDVgRdWpoc8qbhleQAGYM1YcJ1KsV0IuHt6DVdoAWrGuKMtKisRisOGvW4ye8UMMenjpwxuvODEKrUmGb50cVZ4gTlI5TDDeDDazC3cRyrJ8AmgVfo8VPv+pYFWKMDoIIP279vSj63wr2VjkXHzvA59+4ACFaB8iS7NLKz3629z8HO49VLpEMt8h66+QFafrRbn08nwb3jF9CmiNhQbj1CramFM+s3sF+A9IACT8tsQJGQAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="27"
+        title="27"
+        src="/static/6a67e1b89195407add1429d472659226/f058b/27.png"
+        srcset="/static/6a67e1b89195407add1429d472659226/c26ae/27.png 158w,
+/static/6a67e1b89195407add1429d472659226/6bdcf/27.png 315w,
+/static/6a67e1b89195407add1429d472659226/f058b/27.png 630w,
+/static/6a67e1b89195407add1429d472659226/40601/27.png 945w,
+/static/6a67e1b89195407add1429d472659226/9239a/27.png 1246w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<ul>
+<li>SSR 을 사용하는 경우에는 <code class="language-text">getStaticProps</code> 가 아닌 <code class="language-text">getServerSideProps</code> 를 사용합니다.</li>
+</ul>
+<div class="gatsby-highlight" data-language="jsx"><pre class="language-jsx"><code class="language-jsx"><span class="token keyword">export</span> <span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">getServerSideProps</span><span class="token punctuation">(</span><span class="token parameter">context</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">props</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token comment">// props for your component</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre></div>
+<ul>
+<li><code class="language-text">getServerSideProps</code> 는 요청시에 호출되기에 context 에 요청별 매개 변수가 포함됩니다.</li>
+<li>하지만 SSR 은 SSG 보다 속도가 느리기에 매번 요청이 필요한 페이지에서만 사용해야 합니다.</li>
+<li>SSR 은 이번 튜토리얼에서 구현하지 않습니다.</li>
+<li>만일 pre-render 가 필요하지 않은 페이지라면 Client-side Rendering 을 사용하는 것도 방법입니다.</li>
+</ul>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/9c161a643239139042b92e08f6089051/9239a/28.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 151.8987341772152%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAeCAYAAAAsEj5rAAAACXBIWXMAAAsTAAALEwEAmpwYAAADLklEQVRIx51WyW7iQBD1x85vzNeM5hQOUSIlSFGE5sxhDiQBw5Cw2wbM4q3bC7zRq6EtE0KWaanU7cL96tXr6jJWFEXo9/uYzWYYj8dwXReDwQCLxQLD4RDT6VT8XPu+j/1+/65Z3HBxcYHb21tcX1/j7u4Ol5eXuL+/R61WE//V1RXq9Trm87lsem9YcRzj5eVFWDw/PwsT2mg0Ktf8fTKZyIYsy8TyPD+x3W4HK01TLJdLie55Hlarlcx8ZvpcGyPoZDwSeRiIv3NtZNlut7CYApGLopAoWusyGo1s6GNgYVcAWV6UTGl8j0M0NIv1ei0MGM28wEFJkiQRwDwvsPNbKPQGaZaLTyklAUtAI/JmsxFAAjMVgvBlzvtDAKU1Rs2fWLv9MiCD870TQGpG8Qn28PAgurKkaJSDRn3tP0NMZ66wM/43AcmQwlJ8x3GEqbBSSjaxLmmb9UrqkQSYKhkyixNAgpBZr9dDEAQitikTHpI5HBqD0MdhSubkUAxwtXBZBqxHMmdAysGZ7DibQyRjc5DWe5VPnQhKPW3bRrvdFut2u3h8fCyzoRkcy9CmZjwA/siUwjCUmWXDNfXjmkY/g1XL6yhlUm40Gmi1WujaNrodWxhQU94Ec1MMY6NZVa4jhhRa6i5JsFUx/CREsA3Kk64O+syBVXU/STnPMoS5Bp4c4LcDhQLp4TQZsFperwGPuo1xxlGC4aiHxk0Pv25c+Cs2gJEwZ0GfA3xdIZY5zSzPoaIAg02KQQxkKkYUxyJ8VTOmXH2ualmmzE3H9PdHd5WM/jWHHIvlCnGiSh/nI4ZVIGllBzN+0yTKdhV5yHSM9PBsWtuHN8XMBKvWW/anhn3snu82525JFZCp8tnz5mg2m/JRo+/NbvNZQH+5gOe55aei2m2+DEgWUZRCax5CWvZCji8zzLRCqAt8qwOTtUIcbrENgv8H1KlGrjKMf3QQ+yHCOJJmUQU8+qZ8mHKqsYs18P0eylljEwUIKg2C85c1ZIoRdki0gla6/Hix3XE+6djnAA2o6ziwn9ro2l1ptJ1OR1ob/wNVwcqr9xlQ9kG2fPZHtn/Or7Mhw78NSBACL4WxbgAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="28"
+        title="28"
+        src="/static/9c161a643239139042b92e08f6089051/f058b/28.png"
+        srcset="/static/9c161a643239139042b92e08f6089051/c26ae/28.png 158w,
+/static/9c161a643239139042b92e08f6089051/6bdcf/28.png 315w,
+/static/9c161a643239139042b92e08f6089051/f058b/28.png 630w,
+/static/9c161a643239139042b92e08f6089051/40601/28.png 945w,
+/static/9c161a643239139042b92e08f6089051/9239a/28.png 1246w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<ul>
+<li>Next.js 팀은 SWR 이라고 불리는 data fetching 을 위한 React hook 을 만들었습니다.</li>
+<li>이는 client side 에서 data fetching 을 할 때에 유용합니다.</li>
+</ul>
+<div class="gatsby-highlight" data-language="jsx"><pre class="language-jsx"><code class="language-jsx"><span class="token keyword">import</span> useSWR <span class="token keyword">from</span> <span class="token string">'swr'</span>
+
+<span class="token keyword">function</span> <span class="token function">Profile</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> <span class="token punctuation">{</span> data<span class="token punctuation">,</span> error <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">useSWR</span><span class="token punctuation">(</span><span class="token string">'/api/user'</span><span class="token punctuation">,</span> fetch<span class="token punctuation">)</span>
+
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>error<span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span><span class="token plain-text">failed to load</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>data<span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span><span class="token plain-text">loading...</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token keyword">return</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span><span class="token plain-text">hello </span><span class="token punctuation">{</span>data<span class="token punctuation">.</span>name<span class="token punctuation">}</span><span class="token plain-text">!</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token punctuation">}</span></code></pre></div>
+<ul>
+<li>SWR 은 캐싱, 재평가, 포커스 추적, 간격에 대한 리세팅 등을 처리합니다. 자세한 내용은 <a href="https://swr.vercel.app/">여기</a>서 확인해주세요.</li>
+</ul>
+<h1>Dynamic Routes</h1>
+<hr>
+<ul>
+<li>이번엔 각 페이지의 경로가 외부 데이터에 따라 달라지는 동적 경로를 사용하여 SSG 를 하는 방법에 대해 알아보도록 하겠습니다.</li>
+</ul>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/789e45571960706843550171db3852e5/9239a/29.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 84.17721518987341%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAARCAYAAADdRIy+AAAACXBIWXMAAAsTAAALEwEAmpwYAAACAklEQVQ4y3WTx64CMQxF+f9v4QcQGzaAEE2wASRE770NDC1+OiaeN4Cw5Iknca6vSxLH41GWy6XqarWKVvRwOER76/VaFouF2rfbTRDnnOrLVNslhsOhZDIZqVQqquVyWbLZrNrtdltqtZoUi0WpVqt6VigU5HQ6SVycR8VMPJ9PuV6vGvV+v6uNhmEol8tFNf6PD4D7/V6VvTeGpDybzVTn87mMRiPVwWCgKdoZyr6VwHx3u907IH+Px0MZwiIuQRBIt9vVWsLqfD7rinpm3ynzJXq/39eogJvAhnrCdjqdqh/rZDJR9taYL4akYE69Xk82m01Uv3iAT/knJhGqAgJGt4kOG+pCWpQBUAKy12q1NG1KwxobnXdAgKjVeDzWQtMoc8YmCOkyQtZh82FK3Ev+awhDZg4w7yDWrF9pxtJ9T/njIBLSgvl2u9WUCcRrYZ9ac48y+FfmPOMXQ4YV5RKKcBnGsGcCqCWp2mAj1J0mdjodx4REgFyo1+vSaDSkVCppLXkduVxOGcIKBoBiUx6eIeDMahiGjiZFTbFIXIYZqXA5lUppSjBiuO3pNZtNyefzCu4nwvmuvwDpMBHpJMCw43IymdQ966zNJd1Op9PqBwkAOYsYQpsLsIAh8wcI4OwRHR8UmyCUBRD8giBw+CnDX1225rDCyvRzrPy58yPm/gAmExWX0Xu05gAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="29"
+        title="29"
+        src="/static/789e45571960706843550171db3852e5/f058b/29.png"
+        srcset="/static/789e45571960706843550171db3852e5/c26ae/29.png 158w,
+/static/789e45571960706843550171db3852e5/6bdcf/29.png 315w,
+/static/789e45571960706843550171db3852e5/f058b/29.png 630w,
+/static/789e45571960706843550171db3852e5/40601/29.png 945w,
+/static/789e45571960706843550171db3852e5/9239a/29.png 1246w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<ul>
+<li>이번 튜토리얼에선 이전에 <code class="language-text">posts</code> 폴더에 만들어둔 <code class="language-text">[ssg-ssr.md](&lt;http://ssg-ssr.md>)</code> 파일과 <code class="language-text">[pre-rendering.md](&lt;http://pre-rendering.md>)</code> 파일에 맞춰 <code class="language-text">/posts/ssg-ssr</code> 과 <code class="language-text">/posts/pre-rendering</code> 이라는 두개의 동적 경로가 생성돼야 합니다.</li>
+<li>우선 <code class="language-text">pages/posts</code> 폴더에 <code class="language-text">[id].js</code> 라는 파일을 아래와 같이 추가해주세요. <code class="language-text">[</code> 로 시작해 <code class="language-text">]</code> 끝나는 이름의 페이지는 동적 경로 페이지를 생성하는 방법입니다.</li>
+</ul>
+<div class="gatsby-highlight" data-language="jsx"><pre class="language-jsx"><code class="language-jsx"><span class="token keyword">import</span> Layout <span class="token keyword">from</span> <span class="token string">'../../components/layout'</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token function">Post</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Layout</span></span><span class="token punctuation">></span></span><span class="token plain-text">...</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">Layout</span></span><span class="token punctuation">></span></span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">getStaticPaths</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// Return a list of possible value for id</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">getStaticProps</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> params <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// Fetch necessary data for the blog post using params.id</span>
+<span class="token punctuation">}</span></code></pre></div>
+<ul>
+<li>각 함수의 내용은 아래에서 추가 작성합니다.</li>
+<li>동적 경로를 위해 getStaticPaths 라는 비동기 함수를 내보냅니다. 이 함수 내에서 <code class="language-text">id</code> 에 들어 갈 수 있는 가능한 모든 값의 목록을 반환해야 합니다.</li>
+<li>그리고 블로그 게시물 정보를 가져와 SSG 방식을 사용하기 위해 getStaticProps 도 이용합니다. getStaticProps 를 사용하는 파일이 동적 경로를 지원하기에 <code class="language-text">params</code> 라는 매개 변수를 지원합니다.</li>
+</ul>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/55e603915c3828db1a1086a5d6ee7d23/9239a/30.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 84.81012658227847%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAARCAYAAADdRIy+AAAACXBIWXMAAAsTAAALEwEAmpwYAAAB6klEQVQ4y42TiarqQAyGff/XEtwX3GsrWlcU675Uazu5fLlnpIpyTiAkTSf/JH8ymdvtJpvNRg6Hg9ogCFR3u51st1tVfGL7/f7pp/+Th4ZhKJn1ei3FYlE6nY5Uq1XJ5/OSy+XUr1Qqqo1GQ7LZrMabzaaUy2WNl0olqdVqUq/X9d9kMpGMiAhV2puOx+OzAlvR6XR6WjpB7Znz+SwUhY8oIKVyGLDL5SLL5VK63a60Wi2tyHVd/e71etLv9/UbAM4DaK0CGmPkXYhR9f1+18vwSbAx9JOQl7GO1U8Sx7G2/w0knfsCiFyvV+UEnuAVoPF4LIvFQqmAO2uh5z3/2TL28Xgo0Gw20yTsarVS3pig7/syn8/Vn06nenEURZLGeAImSaI8MWk4olL4Q0my9l04ByUfAWnB8zy9mSpQKqVKW9G7cNFHQIL8RGgdcL7TleLDKWuC5RyT/xWQtu0raLfbUigU9CXBpeM4upPsJ+eh51dAJsoS074FGgwGOhQmTmV2F//UMpzxlnkpAGKpdDgcKvBoNNL2vwGCaOI4NmEYqh8EgXEcx/i+bzzPM5PJxAwGAzMej81wODSu65ooivQsOeT+xzOve2gHgE1reijWZxhYhseG/GCYzI+1N+htSZK86LeYjacw5B/fzRNYYbmspQAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="30"
+        title="30"
+        src="/static/55e603915c3828db1a1086a5d6ee7d23/f058b/30.png"
+        srcset="/static/55e603915c3828db1a1086a5d6ee7d23/c26ae/30.png 158w,
+/static/55e603915c3828db1a1086a5d6ee7d23/6bdcf/30.png 315w,
+/static/55e603915c3828db1a1086a5d6ee7d23/f058b/30.png 630w,
+/static/55e603915c3828db1a1086a5d6ee7d23/40601/30.png 945w,
+/static/55e603915c3828db1a1086a5d6ee7d23/9239a/30.png 1246w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<ul>
+<li>그리고 <code class="language-text">lib/posts.js</code> 파일을 열어 아래와 같이 확장자명을 제외 한 posts 파일들의 이름 목록을 반환하는 <code class="language-text">getAllPostIds</code> 함수를 추가합니다.</li>
+</ul>
+<div class="gatsby-highlight" data-language="jsx"><pre class="language-jsx"><code class="language-jsx"><span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">getAllPostIds</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> fileNames <span class="token operator">=</span> fs<span class="token punctuation">.</span><span class="token function">readdirSync</span><span class="token punctuation">(</span>postsDirectory<span class="token punctuation">)</span>
+
+  <span class="token comment">// Returns an array that looks like this:</span>
+  <span class="token comment">// [</span>
+  <span class="token comment">//   {</span>
+  <span class="token comment">//     params: {</span>
+  <span class="token comment">//       id: 'ssg-ssr'</span>
+  <span class="token comment">//     }</span>
+  <span class="token comment">//   },</span>
+  <span class="token comment">//   {</span>
+  <span class="token comment">//     params: {</span>
+  <span class="token comment">//       id: 'pre-rendering'</span>
+  <span class="token comment">//     }</span>
+  <span class="token comment">//   }</span>
+  <span class="token comment">// ]</span>
+  <span class="token keyword">return</span> fileNames<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token parameter">fileName</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      <span class="token literal-property property">params</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token literal-property property">id</span><span class="token operator">:</span> fileName<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">\\.md$</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">,</span> <span class="token string">''</span><span class="token punctuation">)</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span></code></pre></div>
+<ul>
+<li>반환되는 값은 단순한 문자열 배열이 아닌 위의 설명과 같이 각 개체에 params 객체를 갖고 해당 객체에 동적 경로 이름에 맞는 키와 파일 이름을 값으로 포함하는 객체 배열이여야 합니다.</li>
+<li>그리고 <code class="language-text">pages/posts/[id].js</code> 파일의 <code class="language-text">getStaticPaths</code> 함수를 아래와 같이 수정해주세요.</li>
+</ul>
+<div class="gatsby-highlight" data-language="jsx"><pre class="language-jsx"><code class="language-jsx"><span class="token keyword">import</span> <span class="token punctuation">{</span> getAllPostIds <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'../../lib/posts'</span>
+
+<span class="token keyword">export</span> <span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">getStaticPaths</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> paths <span class="token operator">=</span> <span class="token function">getAllPostIds</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+    paths<span class="token punctuation">,</span>
+    <span class="token literal-property property">fallback</span><span class="token operator">:</span> <span class="token boolean">false</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre></div>
+<ul>
+<li>fallback 속성을 false 로 줄 경우 paths 에 들어있는 id 가 아닌 값이 경로로 들어 올 경우 404 페이지를 노출하게 합니다.</li>
+<li>이제 블로그 게시물 정보를 가져 올 <code class="language-text">getPostData</code> 함수를 <code class="language-text">lib/posts.js</code> 파일에 아래와 같이 추가해줍니다.</li>
+</ul>
+<div class="gatsby-highlight" data-language="jsx"><pre class="language-jsx"><code class="language-jsx"><span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">getPostData</span><span class="token punctuation">(</span><span class="token parameter">id</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> fullPath <span class="token operator">=</span> path<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>postsDirectory<span class="token punctuation">,</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>id<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">.md</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span>
+  <span class="token keyword">const</span> fileContents <span class="token operator">=</span> fs<span class="token punctuation">.</span><span class="token function">readFileSync</span><span class="token punctuation">(</span>fullPath<span class="token punctuation">,</span> <span class="token string">'utf8'</span><span class="token punctuation">)</span>
+
+  <span class="token comment">// Use gray-matter to parse the post metadata section</span>
+  <span class="token keyword">const</span> matterResult <span class="token operator">=</span> <span class="token function">matter</span><span class="token punctuation">(</span>fileContents<span class="token punctuation">)</span>
+
+  <span class="token comment">// Combine the data with the id</span>
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+    id<span class="token punctuation">,</span>
+    <span class="token operator">...</span>matterResult<span class="token punctuation">.</span>data
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre></div>
+<ul>
+<li>그리고 <code class="language-text">pages/posts/[id].js</code> 파일의 <code class="language-text">getStaticProps</code> 함수를 아래와 같이 작성해주세요.</li>
+</ul>
+<div class="gatsby-highlight" data-language="jsx"><pre class="language-jsx"><code class="language-jsx"><span class="token keyword">import</span> <span class="token punctuation">{</span> getAllPostIds<span class="token punctuation">,</span> getPostData <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'../../lib/posts'</span>
+
+<span class="token keyword">export</span> <span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">getStaticProps</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> params <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> postData <span class="token operator">=</span> <span class="token function">getPostData</span><span class="token punctuation">(</span>params<span class="token punctuation">.</span>id<span class="token punctuation">)</span>
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">props</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      postData
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre></div>
+<ul>
+<li>이제 동적 경로로 받아온 id 값으로 블로그 게시물 정보를 가져오고 해당 값을 컴포넌트에 props 로 넘겨 사용 할 수 있습니다.</li>
+<li>아래와 같이 Post 컴포넌트를 수정해주세요.</li>
+</ul>
+<div class="gatsby-highlight" data-language="jsx"><pre class="language-jsx"><code class="language-jsx"><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token function">Post</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> postData <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Layout</span></span><span class="token punctuation">></span></span><span class="token plain-text">
+      </span><span class="token punctuation">{</span>postData<span class="token punctuation">.</span>title<span class="token punctuation">}</span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span> <span class="token punctuation">/></span></span><span class="token plain-text">
+      </span><span class="token punctuation">{</span>postData<span class="token punctuation">.</span>id<span class="token punctuation">}</span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span> <span class="token punctuation">/></span></span><span class="token plain-text">
+      </span><span class="token punctuation">{</span>postData<span class="token punctuation">.</span>date<span class="token punctuation">}</span><span class="token plain-text">
+    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">Layout</span></span><span class="token punctuation">></span></span>
+  <span class="token punctuation">)</span>
+<span class="token punctuation">}</span></code></pre></div>
+<ul>
+<li>이제 아래 주소로 접속 하면 블로그 게시물 정보를 불러 온 모습을 확인 할 수 있습니다.
+<ul>
+<li><a href="http://localhost:3000/posts/ssg-ssr">http://localhost:3000/posts/ssg-ssr</a></li>
+<li><a href="http://localhost:3000/posts/pre-rendering">http://localhost:3000/posts/pre-rendering</a></li>
+</ul>
+</li>
+<li>아직은 게시물의 기본 정보만 가져왔을 뿐 게시물 내용은 가져오지 못했습니다.</li>
+<li>게시물 내용을 가져오기 위해 마크다운 컨텐츠를 렌더링 해주는 remark 라이브러리를 설치해주세요.</li>
+</ul>
+<div class="gatsby-highlight" data-language="jsx"><pre class="language-jsx"><code class="language-jsx">npm install remark remark<span class="token operator">-</span>html</code></pre></div>
+<ul>
+<li>그리고 <code class="language-text">lib/posts.js</code> 의 <code class="language-text">getPostData</code> 함수를 아래와 같이 수정해주세요.</li>
+</ul>
+<div class="gatsby-highlight" data-language="jsx"><pre class="language-jsx"><code class="language-jsx"><span class="token keyword">import</span> remark <span class="token keyword">from</span> <span class="token string">'remark'</span>
+<span class="token keyword">import</span> html <span class="token keyword">from</span> <span class="token string">'remark-html'</span>
+
+<span class="token keyword">export</span> <span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">getPostData</span><span class="token punctuation">(</span><span class="token parameter">id</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> fullPath <span class="token operator">=</span> path<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>postsDirectory<span class="token punctuation">,</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>id<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">.md</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span>
+  <span class="token keyword">const</span> fileContents <span class="token operator">=</span> fs<span class="token punctuation">.</span><span class="token function">readFileSync</span><span class="token punctuation">(</span>fullPath<span class="token punctuation">,</span> <span class="token string">'utf8'</span><span class="token punctuation">)</span>
+
+  <span class="token comment">// Use gray-matter to parse the post metadata section</span>
+  <span class="token keyword">const</span> matterResult <span class="token operator">=</span> <span class="token function">matter</span><span class="token punctuation">(</span>fileContents<span class="token punctuation">)</span>
+
+  <span class="token comment">// Use remark to convert markdown into HTML string</span>
+  <span class="token keyword">const</span> processedContent <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">remark</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>html<span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">process</span><span class="token punctuation">(</span>matterResult<span class="token punctuation">.</span>content<span class="token punctuation">)</span>
+  <span class="token keyword">const</span> contentHtml <span class="token operator">=</span> processedContent<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+  <span class="token comment">// Combine the data with the id and contentHtml</span>
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+    id<span class="token punctuation">,</span>
+    contentHtml<span class="token punctuation">,</span>
+    <span class="token operator">...</span>matterResult<span class="token punctuation">.</span>data
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre></div>
+<ul>
+<li>remark 함수는 비동기 함수이기 때문에 await 를 사용하기 위해 <code class="language-text">getPostData</code> 함수도 async 함수로 변경해주세요.</li>
+<li>그리고 <code class="language-text">pages/posts/[id].js</code> 파일의 <code class="language-text">getStaticProps</code> 함수에서 <code class="language-text">getPostData</code> 함수를 비동기로 가져오도록 아래와 같이 변경해주세요.</li>
+</ul>
+<div class="gatsby-highlight" data-language="jsx"><pre class="language-jsx"><code class="language-jsx"><span class="token keyword">export</span> <span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">getStaticProps</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> params <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// Add the "await" keyword like this:</span>
+  <span class="token keyword">const</span> postData <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">getPostData</span><span class="token punctuation">(</span>params<span class="token punctuation">.</span>id<span class="token punctuation">)</span>
+  <span class="token comment">// ...</span>
+<span class="token punctuation">}</span></code></pre></div>
+<ul>
+<li>그리고 Post 컴포넌트를 아래와 같이 수정해주세요.</li>
+</ul>
+<div class="gatsby-highlight" data-language="jsx"><pre class="language-jsx"><code class="language-jsx"><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token function">Post</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> postData <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Layout</span></span><span class="token punctuation">></span></span><span class="token plain-text">
+      </span><span class="token punctuation">{</span>postData<span class="token punctuation">.</span>title<span class="token punctuation">}</span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span> <span class="token punctuation">/></span></span><span class="token plain-text">
+      </span><span class="token punctuation">{</span>postData<span class="token punctuation">.</span>id<span class="token punctuation">}</span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span> <span class="token punctuation">/></span></span><span class="token plain-text">
+      </span><span class="token punctuation">{</span>postData<span class="token punctuation">.</span>date<span class="token punctuation">}</span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span> <span class="token punctuation">/></span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">dangerouslySetInnerHTML</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span> <span class="token literal-property property">__html</span><span class="token operator">:</span> postData<span class="token punctuation">.</span>contentHtml <span class="token punctuation">}</span><span class="token punctuation">}</span></span> <span class="token punctuation">/></span></span><span class="token plain-text">
+    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">Layout</span></span><span class="token punctuation">></span></span>
+  <span class="token punctuation">)</span>
+<span class="token punctuation">}</span></code></pre></div>
+<ul>
+<li>이제 게시물의 내용이 잘 노출되는 것을 확인 하실 수 있습니다.</li>
+<li>이제 위에서 배운 내용을 가지고 코드와 스타일을 조금 수정해주도록 하겠습니다.</li>
+<li>Update <code class="language-text">pages/posts/[id].js</code></li>
+</ul>
+<div class="gatsby-highlight" data-language="jsx"><pre class="language-jsx"><code class="language-jsx">npm install date<span class="token operator">-</span>fns</code></pre></div>
+<div class="gatsby-highlight" data-language="jsx"><pre class="language-jsx"><code class="language-jsx"><span class="token comment">// add components/date.js</span>
+
+<span class="token keyword">import</span> <span class="token punctuation">{</span> parseISO<span class="token punctuation">,</span> format <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'date-fns'</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token function">Date</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> dateString <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> date <span class="token operator">=</span> <span class="token function">parseISO</span><span class="token punctuation">(</span>dateString<span class="token punctuation">)</span>
+  <span class="token keyword">return</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>time</span> <span class="token attr-name">dateTime</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>dateString<span class="token punctuation">}</span></span><span class="token punctuation">></span></span><span class="token punctuation">{</span><span class="token function">format</span><span class="token punctuation">(</span>date<span class="token punctuation">,</span> <span class="token string">'LLLL d, yyyy'</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>time</span><span class="token punctuation">></span></span>
+<span class="token punctuation">}</span></code></pre></div>
+<div class="gatsby-highlight" data-language="jsx"><pre class="language-jsx"><code class="language-jsx"><span class="token comment">// Add this import</span>
+<span class="token keyword">import</span> Head <span class="token keyword">from</span> <span class="token string">'next/head'</span>
+<span class="token keyword">import</span> Date <span class="token keyword">from</span> <span class="token string">'../../components/date'</span>
+
+<span class="token comment">// Add this import at the top of the file</span>
+<span class="token keyword">import</span> utilStyles <span class="token keyword">from</span> <span class="token string">'../../styles/utils.module.css'</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token function">Post</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> postData <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Layout</span></span><span class="token punctuation">></span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Head</span></span><span class="token punctuation">></span></span><span class="token plain-text">
+        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span><span class="token punctuation">{</span>postData<span class="token punctuation">.</span>title<span class="token punctuation">}</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">Head</span></span><span class="token punctuation">></span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>article</span><span class="token punctuation">></span></span><span class="token plain-text">
+        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span> <span class="token attr-name">className</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>utilStyles<span class="token punctuation">.</span>headingXl<span class="token punctuation">}</span></span><span class="token punctuation">></span></span><span class="token punctuation">{</span>postData<span class="token punctuation">.</span>title<span class="token punctuation">}</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span><span class="token plain-text">
+        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">className</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>utilStyles<span class="token punctuation">.</span>lightText<span class="token punctuation">}</span></span><span class="token punctuation">></span></span><span class="token plain-text">
+          </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Date</span></span> <span class="token attr-name">dateString</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>postData<span class="token punctuation">.</span>date<span class="token punctuation">}</span></span> <span class="token punctuation">/></span></span><span class="token plain-text">
+        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span><span class="token plain-text">
+        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">dangerouslySetInnerHTML</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span> <span class="token literal-property property">__html</span><span class="token operator">:</span> postData<span class="token punctuation">.</span>contentHtml <span class="token punctuation">}</span><span class="token punctuation">}</span></span> <span class="token punctuation">/></span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>article</span><span class="token punctuation">></span></span><span class="token plain-text">
+    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">Layout</span></span><span class="token punctuation">></span></span>
+  <span class="token punctuation">)</span>
+<span class="token punctuation">}</span></code></pre></div>
+<ul>
+<li>Update <code class="language-text">pages/index.js</code></li>
+</ul>
+<div class="gatsby-highlight" data-language="jsx"><pre class="language-jsx"><code class="language-jsx"><span class="token comment">// Add this import</span>
+<span class="token keyword">import</span> Link <span class="token keyword">from</span> <span class="token string">'next/link'</span>
+<span class="token keyword">import</span> Date <span class="token keyword">from</span> <span class="token string">'../components/date'</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token function">Home</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> postData <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Layout</span></span><span class="token punctuation">></span></span><span class="token plain-text">
+			</span><span class="token punctuation">{</span><span class="token comment">/* Keep the existing code here */</span><span class="token punctuation">}</span><span class="token plain-text">
+      
+			</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span> <span class="token attr-name">className</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>utilStyles<span class="token punctuation">.</span>list<span class="token punctuation">}</span></span><span class="token punctuation">></span></span><span class="token plain-text">
+	       </span><span class="token punctuation">{</span>
+		       allPostsData<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span>id<span class="token punctuation">,</span> date<span class="token punctuation">,</span> title<span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">(</span>
+						<span class="token punctuation">{</span><span class="token comment">/* Replace li tag with this */</span><span class="token punctuation">}</span>
+	           <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">className</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>utilStyles<span class="token punctuation">.</span>listItem<span class="token punctuation">}</span></span> <span class="token attr-name">key</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>id<span class="token punctuation">}</span></span><span class="token punctuation">></span></span><span class="token plain-text">
+	             </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Link</span></span> <span class="token attr-name">href</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">/posts/</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>id<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">}</span></span><span class="token punctuation">></span></span><span class="token plain-text">
+                 </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span><span class="token punctuation">></span></span><span class="token punctuation">{</span>title<span class="token punctuation">}</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><span class="token plain-text">
+               </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">Link</span></span><span class="token punctuation">></span></span><span class="token plain-text">
+               </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">/></span></span><span class="token plain-text">
+               </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>small</span> <span class="token attr-name">className</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>utilStyles<span class="token punctuation">.</span>lightText<span class="token punctuation">}</span></span><span class="token punctuation">></span></span><span class="token plain-text">
+                 </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Date</span></span> <span class="token attr-name">dateString</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>date<span class="token punctuation">}</span></span> <span class="token punctuation">/></span></span><span class="token plain-text">
+               </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>small</span><span class="token punctuation">></span></span><span class="token plain-text">
+             </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+           <span class="token punctuation">)</span><span class="token punctuation">)</span>
+         <span class="token punctuation">}</span><span class="token plain-text">
+       </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">></span></span><span class="token plain-text">
+
+			</span><span class="token punctuation">{</span><span class="token comment">/* Keep the existing code here */</span><span class="token punctuation">}</span><span class="token plain-text">
+    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">Layout</span></span><span class="token punctuation">></span></span>
+  <span class="token punctuation">)</span>
+<span class="token punctuation">}</span></code></pre></div>
+<ul>
+<li>이렇게 홈페이지에서 게시물 목록까지 노출해주며 블로그 프로젝트는 완성이 되었습니다.</li>
+<li><code class="language-text">getStaticProps</code> 와 마찬가지로 <code class="language-text">getStaticPaths</code> 함수에서도 외부 API 데이터 등을 가져올 수 있습니다.</li>
+<li>동적 경로를 사용 할 파일 이름을 <code class="language-text">[...id].js</code> 처럼 <code class="language-text">...</code> 을 이용 할 경우 모든 경로를 캡쳐 하도록 확장 할 수 있습니다.</li>
+<li><code class="language-text">[...id].js</code> 은 <code class="language-text">/posts/a</code> 와도 매칭되고 <code class="language-text">/posts/a/b</code> 와도 매칭되고 <code class="language-text">/posts/a/b/c</code> 와도 매칭됩니다.</li>
+<li>이 경우엔 <code class="language-text">getStaticPaths</code> 에서 아래와 같이 배열을 반환해야 합니다.</li>
+</ul>
+<div class="gatsby-highlight" data-language="jsx"><pre class="language-jsx"><code class="language-jsx"><span class="token keyword">return</span> <span class="token punctuation">[</span>
+  <span class="token punctuation">{</span>
+    <span class="token literal-property property">params</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token comment">// Statically Generates /posts/a/b/c</span>
+      <span class="token literal-property property">id</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'a'</span><span class="token punctuation">,</span> <span class="token string">'b'</span><span class="token punctuation">,</span> <span class="token string">'c'</span><span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment">//...</span>
+<span class="token punctuation">]</span></code></pre></div>
+<div class="gatsby-highlight" data-language="jsx"><pre class="language-jsx"><code class="language-jsx"><span class="token keyword">export</span> <span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">getStaticProps</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> params <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// params.id will be like ['a', 'b', 'c']</span>
+<span class="token punctuation">}</span></code></pre></div>
+<ul>
+<li>만일 커스텀 404 페이지를 만들고 싶다면 <code class="language-text">pages/404.js</code> 를 생성해주면 됩니다. 이 파일은 빌드 시 정적으로 생성됩니다.</li>
+</ul>
+<div class="gatsby-highlight" data-language="jsx"><pre class="language-jsx"><code class="language-jsx"><span class="token comment">// pages/404.js</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token function">Custom404</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">></span></span><span class="token plain-text">404 - Page Not Found</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span>
+<span class="token punctuation">}</span></code></pre></div>
+<h1>API Routes</h1>
+<hr>
+<ul>
+<li>Next.js 에선 API Routes 가 지원되어 API endpoint 를 Node.js 서버리스 함수로 쉽게 생성 할 수 있습니다.</li>
+<li>이번 프로젝트에 필요하진 않지만 간단히 알아보도록 하겠습니다.</li>
+<li><code class="language-text">pages/api</code> 폴더 내에 다음과 같은 형식을 가진 함수를 작성하여 API endpoint 를 생성 할 수 있습니다.</li>
+</ul>
+<div class="gatsby-highlight" data-language="jsx"><pre class="language-jsx"><code class="language-jsx"><span class="token comment">// req = HTTP incoming message, res = HTTP server response</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token function">handler</span><span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span> res</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// ...</span>
+<span class="token punctuation">}</span></code></pre></div>
+<ul>
+<li><code class="language-text">pages/api/hello.js</code> 파일을 아래와 같이 만들어 간단한 API endpoint 를 만들어보겠습니다.</li>
+</ul>
+<div class="gatsby-highlight" data-language="jsx"><pre class="language-jsx"><code class="language-jsx"><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token function">handler</span><span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span> res</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  res<span class="token punctuation">.</span><span class="token function">status</span><span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token literal-property property">text</span><span class="token operator">:</span> <span class="token string">'Hello'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span></code></pre></div>
+<ul>
+<li>이제 <a href="http://localhost:3000/api/hello"><code class="language-text">http://localhost:3000/api/hello</code></a> 로 접속 시 <code class="language-text">{"text":"Hello"}</code> 라는 값이 request 로 반환되는 것을 확인 하실 수 있습니다.</li>
+<li><code class="language-text">getStaticProps</code> 나 <code class="language-text">getStaticPaths</code> 에서 API Route 를 fetch 하려 하면 안됩니다. (서버측에서만 실행되기 때문)</li>
+<li>대신 <code class="language-text">getStaticProps</code> 나 <code class="language-text">getStaticPaths</code> 에 직접 server-side code 를 작성하세요.</li>
+<li>API Route 를 사용하는 좋은 케이스는 form 입력을 처리하는 api 를 만들어 직접 데이터베이스에 저장하는 코드를 작성 할 수 있습니다.</li>
+<li>API Route 코드는 클라이언트 번들의 일부가 아니므로 안전하게 서버측 코드를 작성 할 수 있습니다.</li>
+<li>API Route 또한 동적으로 경로를 설정 할 수 있습니다. 자세한 내용은 <a href="https://nextjs.org/docs/api-routes/dynamic-api-routes">여기</a>에서 확인해주세요.</li>
+</ul>
+<h1>Deploying</h1>
+<hr>
+<ul>
+<li>Next.js 로 만든 프로젝트는 Next.js 와 같은 개발진이 만든 Vercel 이라는 <code class="language-text">Jam Stack</code> 배포 플랫폼을 이용해 간단하게 배포가 가능합니다.
+<ul>
+<li><code class="language-text">Jam Stack</code> 이란 Javscript, API, Markup 만으로 이루어진 웹 Stack 을 이야기 합니다.</li>
+<li>이중 가장 중요한 것이 Markup 인데 최대한 많은 페이지를 미리 Static HTML 로 정적 생성하여(SSG) 캐싱을 이용해 웹서버의 사용량을 줄이고 사용자의 <code class="language-text">First meaningful paint</code> 속도를 높히자는 의미가 있습니다.</li>
+<li>자세한 내용은 아래 글을 참고해주세요.
+<ul>
+<li><a href="https://jbee.io/web/jam-stack/">https://jbee.io/web/jam-stack/</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>우선 깃허브에 새로운 레파지토리를 생성하고 우리가 만든 프로젝트를 푸시해주세요.</li>
+<li>그리고 <a href="https://vercel.com/signup">https://vercel.com/signup</a> 에 들어가 새로운 계정을 만들어주세요. <code class="language-text">Continue with GitHub</code> 를 선택해 깃허브 아이디로 진행하면 편리합니다.</li>
+<li>계정을 만들고 나면 아까 생성한 깃 레파지토리를 Vercel 에 import 해주세요.</li>
+<li>아래와 같은 설정은 기본값을 이용 할 수 있어 따로 변경 할 필요가 없습니다. Next.js 앱을 가지고 있음을 자동으로 감지하고 최적의 빌드 설정을 선택합니다.
+<ul>
+<li>Project Name</li>
+<li>Root Directory</li>
+<li>Build Command</li>
+<li>Output Directory</li>
+<li>Development Command</li>
+</ul>
+</li>
+<li>이제 Deploy 를 하면 Next.js app 이 자동으로 빌드가 시작됩니다.</li>
+<li>빌드게 끝나면 배포된 URL 이 생성되어 바로 확인해볼 수 있습니다.</li>
+<li>이제 master 브랜치에 새로운 푸쉬가 생길 때 마다 자동으로 빌드와 배포가 진행됩니다.</li>
+<li>만일 다음 과정과 같이 Pull Request 를 이용하여 코드를 업데이트 할 경우 vercel 이 production 에 배포되기 전에 preview deployment URL 이 제공되어 미리 결과물을 테스트 할 수 있습니다.
+<ul>
+<li>Create a new <strong>branch</strong> on your app.</li>
+<li>Make some changes and push to GitHub.</li>
+<li>Create a new <strong>pull request</strong> (<a href="https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request">GitHub help page</a>).</li>
+</ul>
+</li>
+</ul>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/421a3d64a9a03f88cddef58b07a176e6/20982/31.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 16.455696202531648%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAADCAYAAACTWi8uAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAnklEQVQI112OwQqCUBBF9T/d+B9u/B2/wdxFELjKTLPSzKBlVL73NOjEG4yigcvMvXeYuU6SJHieRxRF2Lr3GqUHemVQ2qDMgDaDdMsfk69FH0X/3XXCMMR1XXzfl4NZXjJfLCm2e5q249CcyDeV8NW6pD525MVOuEV7vrDKCsqq5nrrcdI0JQgCZnHMC+STGUaBTfGZv3hKMj0l/vffGtbY3WEgrQkAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="31"
+        title="31"
+        src="/static/421a3d64a9a03f88cddef58b07a176e6/f058b/31.png"
+        srcset="/static/421a3d64a9a03f88cddef58b07a176e6/c26ae/31.png 158w,
+/static/421a3d64a9a03f88cddef58b07a176e6/6bdcf/31.png 315w,
+/static/421a3d64a9a03f88cddef58b07a176e6/f058b/31.png 630w,
+/static/421a3d64a9a03f88cddef58b07a176e6/20982/31.png 778w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<ul>
+<li>preview deployment 에 문제가 없다면 코드를 master 브랜치에 merge 해 프로덕션에 배포 할 수 있습니다.</li>
+<li>이것이 Vercel 에서 이야기 하는 <strong>DPS</strong>(<strong>D</strong>evelop, <strong>P</strong>review and <strong>S</strong>hip) 워크플로우 입니다.
+<ul>
+<li><strong>Develop</strong>: We’ve written code in Next.js and used the Next.js development server running to take advantage of its hot reloading feature.</li>
+<li><strong>Preview</strong>: We’ve pushed changes to a branch on GitHub, and Vercel created a preview deployment that’s available via a URL. We can share this preview URL with others for feedback. In addition to doing <em>code reviews</em>, you can do <em>deployment previews</em>.</li>
+<li><strong>Ship</strong>: We’ve merged the pull request to <code class="language-text">main</code> to ship to production.</li>
+</ul>
+</li>
+</ul>
+<h2>이후 작성 할 내용</h2>
+<hr>
+<ol>
+<li>SWR</li>
+</ol>
+<h2>참고 자료</h2>
+<hr>
+<ul>
+<li><a href="https://nextjs.org/learn/basics/create-nextjs-app">Create a Next.js App</a></li>
+</ul></section><hr/><footer><div class="bio"><div data-gatsby-image-wrapper="" style="width:50px;height:50px" class="gatsby-image-wrapper bio-avatar"><div aria-hidden="true" data-placeholder-image="" style="opacity:1;transition:opacity 500ms linear;background-color:#080808;width:50px;height:50px;position:relative"></div><picture><source type="image/avif" data-srcset="/static/6011ca8e0c3bceb22459a3400711b66d/d4bf4/profile-pic.avif 50w,/static/6011ca8e0c3bceb22459a3400711b66d/ee81f/profile-pic.avif 100w" sizes="50px"/><source type="image/webp" data-srcset="/static/6011ca8e0c3bceb22459a3400711b66d/3faea/profile-pic.webp 50w,/static/6011ca8e0c3bceb22459a3400711b66d/6a679/profile-pic.webp 100w" sizes="50px"/><img data-gatsby-image-ssr="" layout="fixed" data-main-image="" style="opacity:0" sizes="50px" decoding="async" loading="lazy" data-src="/static/6011ca8e0c3bceb22459a3400711b66d/e5610/profile-pic.png" data-srcset="/static/6011ca8e0c3bceb22459a3400711b66d/e5610/profile-pic.png 50w,/static/6011ca8e0c3bceb22459a3400711b66d/e9b55/profile-pic.png 100w" alt="Profile picture"/></picture><noscript><picture><source type="image/avif" srcSet="/static/6011ca8e0c3bceb22459a3400711b66d/d4bf4/profile-pic.avif 50w,/static/6011ca8e0c3bceb22459a3400711b66d/ee81f/profile-pic.avif 100w" sizes="50px"/><source type="image/webp" srcSet="/static/6011ca8e0c3bceb22459a3400711b66d/3faea/profile-pic.webp 50w,/static/6011ca8e0c3bceb22459a3400711b66d/6a679/profile-pic.webp 100w" sizes="50px"/><img data-gatsby-image-ssr="" layout="fixed" data-main-image="" style="opacity:0" sizes="50px" decoding="async" loading="lazy" src="/static/6011ca8e0c3bceb22459a3400711b66d/e5610/profile-pic.png" srcSet="/static/6011ca8e0c3bceb22459a3400711b66d/e5610/profile-pic.png 50w,/static/6011ca8e0c3bceb22459a3400711b66d/e9b55/profile-pic.png 100w" alt="Profile picture"/></picture></noscript><script type="module">const t="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;if(t){const t=document.querySelectorAll("img[data-main-image]");for(let e of t){e.dataset.src&&(e.setAttribute("src",e.dataset.src),e.removeAttribute("data-src")),e.dataset.srcset&&(e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset"));const t=e.parentNode.querySelectorAll("source[data-srcset]");for(let e of t)e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset");e.complete&&(e.style.opacity=1,e.parentNode.parentNode.querySelector("[data-placeholder-image]").style.opacity=0)}}</script></div><p>Blog by <!-- --><strong>Seungyoub Kim</strong> <!-- --><br/>즐겁고 폼나게 일하는 개발자가 되고 싶습니다.<!-- --></p></div></footer></article><nav class="blog-post-nav"><ul style="display:flex;flex-wrap:wrap;justify-content:space-between;list-style:none;padding:0"><li><a rel="prev" href="/redux-saga/">← <!-- -->Redux-Saga<!-- --></a></li><li><a rel="next" href="/react17/">React 17<!-- --> →<!-- --></a></li></ul></nav><div class="comments-wrapper"><div>Loading script...</div><div></div></div></main><footer><a href="https://github.com/seungyoubkim" target="_blank">Github</a></footer></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-TVYZ629KX1"></script><script>
+      
+      
+      if(true) {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-TVYZ629KX1', {"send_page_view":false});
+      }
+      </script><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/nextjs/";window.___webpackCompilationHash="aa9e879ada8149eb1fbe";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-f991a7778357fc7bc796.js"],"app":["/app-1144fa4fd8b53bd6f8d6.js"],"component---src-pages-404-js":["/component---src-pages-404-js-c9e19930794994a32d89.js"],"component---src-pages-index-js":["/component---src-pages-index-js-9eaef437c53c5b90528a.js"],"component---src-pages-using-typescript-tsx":["/component---src-pages-using-typescript-tsx-71e75b82cbf64a93d7d6.js"],"component---src-templates-blog-post-js":["/component---src-templates-blog-post-js-37ec0ba6297eb8d552d6.js"]};/*]]>*/</script><script src="/polyfill-f991a7778357fc7bc796.js" nomodule=""></script><script src="/app-1144fa4fd8b53bd6f8d6.js" async=""></script><script src="/framework-d02ab48d6921f56864a6.js" async=""></script><script src="/webpack-runtime-6dc06fccff6fbdcb5cee.js" async=""></script></body></html>
