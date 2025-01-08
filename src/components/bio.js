@@ -45,7 +45,7 @@ const Bio = () => {
         <p>
           Blog by <strong>{author.name}</strong> {author?.summary || null}
           <br />
-          즐겁고 폼나게 일하는 개발자가 되고 싶습니다.
+          즐겁게 일하는 개발자가 되고 싶습니다.
         </p>
       )}
     </div>
