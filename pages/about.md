@@ -3,8 +3,24 @@ title: "About"
 layout: Post
 content-type: "static"
 permalink: /about
+custom_css: about
 ---
 
-# About
+<div class="profile-container">
+  <div class="profile-image">
+    <img src="/assets/img/profile.jpg" alt="프로필 이미지">
+  </div>
 
-Jekyll Garden is a clean, minimal Jekyll theme designed to make publishing your Obsidian vault as a static website incredibly easy. It bridges the gap between private knowledge management and public sharing, allowing you to create a digital garden where your notes are interconnected through wiki-style links and easily discoverable through search. 
+  <div class="profile-text">
+    <p class="greeting">안녕하세요. 웹 개발을 주로 하는 <strong>김승엽</strong>입니다.</p>
+
+    <h2 class="section-title">Introduce</h2>
+    <p>기술은 가치를 잘 제공하기 위한 <strong>수단</strong>이라고 생각합니다.</p>
+    <p>항상 스스로 <strong>왜</strong>에 대해 질문하고 고민해야 한다고 생각합니다.</p>
+    <p>모든 일은 <strong>협업</strong>이 가장 중요하다고 생각합니다.</p>
+
+    <h2 class="section-title">Contact</h2>
+    <a href="mailto:shas15@kakao.com"><p>shas15@kakao.com</p></a>
+    <a href="tel:+8210-7154-2156"><p>010 7154 2156</p></a>
+  </div>
+</div>

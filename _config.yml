@@ -24,9 +24,9 @@
 # Preferences (controls template behavior)
 preferences:
   homepage:
-    enabled: false
-  search:
     enabled: true
+  search:
+    enabled: false
   backlinks:
     enabled: true
   pagepreview:
@@ -35,49 +35,40 @@ preferences:
     enabled: true
 
 # Site Configuration
-title: "Your Site Title"
-heading: "Your Name"
-description: "A brief description of your site"
-url: "https://yoursite.com"
+title: "Seungyoub's Blog"
+heading: "Seungyoub"
+description: "Hello My Name is Seungyoub Kim"
+url: "https://seungyoubkim.github.io"
 baseurl: ""
 
 # Asset Configuration
-apple_touch_icon: "/assets/img/profile.png"
+apple_touch_icon: "/assets/img/profile.jpg"
 css_file: "/assets/css/style.css"
 ie_css: "/assets/css/ie-target.css"
 
 # Menu Items
 menu:
-  - title: "Notes"
-    url: "/notes"
-  - title: "Blog"
-    url: "/blog"
   - title: "About"
     url: "/about"
+  - title: "Blog"
+    url: "/blog"
 
 # Footer
 footer:
-  copyright: "© 2024 Your Name. Contents under CC-BY-NC"
+  copyright: "© 2026 Seungyoub Kim. Contents under CC-BY-NC"
   credits:
     enabled: true
     url: "/credits"
     text: "Credits"
 
 # Collections
-collections:
-  notes:
-    output: true
-    permalink: /:collection/:name
+# collections:
+#   notes:
+#     output: true
+#     permalink: /:collection/:name
 
 # Defaults
 defaults:
-  - scope:
-      path: ""
-      type: "notes"
-    values:
-      layout: "Post"
-      content-type: "notes"
-      feed: "show"
   - scope:
       path: ""
       type: "posts"

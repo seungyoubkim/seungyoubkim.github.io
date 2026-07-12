@@ -1,11 +1,11 @@
 <!-- feed with filter-->
 <div class="related-wrapper">
-{% assign note_items = site.notes | sort: "date" | reverse %}
-{% for note_items in note_items %}
-    {%- if note_items.feed == "show" -%}
+{% assign post_items = site.posts | sort: "date" | reverse %}
+{% for post in post_items %}
+    {%- if post.feed == "show" -%}
             <div class="notelist-feed">
-                <a href="{{ site.baseurl }}{{note_items.url}}">
-                    <p>{{ note_items.title }}</p>
+                <a href="{{ site.baseurl }}{{post.url}}">
+                    <p>{{ post.title }}</p>
                 </a>
             </div>
     {%- endif -%}

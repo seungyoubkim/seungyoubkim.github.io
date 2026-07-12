@@ -4,9 +4,25 @@
 
 layout: Post
 permalink: /
-title: Jekyll Garden
+title: Home
+custom_css: about
 ---
 
-Jekyll Garden is a simple theme that turns your Obsidian notes into a beautiful website. If you use Obsidian for note-taking, this theme makes it easy to publish your markdown files as a connected website with wiki-style links and full-text search.
+<div class="profile-container">
+  <div class="profile-image">
+    <img src="/assets/img/profile.jpg" alt="프로필 이미지">
+  </div>
 
-Start by reading [[Getting Started]] to set up your own Jekyll Garden. Learn how to use [[Wiki Links]] to connect your notes, explore the [[Markdown Guide]] for formatting, and customize your site with the [[Customization]] guide. When you're ready to share your notes online, follow the [[Deployment]] instructions.
+  <div class="profile-text">
+    <p class="greeting">안녕하세요. 웹 개발을 주로 하는 <strong>김승엽</strong>입니다.</p>
+
+    <h2 class="section-title">Introduce</h2>
+    <p>기술은 가치를 잘 제공하기 위한 <strong>수단</strong>이라고 생각합니다.</p>
+    <p>항상 스스로 <strong>왜</strong>에 대해 질문하고 고민해야 한다고 생각합니다.</p>
+    <p>모든 일은 <strong>협업</strong>이 가장 중요하다고 생각합니다.</p>
+
+    <h2 class="section-title">Contact</h2>
+    <a href="mailto:shas15@kakao.com"><p>shas15@kakao.com</p></a>
+    <a href="tel:+8210-7154-2156"><p>010 7154 2156</p></a>
+  </div>
+</div>
