@@ -1,58 +1,196 @@
+/* =========================================
+   1. 상단 프로필 영역 특화 스타일
+   ========================================= */
 .profile-container {
-    display: flex;
-    gap: var(--space-lg);
-    align-items: flex-start;
-    margin-top: var(--space-md); 
+  display: flex;
+  gap: var(--space-lg);
+  align-items: flex-start;
+  margin-top: var(--space-md); 
 }
-  
-.profile-image {
-    flex-shrink: 0;
-    width: 220px;
-}
-  
-.profile-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 0.5rem;
-    display: block;
-    margin: 0;
-}
-  
-.profile-text {
-    flex-grow: 1;
-}
-  
-.profile-text .greeting {
-    color: var(--text);
-    font-size: var(--scale-base);
-    margin-bottom: var(--space-md);
-    font-weight: var(--weight-medium);
-}
-  
-.profile-text .section-title {
-    color: var(--brand) !important;
-    font-size: var(--scale-lg);
-    font-weight: var(--weight-bold);
-    margin-top: var(--space-md);
-    margin-bottom: var(--space-xs);
-    border-bottom: none !important; 
-}
-  
-.profile-text p {
-    color: var(--text);
-    margin-bottom: var(--space-xs);
-    line-height: var(--line-height);
-    font-size: var(--scale-base);
-}
-  
-@media (max-width: 768px) {
-    .profile-container {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
 
-    .profile-image {
-      width: 180px;
-    }
+.profile-image {
+  flex-shrink: 0;
+  width: 220px;
+}
+
+.profile-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  display: block;
+  margin: 0;
+}
+
+.profile-text {
+  flex-grow: 1;
+}
+
+.profile-text .greeting {
+  color: var(--text);
+  font-size: var(--scale-base);
+  margin-bottom: var(--space-md);
+  font-weight: var(--weight-medium);
+}
+
+.profile-text p {
+  color: var(--text);
+  margin-bottom: var(--space-xs);
+  line-height: var(--line-height);
+  font-size: var(--scale-base);
+}
+
+/* 연락처 링크 밑줄 제거 및 색상 유지 */
+.profile-text p a {
+  text-decoration: none;
+  color: var(--text);
+  transition: color 0.2s ease;
+}
+
+.profile-text p a:hover {
+  color: var(--brand);
+}
+
+/* 모바일 환경 대응 반응형 레이아웃 */
+@media (max-width: 768px) {
+  .profile-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .profile-image {
+    width: 180px;
+  }
+}
+
+
+/* =========================================
+   2. 공통 콘텐츠 섹션 스타일 (어디든 재사용 가능)
+   ========================================= */
+
+/* 공통 섹션 제목 (프로필, 이력서 모두 적용) */
+.section-title {
+  color: var(--brand) !important; 
+  font-size: var(--scale-lg);
+  font-weight: var(--weight-bold);
+  margin-top: var(--space-md);
+  margin-bottom: var(--space-xs);
+  border-bottom: none !important; 
+}
+
+.content-section {
+  margin-top: var(--space-xl);
+  width: 100%;
+}
+
+/* 메인 아이템 (회사명, 학교명 등) */
+.content-item {
+  margin-bottom: var(--space-xl);
+}
+
+.item-title {
+  color: var(--title);
+  font-size: var(--scale-lg);
+  font-weight: var(--weight-bold);
+  margin-bottom: var(--space-xs);
+}
+
+.item-title-gray {
+    color: var(--text);
+    opacity: 0.7;
+}
+
+.item-subtitle {
+  color: var(--text);
+  font-size: var(--scale-base);
+  margin-bottom: var(--space-lg);
+  opacity: 0.8;
+}
+
+.item-subtitle strong {
+  color: var(--title);
+  font-weight: var(--weight-bold);
+}
+
+/* 텍스트 위주의 심플한 리스트 (Skill, Education, 업무 성과 등) */
+.simple-list {
+  list-style-type: disc;
+  padding-left: var(--space-md);
+  margin-bottom: var(--space-md);
+}
+
+.simple-list li {
+  color: var(--text);
+  font-size: var(--scale-base);
+  line-height: var(--line-height);
+  margin-bottom: var(--space-xs);
+}
+
+/* 리스트 내 중첩 리스트 (하위 항목) */
+.simple-list .nested-list {
+  list-style-type: circle;
+  padding-left: var(--space-md);
+  margin-top: var(--space-xs);
+}
+
+/* 기간/날짜 표시용 (약간 흐리게) */
+.date-text {
+  color: var(--text);
+  opacity: 0.6;
+  margin-right: var(--space-xs);
+}
+
+/* 서브 아이템 (특정 프로젝트나 상세 단위) */
+.sub-item {
+  margin-bottom: var(--space-lg);
+}
+
+.sub-item-title {
+  color: var(--title);
+  font-size: var(--scale-base);
+  font-weight: var(--weight-bold);
+  margin-bottom: var(--space-xs);
+}
+
+.sub-item-desc {
+  color: var(--text);
+  font-size: var(--scale-sm);
+  margin-bottom: var(--space-md);
+}
+
+/* 파일 다운로드 및 아이콘 링크 스타일 */
+.icon-link {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  text-decoration: none !important;
+  color: var(--title);
+  font-size: var(--scale-base);
+  font-weight: var(--weight-bold);
+  transition: color 0.2s ease;
+  margin-bottom: var(--space-xs);
+}
+
+.icon-link:hover {
+  color: var(--brand);
+}
+
+.icon-link svg {
+  width: 1.2rem;
+  height: 1.2rem;
+  fill: currentColor;
+}
+
+.file-size {
+  color: var(--text);
+  font-weight: normal;
+  font-size: var(--scale-sm);
+  opacity: 0.6;
+  margin-left: 4px;
+}
+
+/* 섹션 간 구분선 */
+.content-divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: var(--space-lg) 0;
 }
