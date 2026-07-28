@@ -182,21 +182,22 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: clamp(1.2rem, 4vw, 1.4rem);
   font-weight: var(--weight-bold);
-  margin-bottom: var(--space-lg);
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-md);
 }
 
 h2 {
   font-size: clamp(1.1rem, 3vw, 1.2rem);
   font-weight: var(--weight-bold);
-  margin-top: var(--space-xl);
-  margin-bottom: var(--space-md);
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-sm);
 }
 
 h3 {
   font-size: clamp(1rem, 2vw, 1.2rem);
   font-weight: var(--weight-bold);
-  margin-top: var(--space-lg);
-  margin-bottom: var(--space-sm);
+  margin-top: var(--space-md);
+  margin-bottom: var(--space-xs);
 }
 
 h4, h5, h6 { 
@@ -206,7 +207,7 @@ h4, h5, h6 {
 
 p {
   font-size: var(--scale-base); 
-  margin-bottom: var(--space-md);
+  margin-bottom: var(--space-sm);
   color: var(--text);
   line-height: 1.7;
   font-weight: 400;
@@ -402,7 +403,7 @@ pre {
   padding: var(--space-md);
   border-radius: 0.5rem;
   overflow-x: auto;
-  margin: var(--space-lg) 0;
+  margin: var(--space-md) 0;
   border: 1px solid var(--border);
 }
 
@@ -777,4 +778,12 @@ li a[href^="http://"]:after, li a[href^="https://"]:after {
   background: url('data:image/svg+xml;utf8,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%20fill=%22none%22%20stroke=%22%23555%22%20stroke-width=%222%22%20stroke-linecap=%22round%22%20stroke-linejoin=%22round%22%3E%3Cpath%20d=%22M5%2019L19%205M5%205h14v14%22/%3E%3C/svg%3E') no-repeat center center;
   background-size: 1em 1em;
   opacity: 0.7;
+}
+
+blockquote > p {
+  margin: 0;
+}
+
+hr {
+  margin: var(--space-md) 0;
 }
