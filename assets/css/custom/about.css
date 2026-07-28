@@ -154,7 +154,25 @@
 .sub-item-desc {
   color: var(--text);
   font-size: var(--scale-sm);
+  margin-bottom: var(--space-xs);
+}
+
+.sub-item-tech-stack {
+  display: flex;
+  gap: var(--space-xs);
   margin-bottom: var(--space-md);
+}
+
+.sub-item-tech-stack-badge {
+  display: inline-block;
+  padding: 4px 8px;
+  background-color: var(--brand);
+  color: white;
+  border-radius: 20px;
+  font-size: var(--scale-xs);
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  line-height: 1.25;
 }
 
 /* 파일 다운로드 및 아이콘 링크 스타일 */
