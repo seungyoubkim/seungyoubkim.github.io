@@ -429,7 +429,7 @@ function Todos() {
 
 ## 이후 작성 할 내용
 ---
-1. [Redux](/redux)
+1. [Redux](/blog/redux)
 
 ## 추가로 읽어보면 좋을 아티클
 ---

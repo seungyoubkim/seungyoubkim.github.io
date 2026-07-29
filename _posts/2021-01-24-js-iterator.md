@@ -54,6 +54,7 @@ console.log(iterator.next()) // {done: true, value: undefined}
 - 이어서 Iterable 에 대해 알아보기 이전에 ES6 에서 추가 된 심볼(Symbol) 에 대해 먼저 알아보겠습니다.
 - 심볼은 ES6 에서 새롭게 추가 된 7번째 타입으로 변경 불가능한 원시 타입의 값입니다.
     - 자바스크립트는 ES5 까지 아래의 6개의 타입만이 존재했습니다.
+        
         - 원시 타입 (primitive data type)
             - Boolean
             - null
@@ -425,7 +426,7 @@ function _asyncToGenerator(fn) {
 
 ## 이후 작성 할 내용
 ---
-1. [redux-saga](/redux-saga)
+1. [redux-saga](/blog/redux-saga)
 2. 함수형 프로그래밍
 
 ## 참고 자료

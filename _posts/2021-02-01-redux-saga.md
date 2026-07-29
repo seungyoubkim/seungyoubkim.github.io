@@ -5,7 +5,7 @@ date: 2021-02-01
 ---
 > ⚠️ 해당 글의 예시 코드 및 이미지는 모두 참고 자료에서 가져 와 정리 한 것입니다.
 
-지난번에 [Redux](/redux) 에 대해서 알아보았는데요. 이번엔 Redux Middleware 중 현재 가장 핫하다고 할 수 있는 Redux-Saga 에 대해 알아보도록 하겠습니다.
+지난번에 [Redux](/blog/redux) 에 대해서 알아보았는데요. 이번엔 Redux Middleware 중 현재 가장 핫하다고 할 수 있는 Redux-Saga 에 대해 알아보도록 하겠습니다.
 
 Redux-Saga 에서는 ES6 의 Generator 를 사용하고 있기 때문에 이에 대한 기본적인 내용은 이전 [자바스크립트 Iterator](/js-iterator) 글을 참고해주세요.
 

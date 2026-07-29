@@ -24,6 +24,7 @@ let str: string = 'hi'
 ```
 
 - 타입스크립트에는 크게 아래 12가지 타입이 있습니다.
+
     - Boolean
         
     - Number
