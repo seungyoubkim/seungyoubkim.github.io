@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
     <meta content="width=device-width, initial-scale=1" name="viewport" />
@@ -92,7 +92,8 @@
 
              <!--- Post Layout-->
              {%- if page.content-type == "post"  -%}
-                 <h1>{{page.title}}</h1>
+                 <h1 class="post-title">{{page.title}}</h1>
+                 <p class="post-date">{{page.date | date: "%Y-%m-%d"}} 발행</p>
                  {%- include Content.html -%}
                  {%- if site.preferences.backlinks.enabled -%}
                  {%- include Backlinks.html -%}
@@ -114,6 +115,7 @@
                             <div class="notelist-feed">
                                 <a href="{{ site.baseurl }}{{post_items.url}}">
                                     <p>{{ post_items.title }}</p>
+                                    <p class="notelist-feed-date">{{post_items.date | date: "%Y-%m-%d"}}</p>
                                 </a>
                             </div>
                     {%- endif -%}

@@ -605,6 +605,22 @@ td {
   font-weight: var(--weight-medium);
 }
 
+.notelist-feed .notelist-feed-date {
+  color: var(--text);
+  opacity: 0.6;
+  font-size: var(--scale-sm);
+}
+
+.post-title {
+  margin-bottom: 0.4rem;
+}
+
+.post-date {
+  font-size: var(--scale-sm);
+  color: var(--text);
+  opacity: 0.8;
+}
+
 .list-feed {
   border-bottom: 1px solid var(--border);
   padding: var(--space-sm) 0;
