@@ -4,7 +4,7 @@
 <head>
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <meta content="{{ site.title | default: site.heading }}" property="og:site_name" />
-    <meta content="{{ site.description | default: 'A Jekyll Garden site' }}" property="og:description">
+    <meta content="{{ site.description | default: "Seungyoub's Blog" }}" property="og:description">
     <meta content="{{ site.url }}/about/" property="article:author">
     {%- if site.og_image -%}
     <meta property="og:image" content="{{ site.baseurl }}{{ site.og_image }}">
@@ -21,6 +21,7 @@
     <meta content="website" property="og:type">
     <meta content="{{ site.url }}{{ page.url }}" property="og:url">
     {%- endif -%}
+    <link rel="icon" href="/assets/img/favicon.png" type="image/x-icon" sizes="any" />
 
     <title>{%- if page.title -%}{{ page.title }} - {%- endif -%}{{ site.heading }}</title>
     <link rel="canonical" href="{{site.url}}{{page.url}}" />
