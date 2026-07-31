@@ -53,6 +53,10 @@
     <![endif]-->
     <!--<link href="/assets/css/prism.css" rel="stylesheet" />-->
     <link rel="alternate" type="application/rss+xml" href="{{ site.url }}/feed.xml">
+
+    {% if page.noindex %}
+        <meta name="robots" content="noindex, nofollow">
+    {% endif %}
 </head>
 
 <body>
