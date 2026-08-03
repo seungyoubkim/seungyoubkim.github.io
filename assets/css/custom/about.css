@@ -160,6 +160,7 @@
 
 .sub-item-tech-stack {
   display: flex;
+  flex-wrap: wrap;
   gap: var(--space-xs);
   margin-bottom: var(--space-md);
 }
