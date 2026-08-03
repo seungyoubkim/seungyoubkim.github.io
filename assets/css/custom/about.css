@@ -135,8 +135,9 @@
 /* 기간/날짜 표시용 (약간 흐리게) */
 .date-text {
   color: var(--text);
-  opacity: 0.6;
+  opacity: 0.8;
   margin-right: var(--space-xs);
+  font-weight: var(--weight-medium);
 }
 
 /* 서브 아이템 (특정 프로젝트나 상세 단위) */
