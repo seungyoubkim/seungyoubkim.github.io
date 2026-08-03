@@ -124,21 +124,34 @@
           </ul>
         </li>
         <li>
-          <strong>아키텍처 및 인프라 설계</strong>
+          <strong>아키텍처 설계 및 렌더링 최적화</strong>
           <ul class="nested-list">
             <li>
               모바일 환경의 배포 리스크를 줄이고 공통 디자인 시스템을 효율적으로
-              적용하기 위해 React Native 기반의 웹앱 아키텍처로 구현
+              적용하기 위해 React Native 기반의 웹앱 아키텍처로 구현.
             </li>
             <li>
               중복 코드 제거 및 효율적인 프로젝트 관리를 위해 MonoRepo 방식을
-              도입하여 개발 환경 구축
+              도입하여 개발 환경 구축.
+            </li>
+            <li>
+              React Context API 사용 시 하위 컴포넌트 전체가 불필요하게
+              재렌더링되는 성능 병목 현상을 개선하기 위해, 인증 처리 등 반드시
+              필요한 글로벌 상태만 Context로 유지하고, 그 외의 도메인별 부분
+              전역 상태는 Zustand로 마이그레이션하여 상태 변경 시 구독 중인
+              컴포넌트만 재렌더링되도록 최적화.
             </li>
           </ul>
         </li>
         <li>
           <strong>AI 기반 개발 생산성 향상 주도</strong>
           <ul class="nested-list">
+            <li>
+              <strong>전사 AI 활용 실무 강의 진행:</strong> 실무 AI 개발 도입
+              초기부터 Cursor 및 Claude Code의 실무 적용 방안을 선제적으로
+              연구하여 전사 개발 조직 대상 강의 진행, 팀 전반의 기술 적응 및
+              주도적인 생산성 향상 도모.
+            </li>
             <li>
               <strong>Cursor IDE 및 문서 중앙화:</strong> 파편화된 도메인 지식과
               코드 컨벤션을 레포지토리 내 Markdown 파일로 통합하고 Cursor
@@ -149,11 +162,6 @@
               <strong>Figma MCP 도입:</strong> 피그마 디자인 파일을 리액트
               코드로 빠르게 변환하는 파이프라인을 구축하여 UI 개발 소요 시간
               단축
-            </li>
-            <li>
-              <strong>Playwright MCP 도입:</strong> 정리된 테스트 시나리오를
-              기반으로 E2E 테스트가 동작할 수 있도록 자동화 환경 구축 및 검증
-              효율화
             </li>
             <li>
               <strong>전사 가이드 배포:</strong> 지속 가능하고 일관된 AI 코드
